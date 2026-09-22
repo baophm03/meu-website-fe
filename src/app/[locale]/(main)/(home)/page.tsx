@@ -6,9 +6,7 @@ import { Challenges } from "./_components/challenges";
 import { BusinessSolutions } from "./_components/business-solutions";
 import { AiWorkflow } from "./_components/ai-workflow";
 import { Industries } from "./_components/industries";
-import { Products } from "./_components/products";
 import { ClientSuccess } from "./_components/client-success";
-import { Capabilities } from "./_components/capabilities";
 import { WhyMeu } from "./_components/why-meu";
 import { Insights } from "./_components/insights";
 import { FinalCta } from "./_components/final-cta";
@@ -37,9 +35,7 @@ export default async function HomePage({ params }: Props) {
       <Challenges />
       <BusinessSolutions />
       <AiWorkflow />
-      <Capabilities />
       <Industries />
-      <Products />
       <ClientSuccess />
       <WhyMeu />
       <Insights />

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import type { ReactNode } from "react";
 import { ArrowRight } from "lucide-react";
@@ -8,6 +9,38 @@ import { useTranslations } from "next-intl";
 const shell = "container";
 const displayHeading = "font-medium tracking-[-0.045em] text-balance";
 const label = "text-[10px] font-bold uppercase tracking-[0.16em] sm:text-[11px]";
+
+// Placeholder logos — replace with approved client names/logos.
+const CLIENTS = [
+  { name: "Vingroup", logo: "/images/clients/vingroup.png" },
+  { name: "FPT", logo: "/images/clients/fpt.png" },
+  { name: "Viettel", logo: "/images/clients/viettel.png" },
+  { name: "Vinamilk", logo: "/images/clients/vinamilk.png" },
+  { name: "VPBank", logo: "/images/clients/vpbank.png" },
+  { name: "Techcombank", logo: "/images/clients/techcombank.png" },
+  { name: "Sacombank", logo: "/images/clients/sacombank.png" },
+  { name: "MoMo", logo: "/images/clients/momo.png" },
+  { name: "VNPAY", logo: "/images/clients/vnpay.png" },
+  { name: "Tiki", logo: "/images/clients/tiki.png" },
+  { name: "PNJ", logo: "/images/clients/pnj.png" },
+  { name: "TH Group", logo: "/images/clients/thgroup.png" },
+  { name: "Biti's", logo: "/images/clients/bitis.png" },
+  { name: "Bamboo Airways", logo: "/images/clients/bambooairways.png" },
+  { name: "Sun Group", logo: "/images/clients/sungroup.png" },
+  { name: "Vinasun", logo: "/images/clients/vinasun.png" },
+  { name: "ACB", logo: "/images/clients/acb.png" },
+  { name: "Vietcombank", logo: "/images/clients/vietcombank.png" },
+  { name: "MSB", logo: "/images/clients/msb.png" },
+  { name: "VNPT", logo: "/images/clients/vnpt.png" },
+];
+
+const CLIENT_ROWS = [CLIENTS.slice(0, 7), CLIENTS.slice(7, 14), CLIENTS.slice(14)];
+
+const ROW_ANIMATION = [
+  "animate-[marquee_50s_linear_infinite]",
+  "animate-[marquee_65s_linear_infinite] [animation-direction:reverse]",
+  "animate-[marquee_58s_linear_infinite]",
+];
 
 function Section({
   id,
@@ -53,24 +86,20 @@ function SectionHead({
 }) {
   const dark = tone === "dark";
   return (
-    <div className="mb-12 grid gap-6 sm:mb-16 lg:mb-20 lg:grid-cols-[minmax(0,1fr)_2.15fr] lg:gap-12">
-      <div className={cn("flex items-start gap-5 lg:pt-3", label)}>
+    <div className="mb-12 sm:mb-16">
+      <div className={cn("flex items-start gap-5", label)}>
         {index ? <span className="text-primary">{index}</span> : null}
         <span className={dark ? "text-white/50" : "text-muted-foreground"}>{eyebrow}</span>
       </div>
-      <div className="grid gap-6 lg:grid-cols-[1.55fr_1fr] lg:gap-12">
-        <h2 id={id} className={cn(displayHeading, "text-[34px] leading-[1.04] sm:text-[46px] lg:text-[62px]", dark ? "text-white" : "text-foreground")}>{title}</h2>
-        <div className="flex flex-col items-start gap-6 lg:pt-2">
-          {summary ? <p className={cn("max-w-md text-[15px] leading-[1.7]", dark ? "text-white/60" : "text-muted-foreground")}>{summary}</p> : null}
-          {action ? <div className="shrink-0">{action}</div> : null}
+      <div className="mt-8 flex flex-col gap-8 lg:mt-10 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
+        <h2 id={id} className={cn(displayHeading, "max-w-[720px] text-[34px] leading-[1.04] sm:text-[46px] lg:text-[62px]", dark ? "text-white" : "text-foreground")}>{title}</h2>
+        <div className="flex max-w-md shrink-0 flex-col items-start gap-6">
+          {summary ? <p className={cn("text-[15px] leading-[1.7]", dark ? "text-white/60" : "text-muted-foreground")}>{summary}</p> : null}
+          {action}
         </div>
       </div>
     </div>
   );
-}
-
-function Soft({ children, dark = false }: { children: ReactNode; dark?: boolean }) {
-  return <span className={dark ? "text-white/45" : "text-muted-foreground/70"}>{children}</span>;
 }
 
 function ArrowLink({ href, children, tone = "light", className }: { href: string; children: ReactNode; tone?: "light" | "dark"; className?: string }) {
@@ -91,46 +120,44 @@ function ArrowLink({ href, children, tone = "light", className }: { href: string
 
 export function ClientSuccess() {
   const t = useTranslations("home.clientSuccess");
-  const caseRows = [
-    [t("detail1Label"), t("detail1Desc")],
-    [t("detail2Label"), t("detail2Desc")],
-    [t("detail3Label"), t("detail3Desc")],
-  ] as const;
   return (
     <Section variant="white" id="client-success">
       <SectionHead
-        index="06"
+        index="05"
         eyebrow={t("eyebrow")}
         title={t("heading")}
         summary={t("summary")}
         action={<ArrowLink href="/case-studies">{t("allCaseStudies")}</ArrowLink>}
       />
 
-      <article className="grid border border-border lg:grid-cols-[1.15fr_0.85fr]">
-        <div className="relative min-h-[340px] overflow-hidden bg-surface-dark p-7 text-white sm:min-h-[420px] lg:min-h-[540px] lg:p-9">
-          <span aria-hidden="true" className="pointer-events-none absolute -bottom-[10%] -right-[10%] left-[15%] top-[15%] -skew-y-[15deg] border border-primary/50 shadow-[-80px_0_120px_rgba(49,92,255,0.15)]">
-            <span className="absolute inset-[18%] border border-white/15" />
-          </span>
-          <span className={cn(label, "relative text-white/45")}>{t("caseLabel")}</span>
-          <strong className={cn(displayHeading, "absolute bottom-8 left-7 text-[28px] leading-[1] sm:text-[36px] lg:bottom-12 lg:left-9 lg:text-[42px]")}>
-            {t("caseTitle")}
-          </strong>
-        </div>
-
-        <div className="p-7 sm:p-10 lg:p-14">
-          <span className={cn(label, "text-primary")}>{t("caseCategory")}</span>
-          <h3 className={cn(displayHeading, "mt-6 text-[24px] leading-[1.15] sm:text-[30px]")}>{t("caseHeading")}</h3>
-          <dl className="my-10 border-b border-border">
-            {caseRows.map(([term, detail]) => (
-              <div key={term} className="grid gap-2 border-t border-border py-5 sm:grid-cols-[92px_1fr] sm:gap-4">
-                <dt className={cn(label, "pt-0.5 text-primary")}>{term}</dt>
-                <dd className="text-[14px] leading-[1.6] text-muted-foreground">{detail}</dd>
-              </div>
+      {/* Auto-scrolling client logo wall — 3 rows, logo swaps to name on hover */}
+      <div className="group relative space-y-4 overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_6%,#000_94%,transparent)]">
+        {CLIENT_ROWS.map((row, rowIndex) => (
+          <ul
+            key={rowIndex}
+            className={cn("flex w-max items-center gap-4 pr-4 group-hover:[animation-play-state:paused] motion-reduce:animate-none", ROW_ANIMATION[rowIndex])}
+          >
+            {[...row, ...row].map((client, i) => (
+              <li
+                key={`${client.name}-${i}`}
+                aria-hidden={i >= row.length}
+                className="group/logo relative flex h-[72px] w-[168px] shrink-0 items-center justify-center border border-border bg-white transition-colors duration-200 hover:border-primary"
+              >
+                <Image
+                  src={client.logo}
+                  alt={client.name}
+                  width={96}
+                  height={40}
+                  className="max-h-9 w-auto object-contain opacity-80 transition-opacity duration-200 group-hover/logo:opacity-0"
+                />
+                <span className="pointer-events-none absolute inset-0 flex items-center justify-center px-4 text-center text-[13px] font-semibold uppercase leading-[1.3] tracking-[0.12em] text-foreground opacity-0 transition-opacity duration-200 group-hover/logo:opacity-100">
+                  {client.name}
+                </span>
+              </li>
             ))}
-          </dl>
-          <ArrowLink href="/case-studies">{t("readClientStories")}</ArrowLink>
-        </div>
-      </article>
+          </ul>
+        ))}
+      </div>
     </Section>
   );
 }

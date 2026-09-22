@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import type { ReactNode } from "react";
 import { ArrowRight } from "lucide-react";
@@ -53,24 +54,20 @@ function SectionHead({
 }) {
   const dark = tone === "dark";
   return (
-    <div className="mb-12 grid gap-6 sm:mb-16 lg:mb-20 lg:grid-cols-[minmax(0,1fr)_2.15fr] lg:gap-12">
-      <div className={cn("flex items-start gap-5 lg:pt-3", label)}>
+    <div className="mb-12 sm:mb-16">
+      <div className={cn("flex items-start gap-5", label)}>
         {index ? <span className="text-primary">{index}</span> : null}
         <span className={dark ? "text-white/50" : "text-muted-foreground"}>{eyebrow}</span>
       </div>
-      <div className="grid gap-6 lg:grid-cols-[1.55fr_1fr] lg:gap-12">
-        <h2 id={id} className={cn(displayHeading, "text-[34px] leading-[1.04] sm:text-[46px] lg:text-[62px]", dark ? "text-white" : "text-foreground")}>{title}</h2>
-        <div className="flex flex-col items-start gap-6 lg:pt-2">
-          {summary ? <p className={cn("max-w-md text-[15px] leading-[1.7]", dark ? "text-white/60" : "text-muted-foreground")}>{summary}</p> : null}
-          {action ? <div className="shrink-0">{action}</div> : null}
+      <div className="mt-8 flex flex-col gap-8 lg:mt-10 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
+        <h2 id={id} className={cn(displayHeading, "max-w-[720px] text-[34px] leading-[1.04] sm:text-[46px] lg:text-[62px]", dark ? "text-white" : "text-foreground")}>{title}</h2>
+        <div className="flex max-w-md shrink-0 flex-col items-start gap-6">
+          {summary ? <p className={cn("text-[15px] leading-[1.7]", dark ? "text-white/60" : "text-muted-foreground")}>{summary}</p> : null}
+          {action}
         </div>
       </div>
     </div>
   );
-}
-
-function Soft({ children, dark = false }: { children: ReactNode; dark?: boolean }) {
-  return <span className={dark ? "text-white/45" : "text-muted-foreground/70"}>{children}</span>;
 }
 
 function ArrowLink({ href, children, tone = "light", className }: { href: string; children: ReactNode; tone?: "light" | "dark"; className?: string }) {
@@ -93,15 +90,18 @@ export function Insights() {
   const t = useTranslations("home.insights");
 
   const insights = [
-    [t("card1Meta"), t("card1Title"), t("card1Desc"), "/insights/ai-automation"],
-    [t("card2Meta"), t("card2Title"), t("card2Desc"), "/insights/enterprise-tech"],
-    [t("card3Meta"), t("card3Title"), t("card3Desc"), "/insights/digital-transformation"],
+    [t("card1Meta"), t("card1Title"), t("card1Desc"), "/insights/ai-automation", "/images/insights/insight-1.jpg"],
+    [t("card2Meta"), t("card2Title"), t("card2Desc"), "/insights/enterprise-tech", "/images/insights/insight-2.jpg"],
+    [t("card3Meta"), t("card3Title"), t("card3Desc"), "/insights/digital-transformation", "/images/insights/insight-3.jpg"],
+    [t("card4Meta"), t("card4Title"), t("card4Desc"), "/insights/ai-agents-operations", "/images/insights/insight-4.jpg"],
+    [t("card5Meta"), t("card5Title"), t("card5Desc"), "/insights/erp-implementation", "/images/insights/insight-5.jpg"],
+    [t("card6Meta"), t("card6Title"), t("card6Desc"), "/insights/website-operations-channel", "/images/insights/insight-6.jpg"],
   ] as const;
 
   return (
     <Section variant="surface" id="insights">
       <SectionHead
-        index="09"
+        index="07"
         eyebrow={t("eyebrow")}
         title={
           <>
@@ -112,12 +112,19 @@ export function Insights() {
       />
 
       <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
-        {insights.map(([meta, title, copy, href], index) => (
+        {insights.map(([meta, title, copy, href, image], index) => (
           <article key={title} className="group flex flex-col">
             <Link href={href} className="focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-primary">
-              <span aria-hidden="true" className="relative block h-[200px] overflow-hidden bg-surface-dark-raised sm:h-[220px]">
-                <span className={cn(label, "absolute left-6 top-6 z-10 text-primary-light")}>{`0${index + 1}`}</span>
-                <i className="absolute -bottom-[180px] -right-[50px] size-[310px] rounded-full border border-primary shadow-[0_0_55px_rgba(49,92,255,0.25)] transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none" />
+              <span className="relative block h-[200px] overflow-hidden bg-surface-dark-raised sm:h-[220px]">
+                <Image
+                  src={image}
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  className="object-cover transition-transform duration-500 ease-out group-hover:scale-105 motion-reduce:transform-none"
+                />
+                <span aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(to_top,rgba(5,6,8,0.35),transparent_45%)]" />
+                <span className={cn(label, "absolute left-6 top-6 z-10 rounded-full bg-surface-dark/70 px-3 py-1.5 text-primary-light backdrop-blur-sm")}>{`0${index + 1}`}</span>
               </span>
             </Link>
             <span className={cn(label, "mt-6 text-primary")}>{meta}</span>

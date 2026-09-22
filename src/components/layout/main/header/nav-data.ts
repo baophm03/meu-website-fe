@@ -1,5 +1,5 @@
-export type MegaLink = { label: string; labelKey?: string; href: string; note?: string; noteKey?: string };
-export type MegaColumn = { heading: string; headingKey?: string; blurb: string; blurbKey?: string; exploreHref: string; links: MegaLink[] };
+export type MegaLink = { label: string; labelKey?: string; href: string };
+export type MegaColumn = { heading: string; headingKey?: string; blurb: string; blurbKey?: string; links: MegaLink[] };
 export type NavItem = {
   label: string;
   labelKey?: string;
@@ -13,7 +13,6 @@ const businessSolutions: MegaColumn = {
   headingKey: "mega.businessSolutions",
   blurb: "Start from the outcome you need in the operation.",
   blurbKey: "mega.businessSolutionsBlurb",
-  exploreHref: "/solutions/business-solutions",
   links: [
     { label: "Digital Transformation", labelKey: "mega.digitalTransformation", href: "/solutions/digital-transformation" },
     { label: "Enterprise Management", labelKey: "mega.enterpriseManagement", href: "/solutions/enterprise-management" },
@@ -28,7 +27,6 @@ const technologyCapabilities: MegaColumn = {
   headingKey: "mega.techCapabilities",
   blurb: "How the work gets designed, built, integrated and operated.",
   blurbKey: "mega.techCapabilitiesBlurb",
-  exploreHref: "/solutions/technology-capabilities",
   links: [
     { label: "Technology Consulting", labelKey: "mega.techConsulting", href: "/solutions/technology-consulting" },
     { label: "AI Application Consulting", labelKey: "mega.aiConsulting", href: "/solutions/ai-consulting" },
@@ -43,7 +41,6 @@ const talentEnablement: MegaColumn = {
   headingKey: "mega.talentEnablement",
   blurb: "Add capacity to your teams, or grow the people you already have.",
   blurbKey: "mega.talentEnablementBlurb",
-  exploreHref: "/solutions/talent-enablement",
   links: [
     { label: "IT Talent Solutions", labelKey: "mega.itTalentSolutions", href: "/solutions/it-talent-solutions" },
     { label: "Technology Training", labelKey: "mega.techTraining", href: "/solutions/technology-training" },
@@ -51,12 +48,12 @@ const talentEnablement: MegaColumn = {
 };
 
 export const industries: MegaLink[] = [
-  { label: "Healthcare", labelKey: "mega.healthcare", href: "/industries/healthcare", note: "Patient access, appointments and operations", noteKey: "mega.healthcareNote" },
-  { label: "Logistics & Supply Chain", labelKey: "mega.logisticsSupply", href: "/industries/logistics-supply-chain", note: "Shipment and order visibility", noteKey: "mega.logisticsSupplyNote" },
-  { label: "Retail & Commerce", labelKey: "mega.retailCommerce", href: "/industries/retail-commerce", note: "Omnichannel selling and fulfillment", noteKey: "mega.retailCommerceNote" },
-  { label: "Pharmaceutical & Life Sciences", labelKey: "mega.pharmaLifeSciences", href: "/industries/pharmaceutical-life-sciences", note: "Distribution, documents and training", noteKey: "mega.pharmaLifeSciencesNote" },
-  { label: "Education & Training", labelKey: "mega.educationTraining", href: "/industries/education-training", note: "Learner, instructor and admin journeys", noteKey: "mega.educationTrainingNote" },
-  { label: "Associations & Organizations", labelKey: "mega.associationsOrgs", href: "/industries/associations-organizations", note: "Member lifecycle and engagement", noteKey: "mega.associationsOrgsNote" },
+  { label: "Healthcare", labelKey: "mega.healthcare", href: "/industries/healthcare" },
+  { label: "Logistics & Supply Chain", labelKey: "mega.logisticsSupply", href: "/industries/logistics-supply-chain" },
+  { label: "Retail & Commerce", labelKey: "mega.retailCommerce", href: "/industries/retail-commerce" },
+  { label: "Pharmaceutical & Life Sciences", labelKey: "mega.pharmaLifeSciences", href: "/industries/pharmaceutical-life-sciences" },
+  { label: "Education & Training", labelKey: "mega.educationTraining", href: "/industries/education-training" },
+  { label: "Associations & Organizations", labelKey: "mega.associationsOrgs", href: "/industries/associations-organizations" },
 ];
 
 export const navigation: NavItem[] = [
@@ -76,7 +73,6 @@ export const navigation: NavItem[] = [
         headingKey: "mega.industriesWeWorkIn",
         blurb: "Only sectors with validated domain knowledge and delivery evidence.",
         blurbKey: "mega.industriesWeWorkInBlurb",
-        exploreHref: "/industries",
         links: industries,
       },
     ],
@@ -91,7 +87,6 @@ export const navigation: NavItem[] = [
         headingKey: "mega.meosUniverse",
         blurb: "One ecosystem — diverse solutions — comprehensive capabilities. Productised platforms with a stable roadmap and a live demo.",
         blurbKey: "mega.meosUniverseBlurb",
-        exploreHref: "/products",
         links: [
           { label: "MeOS 365", labelKey: "mega.meos365", href: "/products/meos-365" },
           { label: "MeOS Ecommerce", labelKey: "mega.meosEcommerce", href: "/products/meos-ecommerce" },
@@ -112,10 +107,8 @@ export const navigation: NavItem[] = [
         headingKey: "mega.clientSuccess",
         blurb: "Challenge, solution and measured impact — filtered the way you buy.",
         blurbKey: "mega.clientSuccessBlurb",
-        exploreHref: "/case-studies",
         links: [
           { label: "Featured Case Studies", labelKey: "mega.featuredCaseStudies", href: "/case-studies/featured" },
-          { label: "All Case Studies", labelKey: "mega.allCaseStudies", href: "/case-studies" },
           { label: "By Industry", labelKey: "mega.byIndustry", href: "/case-studies/industry" },
           { label: "By Solution", labelKey: "mega.bySolution", href: "/case-studies/solution" },
           { label: "By Technology", labelKey: "mega.byTechnology", href: "/case-studies/technology" },
@@ -133,7 +126,6 @@ export const navigation: NavItem[] = [
         headingKey: "mega.insights",
         blurb: "Practical perspective for leaders making technology decisions.",
         blurbKey: "mega.insightsBlurb",
-        exploreHref: "/insights",
         links: [
           { label: "AI & Automation", labelKey: "mega.insightsAiAutomation", href: "/insights/ai-automation" },
           { label: "Digital Transformation", labelKey: "mega.insightsDigitalTrans", href: "/insights/digital-transformation" },
@@ -156,7 +148,6 @@ export const navigation: NavItem[] = [
         headingKey: "mega.aboutMeu",
         blurb: "Who we are and how we work.",
         blurbKey: "mega.aboutMeuBlurb",
-        exploreHref: "/about",
         links: [
           { label: "About Us", labelKey: "mega.aboutUs", href: "/about/us" },
           { label: "Vision | Mission | Core Values", labelKey: "mega.visionMission", href: "/about/vision-mission" },
@@ -177,7 +168,6 @@ export const navigation: NavItem[] = [
         headingKey: "mega.trustCenter",
         blurb: "How we protect your data, privacy and AI deployments.",
         blurbKey: "mega.trustCenterBlurb",
-        exploreHref: "/trust",
         links: [
           { label: "Security", labelKey: "mega.security", href: "/trust/security" },
           { label: "Privacy", labelKey: "mega.privacy", href: "/trust/privacy" },
