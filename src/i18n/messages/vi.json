@@ -157,11 +157,19 @@
       "title1": "Thách thức của bạn.",
       "title2": "Giải pháp từ chúng tôi.",
       "description": "Chiến lược, phần mềm và AI xây quanh kết quả kinh doanh thực tế.",
+      "primaryButton": "Bắt đầu dự án",
       "secondaryButton": "Khám phá giải pháp",
       "proof1": "Một đối tác chịu trách nhiệm",
       "proof2": "Bàn giao trọn gói",
       "proof3": "Thiết kế để áp dụng",
       "proof4": "Việt Nam · toàn cầu"
+    },
+    "proof": {
+      "eyebrow": "Con số biết nói",
+      "m1Label": "Dự án đã bàn giao",
+      "m2Label": "Khách hàng gắn bó",
+      "m3Label": "Ngành trọng điểm",
+      "partnersLabel": "Nền tảng & hệ sinh thái chúng tôi triển khai"
     },
     "challenges": {
       "eyebrow": "Bắt đầu từ kinh doanh",
@@ -232,6 +240,7 @@
       "heading": "Xây quanh cách thế giới của bạn vận hành.",
       "summary": "Chúng tôi chỉ xuất bản trang ngành khi có chuyên môn thực tế và minh chứng bàn giao rõ ràng.",
       "allIndustries": "Tất cả ngành",
+      "scrollHint": "Kéo để khám phá",
       "ind1Title": "Y tế",
       "ind1Desc": "Tiếp cận bệnh nhân, lịch hẹn và vận hành.",
       "ind2Title": "Logistics & chuỗi cung ứng",

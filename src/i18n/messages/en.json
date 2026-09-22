@@ -157,11 +157,19 @@
       "title1": "Your business challenge.",
       "title2": "Our technology solution.",
       "description": "Strategy, software and AI built around real business outcomes.",
+      "primaryButton": "Start a project",
       "secondaryButton": "Explore solutions",
       "proof1": "One accountable partner",
       "proof2": "End-to-end delivery",
       "proof3": "Built for adoption",
       "proof4": "Vietnam · global"
+    },
+    "proof": {
+      "eyebrow": "Proof in numbers",
+      "m1Label": "Projects delivered",
+      "m2Label": "Client retention",
+      "m3Label": "Core industries",
+      "partnersLabel": "Platforms & ecosystems we build on"
     },
     "challenges": {
       "eyebrow": "Start with the business",
@@ -232,6 +240,7 @@
       "heading": "Built around the way your world works.",
       "summary": "We publish an industry page only when there is real domain knowledge and delivery evidence behind it.",
       "allIndustries": "All industries",
+      "scrollHint": "Drag to explore",
       "ind1Title": "Healthcare",
       "ind1Desc": "Patient access, scheduling and operations.",
       "ind2Title": "Logistics & supply chain",

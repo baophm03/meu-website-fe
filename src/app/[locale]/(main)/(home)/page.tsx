@@ -37,10 +37,10 @@ export default async function HomePage({ params }: Props) {
       <Challenges />
       <BusinessSolutions />
       <AiWorkflow />
+      <Capabilities />
       <Industries />
       <Products />
       <ClientSuccess />
-      <Capabilities />
       <WhyMeu />
       <Insights />
       <FinalCta />
