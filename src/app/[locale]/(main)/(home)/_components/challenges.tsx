@@ -24,9 +24,9 @@ export function Challenges() {
       <div className={cn(shell, "grid gap-12 lg:grid-cols-[2fr_3fr] lg:gap-16")}>
         {/* 40% — giant accent typography, sticky on desktop */}
         <ScrollReveal y={36} className="lg:sticky lg:top-28 lg:self-start">
-          <span className={cn(label, "inline-flex items-center gap-3 text-primary")}>
-            <i aria-hidden="true" className="h-px w-8 bg-primary/70" />
-            {t("eyebrow")}
+          <span className={cn(label, "inline-flex items-center gap-5")}>
+            <span className="text-primary">01</span>
+            <span className="text-muted-foreground">{t("eyebrow")}</span>
           </span>
           <h2 id="challenges-title" className={cn(displayHeading, "mt-6 text-[44px] leading-[0.98] sm:text-[58px] lg:text-[76px]")}>
             {t("heading")}

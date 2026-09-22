@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/shared/reveal";
+import { MetricCounter } from "@/components/shared/metric-counter";
 import { useTranslations } from "next-intl";
 
 const shell = "container";
@@ -51,24 +52,20 @@ function SectionHead({
 }) {
   const dark = tone === "dark";
   return (
-    <div className="mb-12 grid gap-6 sm:mb-16 lg:mb-20 lg:grid-cols-[minmax(0,1fr)_2.15fr] lg:gap-12">
-      <div className={cn("flex items-start gap-5 lg:pt-3", label)}>
+    <div className="mb-12 sm:mb-16">
+      <div className={cn("flex items-start gap-5", label)}>
         {index ? <span className="text-primary">{index}</span> : null}
         <span className={dark ? "text-white/50" : "text-muted-foreground"}>{eyebrow}</span>
       </div>
-      <div className="grid gap-6 lg:grid-cols-[1.55fr_1fr] lg:gap-12">
-        <h2 id={id} className={cn(displayHeading, "text-[34px] leading-[1.04] sm:text-[46px] lg:text-[62px]", dark ? "text-white" : "text-foreground")}>{title}</h2>
-        <div className="flex flex-col items-start gap-6 lg:pt-2">
-          {summary ? <p className={cn("max-w-md text-[15px] leading-[1.7]", dark ? "text-white/60" : "text-muted-foreground")}>{summary}</p> : null}
-          {action ? <div className="shrink-0">{action}</div> : null}
+      <div className="mt-8 flex flex-col gap-8 lg:mt-10 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
+        <h2 id={id} className={cn(displayHeading, "max-w-[720px] text-[34px] leading-[1.04] sm:text-[46px] lg:text-[62px]", dark ? "text-white" : "text-foreground")}>{title}</h2>
+        <div className="flex max-w-md shrink-0 flex-col items-start gap-6">
+          {summary ? <p className={cn("text-[15px] leading-[1.7]", dark ? "text-white/60" : "text-muted-foreground")}>{summary}</p> : null}
+          {action}
         </div>
       </div>
     </div>
   );
-}
-
-function Soft({ children, dark = false }: { children: ReactNode; dark?: boolean }) {
-  return <span className={dark ? "text-white/45" : "text-muted-foreground/70"}>{children}</span>;
 }
 
 export function WhyMeu() {
@@ -78,12 +75,20 @@ export function WhyMeu() {
     ["01", t("d1Title"), t("d1Desc")],
     ["02", t("d2Title"), t("d2Desc")],
     ["03", t("d3Title"), t("d3Desc")],
+    ["04", t("d4Title"), t("d4Desc")],
+    ["05", t("d5Title"), t("d5Desc")],
   ] as const;
+
+  const stats = [
+    { value: 10, suffix: "+", label: t("stat1Label") },
+    { value: 20, suffix: "+", label: t("stat2Label") },
+    { value: 100, suffix: "+", label: t("stat3Label") },
+  ];
 
   return (
     <Section variant="white" id="why-meu">
       <SectionHead
-        index="08"
+        index="06"
         eyebrow={t("eyebrow")}
         title={
           <>
@@ -93,11 +98,24 @@ export function WhyMeu() {
         summary={t("summary")}
       />
 
-      <div className="grid border-l border-t border-border lg:grid-cols-3">
+      <div className="mb-12 grid gap-8 border-y border-border py-10 sm:grid-cols-3 lg:mb-16 lg:py-12">
+        {stats.map((stat, index) => (
+          <div key={stat.label} className={cn("flex flex-col gap-3 sm:px-10 sm:first:pl-0 sm:last:pr-0", index > 0 ? "sm:border-l sm:border-border" : "")}>
+            <MetricCounter
+              value={stat.value}
+              suffix={stat.suffix}
+              className="text-[44px] font-medium leading-none tracking-[-0.03em] text-primary sm:text-[54px] lg:text-[60px]"
+            />
+            <span className={cn(label, "text-muted-foreground")}>{stat.label}</span>
+          </div>
+        ))}
+      </div>
+
+      <div className="grid border-l border-t border-border sm:grid-cols-2 lg:grid-cols-5">
         {differentiators.map(([index, title, copy]) => (
-          <article key={index} className="border-b border-r border-border p-7 sm:min-h-[280px] lg:p-9">
+          <article key={index} className="flex flex-col border-b border-r border-border p-7 sm:min-h-[260px] lg:p-8">
             <span className={cn(label, "text-primary")}>{index}</span>
-            <h3 className={cn(displayHeading, "mt-8 text-[21px] leading-[1.2] sm:text-[24px] lg:mt-16")}>{title}</h3>
+            <h3 className={cn(displayHeading, "mt-8 text-[21px] leading-[1.2] sm:text-[23px] lg:mt-auto lg:pt-14")}>{title}</h3>
             <p className="mt-3.5 text-[14px] leading-[1.65] text-muted-foreground">{copy}</p>
           </article>
         ))}

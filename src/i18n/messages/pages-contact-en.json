@@ -10,6 +10,7 @@
       "form": {
         "eyebrow": "Send a message",
         "heading": "Tell us about your challenge.",
+        "summary": "Fill in the form below — we respond within one business day.",
         "nameLabel": "Full name",
         "namePlaceholder": "Your name",
         "emailLabel": "Work email",
