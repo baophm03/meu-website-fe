@@ -1,7 +1,6 @@
 ﻿"use client";
 
 import * as React from "react";
-import Link from "next/link";
 import {
   ChevronDown,
   ChevronRight,
@@ -182,7 +181,12 @@ export function HeaderCategoryTable({
                       )}
 
                       <div className="mr-2">{getTypeIcon(item.type)}</div>
-                      <div className="truncate font-medium text-black">{item.name}</div>
+                      <div className="min-w-0">
+                        <div className="truncate font-medium text-black">{item.name}</div>
+                        {item.name_en ? (
+                          <div className="truncate text-xs text-slate-400">{item.name_en}</div>
+                        ) : null}
+                      </div>
                     </div>
                   </TableCell>
 

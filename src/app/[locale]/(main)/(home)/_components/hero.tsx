@@ -62,6 +62,7 @@ export function Hero() {
     primaryCta: t(`slides.${slide.id}.primaryCta`),
     secondaryCta: t(`slides.${slide.id}.secondaryCta`),
   }));
+
   const [activeIndex, setActiveIndex] = useState(0);
   const progressRef = useRef<HTMLDivElement>(null);
   const [reduceMotion] = useState(

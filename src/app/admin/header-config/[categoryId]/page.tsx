@@ -40,7 +40,7 @@ import {
   buildCategoryTree,
   buildHeaderItemsFromCategories,
   transformPost,
-} from "@/lib/api/cms-transforms";
+} from "@/utils/cms-transforms";
 import { ADMIN_NEWS_TYPE_LABELS } from "@/mockdata/admin-news";
 import { buildHeaderCategoryTree } from "@/mockdata/header-config";
 import { HeaderCategoryPostsLoading } from "./_components/HeaderCategoryPostsLoading";

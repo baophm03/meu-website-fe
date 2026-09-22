@@ -2,16 +2,16 @@ import { useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { ArrowRight, ChevronDown } from "lucide-react";
-import { navigation } from "../nav-data";
+import type { NavItem } from "../nav-data";
 import { cn } from "@/lib/utils";
 
-export function MobileDrawer({ onClose }: { onClose: () => void }) {
+export function MobileDrawer({ items, onClose }: { items: NavItem[]; onClose: () => void }) {
   const [openGroup, setOpenGroup] = useState<string | null>(null);
   const t = useTranslations();
   return (
     <div className="fixed inset-x-0 bottom-0 top-[68px] z-50 overflow-y-auto bg-background lg:hidden">
       <nav aria-label={t("actions.mobileNavigation")} className="px-5 pb-8 pt-2">
-        {navigation.map((item) => {
+        {items.map((item) => {
           const expanded = openGroup === item.label;
           const displayLabel = item.labelKey ? t(item.labelKey) : item.label;
           return (

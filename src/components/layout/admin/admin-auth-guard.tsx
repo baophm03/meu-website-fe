@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { ensureValidAdminAccessToken, redirectToLogin } from "@/lib/auth/admin-auth";
+import { ensureValidAdminAccessToken, redirectToLogin } from "@/utils/admin-auth";
 import useAuthStore from "@/store/useAuthStore";
 import useProfileStore from "@/store/useProfileStore";
 

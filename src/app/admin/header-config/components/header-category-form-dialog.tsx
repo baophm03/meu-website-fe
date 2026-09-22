@@ -31,11 +31,13 @@ export type HeaderCategoryFormMode = "create" | "edit";
 export interface HeaderCategoryFormValues {
   id?: string;
   name: string;
+  name_en: string;
   slug: string;
   sort_order: string;
   parent_id: string;
   type: HeaderCategoryType;
   description: string;
+  description_en: string;
 }
 
 interface HeaderCategoryFormDialogProps {
@@ -77,9 +79,11 @@ export function HeaderCategoryFormDialog({
   onSubmit,
 }: HeaderCategoryFormDialogProps) {
   const title = mode === "create" ? "Tạo danh mục" : "Chỉnh sửa danh mục";
-  const availableTypeOptions = values.parent_id
-    ? TYPE_OPTIONS.filter((option) => option.value !== "category")
-    : TYPE_OPTIONS;
+  const selectedParent = parentOptions.find((option) => option.id === values.parent_id);
+  const availableTypeOptions =
+    selectedParent && selectedParent.parent_id
+      ? TYPE_OPTIONS.filter((option) => option.value !== "category")
+      : TYPE_OPTIONS;
 
   const setField = <K extends keyof HeaderCategoryFormValues>(
     key: K,
@@ -107,14 +111,24 @@ export function HeaderCategoryFormDialog({
         </DialogHeader>
 
         <div className="grid grid-cols-1 gap-4 py-2 md:grid-cols-2">
-          <div>
+          <div className="md:col-span-2">
             <Label className="mb-1.5 block text-gray-700">
-              Tên danh mục <span className="text-red-600">*</span>
+              Tên danh mục (VI) <span className="text-red-600">*</span>
             </Label>
             <Input
               value={values.name}
               onChange={(event) => handleNameChange(event.target.value)}
               placeholder="Nhập tên danh mục"
+              className={fieldClassName}
+            />
+          </div>
+
+          <div className="md:col-span-2">
+            <Label className="mb-1.5 block text-gray-700">Tên danh mục (EN)</Label>
+            <Input
+              value={values.name_en}
+              onChange={(event) => setField("name_en", event.target.value)}
+              placeholder="English name"
               className={fieldClassName}
             />
           </div>
@@ -209,12 +223,23 @@ export function HeaderCategoryFormDialog({
           </div>
 
           <div className="md:col-span-2">
-            <Label className="mb-1.5 block text-gray-700">Mô tả</Label>
+            <Label className="mb-1.5 block text-gray-700">Mô tả (VI)</Label>
             <Textarea
               rows={3}
               value={values.description}
               onChange={(event) => setField("description", event.target.value)}
               placeholder="Ghi mô tả về danh mục"
+              className={fieldClassName}
+            />
+          </div>
+
+          <div className="md:col-span-2">
+            <Label className="mb-1.5 block text-gray-700">Mô tả (EN)</Label>
+            <Textarea
+              rows={3}
+              value={values.description_en}
+              onChange={(event) => setField("description_en", event.target.value)}
+              placeholder="Category description in English"
               className={fieldClassName}
             />
           </div>

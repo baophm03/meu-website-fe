@@ -11,7 +11,7 @@ import {
 import {
   type CmsTagItem,
   type CmsPagedResult,
-} from "@/lib/api/cms-transforms";
+} from "@/utils/cms-transforms";
 
 import { TagDeleteDialog } from "./_components/tag-delete-dialog";
 import { TagFormDialog } from "./_components/tag-form-dialog";

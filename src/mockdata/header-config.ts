@@ -7,6 +7,7 @@ export type HeaderCategoryType = "category" | "page" | "news";
 export interface HeaderCategoryItem {
   id: string;
   name: string;
+  name_en?: string | null;
   slug: string;
   static_link: string;
   sort_order: number;
@@ -17,6 +18,7 @@ export interface HeaderCategoryItem {
   category_ids: string[];
   tagsearch_values: string[];
   description?: string;
+  description_en?: string | null;
   created_at?: string;
   updated_at?: string;
 }

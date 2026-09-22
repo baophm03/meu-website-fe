@@ -1,6 +1,4 @@
 @import 'tailwindcss';
-@import 'tailwindcss/preflight' layer(base);
-@import 'tailwindcss/theme' layer(theme);
 
 @plugin "tailwindcss-animate";
 
@@ -45,9 +43,9 @@
   --color-sidebar: hsl(var(--sidebar-background));
   --color-sidebar-foreground: hsl(var(--sidebar-foreground));
   --color-side-bar-primary: hsl(var(--sidebar-primary));
-  --color-side-bar-primary-foreground: hslvar(--sidebar-primary-foreground);
+  --color-side-bar-primary-foreground: hsl(var(--sidebar-primary-foreground));
   --color-side-bar-accent: hsl(var(--sidebar-accent));
-  --color-side-bar-accent-foreground: hslvar(--sidebar-accent-foreground);
+  --color-side-bar-accent-foreground: hsl(var(--sidebar-accent-foreground));
   --color-side-bar-border: hsl(var(--sidebar-border));
   --color-side-bar-ring: hsl(var(--sidebar-ring));
   --color-header-primary: hsl(var(--header-primary));
@@ -182,6 +180,15 @@
 }
 
 @layer base {
+
+  *,
+  ::before,
+  ::after,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: hsl(var(--border));
+  }
+
   .tiptap {
     @apply border-gray-200;
 

@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Link, usePathname } from "@/i18n/navigation";
-import { navigation } from "./nav-data";
+import { useCmsNavigation } from "./use-cms-navigation";
 import { cn } from "@/lib/utils";
 import { MegaPanel } from "./components/mega-panel";
 import { MobileDrawer } from "./components/mobile-drawer";
@@ -19,6 +19,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const hoverTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
+  const navItems = useCmsNavigation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -54,7 +55,7 @@ export default function Header() {
     if (hoverTimer.current) clearTimeout(hoverTimer.current);
   };
 
-  const activeItem = navigation.find((item) => item.label === openMenu && item.columns);
+  const activeItem = navItems.find((item) => item.label === openMenu && item.columns);
   const isHome = pathname === "/en" || pathname === "/vi" || pathname === "/";
   const overlay = isHome && !scrolled && !mobileOpen;
 
@@ -80,6 +81,7 @@ export default function Header() {
           <Image src="/logo.png" alt="" width={60} height={60} priority className="h-15 w-15 object-contain" />
         </Link>
         <DesktopNav
+          items={navItems}
           openMenu={openMenu}
           setOpenMenu={setOpenMenu}
           hoveredLabel={hoveredLabel}
@@ -102,7 +104,7 @@ export default function Header() {
 
       {searchOpen ? <SearchDropdown onClose={() => setSearchOpen(false)} /> : null}
 
-      {mobileOpen ? <MobileDrawer onClose={() => setMobileOpen(false)} /> : null}
+      {mobileOpen ? <MobileDrawer items={navItems} onClose={() => setMobileOpen(false)} /> : null}
     </header>
   );
 }

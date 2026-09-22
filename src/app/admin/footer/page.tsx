@@ -24,6 +24,7 @@ import {
 import type { Footer } from "@/api/models/footer";
 
 const PAGE_SIZE = 10;
+const FOOTER_CREATE_ID = "00000000-0000-0000-0000-000000000000";
 
 export default function AdminFooterPage() {
   const router = useRouter();
@@ -100,7 +101,7 @@ export default function AdminFooterPage() {
           </div>
         }
         onSearchChange={setSearch}
-        onActionClick={() => router.push("/admin/footer/create")}
+        onActionClick={() => router.push(`/admin/footer/edit/${FOOTER_CREATE_ID}`)}
       >
         <Table>
           <TableHeader>

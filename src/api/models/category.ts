@@ -10,6 +10,8 @@ import type { CategoryThumbnail } from './categoryThumbnail';
 export interface Category {
   id?: string;
   name?: string;
+  /** @nullable */
+  name_en?: string | null;
   slug?: string;
   /** @nullable */
   url?: string | null;
@@ -32,4 +34,8 @@ export interface Category {
   type?: string | null;
   /** @nullable */
   parent_id?: string | null;
+  /** @nullable */
+  description?: string | null;
+  /** @nullable */
+  description_en?: string | null;
 }

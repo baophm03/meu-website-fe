@@ -97,9 +97,8 @@ function RemoveButton({ onRemove, small }: { onRemove: () => void; small?: boole
     <button
       type="button"
       onClick={onRemove}
-      className={`flex items-center justify-center rounded-md transition hover:bg-red-50 ${
-        small ? "h-7 w-7" : "h-8 w-8"
-      }`}
+      className={`flex items-center justify-center rounded-md transition hover:bg-red-50 ${small ? "h-7 w-7" : "h-8 w-8"
+        }`}
       title="Xóa"
     >
       <Trash2 className={`${small ? "h-3.5 w-3.5" : "h-4 w-4"} text-red-600`} />
@@ -183,17 +182,18 @@ export function FooterEditor(props: EditorProps) {
           <Card key={`col-${colIdx}`}>
             <div className="space-y-4 p-5">
               <div className="flex items-center justify-between border-b pb-3">
-                <div className="flex flex-1 items-center gap-3">
-                  <span className="flex-shrink-0 text-sm font-medium text-slate-500">
-                    Cột {colIdx + 1}
-                  </span>
+                <div className="flex items-center gap-2">
+                  <Columns3 className="h-4 w-4 text-slate-500" />
+                  <span className="text-sm font-medium text-slate-500">Cột {colIdx + 1}</span>
+                </div>
+                <div className="flex items-center gap-1">
                   <MoveButtons
                     onMove={(dir) => onMoveColumn(colIdx, dir)}
                     disableUp={colIdx === 0}
                     disableDown={colIdx === columns.length - 1}
                   />
+                  <RemoveButton onRemove={() => onRemoveColumn(colIdx)} />
                 </div>
-                <RemoveButton onRemove={() => onRemoveColumn(colIdx)} />
               </div>
 
               <Input
@@ -216,13 +216,15 @@ export function FooterEditor(props: EditorProps) {
                         <span className="text-xs font-medium text-slate-500">
                           Hàng {rowIdx + 1}
                         </span>
+                      </div>
+                      <div className="flex items-center gap-1">
                         <MoveButtons
                           onMove={(dir) => onMoveRow(colIdx, rowIdx, dir)}
                           disableUp={rowIdx === 0}
                           disableDown={rowIdx === column.rows.length - 1}
                         />
+                        <RemoveButton small onRemove={() => onRemoveRow(colIdx, rowIdx)} />
                       </div>
-                      <RemoveButton small onRemove={() => onRemoveRow(colIdx, rowIdx)} />
                     </div>
 
                     {/* Elements */}
@@ -241,46 +243,45 @@ export function FooterEditor(props: EditorProps) {
                             className="space-y-2 rounded-md border border-slate-200 bg-white p-3"
                           >
                             <div className="flex items-center justify-between">
-                              <MoveButtons
-                                onMove={(dir) => onMoveElement(colIdx, rowIdx, elIdx, dir)}
-                                disableUp={elIdx === 0}
-                                disableDown={elIdx === row.elements.length - 1}
-                              />
-                              <RemoveButton
-                                small
-                                onRemove={() => onRemoveElement(colIdx, rowIdx, elIdx)}
-                              />
-                            </div>
-
-                            <div className="mb-1 flex gap-1">
-                              <Button
-                                type="button"
-                                variant={el.type === "text" ? "default" : "outline"}
-                                size="sm"
-                                className={`h-7 px-2 ${
-                                  el.type === "text" ? "bg-[#063e8e] hover:bg-[#063e8e]/90" : ""
-                                }`}
-                                onClick={() =>
-                                  onUpdateElement(colIdx, rowIdx, elIdx, "type", "text")
-                                }
-                              >
-                                <Type className="mr-1 h-3 w-3" />
-                                Text
-                              </Button>
-                              <Button
-                                type="button"
-                                variant={el.type === "image" ? "default" : "outline"}
-                                size="sm"
-                                className={`h-7 px-2 ${
-                                  el.type === "image" ? "bg-[#063e8e] hover:bg-[#063e8e]/90" : ""
-                                }`}
-                                onClick={() =>
-                                  onUpdateElement(colIdx, rowIdx, elIdx, "type", "image")
-                                }
-                              >
-                                <ImageIcon className="mr-1 h-3 w-3" />
-                                Image
-                              </Button>
+                              <div className="flex gap-1">
+                                <Button
+                                  type="button"
+                                  variant={el.type === "text" ? "default" : "outline"}
+                                  size="sm"
+                                  className={`h-7 px-2 ${el.type === "text" ? "bg-[#063e8e] hover:bg-[#063e8e]/90" : ""
+                                    }`}
+                                  onClick={() =>
+                                    onUpdateElement(colIdx, rowIdx, elIdx, "type", "text")
+                                  }
+                                >
+                                  <Type className="mr-1 h-3 w-3" />
+                                  Text
+                                </Button>
+                                <Button
+                                  type="button"
+                                  variant={el.type === "image" ? "default" : "outline"}
+                                  size="sm"
+                                  className={`h-7 px-2 ${el.type === "image" ? "bg-[#063e8e] hover:bg-[#063e8e]/90" : ""
+                                    }`}
+                                  onClick={() =>
+                                    onUpdateElement(colIdx, rowIdx, elIdx, "type", "image")
+                                  }
+                                >
+                                  <ImageIcon className="mr-1 h-3 w-3" />
+                                  Image
+                                </Button>
+                              </div>
+                              <div className="flex items-center gap-1">
+                                <MoveButtons
+                                  onMove={(dir) => onMoveElement(colIdx, rowIdx, elIdx, dir)}
+                                  disableUp={elIdx === 0}
+                                  disableDown={elIdx === row.elements.length - 1}
+                                />
+                                <RemoveButton
+                                  small
+                                  onRemove={() => onRemoveElement(colIdx, rowIdx, elIdx)}
+                                />
+                              </div>
                             </div>
 
                             <div className="grid grid-cols-1 gap-2">

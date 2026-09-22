@@ -1,9 +1,8 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import type { ReactNode } from "react";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { PageHero, Section, SectionHead, CtaSection, PrimaryButton, SecondaryButton, label, displayHeading } from "../_components/section-primitives";
+import { PageHero, Section, SectionHead, CtaSection, PrimaryButton, SecondaryButton, label } from "../_components/section-primitives";
 
 const businessItems = ["item1", "item2", "item3", "item4", "item5", "item6", "item7"] as const;
 const techItems = ["item1", "item2", "item3", "item4", "item5", "item6", "item7", "item8"] as const;

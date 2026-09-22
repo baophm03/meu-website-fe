@@ -1,10 +1,11 @@
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { ChevronDown } from "lucide-react";
-import { navigation } from "../nav-data";
+import type { NavItem } from "../nav-data";
 import { cn } from "@/lib/utils";
 
 type DesktopNavProps = {
+  items: NavItem[];
   openMenu: string | null;
   setOpenMenu: (value: string | null) => void;
   hoveredLabel: string | null;
@@ -15,6 +16,7 @@ type DesktopNavProps = {
 };
 
 export function DesktopNav({
+  items,
   openMenu,
   setOpenMenu,
   hoveredLabel,
@@ -27,7 +29,7 @@ export function DesktopNav({
 
   return (
     <nav aria-label={t("actions.mainNavigation")} className="hidden h-full items-stretch gap-0.5 lg:flex">
-      {navigation.map((item) => {
+      {items.map((item) => {
         const expanded = openMenu === item.label;
         const hovered = hoveredLabel === item.label;
         const displayLabel = item.labelKey ? t(item.labelKey) : item.label;

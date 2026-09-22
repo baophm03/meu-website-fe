@@ -25,7 +25,7 @@ import {
   buildHeaderItemsFromCategories,
   buildStaticLink,
   toCategoryApiType,
-} from "@/lib/api/cms-transforms";
+} from "@/utils/cms-transforms";
 import {
   buildHeaderCategoryTree,
   HeaderCategoryItem,
@@ -35,11 +35,13 @@ import {
 
 const EMPTY_HEADER_CATEGORY_FORM: HeaderCategoryFormValues = {
   name: "",
+  name_en: "",
   slug: "",
   sort_order: "1",
   parent_id: "",
   type: "page",
   description: "",
+  description_en: "",
 };
 
 const PROTECTED_HOME_CATEGORY_ID = "root-home";
@@ -54,11 +56,13 @@ function toFormValues(item?: CmsHeaderCategoryItem | null): HeaderCategoryFormVa
   return {
     id: item.id,
     name: item.name,
+    name_en: item.name_en ?? "",
     slug: item.slug,
     sort_order: String(item.sort_order),
     parent_id: item.parent_id ?? "",
     type: item.type,
     description: item.description ?? "",
+    description_en: item.description_en ?? "",
   };
 }
 
@@ -186,8 +190,13 @@ export default function HeaderConfigPage() {
   }, [expanded, flatRows, search]);
 
   const categoryParentOptions = React.useMemo(
-    () => tree.filter((item) => item.type === "category"),
-    [tree],
+    () => flatRows.filter((item) => item.type === "category" && item.depth <= 1),
+    [flatRows],
+  );
+
+  const depthMap = React.useMemo(
+    () => new Map(flatRows.map((item) => [item.id, item.depth])),
+    [flatRows],
   );
 
   const editingItem = React.useMemo(
@@ -195,10 +204,18 @@ export default function HeaderConfigPage() {
     [flatRows, formValues.id],
   );
 
-  const canChangeParent = React.useMemo(() => {
-    if (!editingItem) return true;
-    return editingItem.children.length === 0 || !formValues.parent_id;
-  }, [editingItem, formValues.parent_id]);
+  const parentOptionsForForm = React.useMemo(() => {
+    const maxDepth = editingItem && editingItem.children.length > 0 ? 0 : 1;
+    const excluded = new Set<string>();
+    const walk = (node: HeaderCategoryTreeItem) => {
+      excluded.add(node.id);
+      node.children.forEach(walk);
+    };
+    if (editingItem) walk(editingItem);
+    return categoryParentOptions.filter(
+      (item) => item.depth <= maxDepth && !excluded.has(item.id),
+    );
+  }, [categoryParentOptions, editingItem]);
 
   const openCreateRoot = () => {
     setFormMode("create");
@@ -207,7 +224,8 @@ export default function HeaderConfigPage() {
   };
 
   const openCreateChild = (item: HeaderCategoryTreeItem) => {
-    if (item.parent_id || item.type !== "category") return;
+    const depth = (item as HeaderCategoryFlatRow).depth ?? 0;
+    if (item.type !== "category" || depth > 1) return;
 
     setFormMode("create");
     setFormValues({
@@ -261,22 +279,26 @@ export default function HeaderConfigPage() {
       return;
     }
 
+    const parentDepth = formValues.parent_id
+      ? (depthMap.get(formValues.parent_id) ?? -1)
+      : -1;
+
     if (formValues.parent_id) {
-      const parent = tree.find((item) => item.id === formValues.parent_id);
-      if (!parent || parent.type !== "category") {
+      const parent = itemMap.get(formValues.parent_id);
+      if (!parent || parent.type !== "category" || parentDepth > 1) {
         toast.error("Danh mục cha không hợp lệ");
         return;
       }
     }
 
-    if (formValues.parent_id && formValues.type === "category") {
-      toast.error("Danh mục con không được có thể loại Danh mục");
+    if (formValues.type === "category" && parentDepth > 0) {
+      toast.error("Danh mục cấp 3 không được có thể loại Danh mục");
       return;
     }
 
-    if (editingItem && editingItem.children.length > 0 && formValues.parent_id) {
+    if (editingItem && editingItem.children.length > 0 && parentDepth > 0) {
       toast.error(
-        "Danh mục đang có danh mục con nên không thể chuyển thành danh mục con",
+        "Danh mục đang có danh mục con chỉ có thể đặt ở cấp gốc hoặc cấp 2",
       );
       return;
     }
@@ -293,31 +315,40 @@ export default function HeaderConfigPage() {
     try {
       const payload = {
         name: formValues.name.trim(),
+        name_en: formValues.name_en.trim() || null,
         slug: formValues.slug.trim() || toSlug(formValues.name),
         sort_order: Number(formValues.sort_order) || 1,
         type: formValues.type,
         api_parent_id: parentContext.apiParentId,
         parent_static_link: parentContext.parentStaticLink,
+        description: formValues.description.trim() || null,
+        description_en: formValues.description_en.trim() || null,
       };
 
       if (formMode === "create") {
         await postApiV10Category({
           name: payload.name,
+          name_en: payload.name_en,
           slug: payload.slug,
           url: buildStaticLink(payload.slug, parentContext.parentStaticLink),
           sort_order: payload.sort_order,
           parent_id: payload.api_parent_id || undefined,
           type: toCategoryApiType(payload.type),
+          description: payload.description,
+          description_en: payload.description_en,
         });
         toast.success("Tạo danh mục thành công");
       } else if (formValues.id) {
         await putApiV10CategoryId(formValues.id, {
           name: payload.name,
+          name_en: payload.name_en,
           slug: payload.slug,
           url: buildStaticLink(payload.slug, parentContext.parentStaticLink),
           sort_order: payload.sort_order,
           parent_id: payload.api_parent_id || undefined,
           type: toCategoryApiType(payload.type),
+          description: payload.description,
+          description_en: payload.description_en,
         });
         toast.success("Cập nhật danh mục thành công");
       }
@@ -405,8 +436,8 @@ export default function HeaderConfigPage() {
         mode={formMode}
         open={formOpen}
         values={formValues}
-        parentOptions={categoryParentOptions}
-        canChangeParent={canChangeParent}
+        parentOptions={parentOptionsForForm}
+        canChangeParent
         onOpenChange={setFormOpen}
         onValuesChange={setFormValues}
         onSubmit={() => void handleSubmit()}

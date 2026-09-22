@@ -23,10 +23,6 @@ const ADMIN_LANDING_ROUTES: AdminLandingRoute[] = [
     permission: { action: "VIEW", subject: "POSTS" }
   },
   {
-    path: "/admin/base-config",
-    permission: { action: "VIEW", subject: "SETTINGS" }
-  },
-  {
     path: "/admin/users",
     permission: { action: "VIEW", subject: "USERS" }
   },

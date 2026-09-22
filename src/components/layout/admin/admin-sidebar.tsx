@@ -6,35 +6,22 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   ChevronDown,
-  Globe,
   ImagePlus,
+  Inbox,
   Layers,
   Mail,
   Megaphone,
   Newspaper,
   PanelBottom,
-  Settings,
-  Sparkles,
   Tags,
   UserCog,
   Shield,
   KeyRound,
   Video,
 } from "lucide-react";
-import { useGetApiV10Logo } from "@/api/endpoints/logo";
-import type { Logo } from "@/api/models/logo";
-import links from "@/links";
 import { useSidebarStore } from "@/hooks/use-admin-sidebar";
 import { ability, type Actions } from "@/config/casl/ability";
 import { cn } from "@/lib/utils";
-
-type LogoListEnvelope = {
-  data?: {
-    responseData?: {
-      rows?: Logo[];
-    };
-  };
-};
 
 type NavChild = {
   name: string;
@@ -53,12 +40,6 @@ type NavItem = {
 // Navigation với permissions
 const navigation: NavItem[] = [
   {
-    name: "Cấu hình chung",
-    href: "/admin/base-config",
-    icon: Settings,
-    permission: { action: "VIEW", subject: "SETTINGS" },
-  },
-  {
     name: "Cấu hình danh mục",
     href: "/admin/header-config",
     icon: Layers,
@@ -69,6 +50,12 @@ const navigation: NavItem[] = [
     href: "/admin/news",
     icon: Newspaper,
     permission: { action: "VIEW", subject: "POSTS" },
+  },
+  {
+    name: "Quản lý leads",
+    href: "/admin/contact-management/contact-requests",
+    icon: Inbox,
+    permission: { action: "VIEW", subject: "CONTACT" },
   },
   {
     name: "Quản lý tag tìm kiếm",
@@ -138,23 +125,6 @@ export function AdminSidebar() {
   const [expandedGroups, setExpandedGroups] = React.useState<Record<string, boolean>>({});
 
 
-  const { data: logoData } = useGetApiV10Logo(
-    {
-      page: 1,
-      pageSize: 1,
-      sortField: "updated_at",
-      sortOrder: "desc",
-    },
-    {
-      query: {
-        select: (response: unknown) => {
-          const responseData = (response as LogoListEnvelope)?.data?.responseData;
-          return responseData?.rows?.[0] ?? null;
-        },
-      },
-    }
-  );
-
   const hasPermission = (permission: { action: string; subject: string } | undefined) => {
     if (!permission) return true;
     return ability.can(permission.action as Actions, permission.subject);
@@ -213,8 +183,8 @@ export function AdminSidebar() {
           >
             <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-[#063e8e]/10 bg-[#f8fbff] shadow-sm">
               <Image
-                src={logoData?.logo_url ? links.resolveImageUrl(logoData.logo_url) : "/logo.png"}
-                alt={logoData?.logo_name || "VCCI HCM"}
+                src="/logo.png"
+                alt="VCCI HCM"
                 width={40}
                 height={40}
                 className="h-10 w-10 object-contain"
@@ -225,7 +195,7 @@ export function AdminSidebar() {
             {isOpen ? (
               <div className="min-w-0">
                 <div className="truncate text-[13px] font-bold uppercase tracking-[0.22em] text-[#063e8e]">
-                  {logoData?.logo_name || "VCCI News"}
+                  VCCI News
                 </div>
                 <div className="mt-1 text-sm leading-5 text-slate-600">
                   Trang quản trị website
@@ -234,17 +204,6 @@ export function AdminSidebar() {
             ) : null}
           </Link>
         </div>
-
-        {/* Main Navigation */}
-        <div className="px-4 pb-2">
-          {isOpen ? (
-            <div className="flex items-center gap-2 px-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
-              <Sparkles className="h-3.5 w-3.5 text-[#063e8e]" />
-              Điều hướng quản trị
-            </div>
-          ) : null}
-        </div>
-
         <nav
           className={cn(
             "scrollbar flex-1 space-y-3 overflow-y-auto px-4 pb-5 pt-2",
@@ -368,39 +327,6 @@ export function AdminSidebar() {
             </>
           )}
         </nav>
-
-        {/* Footer */}
-        <div className="px-4 pb-5 pt-3">
-          {isOpen ? (
-            <div className="rounded-[28px] border border-white/80 bg-white/95 p-4 shadow-[0_14px_32px_rgba(6,62,142,0.08)]">
-              <Link
-                href="/"
-                onClick={handleMobileNavigate}
-                className="flex items-center gap-3 text-sm font-semibold text-[#063e8e] transition hover:opacity-80"
-              >
-                <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#edf4ff] text-[#063e8e]">
-                  <Globe className="h-4 w-4" />
-                </div>
-                <div>
-                  <div>Về trang chủ</div>
-                  <div className="mt-0.5 text-xs font-medium text-slate-500">Website công khai</div>
-                </div>
-              </Link>
-              <div className="mt-3 border-t border-slate-100 pt-3 text-xs text-slate-500">
-                © 2026 VCCI HCM
-              </div>
-            </div>
-          ) : (
-            <Link
-              href="/"
-              onClick={handleMobileNavigate}
-              title="Về trang chủ"
-              className="mx-auto flex h-14 w-14 items-center justify-center rounded-[22px] border border-white/80 bg-white/95 text-[#063e8e] shadow-sm transition hover:bg-white"
-            >
-              <Globe className="h-5 w-5" />
-            </Link>
-          )}
-        </div>
       </div>
     </aside>
   );

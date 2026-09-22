@@ -6,7 +6,6 @@ import dayjs from "dayjs";
 import {
   ArrowRight,
   FolderTree,
-  Globe,
   Image as ImageIcon,
   LayoutTemplate,
   Mail,
@@ -26,7 +25,6 @@ import {
   readAdminMediaItems,
   readAdminNewsItems,
 } from "@/mockdata/admin-news";
-import { type BaseConfigData, readBaseConfig } from "@/mockdata/base-config";
 import {
   type ContactRequestItem,
   type MembershipApplicationItem,
@@ -91,8 +89,6 @@ export default function AdminDashboardPage() {
   const [membershipApplications, setMembershipApplications] = React.useState<
     MembershipApplicationItem[]
   >([]);
-  const [baseConfig, setBaseConfig] = React.useState<BaseConfigData>(() => readBaseConfig());
-
   React.useEffect(() => {
     setNewsItems(readAdminNewsItems());
     setMediaItems(readAdminMediaItems());
@@ -103,7 +99,6 @@ export default function AdminDashboardPage() {
     setNewsletterItems(readNewsletterSubscriptions());
     setContactRequests(readContactRequests());
     setMembershipApplications(readMembershipApplications());
-    setBaseConfig(readBaseConfig());
     setReady(true);
   }, []);
 
@@ -157,12 +152,6 @@ export default function AdminDashboardPage() {
 
   const shortcuts = React.useMemo<DashboardShortcut[]>(
     () => [
-      {
-        title: "Cấu hình chung",
-        description: "Logo, banner, chi nhánh liên hệ và mạng xã hội",
-        href: "/admin/base-config",
-        icon: Globe,
-      },
       {
         title: "Cấu hình danh mục",
         description: "Menu header và bài viết theo danh mục",
@@ -227,14 +216,7 @@ export default function AdminDashboardPage() {
   }, [contactRequests, mediaItems, membershipApplications, newsItems]);
 
   const spotlightNews = React.useMemo(() => newsItems.slice(0, 3), [newsItems]);
-  const visibleSocials = React.useMemo(
-    () => baseConfig.socials.filter((item) => item.isVisible).sort((a, b) => a.sortOrder - b.sortOrder),
-    [baseConfig.socials],
-  );
-  const activeBanners = React.useMemo(
-    () => baseConfig.banners.filter((item) => item.isActive).sort((a, b) => a.sortOrder - b.sortOrder),
-    [baseConfig.banners],
-  );
+
 
   if (!ready) {
     return (
@@ -251,7 +233,7 @@ export default function AdminDashboardPage() {
 
   return (
     <div className="space-y-6">
-      <section className="grid gap-5 xl:grid-cols-[1.35fr_0.65fr]">
+      <section className="grid gap-5">
         <Card className="overflow-hidden rounded-[30px] border-[#063e8e]/10 bg-[linear-gradient(135deg,#ffffff_0%,#f5f9ff_55%,#ebf3ff_100%)] shadow-[0_18px_55px_rgba(6,62,142,0.08)]">
           <CardContent className="p-6 sm:p-7">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
@@ -293,40 +275,6 @@ export default function AdminDashboardPage() {
           </CardContent>
         </Card>
 
-        <Card className="rounded-[30px] border-[#063e8e]/10 shadow-sm">
-          <CardHeader className="pb-3">
-            <CardTitle className="text-xl text-[#163b73]">Thông tin website</CardTitle>
-            <CardDescription className="text-slate-600">
-              Tóm tắt nhận diện và cấu hình chung đang hiển thị.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="rounded-[24px] border border-[#063e8e]/10 bg-[#f8fbff] p-4">
-              <div className="text-xs uppercase tracking-[0.14em] text-slate-400">Website</div>
-              <div className="mt-2 text-lg font-semibold text-[#163b73]">{baseConfig.websiteName}</div>
-              <div className="mt-1 truncate text-sm text-slate-500">{baseConfig.websiteLink}</div>
-            </div>
-
-            <div className="grid gap-3 sm:grid-cols-2">
-              <div className="rounded-[24px] border border-[#063e8e]/10 bg-white p-4">
-                <div className="text-xs uppercase tracking-[0.14em] text-slate-400">Banner hoạt động</div>
-                <div className="mt-2 text-2xl font-semibold text-[#163b73]">{activeBanners.length}</div>
-              </div>
-              <div className="rounded-[24px] border border-[#063e8e]/10 bg-white p-4">
-                <div className="text-xs uppercase tracking-[0.14em] text-slate-400">Mạng xã hội hiển thị</div>
-                <div className="mt-2 text-2xl font-semibold text-[#163b73]">{visibleSocials.length}</div>
-              </div>
-            </div>
-
-            <div className="rounded-[24px] border border-[#063e8e]/10 bg-white p-4">
-              <div className="text-xs uppercase tracking-[0.14em] text-slate-400">Chi nhánh liên hệ</div>
-              <div className="mt-2 text-lg font-semibold text-[#163b73]">{baseConfig.branches.length} địa điểm</div>
-              <div className="mt-1 text-sm text-slate-500">
-                {baseConfig.branches[0]?.branchName || "Chưa có chi nhánh nào được cấu hình"}
-              </div>
-            </div>
-          </CardContent>
-        </Card>
       </section>
 
       <section className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -518,7 +466,6 @@ export default function AdminDashboardPage() {
               { label: "Video", value: videos.length, icon: MonitorPlay },
               { label: "Lĩnh vực hội viên", value: memberFields.length, icon: FolderTree },
               { label: "Khu vực hội viên", value: memberRegions.length, icon: MapPin },
-              { label: "Chi nhánh liên hệ", value: baseConfig.branches.length, icon: Globe },
             ].map((item) => (
               <div
                 key={item.label}
