@@ -1,7 +1,8 @@
 import { useTranslations } from "next-intl";
-import { Check, ClipboardList, Wrench } from "lucide-react";
+import { Check, ClipboardList, Users, Wrench } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SafeImage } from "@/components/shared/safe-image";
+import { AbstractPanel } from "@/components/shared/abstract-panel";
 import { ScrollReveal } from "@/components/shared/scroll-reveal";
 import { PageHero, Section, SectionHead, CtaSection, label, displayHeading } from "@/app/[locale]/(main)/_components/section-primitives";
 import PagePostsSection from "./_components/page-posts-section";
@@ -144,7 +145,11 @@ function CaseStudiesSection({ t }: { t: ReturnType<typeof useTranslations> }) {
             return (
               <article key={prefix} data-case className="flex flex-col overflow-hidden rounded-2xl border border-border bg-white/80 backdrop-blur-sm transition duration-300 hover:border-primary/40">
                 <div className="relative aspect-[16/7] w-full shrink-0">
-                  <SafeImage src={caseImage} alt="" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+                  {caseIndex === 1 ? (
+                    <AbstractPanel icon={Users} />
+                  ) : (
+                    <SafeImage src={caseImage} alt="" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+                  )}
                 </div>
                 <div className="flex flex-1 flex-col p-7 sm:p-9">
                   <h3 className={cn(displayHeading, "text-[22px] uppercase leading-[1.15] tracking-wide text-foreground sm:text-[26px]")}>{t(`${prefix}Name`)}</h3>

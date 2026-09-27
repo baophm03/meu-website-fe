@@ -1,7 +1,8 @@
 import { useTranslations } from "next-intl";
-import { Check, ClipboardList, Wrench } from "lucide-react";
+import { Check, ClipboardList, ShoppingBag, Wrench } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SafeImage } from "@/components/shared/safe-image";
+import { AbstractPanel } from "@/components/shared/abstract-panel";
 import { ScrollReveal } from "@/components/shared/scroll-reveal";
 import { PageHero, Section, SectionHead, CtaSection, label, displayHeading } from "@/app/[locale]/(main)/_components/section-primitives";
 import PagePostsSection from "./_components/page-posts-section";
@@ -71,10 +72,15 @@ function SolutionsSection({ t }: { t: ReturnType<typeof useTranslations> }) {
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {SOLUTIONS.map((prefix, i) => {
             const imageKey = ["solutions", "bridge", "case1", "case2", "hero", "challenges"][i] as keyof typeof IMAGES;
+            const isRisky = imageKey === "solutions" || imageKey === "bridge";
             return (
               <div key={prefix} data-solution className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-white/70 backdrop-blur-sm transition duration-300 hover:border-primary/40">
                 <div className="relative aspect-[16/9] w-full shrink-0">
-                  <SafeImage src={IMAGES[imageKey]} alt="" fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                  {isRisky ? (
+                    <AbstractPanel icon={ShoppingBag} />
+                  ) : (
+                    <SafeImage src={IMAGES[imageKey]} alt="" fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                  )}
                 </div>
                 <div className="flex flex-1 flex-col gap-3 p-6">
                   <span className={cn(label, "text-primary")}>{`0${i + 1}`}</span>
@@ -135,7 +141,7 @@ function BridgeSection({ t }: { t: ReturnType<typeof useTranslations> }) {
     <Section variant="light" className="bg-transparent">
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-border bg-muted shadow-[0_24px_70px_-32px_rgba(15,23,42,0.35)]">
-          <SafeImage src={IMAGES.bridge} alt="" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+          <AbstractPanel icon={ShoppingBag} />
         </div>
         <div>
           <h2 className={cn(displayHeading, "max-w-[560px] text-[28px] leading-[1.08] text-foreground sm:text-[36px] lg:text-[42px]")}>{t("bridgeHeading")}</h2>

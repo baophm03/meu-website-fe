@@ -48,9 +48,10 @@ import ProductsAiPage from "./static-pages/products-ai";
 import ProductsCommercePage from "./static-pages/products-commerce";
 import ProductsEnterprisePage from "./static-pages/products-enterprise";
 import ProductsIndustryPage from "./static-pages/products-industry";
-import ProductsMeosPage from "./static-pages/products-meos";
+import ProductsMeosEcosystemPage from "./static-pages/products-meos-ecosystem";
 import ProductsMeos365Page from "./static-pages/products-meos-365";
 import ProductsMeosEcommercePage from "./static-pages/products-meos-ecommerce";
+import ProductsMeosHicarePage from "./static-pages/products-meos-hicare";
 import ProductsMeosMiniappPage from "./static-pages/products-meos-miniapp";
 import ProductsMeosOmniPage from "./static-pages/products-meos-omni";
 // solutions
@@ -245,7 +246,7 @@ export default async function Page({ params, searchParams }: Props) {
     case "enterprise":
       return <ProductsEnterprisePage />;
     case "meos-ecosystem":
-      return <ProductsMeosPage />;
+      return <ProductsMeosEcosystemPage />;
     case "meos-365":
       return <ProductsMeos365Page />;
     case "meos-ecommerce":
@@ -254,6 +255,8 @@ export default async function Page({ params, searchParams }: Props) {
       return <ProductsMeosMiniappPage />;
     case "meos-omni":
       return <ProductsMeosOmniPage />;
+    case "meos-hicare":
+      return <ProductsMeosHicarePage />;
     case "ai-consulting":
       return <SolutionsAiConsultingPage slug={slug} />;
     case "ai-engineering":

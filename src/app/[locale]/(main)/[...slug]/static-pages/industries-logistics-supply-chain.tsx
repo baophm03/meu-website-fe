@@ -1,7 +1,8 @@
 import { useTranslations } from "next-intl";
-import { Check, ClipboardList, Wrench } from "lucide-react";
+import { Check, ClipboardList, Truck, Wrench } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SafeImage } from "@/components/shared/safe-image";
+import { AbstractPanel } from "@/components/shared/abstract-panel";
 import { ScrollReveal } from "@/components/shared/scroll-reveal";
 import { PageHero, Section, SectionHead, CtaSection, label, displayHeading } from "@/app/[locale]/(main)/_components/section-primitives";
 import PagePostsSection from "./_components/page-posts-section";
@@ -59,11 +60,15 @@ function SolutionsSection({ t }: { t: ReturnType<typeof useTranslations> }) {
         <div className="space-y-6">
           {SOLUTIONS.map((prefix, i) => {
             const reversed = i % 2 === 1;
-            const image = IMAGES[["solutions", "bridge", "case1", "case2", "hero", "challenges"][i % 6] as keyof typeof IMAGES];
+            const imageKey = ["solutions", "bridge", "case1", "case2", "hero", "challenges"][i % 6] as keyof typeof IMAGES;
             return (
               <div key={prefix} data-solution className={cn("grid items-center gap-8 overflow-hidden rounded-2xl border border-border bg-white/70 backdrop-blur-sm lg:grid-cols-2", reversed && "lg:[&>*:first-child]:order-2")}>
                 <div className="relative aspect-[16/9] w-full lg:aspect-auto lg:h-full lg:min-h-[240px]">
-                  <SafeImage src={image} alt="" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+                  {imageKey === "solutions" ? (
+                    <AbstractPanel icon={Truck} />
+                  ) : (
+                    <SafeImage src={IMAGES[imageKey]} alt="" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+                  )}
                 </div>
                 <div className="flex flex-col gap-3 p-7 sm:p-9">
                   <span className={cn(label, "flex items-center gap-2 text-primary")}>
