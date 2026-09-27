@@ -15,7 +15,7 @@ import PagePostsSection from "./_components/page-posts-section";
 const IMAGES = {
   hero: "/images/industries/healthcare/healthcare-1.jpg",
   challenges: "/images/industries/healthcare/healthcare-2.jpg",
-  solutions: "/images/industries/healthcare/healthcare-3.jpg",
+  solutions: "/images/industries/healthcare/healthcare-7.jpg",
   bridge: "/images/industries/healthcare/healthcare-4.jpg",
   case1: "/images/industries/healthcare/healthcare-5.jpg",
   case2: "/images/industries/healthcare/healthcare-6.jpg",
