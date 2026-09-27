@@ -1,9 +1,9 @@
-import { Link, usePathname, useRouter } from "@/i18n/navigation";
-import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { type Dispatch, type SetStateAction } from "react";
-import { ArrowRight, Globe, Menu, Search, X } from "lucide-react";
+import { Menu, Search, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { routing } from "@/i18n/routing";
+import { LanguageSwitcher } from "./language-switcher";
 
 type HeaderActionsProps = {
   searchOpen: boolean;
@@ -20,15 +20,7 @@ export function HeaderActions({
   setMobileOpen,
   dark,
 }: HeaderActionsProps) {
-  const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
   const t = useTranslations();
-  const nextLocale = routing.locales.find((l) => l !== locale) ?? routing.defaultLocale;
-
-  const switchLocale = () => {
-    router.replace(pathname, { locale: nextLocale });
-  };
 
   return (
     <div className="flex items-center gap-1.5">
@@ -44,18 +36,7 @@ export function HeaderActions({
       >
         {searchOpen ? <X className="h-5 w-5" /> : <Search className="h-5 w-5" />}
       </button>
-      <button
-        type="button"
-        onClick={switchLocale}
-        aria-label={t("actions.switchLanguage", { locale: locale.toUpperCase() })}
-        className={cn(
-          "hidden h-10 items-center gap-1.5 rounded-lg px-2.5 text-[13px] font-semibold uppercase transition sm:flex",
-          dark ? "text-white/80 hover:bg-white/10 hover:text-white" : "text-muted-foreground hover:bg-muted hover:text-foreground",
-        )}
-      >
-        <Globe aria-hidden="true" className="h-4 w-4" />
-        {nextLocale}
-      </button>
+      <LanguageSwitcher dark={dark} />
       <Link
         href="/contact"
         className={cn(

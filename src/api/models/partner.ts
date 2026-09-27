@@ -5,26 +5,23 @@
  * Coded by Meu TEAM
  * OpenAPI spec version: 1.0.0
  */
-import type { PartnerPartnerType } from './partnerPartnerType';
+import type { PartnerLogoSummary } from './partnerLogoSummary';
 
 export interface Partner {
   id: string;
-  /** @maxLength 255 */
-  slug: string;
-  /** @maxLength 255 */
   name: string;
+  slug: string;
+  industry_ids: string[];
   /** @nullable */
-  description?: string | null;
+  logo: PartnerLogoSummary;
   /** @nullable */
-  logo_id?: string | null;
-  /**
-   * @maxLength 500
-   * @nullable
-   */
-  website?: string | null;
-  partner_type: PartnerPartnerType;
-  sort_order: number;
-  is_active: boolean;
+  rating: number | null;
+  /** @nullable */
+  address: string | null;
+  /** @nullable */
+  phone: string | null;
+  /** @nullable */
+  website: string | null;
   created_at: string;
   /** @nullable */
   created_by?: string | null;

@@ -1,80 +1,23 @@
 import { Link } from "@/i18n/navigation";
-import type { ReactNode } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Reveal } from "@/components/shared/reveal";
+import { SafeImage } from "@/components/shared/safe-image";
+import { ScrollReveal } from "@/components/shared/scroll-reveal";
 import { useTranslations } from "next-intl";
 
 const shell = "container";
 const displayHeading = "font-medium tracking-[-0.045em] text-balance";
-const label = "text-[10px] font-bold uppercase tracking-[0.16em] sm:text-[11px]";
 
-function Section({
-  id,
-  variant = "white",
-  className,
-  children,
-  labelledBy,
-}: {
-  id?: string;
-  variant?: "white" | "surface" | "dark";
-  className?: string;
-  children: ReactNode;
-  labelledBy?: string;
-}) {
-  const variants = {
-    white: "bg-background text-foreground",
-    surface: "bg-muted text-foreground",
-    dark: "bg-surface-dark-soft text-white",
-  } as const;
-  return (
-    <section id={id} aria-labelledby={labelledBy} className={cn("scroll-mt-20 py-16 sm:py-24 lg:py-[128px]", variants[variant], className)}>
-      <Reveal className={shell}>{children}</Reveal>
-    </section>
-  );
-}
+const CHALLENGE_IMAGES = [
+  "/images/solutions/website-ops.jpg",
+  "/images/industries/retail.jpg",
+  "/images/industries/associations.jpg",
+  "/images/industries/logistics.jpg",
+  "/images/solutions/enterprise-management.jpg",
+  "/images/solutions/digital-transformation.jpg",
+] as const;
 
-function SectionHead({
-  id,
-  index,
-  eyebrow,
-  title,
-  summary,
-  tone = "light",
-  action,
-}: {
-  id?: string;
-  index?: string;
-  eyebrow: string;
-  title: ReactNode;
-  summary?: string;
-  tone?: "light" | "dark";
-  action?: ReactNode;
-}) {
-  const dark = tone === "dark";
-  return (
-    <div className="mb-12 grid gap-6 sm:mb-16 lg:mb-20 lg:grid-cols-[minmax(0,1fr)_2.15fr] lg:gap-12">
-      <div className={cn("flex items-start gap-5 lg:pt-3", label)}>
-        {index ? <span className="text-primary">{index}</span> : null}
-        <span className={dark ? "text-white/50" : "text-muted-foreground"}>{eyebrow}</span>
-      </div>
-      <div className="grid gap-6 lg:grid-cols-[1.55fr_1fr] lg:gap-12">
-        <h2 id={id} className={cn(displayHeading, "text-[34px] leading-[1.04] sm:text-[46px] lg:text-[62px]", dark ? "text-white" : "text-foreground")}>{title}</h2>
-        <div className="flex flex-col items-start gap-6 lg:pt-2">
-          {summary ? <p className={cn("max-w-md text-[15px] leading-[1.7]", dark ? "text-white/60" : "text-muted-foreground")}>{summary}</p> : null}
-          {action ? <div className="shrink-0">{action}</div> : null}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Soft({ children, dark = false }: { children: ReactNode; dark?: boolean }) {
-  return <span className={dark ? "text-white/45" : "text-muted-foreground/70"}>{children}</span>;
-}
-
-export function Challenges() {
-  const t = useTranslations("home.challenges");
+export function Challenges() { const t = useTranslations("home.challenges");
   const challenges = [
     ["01", t("c1Title"), t("c1Desc")],
     ["02", t("c2Title"), t("c2Desc")],
@@ -83,36 +26,59 @@ export function Challenges() {
     ["05", t("c5Title"), t("c5Desc")],
     ["06", t("c6Title"), t("c6Desc")],
   ];
-  return (
-    <Section variant="white" id="challenges">
-      <SectionHead
-        index="01"
-        eyebrow={t("eyebrow")}
-        title={t("heading")}
-        summary={t("summary")}
-      />
 
-      <div className="border-t border-border">
-        {challenges.map(([index, title, copy]) => (
-          <article
-            key={index}
-            className="group grid grid-cols-[40px_1fr_44px] items-center gap-4 border-b border-border py-8 transition-[padding,background-color] duration-200 hover:bg-muted sm:grid-cols-[90px_1fr_52px] sm:py-10 lg:hover:pl-4 motion-reduce:transition-none"
+  return (
+    <section id="challenges" aria-labelledby="challenges-title" className="scroll-mt-20 py-16 text-white sm:py-24 lg:py-24">
+      <div className={cn(shell, "grid gap-12 lg:grid-cols-[2fr_3fr] lg:gap-16")}>
+        {/* 40% — sticky intro panel */}
+        <ScrollReveal y={36} className="lg:sticky lg:top-28 lg:self-start">
+          <h2 id="challenges-title" className={cn(displayHeading, "text-[44px] leading-[0.98] sm:text-[58px] lg:text-[72px]")}>
+            {t("heading")}
+          </h2>
+          <p className="mt-7 max-w-[380px] text-[15px] leading-[1.7] text-white/55 sm:text-[16px]">{t("summary")}</p>
+
+          <Link
+            href="/solutions"
+            className="group/cta mt-9 inline-flex items-center gap-3 rounded-full bg-primary px-7 py-3.5 text-[13px] font-bold uppercase tracking-[0.12em] text-white transition-all duration-300 hover:shadow-[0_16px_40px_-12px_rgba(6,62,142,0.5)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
           >
-            <span className={cn(label, "self-start pt-1.5 text-primary sm:pt-2")}>{index}</span>
-            <div>
-              <h3 className={cn(displayHeading, "text-[22px] leading-[1.15] sm:text-[27px] lg:text-[33px]")}>{title}</h3>
-              <p className="mt-2.5 max-w-[600px] text-[14px] leading-[1.6] text-muted-foreground sm:text-[15px]">{copy}</p>
-            </div>
-            <Link
-              href="/solutions"
-              aria-label={t("explore", { title })}
-              className="grid size-11 place-items-center border border-border text-foreground transition group-hover:border-primary group-hover:bg-primary group-hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary sm:size-12"
-            >
-              <ArrowUpRight aria-hidden="true" className="h-5 w-5" />
-            </Link>
-          </article>
-        ))}
+            {t("cta")}
+            <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover/cta:translate-x-1" />
+          </Link>
+
+        </ScrollReveal>
+
+        {/* 60% — hover-reveal cards: title always visible, description slides open */}
+        <ScrollReveal itemSelector="[data-challenge]" y={36} stagger={0.1}>
+          <div className="grid gap-6 sm:grid-cols-2">
+            {challenges.map(([index, title, copy], i) => { return (
+                <article
+                  key={index}
+                  data-challenge
+                  className="group relative flex aspect-[16/12] flex-col justify-end overflow-hidden border border-white/10 border-white/12 bg-slate-950 transition-all duration-500 hover:-translate-y-2 hover:border-primary/50 hover:shadow-[0_28px_60px_-24px_rgba(6,62,142,0.35)] sm:aspect-square"
+                >
+                  <SafeImage
+                    src={CHALLENGE_IMAGES[i]}
+                    alt={title}
+                    fill
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/45 to-slate-950/10 transition-opacity duration-500 group-hover:via-slate-950/60" />
+
+                  {/* sliding window: title visible, description expands on hover */}
+                  <div className="relative p-6 sm:p-7">
+                    <h3 className={cn(displayHeading, "text-[19px] leading-[1.25] text-white sm:text-[21px]")}>
+                      {title}
+                    </h3>
+                    <div className="grid grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out sm:grid-rows-[0fr] sm:group-hover:grid-rows-[1fr]">
+                      <div className="overflow-hidden">
+                        <p className="pt-3.5 text-[13px] leading-[1.7] text-white/75 sm:text-[14px]">{copy}</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              ); })}
+          </div>
+        </ScrollReveal>
       </div>
-    </Section>
-  );
-}
+    </section>
+  ); }

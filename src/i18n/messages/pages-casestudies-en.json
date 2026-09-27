@@ -177,6 +177,28 @@
           "primaryButton": "Talk to an expert",
           "secondaryButton": "All case studies"
         }
+      },
+      "detail": {
+        "backToCaseStudies": "All case studies",
+        "eyebrow": "Case Study",
+        "groupLabel": "Category",
+        "dateLabel": "Published",
+        "readingLabel": "Duration",
+        "readingTime": "{minutes} min read",
+        "relatedEyebrow": "Keep reading",
+        "relatedTitle": "Related case studies.",
+        "readCaseStudy": "View case study",
+        "ctaEyebrow": "Ready to start?",
+        "ctaHeading1": "You bring the challenge.",
+        "ctaHeading2": "We bring the direction.",
+        "ctaDesc": "Start a focused conversation with a senior MeU technology partner.",
+        "ctaPrimary": "Talk to an expert",
+        "ctaSecondary": "All case studies",
+        "overviewLabel": "Overview",
+        "sidebarCtaEyebrow": "Need something similar?",
+        "sidebarCtaTitle": "The MeU team is ready to discuss your challenge.",
+        "sidebarCtaButton": "Book a consultation",
+        "midCtaEyebrow": "Your challenge"
       }
     }
   }

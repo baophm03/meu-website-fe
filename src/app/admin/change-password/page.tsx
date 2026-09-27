@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { Loader2, Lock, Eye, EyeOff, KeyRound, CheckCircle2, AlertCircle } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -11,10 +10,9 @@ import { usePutApiV10UserChangePassword } from "@/api/endpoints/user";
 import { usePostApiV10AuthLogout } from "@/api/endpoints/authentication";
 import useProfileStore from "@/store/useProfileStore";
 import useAuthStore from "@/store/useAuthStore";
-import { redirectToLogin } from "@/lib/auth/admin-auth";
+import { redirectToLogin } from "@/utils/admin-auth";
 
 export default function ChangePasswordPage() {
-  const router = useRouter();
   const appUser = useProfileStore((state) => state.appUser);
   const logoutMutation = usePostApiV10AuthLogout();
   const [oldPassword, setOldPassword] = useState("");
@@ -54,18 +52,16 @@ export default function ChangePasswordPage() {
       toast.success("Đổi mật khẩu thành công!");
 
       // Update store để bỏ must_change_password
-      useProfileStore.getState().setAppUser({
-        ...appUser,
-        must_change_password: false,
-      } as typeof appUser);
+      if (appUser) {
+        useProfileStore.getState().setAppUser({
+          ...appUser,
+          must_change_password: false,
+        });
+      }
 
-      // Sau 2s, logout để user đăng nhập lại bằng mật khẩu mới
-      setTimeout(async () => {
-        try {
-          await logoutMutation.mutateAsync();
-        } catch {
-          // Ignore API failure
-        }
+      // Sau 2s, logout để user đăng nhập lại bằng mật khẩu mới.
+      setTimeout(() => {
+        logoutMutation.mutateAsync().catch(() => { });
         useAuthStore.getState().resetStore();
         useProfileStore.getState().clearProfile();
         redirectToLogin();

@@ -6,5 +6,6 @@
  * OpenAPI spec version: 1.0.0
  */
 import type { PartnerCreate } from './partnerCreate';
+import type { PartnerUpdate } from './partnerUpdate';
 
-export type PartnerMutate = PartnerCreate;
+export type PartnerMutate = PartnerCreate | PartnerUpdate;

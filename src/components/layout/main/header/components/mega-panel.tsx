@@ -27,19 +27,10 @@ export function MegaPanel({ item, onClose }: { item: NavItem; onClose: () => voi
                         <span className="text-[14px] font-semibold text-foreground group-hover:text-primary">{link.labelKey ? t(link.labelKey) : link.label}</span>
                         <ArrowRight aria-hidden="true" className="h-3.5 w-3.5 shrink-0 text-border transition group-hover:translate-x-0.5 group-hover:text-primary" />
                       </span>
-                      {link.note ? <span className="mt-0.5 block text-[12px] leading-snug text-muted-foreground">{link.noteKey ? t(link.noteKey) : link.note}</span> : null}
                     </Link>
                   </li>
                 ))}
               </ul>
-              <Link
-                href={column.exploreHref}
-                onClick={onClose}
-                className="mt-3 inline-flex items-center gap-1.5 px-3 text-[12px] font-bold uppercase tracking-[0.1em] text-primary hover:text-primary-hover"
-              >
-                {t("common.exploreAll")}
-                <ArrowRight aria-hidden="true" className="h-3 w-3" />
-              </Link>
             </div>
           ))}
         </div>

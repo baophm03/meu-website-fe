@@ -30,13 +30,12 @@ import type {
 } from '@tanstack/react-query';
 
 import type {
-  DeleteApiV10PartnerId200,
-  GetApiV10PartnerId200,
   GetApiV10PartnerParams,
   PartnerCreate,
-  PostApiV10Partner200,
-  PutApiV10PartnerId200,
-  ResponseGetAllData
+  PartnerDeleteResponse,
+  PartnerGetAllResponse,
+  PartnerGetOneResponse,
+  PartnerUpdate
 } from '../models';
 
 import { useCustomClient } from '../mutator/custom-client';
@@ -58,7 +57,7 @@ export const getApiV10PartnerId = (
 ) => {
       
       
-      return useCustomClient<GetApiV10PartnerId200>(
+      return useCustomClient<PartnerGetOneResponse>(
       {url: `/api/v1.0/partner/${id}`, method: 'GET', signal
     },
       options);
@@ -248,14 +247,14 @@ export const prefetchGetApiV10PartnerIdQuery = async <TData = Awaited<ReturnType
  */
 export const putApiV10PartnerId = (
     id: string,
-    partnerCreate: BodyType<PartnerCreate>,
+    partnerUpdate: BodyType<PartnerUpdate>,
  options?: SecondParameter<typeof useCustomClient>,) => {
       
       
-      return useCustomClient<PutApiV10PartnerId200>(
+      return useCustomClient<PartnerGetOneResponse>(
       {url: `/api/v1.0/partner/${id}`, method: 'PUT',
       headers: {'Content-Type': 'application/json', },
-      data: partnerCreate
+      data: partnerUpdate
     },
       options);
     }
@@ -263,8 +262,8 @@ export const putApiV10PartnerId = (
 
 
 export const getPutApiV10PartnerIdMutationOptions = <TError = ErrorType<void>,
-    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof putApiV10PartnerId>>, TError,{id: string;data: BodyType<PartnerCreate>}, TContext>, request?: SecondParameter<typeof useCustomClient>}
-): UseMutationOptions<Awaited<ReturnType<typeof putApiV10PartnerId>>, TError,{id: string;data: BodyType<PartnerCreate>}, TContext> => {
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof putApiV10PartnerId>>, TError,{id: string;data: BodyType<PartnerUpdate>}, TContext>, request?: SecondParameter<typeof useCustomClient>}
+): UseMutationOptions<Awaited<ReturnType<typeof putApiV10PartnerId>>, TError,{id: string;data: BodyType<PartnerUpdate>}, TContext> => {
 
 const mutationKey = ['putApiV10PartnerId'];
 const {mutation: mutationOptions, request: requestOptions} = options ?
@@ -276,7 +275,7 @@ const {mutation: mutationOptions, request: requestOptions} = options ?
       
 
 
-      const mutationFn: MutationFunction<Awaited<ReturnType<typeof putApiV10PartnerId>>, {id: string;data: BodyType<PartnerCreate>}> = (props) => {
+      const mutationFn: MutationFunction<Awaited<ReturnType<typeof putApiV10PartnerId>>, {id: string;data: BodyType<PartnerUpdate>}> = (props) => {
           const {id,data} = props ?? {};
 
           return  putApiV10PartnerId(id,data,requestOptions)
@@ -288,18 +287,18 @@ const {mutation: mutationOptions, request: requestOptions} = options ?
   return  { mutationFn, ...mutationOptions }}
 
     export type PutApiV10PartnerIdMutationResult = NonNullable<Awaited<ReturnType<typeof putApiV10PartnerId>>>
-    export type PutApiV10PartnerIdMutationBody = BodyType<PartnerCreate>
+    export type PutApiV10PartnerIdMutationBody = BodyType<PartnerUpdate>
     export type PutApiV10PartnerIdMutationError = ErrorType<void>
 
     /**
  * @summary Update partner by ID
  */
 export const usePutApiV10PartnerId = <TError = ErrorType<void>,
-    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof putApiV10PartnerId>>, TError,{id: string;data: BodyType<PartnerCreate>}, TContext>, request?: SecondParameter<typeof useCustomClient>}
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof putApiV10PartnerId>>, TError,{id: string;data: BodyType<PartnerUpdate>}, TContext>, request?: SecondParameter<typeof useCustomClient>}
  , queryClient?: QueryClient): UseMutationResult<
         Awaited<ReturnType<typeof putApiV10PartnerId>>,
         TError,
-        {id: string;data: BodyType<PartnerCreate>},
+        {id: string;data: BodyType<PartnerUpdate>},
         TContext
       > => {
 
@@ -316,7 +315,7 @@ export const deleteApiV10PartnerId = (
  options?: SecondParameter<typeof useCustomClient>,) => {
       
       
-      return useCustomClient<DeleteApiV10PartnerId200>(
+      return useCustomClient<PartnerDeleteResponse>(
       {url: `/api/v1.0/partner/${id}`, method: 'DELETE'
     },
       options);
@@ -379,7 +378,7 @@ export const getApiV10Partner = (
 ) => {
       
       
-      return useCustomClient<ResponseGetAllData>(
+      return useCustomClient<PartnerGetAllResponse>(
       {url: `/api/v1.0/partner`, method: 'GET',
         params, signal
     },
@@ -574,7 +573,7 @@ export const postApiV10Partner = (
 ) => {
       
       
-      return useCustomClient<PostApiV10Partner200>(
+      return useCustomClient<PartnerGetOneResponse>(
       {url: `/api/v1.0/partner`, method: 'POST',
       headers: {'Content-Type': 'application/json', },
       data: partnerCreate, signal
@@ -584,7 +583,7 @@ export const postApiV10Partner = (
   
 
 
-export const getPostApiV10PartnerMutationOptions = <TError = ErrorType<unknown>,
+export const getPostApiV10PartnerMutationOptions = <TError = ErrorType<void>,
     TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof postApiV10Partner>>, TError,{data: BodyType<PartnerCreate>}, TContext>, request?: SecondParameter<typeof useCustomClient>}
 ): UseMutationOptions<Awaited<ReturnType<typeof postApiV10Partner>>, TError,{data: BodyType<PartnerCreate>}, TContext> => {
 
@@ -611,12 +610,12 @@ const {mutation: mutationOptions, request: requestOptions} = options ?
 
     export type PostApiV10PartnerMutationResult = NonNullable<Awaited<ReturnType<typeof postApiV10Partner>>>
     export type PostApiV10PartnerMutationBody = BodyType<PartnerCreate>
-    export type PostApiV10PartnerMutationError = ErrorType<unknown>
+    export type PostApiV10PartnerMutationError = ErrorType<void>
 
     /**
  * @summary Create a partner
  */
-export const usePostApiV10Partner = <TError = ErrorType<unknown>,
+export const usePostApiV10Partner = <TError = ErrorType<void>,
     TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof postApiV10Partner>>, TError,{data: BodyType<PartnerCreate>}, TContext>, request?: SecondParameter<typeof useCustomClient>}
  , queryClient?: QueryClient): UseMutationResult<
         Awaited<ReturnType<typeof postApiV10Partner>>,

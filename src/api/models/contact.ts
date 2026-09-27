@@ -13,8 +13,11 @@ export interface Contact {
   fullname: string;
   /** @maxLength 255 */
   email: string;
-  /** @maxLength 30 */
-  phone: string;
+  /**
+   * @maxLength 30
+   * @nullable
+   */
+  phone?: string | null;
   /** @maxLength 255 */
   title: string;
   content: string;

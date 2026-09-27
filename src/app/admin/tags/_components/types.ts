@@ -1,4 +1,4 @@
-import type { CmsTagItem } from "@/lib/api/cms-transforms";
+import type { CmsTagItem } from "@/utils/cms-transforms";
 
 export interface TagFormValues {
   id?: string;

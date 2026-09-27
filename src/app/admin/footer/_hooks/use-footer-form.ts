@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 export type FooterElementType = "text" | "image";
 
@@ -232,7 +232,7 @@ export function useFooterForm(initial?: Partial<FooterFormState>) {
   });
 
   // ---- Load from API (for edit page) ----
-  const loadFromApi = (data: {
+  const loadFromApi = useCallback((data: {
     language?: string;
     is_active?: boolean | null;
     footer_columns?: Array<{
@@ -262,7 +262,7 @@ export function useFooterForm(initial?: Partial<FooterFormState>) {
       is_active: data.is_active ?? true,
       columns: columns.length > 0 ? columns : [emptyColumn()],
     });
-  };
+  }, []);
 
   return {
     formData,

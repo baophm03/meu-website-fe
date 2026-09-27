@@ -1,0 +1,236 @@
+﻿"use client";
+
+import * as React from "react";
+import {
+  ChevronDown,
+  ChevronRight,
+  ExternalLink,
+  FileText,
+  FolderTree,
+  Plus,
+} from "lucide-react";
+import { AdminRowActions } from "@/components/admin/admin-row-actions";
+import { AdminTableLayout } from "@/components/admin/admin-table-layout";
+import { Skeleton } from "@/components/ui/skeleton";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { type HeaderConfigTreeItem } from "../types";
+
+export type HeaderConfigFlatRow = HeaderConfigTreeItem & {
+  depth: number;
+  parentId: string | null;
+};
+
+interface HeaderConfigTableProps {
+  rows: HeaderConfigFlatRow[];
+  expanded: Record<string, boolean>;
+  isLoading: boolean;
+  searchValue: string;
+  onSearchChange: (value: string) => void;
+  onToggle: (id: string) => void;
+  onCreateRoot: () => void;
+  onCreateChild: (item: HeaderConfigTreeItem) => void;
+  onEdit: (item: HeaderConfigTreeItem) => void;
+  onDelete: (item: HeaderConfigTreeItem) => void;
+}
+
+function getDisplaySortOrder(item: HeaderConfigFlatRow, rows: HeaderConfigFlatRow[]) {
+  if (!item.parentId) {
+    return String(item.sort_order);
+  }
+
+  const parent = rows.find((entry) => entry.id === item.parentId);
+  if (!parent) {
+    return String(item.sort_order);
+  }
+
+  return `${parent.sort_order}-${item.sort_order}`;
+}
+
+function getItemIcon(item: HeaderConfigFlatRow) {
+  return item.children.length > 0 ? (
+    <FolderTree className="h-4 w-4 text-[#063e8e]" />
+  ) : (
+    <FileText className="h-4 w-4 text-[#063e8e]" />
+  );
+}
+
+function HeaderConfigTableLoading() {
+  return Array.from({ length: 4 }).map((_, index) => (
+    <TableRow
+      key={`loading-${index}`}
+      className={index % 2 === 0 ? "bg-white" : "bg-[#063e8e]/[0.03]"}
+    >
+      <TableCell className="w-[40%] py-4">
+        <div className="flex items-center gap-3">
+          <Skeleton className="h-4 w-4 rounded-sm bg-[#063e8e]/15" />
+          <Skeleton className="h-4 w-40 bg-[#063e8e]/15" />
+        </div>
+      </TableCell>
+      <TableCell className="w-[140px] text-center">
+        <Skeleton className="mx-auto h-8 w-12 rounded-full bg-[#063e8e]/15" />
+      </TableCell>
+      <TableCell className="w-[280px] py-4">
+        <Skeleton className="mx-auto h-4 w-52 bg-[#063e8e]/15" />
+      </TableCell>
+      <TableCell className="w-[120px] text-center">
+        <Skeleton className="mx-auto h-8 w-8 rounded-md bg-[#063e8e]/15" />
+      </TableCell>
+    </TableRow>
+  ));
+}
+
+export function HeaderConfigTable({
+  rows,
+  expanded,
+  isLoading,
+  searchValue,
+  onSearchChange,
+  onToggle,
+  onCreateRoot,
+  onCreateChild,
+  onEdit,
+  onDelete,
+}: HeaderConfigTableProps) {
+  return (
+    <AdminTableLayout
+      searchValue={searchValue}
+      searchPlaceholder="Tìm kiếm danh mục..."
+      actionLabel="Thêm danh mục"
+      actionIcon={<Plus className="mr-2 h-4 w-4" />}
+      onSearchChange={onSearchChange}
+      onActionClick={onCreateRoot}
+    >
+      <Table className="table-fixed">
+        <TableHeader>
+          <TableRow className="border-0 bg-[#063e8e] hover:bg-[#063e8e]">
+            <TableHead className="w-[40%] py-4 pl-4 text-center text-white">
+              Tên danh mục
+            </TableHead>
+            <TableHead className="w-[140px] py-4 text-center text-white">
+              Thứ tự
+            </TableHead>
+            <TableHead className="w-[280px] py-4 text-center text-white">
+              Liên kết
+            </TableHead>
+            <TableHead className="w-[120px] py-4 text-center text-white">
+              Thao tác
+            </TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {isLoading ? (
+            <HeaderConfigTableLoading />
+          ) : rows.length === 0 ? (
+            <TableRow>
+              <TableCell colSpan={4} className="py-12 text-center text-sm text-gray-700">
+                Không có danh mục nào phù hợp.
+              </TableCell>
+            </TableRow>
+          ) : (
+            rows.map((item, index) => {
+              const hasChildren = item.children.length > 0;
+              const isExpanded = expanded[item.id] ?? true;
+              const canCreateChild = item.depth <= 1;
+
+              return (
+                <TableRow
+                  key={item.id}
+                  className={index % 2 === 0 ? "bg-white" : "bg-[#063e8e]/[0.03]"}
+                >
+                  <TableCell className="w-[40%] py-4">
+                    <div className="flex items-center" style={{ marginLeft: item.depth * 24 }}>
+                      {hasChildren ? (
+                        <button
+                          type="button"
+                          className="mr-2 rounded p-1 hover:bg-[#063e8e]/10"
+                          onClick={() => onToggle(item.id)}
+                        >
+                          {isExpanded ? (
+                            <ChevronDown className="h-4 w-4" />
+                          ) : (
+                            <ChevronRight className="h-4 w-4" />
+                          )}
+                        </button>
+                      ) : (
+                        <span className="mr-2 w-6" />
+                      )}
+
+                      <div className="mr-2">{getItemIcon(item)}</div>
+                      <div className="min-w-0">
+                        <div className="truncate font-medium text-black">{item.name}</div>
+                        {item.name_en ? (
+                          <div className="truncate text-xs text-slate-400">{item.name_en}</div>
+                        ) : null}
+                      </div>
+                    </div>
+                  </TableCell>
+
+                  <TableCell className="w-[140px] text-center font-medium text-black">
+                    <span
+                      className={
+                        item.parent_id
+                          ? "inline-flex min-w-8 items-center justify-center rounded-full border border-gray-300 px-2.5 py-1 text-sm text-gray-700"
+                          : "inline-flex min-w-8 items-center justify-center rounded-full border border-[#063e8e]/20 bg-[#063e8e]/10 px-2.5 py-1 text-sm text-[#063e8e]"
+                      }
+                    >
+                      {getDisplaySortOrder(item, rows)}
+                    </span>
+                  </TableCell>
+
+                  <TableCell className="w-[280px] text-sm text-gray-700">
+                    <div className="mx-auto flex max-w-[220px] items-center justify-center gap-2">
+                      <span className="block max-w-[180px] truncate">
+                        {item.static_link || "-"}
+                      </span>
+                      {item.static_link ? (
+                        <ExternalLink className="h-3.5 w-3.5 shrink-0 text-[#063e8e]" />
+                      ) : null}
+                    </div>
+                  </TableCell>
+
+                  <TableCell className="w-[120px] text-center">
+                    <AdminRowActions
+                      actions={[
+                        {
+                          kind: "edit" as const,
+                          label: "Chỉnh sửa danh mục",
+                          onClick: () => onEdit(item),
+                        },
+                        {
+                          kind: "manage" as const,
+                          label: "Quản lý bài viết",
+                          href: `/admin/header-config/${item.id}`,
+                        },
+                        ...(canCreateChild
+                          ? [
+                            {
+                              kind: "create-child" as const,
+                              label: "Thêm danh mục con",
+                              onClick: () => onCreateChild(item),
+                            },
+                          ]
+                          : []),
+                        {
+                          kind: "delete" as const,
+                          label: "Xóa danh mục",
+                          onClick: () => onDelete(item),
+                        },
+                      ]}
+                    />
+                  </TableCell>
+                </TableRow>
+              );
+            })
+          )}
+        </TableBody>
+      </Table>
+    </AdminTableLayout>
+  );
+}

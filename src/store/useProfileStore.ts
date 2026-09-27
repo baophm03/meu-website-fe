@@ -1,27 +1,15 @@
 import { create } from "zustand";
 import { createJSONStorage, devtools, persist } from "zustand/middleware";
-import { updateCaslAbility, type Permission } from "@/config/permissions";
+import { updateCaslAbility } from "@/config/permissions";
+import type {
+  AuthenticatedAdminUser,
+  ProfileStoreStateType,
+} from "@/lib/types/auth";
 
-export interface AuthenticatedAdminUser {
-  id: string;
-  email: string;
-  username: string;
-  first_name: string | null;
-  last_name: string | null;
-  roles: string[];
-  permissions: Permission[];
-  status: string | null;
-  last_login_at: string | null;
-  must_change_password?: boolean;
-}
-
-export interface ProfileStoreStateType {
-  appUser: AuthenticatedAdminUser | null;
-  _hasHydrated: boolean;
-  setHasHydrated: (hasHydrated?: boolean) => void;
-  setAppUser: (user: AuthenticatedAdminUser | null) => void;
-  clearProfile: () => void;
-}
+export type {
+  AuthenticatedAdminUser,
+  ProfileStoreStateType,
+} from "@/lib/types/auth";
 
 const AUTH_STORAGE_KEY = "app-auth-storage";
 

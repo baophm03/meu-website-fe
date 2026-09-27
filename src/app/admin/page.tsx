@@ -19,12 +19,8 @@ const ADMIN_LANDING_ROUTES: AdminLandingRoute[] = [
     permission: { action: "VIEW", subject: "DASHBOARD" }
   },
   {
-    path: "/admin/news",
+    path: "/admin/posts",
     permission: { action: "VIEW", subject: "POSTS" }
-  },
-  {
-    path: "/admin/base-config",
-    permission: { action: "VIEW", subject: "SETTINGS" }
   },
   {
     path: "/admin/users",
@@ -39,10 +35,6 @@ const ADMIN_LANDING_ROUTES: AdminLandingRoute[] = [
     permission: { action: "VIEW", subject: "ROLES" }
   },
   {
-    path: "/admin/advertisements",
-    permission: { action: "VIEW", subject: "ADVERTISEMENTS" }
-  },
-  {
     path: "/admin/media",
     permission: { action: "VIEW", subject: "FILES" }
   },
@@ -51,15 +43,11 @@ const ADMIN_LANDING_ROUTES: AdminLandingRoute[] = [
     permission: { action: "VIEW", subject: "TAGS" }
   },
   {
-    path: "/admin/videos",
-    permission: { action: "VIEW", subject: "VIDEOS" }
+    path: "/admin/partners",
+    permission: { action: "VIEW", subject: "PARTNERS" }
   },
   {
-    path: "/admin/members",
-    permission: { action: "VIEW", subject: "MEMBERS" }
-  },
-  {
-    path: "/admin/contact-management",
+    path: "/admin/contact-requests",
     permission: { action: "VIEW", subject: "CONTACT" }
   },
 ];

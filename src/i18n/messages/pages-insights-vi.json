@@ -370,7 +370,37 @@
           "primaryButton": "Trao đổi với chuyên gia",
           "secondaryButton": "Xem thành công khách hàng"
         }
+      },
+      "posts": {
+        "eyebrow": "Bài viết",
+        "heading": "Tất cả bài viết.",
+        "summary": "Tin tức, insight và báo cáo mới nhất từ MeU.",
+        "readMore": "Đọc thêm",
+        "viewAll": "Xem tất cả",
+        "latest": "Mới nhất"
       }
+    },
+    "postDetail": {
+      "backToNews": "Tất cả tin tức",
+      "readingTime": "{minutes} phút đọc",
+      "relatedEyebrow": "Đọc tiếp",
+      "relatedTitle": "Bài viết liên quan.",
+      "readArticle": "Đọc bài viết",
+      "ctaEyebrow": "Sẵn sàng bắt đầu?",
+      "ctaHeading1": "Mang đến thách thức.",
+      "ctaHeading2": "Chúng tôi mang đến hướng đi.",
+      "ctaDesc": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
+      "ctaPrimary": "Nói chuyện với chuyên gia",
+      "ctaSecondary": "Khám phá insights"
+    },
+    "jobDetail": {
+      "backToCareers": "Tất cả vị trí",
+      "deadline": "Hạn nộp",
+      "applyNow": "Ứng tuyển ngay",
+      "applyHint": "Gửi CV kèm portfolio/GitHub — đội tuyển dụng sẽ phản hồi trong 3-5 ngày làm việc.",
+      "apply": "Ứng tuyển",
+      "otherRoles": "Vị trí đang mở khác.",
+      "allRoles": "Xem tất cả vị trí"
     }
   }
 }

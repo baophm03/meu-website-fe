@@ -1,17 +1,17 @@
 import type { RawRuleOf } from "@casl/ability";
-import { ability, type Actions, type AppAbility } from "@/config/casl/ability";
+import { ability } from "@/config/casl/ability";
+import type {
+  Actions,
+  AppAbility,
+  Permission,
+  PermissionKey,
+} from "@/lib/types/permissions";
 
-export interface PermissionCheck {
-  action: string;
-  subject: string;
-}
-
-export interface Permission {
-  module: string;
-  action: string;
-}
-
-export type PermissionKey = string;
+export type {
+  Permission,
+  PermissionCheck,
+  PermissionKey,
+} from "@/lib/types/permissions";
 
 // Key nội bộ để so sánh trong Set — không phải format trao đổi với BE
 export const permKey = (module: string, action: string): PermissionKey =>

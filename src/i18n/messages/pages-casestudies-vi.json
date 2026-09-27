@@ -177,6 +177,28 @@
           "primaryButton": "Trao đổi với chuyên gia",
           "secondaryButton": "Tất cả case study"
         }
+      },
+      "detail": {
+        "backToCaseStudies": "Tất cả case study",
+        "eyebrow": "Case Study",
+        "groupLabel": "Nhóm",
+        "dateLabel": "Ngày đăng",
+        "readingLabel": "Thời lượng",
+        "readingTime": "{minutes} phút đọc",
+        "relatedEyebrow": "Đọc tiếp",
+        "relatedTitle": "Case study liên quan.",
+        "readCaseStudy": "Xem case study",
+        "ctaEyebrow": "Sẵn sàng bắt đầu?",
+        "ctaHeading1": "Mang đến thách thức.",
+        "ctaHeading2": "Chúng tôi mang đến hướng đi.",
+        "ctaDesc": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
+        "ctaPrimary": "Nói chuyện với chuyên gia",
+        "ctaSecondary": "Xem tất cả case study",
+        "overviewLabel": "Tổng quan",
+        "sidebarCtaEyebrow": "Cần giải pháp tương tự?",
+        "sidebarCtaTitle": "Đội ngũ MeU sẵn sàng trao đổi về bài toán của bạn.",
+        "sidebarCtaButton": "Đặt lịch tư vấn",
+        "midCtaEyebrow": "Bài toán của bạn"
       }
     }
   }

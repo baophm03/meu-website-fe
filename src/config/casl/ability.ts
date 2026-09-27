@@ -1,24 +1,6 @@
-import { createMongoAbility, MongoAbility } from "@casl/ability";
+import { createMongoAbility } from "@casl/ability";
+import type { AppAbility } from "@/lib/types/permissions";
 
-export type Actions =
-  | "CREATE"
-  | "VIEW"
-  | "READ"
-  | "READ_OWN"
-  | "READ_ALL"
-  | "UPDATE"
-  | "UPDATE_OWN"
-  | "UPDATE_ALL"
-  | "DELETE"
-  | "DELETE_OWN"
-  | "DELETE_ALL"
-  | "EXPORT"
-  | "ASSIGN"
-  | "APPROVE"
-  | "APPROVE_VIEW";
-
-export type Subjects = string;
-
-export type AppAbility = MongoAbility<[Actions, Subjects]>;
+export type { Actions, AppAbility, Subjects } from "@/lib/types/permissions";
 
 export const ability = createMongoAbility<AppAbility>();

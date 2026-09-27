@@ -174,7 +174,7 @@ export default function AdminLoginPage() {
           Đăng nhập quản trị
         </h2>
         <p className="mt-2 text-sm leading-6 text-gray-700">
-          Truy cập khu vực quản trị nội dung VCCI News.
+          Truy cập khu vực quản trị nội dung MeU Solutions.
         </p>
       </div>
       <form className="space-y-5" onSubmit={handleLogin}>

@@ -5,18 +5,33 @@
  * Coded by Meu TEAM
  * OpenAPI spec version: 1.0.0
  */
+import type { FiltersParameter } from './filtersParameter';
+import type { SortFieldParameter } from './sortFieldParameter';
+import type { SortOrderParameter } from './sortOrderParameter';
+import type { PageParameter } from './pageParameter';
+import type { PageSizeParameter } from './pageSizeParameter';
 
 export type GetApiV10PageConfigParams = {
 /**
- * ID of the page config to retrieve
+ * filter, visit https://www.npmjs.com/package/sequelize-api-paginate for syntax
  */
-id?: string;
+filters?: FiltersParameter;
 /**
- * Static link of the page config to retrieve
+ * sortField, visit https://www.npmjs.com/package/sequelize-api-paginate for syntax
  */
-static_link?: string;
+sortField?: SortFieldParameter;
 /**
- * Code of the page config to retrieve
+ * sort order, visit https://www.npmjs.com/package/sequelize-api-paginate for syntax
  */
-code?: string;
+sortOrder?: SortOrderParameter;
+/**
+ * page, visit https://www.npmjs.com/package/sequelize-api-paginate for syntax
+ * @minimum 1
+ */
+page?: PageParameter;
+/**
+ * pageSize, visit https://www.npmjs.com/package/sequelize-api-paginate for syntax
+ * @minimum 1
+ */
+pageSize?: PageSizeParameter;
 };

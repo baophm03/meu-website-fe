@@ -59,12 +59,12 @@ export default async function Footer() {
   return (
     <footer className="bg-surface-dark text-white">
       <div className="container w-full py-14 lg:pt-20 lg:pb-10">
-        <div className="grid gap-10 border-b border-white/10 pb-12 lg:grid-cols-[1fr_3fr]">
+        <div className="grid gap-x-8 gap-y-10 border-b border-white/10 pb-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link href="/" aria-label="MeU Solutions — home" className="flex items-center gap-2.5">
               <Image src="/logo-full.png" alt="" width={150} height={60} className="h-15 w-50 object-contain" />
             </Link>
-            <p className="mt-4 max-w-xs text-[14px] leading-relaxed text-slate-400">
+            <p className="mt-4 text-[14px] leading-relaxed text-slate-400">
               {t("footer.tagline")}
             </p>
             <address className="mt-5 not-italic text-[13px] leading-relaxed text-slate-400">
@@ -77,78 +77,74 @@ export default async function Footer() {
           </div>
 
           {cmsFooter ? (
-            <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7">
-              {columns.map((column, colIdx) => {
-                const rows = [...(column.footer_rows ?? [])].sort(bySortOrder) as FooterRow[];
-                return (
-                  <nav key={column.id ?? colIdx} aria-label={column.title ?? undefined}>
-                    {column.title ? (
-                      <h2 className="text-[11px] font-bold uppercase tracking-[0.14em] text-white">
-                        {column.title}
-                      </h2>
-                    ) : null}
-                    <ul className="mt-4 space-y-2.5">
-                      {rows.map((row, rowIdx) => {
-                        const elements = [...(row.footer_elements ?? [])].sort(bySortOrder) as FooterElement[];
-                        return elements.map((el, elIdx) => {
-                          const key = el.id ?? `${rowIdx}-${elIdx}`;
-                          const href = el.link?.trim() || "";
+            columns.map((column, colIdx) => {
+              const rows = [...(column.footer_rows ?? [])].sort(bySortOrder) as FooterRow[];
+              return (
+                <nav key={column.id ?? colIdx} aria-label={column.title ?? undefined}>
+                  {column.title ? (
+                    <h2 className="text-[11px] font-bold uppercase tracking-[0.14em] text-white">
+                      {column.title}
+                    </h2>
+                  ) : null}
+                  <ul className="mt-4 space-y-2.5">
+                    {rows.map((row, rowIdx) => {
+                      const elements = [...(row.footer_elements ?? [])].sort(bySortOrder) as FooterElement[];
+                      return elements.map((el, elIdx) => {
+                        const key = el.id ?? `${rowIdx}-${elIdx}`;
+                        const href = el.link?.trim() || "";
 
-                          if (el.type === "image") {
-                            const src = links.resolveImageUrl(el.content);
-                            if (!src) return null;
-                            const img = (
-                              <Image
-                                src={src}
-                                alt={column.title ?? ""}
-                                width={120}
-                                height={48}
-                                className="h-8 w-auto object-contain opacity-80 transition hover:opacity-100"
-                              />
-                            );
-                            return (
-                              <li key={key}>
-                                {href ? <ElementLink href={href} className="inline-block">{img}</ElementLink> : img}
-                              </li>
-                            );
-                          }
-
-                          if (!el.content?.trim()) return null;
+                        if (el.type === "image") {
+                          const src = links.resolveImageUrl(el.content);
+                          if (!src) return null;
+                          const img = (
+                            <Image
+                              src={src}
+                              alt={column.title ?? ""}
+                              width={120}
+                              height={48}
+                              className="h-8 w-auto object-contain opacity-80 transition hover:opacity-100"
+                            />
+                          );
                           return (
                             <li key={key}>
-                              {href ? (
-                                <ElementLink href={href} className="text-[13px] leading-snug text-slate-400 transition hover:text-white">
-                                  {el.content}
-                                </ElementLink>
-                              ) : (
-                                <span className="text-[13px] leading-snug text-slate-400">{el.content}</span>
-                              )}
+                              {href ? <ElementLink href={href} className="inline-block">{img}</ElementLink> : img}
                             </li>
                           );
-                        });
-                      })}
-                    </ul>
-                  </nav>
-                );
-              })}
-            </div>
-          ) : (
-            <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7">
-              {footerColumns.map((column) => (
-                <nav key={column.heading} aria-label={column.heading}>
-                  <h2 className="text-[11px] font-bold uppercase tracking-[0.14em] text-white">{t(column.headingKey)}</h2>
-                  <ul className="mt-4 space-y-2.5">
-                    {column.links.map((link) => (
-                      <li key={link.href}>
-                        <Link href={link.href} className="text-[13px] leading-snug text-slate-400 transition hover:text-white">
-                          {link.labelKey ? t(link.labelKey) : link.label}
-                        </Link>
-                      </li>
-                    ))}
+                        }
+
+                        if (!el.content?.trim()) return null;
+                        return (
+                          <li key={key}>
+                            {href ? (
+                              <ElementLink href={href} className="text-[13px] leading-snug text-slate-400 transition hover:text-white">
+                                {el.content}
+                              </ElementLink>
+                            ) : (
+                              <span className="text-[13px] leading-snug text-slate-400">{el.content}</span>
+                            )}
+                          </li>
+                        );
+                      });
+                    })}
                   </ul>
                 </nav>
-              ))}
-            </div>
+              );
+            })
+          ) : (
+            footerColumns.map((column) => (
+              <nav key={column.heading} aria-label={column.heading}>
+                <h2 className="text-[11px] font-bold uppercase tracking-[0.14em] text-white">{column.headingKey ? t(column.headingKey) : column.heading}</h2>
+                <ul className="mt-4 space-y-2.5">
+                  {column.links.map((link) => (
+                    <li key={link.href}>
+                      <Link href={link.href} className="text-[13px] leading-snug text-slate-400 transition hover:text-white">
+                        {link.labelKey ? t(link.labelKey) : link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            ))
           )}
         </div>
 
@@ -176,6 +172,6 @@ export default async function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </footer >
   );
 }

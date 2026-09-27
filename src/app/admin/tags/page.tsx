@@ -1,17 +1,19 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
 import { toast } from "sonner";
+import { useQueryClient } from "@tanstack/react-query";
 import {
-  deleteApiV10TagId,
-  getApiV10Tag,
-  patchApiV10TagId,
-  postApiV10Tag,
+  getGetApiV10TagQueryKey,
+  useDeleteApiV10TagId,
+  useGetApiV10Tag,
+  usePatchApiV10TagId,
+  usePostApiV10Tag,
 } from "@/api/endpoints/tag";
 import {
   type CmsTagItem,
   type CmsPagedResult,
-} from "@/lib/api/cms-transforms";
+} from "@/utils/cms-transforms";
 
 import { TagDeleteDialog } from "./_components/tag-delete-dialog";
 import { TagFormDialog } from "./_components/tag-form-dialog";
@@ -20,46 +22,33 @@ import { EMPTY_FORM, PAGE_SIZE, type TagFormValues } from "./_components/types";
 import { slugifyTag } from "./_components/utils";
 
 export default function AdminTagsPage() {
-  const [items, setItems] = useState<CmsTagItem[]>([]);
+  const queryClient = useQueryClient();
   const [search, setSearch] = useState("");
-  const [isReady, setIsReady] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formOpen, setFormOpen] = useState(false);
   const [formValues, setFormValues] = useState<TagFormValues>(EMPTY_FORM);
   const [deleteTarget, setDeleteTarget] = useState<CmsTagItem | null>(null);
   const [page, setPage] = useState(1);
-  const [total, setTotal] = useState(0);
 
-  const load = useCallback(async () => {
-    setIsReady(false);
+  const keyword = search.trim();
+  const { data, isFetching } = useGetApiV10Tag({
+    page,
+    pageSize: PAGE_SIZE,
+    sortField: "name",
+    sortOrder: "asc",
+    filters: keyword ? `name@=${keyword}|slug@=${keyword}` : undefined,
+  });
+  const createTag = usePostApiV10Tag();
+  const updateTag = usePatchApiV10TagId();
+  const deleteTag = useDeleteApiV10TagId();
 
-    const keyword = search.trim();
-    const response = await getApiV10Tag({
-      page,
-      pageSize: PAGE_SIZE,
-      sortField: "name",
-      sortOrder: "asc",
-      filters: keyword ? `name@=${keyword}|slug@=${keyword}` : undefined,
-    });
-    const result = (response.responseData ?? {}) as unknown as CmsPagedResult<CmsTagItem>;
+  const result = (data?.responseData ?? {}) as unknown as CmsPagedResult<CmsTagItem>;
+  const items = result.rows ?? [];
+  const total = result.count ?? 0;
+  const isReady = !isFetching;
 
-    setItems(result.rows ?? []);
-    setTotal(result.count ?? 0);
-    setIsReady(true);
-  }, [page, search]);
-
-  useEffect(() => {
-    void load().catch((error) => {
-      toast.error(error instanceof Error ? error.message : "Không thể tải danh sách tag");
-      setItems([]);
-      setTotal(0);
-      setIsReady(true);
-    });
-  }, [load]);
-
-  useEffect(() => {
-    setPage(1);
-  }, [search]);
+  const reload = () =>
+    queryClient.invalidateQueries({ queryKey: getGetApiV10TagQueryKey() });
 
   const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
 
@@ -100,20 +89,25 @@ export default function AdminTagsPage() {
 
     try {
       if (formValues.id) {
-        await patchApiV10TagId(formValues.id, {
-          name: payload.name,
-          slug: payload.slug,
+        await updateTag.mutateAsync({
+          id: formValues.id,
+          data: {
+            name: payload.name,
+            slug: payload.slug,
+          },
         });
         toast.success("Cập nhật tag thành công");
       } else {
-        await postApiV10Tag({
-          name: payload.name,
-          slug: payload.slug,
+        await createTag.mutateAsync({
+          data: {
+            name: payload.name,
+            slug: payload.slug,
+          },
         });
         toast.success("Tạo tag thành công");
       }
 
-      await load();
+      await reload();
       setFormOpen(false);
       setFormValues(EMPTY_FORM);
     } catch (error) {
@@ -129,10 +123,10 @@ export default function AdminTagsPage() {
     setIsSubmitting(true);
 
     try {
-      await deleteApiV10TagId(deleteTarget.id);
+      await deleteTag.mutateAsync({ id: deleteTarget.id });
       toast.success("Xóa tag thành công");
       setDeleteTarget(null);
-      await load();
+      await reload();
     } catch (error) {
       toast.error(error instanceof Error ? error.message : "Không thể xóa tag");
     } finally {
@@ -144,7 +138,10 @@ export default function AdminTagsPage() {
     <div className="space-y-8">
       <TagsTable
         search={search}
-        onSearchChange={setSearch}
+        onSearchChange={(value) => {
+          setSearch(value);
+          setPage(1);
+        }}
         isReady={isReady}
         onActionClick={openCreate}
         items={items}

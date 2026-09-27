@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 
 import Link from "next/link";
 import {
+  CheckCheck,
   Eye,
   EyeOff,
   FileText,
@@ -22,7 +23,8 @@ type AdminRowActionKind =
   | "visible"
   | "delete"
   | "manage"
-  | "create-child";
+  | "create-child"
+  | "check";
 
 type AdminRowActionBase = {
   label: string;
@@ -31,33 +33,37 @@ type AdminRowActionBase = {
 
 type AdminRowAction =
   | (AdminRowActionBase & {
-      kind: "edit";
-      onClick: () => void;
-    })
+    kind: "edit";
+    onClick: () => void;
+  })
   | (AdminRowActionBase & {
-      kind: "view";
-      onClick: () => void;
-    })
+    kind: "view";
+    onClick: () => void;
+  })
   | (AdminRowActionBase & {
-      kind: "visible";
-      onClick?: () => void;
-    })
+    kind: "visible";
+    onClick?: () => void;
+  })
   | (AdminRowActionBase & {
-      kind: "hidden";
-      onClick?: () => void;
-    })
+    kind: "hidden";
+    onClick?: () => void;
+  })
   | (AdminRowActionBase & {
-      kind: "delete";
-      onClick: () => void;
-    })
+    kind: "delete";
+    onClick: () => void;
+  })
   | (AdminRowActionBase & {
-      kind: "manage";
-      href: string;
-    })
+    kind: "manage";
+    href: string;
+  })
   | (AdminRowActionBase & {
-      kind: "create-child";
-      onClick: () => void;
-    });
+    kind: "create-child";
+    onClick: () => void;
+  })
+  | (AdminRowActionBase & {
+    kind: "check";
+    onClick: () => void;
+  });
 
 interface AdminRowActionsProps {
   actions: AdminRowAction[];
@@ -105,6 +111,11 @@ const actionStyles: Record<
     button:
       "border-sky-100 bg-white text-sky-600 hover:border-sky-200 hover:bg-sky-50 hover:text-sky-700",
     icon: <FolderPlus className="h-4 w-4" />,
+  },
+  check: {
+    button:
+      "border-emerald-100 bg-white text-emerald-600 hover:border-emerald-200 hover:bg-emerald-50 hover:text-emerald-700",
+    icon: <CheckCheck className="h-4 w-4" />,
   },
 };
 

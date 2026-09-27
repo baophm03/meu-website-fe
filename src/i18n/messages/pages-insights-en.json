@@ -370,7 +370,37 @@
           "primaryButton": "Talk to an expert",
           "secondaryButton": "See client success"
         }
+      },
+      "posts": {
+        "eyebrow": "Posts",
+        "heading": "All posts.",
+        "summary": "The latest news, insights and reports from MeU.",
+        "readMore": "Read more",
+        "viewAll": "View all",
+        "latest": "Latest"
       }
+    },
+    "postDetail": {
+      "backToNews": "All news",
+      "readingTime": "{minutes} min read",
+      "relatedEyebrow": "Keep reading",
+      "relatedTitle": "Related articles.",
+      "readArticle": "Read article",
+      "ctaEyebrow": "Ready to move?",
+      "ctaHeading1": "Bring us the challenge.",
+      "ctaHeading2": "We will bring a way forward.",
+      "ctaDesc": "Start a focused conversation with a senior MeU technology partner.",
+      "ctaPrimary": "Talk to an expert",
+      "ctaSecondary": "Explore insights"
+    },
+    "jobDetail": {
+      "backToCareers": "All open roles",
+      "deadline": "Apply by",
+      "applyNow": "Apply now",
+      "applyHint": "Send your CV with portfolio/GitHub — the hiring team replies within 3-5 business days.",
+      "apply": "Apply",
+      "otherRoles": "Other open roles.",
+      "allRoles": "View all roles"
     }
   }
 }

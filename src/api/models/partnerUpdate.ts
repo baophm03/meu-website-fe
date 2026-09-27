@@ -5,23 +5,22 @@
  * Coded by Meu TEAM
  * OpenAPI spec version: 1.0.0
  */
-import type { PartnerUpdatePartnerType } from './partnerUpdatePartnerType';
 
 export interface PartnerUpdate {
-  /** @maxLength 255 */
-  slug?: string;
-  /** @maxLength 255 */
-  name?: string;
   /** @nullable */
-  description?: string | null;
+  name?: string | null;
+  /** @nullable */
+  slug?: string | null;
+  /** @nullable */
+  industry_ids?: string[] | null;
   /** @nullable */
   logo_id?: string | null;
-  /**
-   * @maxLength 500
-   * @nullable
-   */
+  /** @nullable */
+  rating?: number | null;
+  /** @nullable */
+  address?: string | null;
+  /** @nullable */
+  phone?: string | null;
+  /** @nullable */
   website?: string | null;
-  partner_type?: PartnerUpdatePartnerType;
-  sort_order?: number;
-  is_active?: boolean;
 }

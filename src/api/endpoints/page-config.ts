@@ -31,8 +31,11 @@ import type {
 
 import type {
   GetApiV10PageConfigParams,
-  PostApiV10PageConfigBody,
-  PutApiV10PageConfigIdBody
+  PageConfigCreate,
+  PageConfigDeleteResponse,
+  PageConfigGetAllResponse,
+  PageConfigGetOneResponse,
+  PageConfigUpdate
 } from '../models';
 
 import { useCustomClient } from '../mutator/custom-client';
@@ -45,8 +48,8 @@ type SecondParameter<T extends (...args: never) => unknown> = Parameters<T>[1];
 
 
 /**
- * Retrieve hierarchical page config by its ID
- * @summary Get hierarchical pageConfig by ID
+ * Retrieve a single page config record by its ID
+ * @summary Get page config by ID
  */
 export const getApiV10PageConfigId = (
     id: string,
@@ -54,7 +57,7 @@ export const getApiV10PageConfigId = (
 ) => {
       
       
-      return useCustomClient<void>(
+      return useCustomClient<PageConfigGetOneResponse>(
       {url: `/api/v1.0/pageConfig/${id}`, method: 'GET', signal
     },
       options);
@@ -123,7 +126,7 @@ export function useGetApiV10PageConfigIdInfinite<TData = InfiniteData<Awaited<Re
  , queryClient?: QueryClient
   ):  UseInfiniteQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> }
 /**
- * @summary Get hierarchical pageConfig by ID
+ * @summary Get page config by ID
  */
 
 export function useGetApiV10PageConfigIdInfinite<TData = InfiniteData<Awaited<ReturnType<typeof getApiV10PageConfigId>>>, TError = ErrorType<void>>(
@@ -141,7 +144,7 @@ export function useGetApiV10PageConfigIdInfinite<TData = InfiniteData<Awaited<Re
 }
 
 /**
- * @summary Get hierarchical pageConfig by ID
+ * @summary Get page config by ID
  */
 export const prefetchGetApiV10PageConfigIdInfiniteQuery = async <TData = Awaited<ReturnType<typeof getApiV10PageConfigId>>, TError = ErrorType<void>>(
  queryClient: QueryClient, id: string, options?: { query?:Partial<UseInfiniteQueryOptions<Awaited<ReturnType<typeof getApiV10PageConfigId>>, TError, TData>>, request?: SecondParameter<typeof useCustomClient>}
@@ -204,7 +207,7 @@ export function useGetApiV10PageConfigId<TData = Awaited<ReturnType<typeof getAp
  , queryClient?: QueryClient
   ):  UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> }
 /**
- * @summary Get hierarchical pageConfig by ID
+ * @summary Get page config by ID
  */
 
 export function useGetApiV10PageConfigId<TData = Awaited<ReturnType<typeof getApiV10PageConfigId>>, TError = ErrorType<void>>(
@@ -222,7 +225,7 @@ export function useGetApiV10PageConfigId<TData = Awaited<ReturnType<typeof getAp
 }
 
 /**
- * @summary Get hierarchical pageConfig by ID
+ * @summary Get page config by ID
  */
 export const prefetchGetApiV10PageConfigIdQuery = async <TData = Awaited<ReturnType<typeof getApiV10PageConfigId>>, TError = ErrorType<void>>(
  queryClient: QueryClient, id: string, options?: { query?:Partial<UseQueryOptions<Awaited<ReturnType<typeof getApiV10PageConfigId>>, TError, TData>>, request?: SecondParameter<typeof useCustomClient>}
@@ -239,19 +242,19 @@ export const prefetchGetApiV10PageConfigIdQuery = async <TData = Awaited<ReturnT
 
 
 /**
- * Update a single pageConfig record by its ID. level is computed if parent_id changes and must not be sent.
- * @summary Update pageConfig by ID
+ * Update a single page config record by its ID
+ * @summary Update page config by ID
  */
 export const putApiV10PageConfigId = (
     id: string,
-    putApiV10PageConfigIdBody: BodyType<PutApiV10PageConfigIdBody>,
+    pageConfigUpdate: BodyType<PageConfigUpdate>,
  options?: SecondParameter<typeof useCustomClient>,) => {
       
       
-      return useCustomClient<void>(
+      return useCustomClient<PageConfigGetOneResponse>(
       {url: `/api/v1.0/pageConfig/${id}`, method: 'PUT',
       headers: {'Content-Type': 'application/json', },
-      data: putApiV10PageConfigIdBody
+      data: pageConfigUpdate
     },
       options);
     }
@@ -259,8 +262,8 @@ export const putApiV10PageConfigId = (
 
 
 export const getPutApiV10PageConfigIdMutationOptions = <TError = ErrorType<void>,
-    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof putApiV10PageConfigId>>, TError,{id: string;data: BodyType<PutApiV10PageConfigIdBody>}, TContext>, request?: SecondParameter<typeof useCustomClient>}
-): UseMutationOptions<Awaited<ReturnType<typeof putApiV10PageConfigId>>, TError,{id: string;data: BodyType<PutApiV10PageConfigIdBody>}, TContext> => {
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof putApiV10PageConfigId>>, TError,{id: string;data: BodyType<PageConfigUpdate>}, TContext>, request?: SecondParameter<typeof useCustomClient>}
+): UseMutationOptions<Awaited<ReturnType<typeof putApiV10PageConfigId>>, TError,{id: string;data: BodyType<PageConfigUpdate>}, TContext> => {
 
 const mutationKey = ['putApiV10PageConfigId'];
 const {mutation: mutationOptions, request: requestOptions} = options ?
@@ -272,7 +275,7 @@ const {mutation: mutationOptions, request: requestOptions} = options ?
       
 
 
-      const mutationFn: MutationFunction<Awaited<ReturnType<typeof putApiV10PageConfigId>>, {id: string;data: BodyType<PutApiV10PageConfigIdBody>}> = (props) => {
+      const mutationFn: MutationFunction<Awaited<ReturnType<typeof putApiV10PageConfigId>>, {id: string;data: BodyType<PageConfigUpdate>}> = (props) => {
           const {id,data} = props ?? {};
 
           return  putApiV10PageConfigId(id,data,requestOptions)
@@ -284,18 +287,18 @@ const {mutation: mutationOptions, request: requestOptions} = options ?
   return  { mutationFn, ...mutationOptions }}
 
     export type PutApiV10PageConfigIdMutationResult = NonNullable<Awaited<ReturnType<typeof putApiV10PageConfigId>>>
-    export type PutApiV10PageConfigIdMutationBody = BodyType<PutApiV10PageConfigIdBody>
+    export type PutApiV10PageConfigIdMutationBody = BodyType<PageConfigUpdate>
     export type PutApiV10PageConfigIdMutationError = ErrorType<void>
 
     /**
- * @summary Update pageConfig by ID
+ * @summary Update page config by ID
  */
 export const usePutApiV10PageConfigId = <TError = ErrorType<void>,
-    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof putApiV10PageConfigId>>, TError,{id: string;data: BodyType<PutApiV10PageConfigIdBody>}, TContext>, request?: SecondParameter<typeof useCustomClient>}
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof putApiV10PageConfigId>>, TError,{id: string;data: BodyType<PageConfigUpdate>}, TContext>, request?: SecondParameter<typeof useCustomClient>}
  , queryClient?: QueryClient): UseMutationResult<
         Awaited<ReturnType<typeof putApiV10PageConfigId>>,
         TError,
-        {id: string;data: BodyType<PutApiV10PageConfigIdBody>},
+        {id: string;data: BodyType<PageConfigUpdate>},
         TContext
       > => {
 
@@ -304,15 +307,15 @@ export const usePutApiV10PageConfigId = <TError = ErrorType<void>,
       return useMutation(mutationOptions, queryClient);
     }
     /**
- * Delete a single pageConfig record by its ID
- * @summary Delete pageConfig by ID
+ * Delete a single page config record by its ID
+ * @summary Delete page config by ID
  */
 export const deleteApiV10PageConfigId = (
     id: string,
  options?: SecondParameter<typeof useCustomClient>,) => {
       
       
-      return useCustomClient<void>(
+      return useCustomClient<PageConfigDeleteResponse>(
       {url: `/api/v1.0/pageConfig/${id}`, method: 'DELETE'
     },
       options);
@@ -350,7 +353,7 @@ const {mutation: mutationOptions, request: requestOptions} = options ?
     export type DeleteApiV10PageConfigIdMutationError = ErrorType<void>
 
     /**
- * @summary Delete pageConfig by ID
+ * @summary Delete page config by ID
  */
 export const useDeleteApiV10PageConfigId = <TError = ErrorType<void>,
     TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof deleteApiV10PageConfigId>>, TError,{id: string}, TContext>, request?: SecondParameter<typeof useCustomClient>}
@@ -366,8 +369,8 @@ export const useDeleteApiV10PageConfigId = <TError = ErrorType<void>,
       return useMutation(mutationOptions, queryClient);
     }
     /**
- * Retrieve hierarchical page config by id, static_link, or code. If no parameters are provided, returns the root hierarchical structure.
- * @summary Get hierarchical pageConfig
+ * Retrieve the page registry with pagination, filtering and sorting
+ * @summary Get all page configs
  */
 export const getApiV10PageConfig = (
     params?: GetApiV10PageConfigParams,
@@ -375,7 +378,7 @@ export const getApiV10PageConfig = (
 ) => {
       
       
-      return useCustomClient<void>(
+      return useCustomClient<PageConfigGetAllResponse>(
       {url: `/api/v1.0/pageConfig`, method: 'GET',
         params, signal
     },
@@ -445,7 +448,7 @@ export function useGetApiV10PageConfigInfinite<TData = InfiniteData<Awaited<Retu
  , queryClient?: QueryClient
   ):  UseInfiniteQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> }
 /**
- * @summary Get hierarchical pageConfig
+ * @summary Get all page configs
  */
 
 export function useGetApiV10PageConfigInfinite<TData = InfiniteData<Awaited<ReturnType<typeof getApiV10PageConfig>>>, TError = ErrorType<unknown>>(
@@ -463,7 +466,7 @@ export function useGetApiV10PageConfigInfinite<TData = InfiniteData<Awaited<Retu
 }
 
 /**
- * @summary Get hierarchical pageConfig
+ * @summary Get all page configs
  */
 export const prefetchGetApiV10PageConfigInfiniteQuery = async <TData = Awaited<ReturnType<typeof getApiV10PageConfig>>, TError = ErrorType<unknown>>(
  queryClient: QueryClient, params?: GetApiV10PageConfigParams, options?: { query?:Partial<UseInfiniteQueryOptions<Awaited<ReturnType<typeof getApiV10PageConfig>>, TError, TData>>, request?: SecondParameter<typeof useCustomClient>}
@@ -526,7 +529,7 @@ export function useGetApiV10PageConfig<TData = Awaited<ReturnType<typeof getApiV
  , queryClient?: QueryClient
   ):  UseQueryResult<TData, TError> & { queryKey: DataTag<QueryKey, TData, TError> }
 /**
- * @summary Get hierarchical pageConfig
+ * @summary Get all page configs
  */
 
 export function useGetApiV10PageConfig<TData = Awaited<ReturnType<typeof getApiV10PageConfig>>, TError = ErrorType<unknown>>(
@@ -544,7 +547,7 @@ export function useGetApiV10PageConfig<TData = Awaited<ReturnType<typeof getApiV
 }
 
 /**
- * @summary Get hierarchical pageConfig
+ * @summary Get all page configs
  */
 export const prefetchGetApiV10PageConfigQuery = async <TData = Awaited<ReturnType<typeof getApiV10PageConfig>>, TError = ErrorType<unknown>>(
  queryClient: QueryClient, params?: GetApiV10PageConfigParams, options?: { query?:Partial<UseQueryOptions<Awaited<ReturnType<typeof getApiV10PageConfig>>, TError, TData>>, request?: SecondParameter<typeof useCustomClient>}
@@ -561,28 +564,28 @@ export const prefetchGetApiV10PageConfigQuery = async <TData = Awaited<ReturnTyp
 
 
 /**
- * Create a new pageConfig record. parent_id is required. level is computed from parent and must not be sent.
- * @summary Create a pageConfig
+ * Create a new page config record
+ * @summary Create a page config
  */
 export const postApiV10PageConfig = (
-    postApiV10PageConfigBody: BodyType<PostApiV10PageConfigBody>,
+    pageConfigCreate: BodyType<PageConfigCreate>,
  options?: SecondParameter<typeof useCustomClient>,signal?: AbortSignal
 ) => {
       
       
-      return useCustomClient<void>(
+      return useCustomClient<PageConfigGetOneResponse>(
       {url: `/api/v1.0/pageConfig`, method: 'POST',
       headers: {'Content-Type': 'application/json', },
-      data: postApiV10PageConfigBody, signal
+      data: pageConfigCreate, signal
     },
       options);
     }
   
 
 
-export const getPostApiV10PageConfigMutationOptions = <TError = ErrorType<unknown>,
-    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof postApiV10PageConfig>>, TError,{data: BodyType<PostApiV10PageConfigBody>}, TContext>, request?: SecondParameter<typeof useCustomClient>}
-): UseMutationOptions<Awaited<ReturnType<typeof postApiV10PageConfig>>, TError,{data: BodyType<PostApiV10PageConfigBody>}, TContext> => {
+export const getPostApiV10PageConfigMutationOptions = <TError = ErrorType<void>,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof postApiV10PageConfig>>, TError,{data: BodyType<PageConfigCreate>}, TContext>, request?: SecondParameter<typeof useCustomClient>}
+): UseMutationOptions<Awaited<ReturnType<typeof postApiV10PageConfig>>, TError,{data: BodyType<PageConfigCreate>}, TContext> => {
 
 const mutationKey = ['postApiV10PageConfig'];
 const {mutation: mutationOptions, request: requestOptions} = options ?
@@ -594,7 +597,7 @@ const {mutation: mutationOptions, request: requestOptions} = options ?
       
 
 
-      const mutationFn: MutationFunction<Awaited<ReturnType<typeof postApiV10PageConfig>>, {data: BodyType<PostApiV10PageConfigBody>}> = (props) => {
+      const mutationFn: MutationFunction<Awaited<ReturnType<typeof postApiV10PageConfig>>, {data: BodyType<PageConfigCreate>}> = (props) => {
           const {data} = props ?? {};
 
           return  postApiV10PageConfig(data,requestOptions)
@@ -606,18 +609,18 @@ const {mutation: mutationOptions, request: requestOptions} = options ?
   return  { mutationFn, ...mutationOptions }}
 
     export type PostApiV10PageConfigMutationResult = NonNullable<Awaited<ReturnType<typeof postApiV10PageConfig>>>
-    export type PostApiV10PageConfigMutationBody = BodyType<PostApiV10PageConfigBody>
-    export type PostApiV10PageConfigMutationError = ErrorType<unknown>
+    export type PostApiV10PageConfigMutationBody = BodyType<PageConfigCreate>
+    export type PostApiV10PageConfigMutationError = ErrorType<void>
 
     /**
- * @summary Create a pageConfig
+ * @summary Create a page config
  */
-export const usePostApiV10PageConfig = <TError = ErrorType<unknown>,
-    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof postApiV10PageConfig>>, TError,{data: BodyType<PostApiV10PageConfigBody>}, TContext>, request?: SecondParameter<typeof useCustomClient>}
+export const usePostApiV10PageConfig = <TError = ErrorType<void>,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof postApiV10PageConfig>>, TError,{data: BodyType<PageConfigCreate>}, TContext>, request?: SecondParameter<typeof useCustomClient>}
  , queryClient?: QueryClient): UseMutationResult<
         Awaited<ReturnType<typeof postApiV10PageConfig>>,
         TError,
-        {data: BodyType<PostApiV10PageConfigBody>},
+        {data: BodyType<PageConfigCreate>},
         TContext
       > => {
 
