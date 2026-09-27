@@ -25,18 +25,6 @@ export function formatFileSize(size?: number | null) {
   return `${(size / (1024 * 1024)).toFixed(1)} MB`;
 }
 
-export function formatDate(value?: string | null) {
-  if (!value) return "-";
-
-  return new Date(value).toLocaleString("vi-VN", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  });
-}
-
 export function getFileSize(item: CmsFileItem) {
   const importInfo = item as CmsFileItem & {
     size?: number | null;

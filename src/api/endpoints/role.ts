@@ -307,7 +307,7 @@ export const usePutApiV10RoleId = <TError = ErrorType<void>,
       return useMutation(mutationOptions, queryClient);
     }
     /**
- * Delete a single role by its ID. Cannot delete system roles (system_admin).
+ * Delete a single role by its ID. Cannot delete system roles (admin).
  * @summary Delete role by ID
  */
 export const deleteApiV10RoleId = (

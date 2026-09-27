@@ -5,6 +5,6 @@
  * Coded by Meu TEAM
  * OpenAPI spec version: 1.0.0
  */
-import type { PostCreate } from './postCreate';
+import type { PostUpdate } from './postUpdate';
 
-export type PostMutate = PostCreate;
+export type PostMutate = PostUpdate;

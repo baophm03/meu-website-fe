@@ -331,6 +331,276 @@
           "primaryButton": "Yêu cầu demo",
           "secondaryButton": "Xem tất cả sản phẩm"
         }
+      },
+      "meos": {
+        "hero": {
+          "eyebrow": "Sản phẩm & nền tảng",
+          "heading": "Hệ sinh thái công nghệ MEOS",
+          "summary": "Một hệ sinh thái, nhiều giải pháp cho nhu cầu doanh nghiệp — MEOS tập hợp nhiều giải pháp số được phát triển để đáp ứng các nhu cầu khác nhau trong hoạt động kinh doanh và vận hành.",
+          "secondaryButton": "Tất cả sản phẩm"
+        },
+        "whatWeDo": {
+          "eyebrow": "Hệ sinh thái MEOS",
+          "heading": "Nhiều giải pháp cùng phát triển trong một hệ sinh thái.",
+          "summary": "MEOS được xây dựng theo hướng mở, trong đó mỗi giải pháp đảm nhiệm một nhóm nhu cầu riêng nhưng có khả năng kết nối và phát triển cùng nhau.",
+          "item1Title": "MEOS Mini App",
+          "item1Desc": "Giải pháp hỗ trợ doanh nghiệp xây dựng kênh bán hàng, chăm sóc khách hàng, loyalty, voucher và affiliate trên nền tảng Mini App.",
+          "item2Title": "MEOS E-commerce",
+          "item2Desc": "Giải pháp hỗ trợ hoạt động thương mại điện tử, từ quản lý sản phẩm, đơn hàng, khách hàng đến vận hành kinh doanh trực tuyến.",
+          "item3Title": "MEOS Omni",
+          "item3Desc": "Giải pháp hướng đến việc kết nối các điểm chạm và hoạt động tương tác với khách hàng trên nhiều kênh.",
+          "item4Title": "Các giải pháp mở rộng",
+          "item4Desc": "Hệ sinh thái tiếp tục được phát triển với các giải pháp và nền tảng mới, đáp ứng những nhu cầu khác nhau của doanh nghiệp."
+        },
+        "approach": {
+          "eyebrow": "Cách MEOS được phát triển",
+          "heading": "Mỗi giải pháp giải quyết một nhu cầu, cùng hướng đến một hệ sinh thái.",
+          "summary": "Doanh nghiệp có thể tiếp cận từng giải pháp theo nhu cầu thực tế, đồng thời có khả năng kết nối và mở rộng khi nhu cầu phát triển.",
+          "step1Label": "Theo nhu cầu",
+          "step1Desc": "Mỗi giải pháp tập trung vào một nhóm bài toán cụ thể trong hoạt động kinh doanh và vận hành.",
+          "step2Label": "Theo từng giai đoạn",
+          "step2Desc": "Doanh nghiệp có thể bắt đầu với một giải pháp phù hợp thay vì triển khai toàn bộ hệ thống ngay từ đầu.",
+          "step3Label": "Kết nối giữa các giải pháp",
+          "step3Desc": "Các thành phần trong hệ sinh thái có khả năng kết nối dữ liệu và hỗ trợ lẫn nhau trong quá trình vận hành.",
+          "step4Label": "Liên tục mở rộng",
+          "step4Desc": "Các giải pháp mới có thể được bổ sung để đáp ứng những nhu cầu mới khi doanh nghiệp phát triển."
+        },
+        "outcomes": {
+          "eyebrow": "Giá trị của hệ sinh thái MEOS",
+          "heading": "Từ những giải pháp riêng lẻ đến một hệ sinh thái kết nối.",
+          "summary": "MEOS không đặt trọng tâm vào một sản phẩm duy nhất, mà xây dựng một hệ sinh thái gồm nhiều giải pháp có thể cùng phát triển theo nhu cầu của doanh nghiệp.",
+          "outcome1Title": "Đa dạng giải pháp",
+          "outcome1Desc": "Nhiều nền tảng được phát triển cho những nhu cầu khác nhau về bán hàng, thương mại điện tử, khách hàng và vận hành.",
+          "outcome2Title": "Linh hoạt lựa chọn",
+          "outcome2Desc": "Doanh nghiệp có thể lựa chọn giải pháp phù hợp với nhu cầu và quy mô ở từng giai đoạn.",
+          "outcome3Title": "Khả năng kết nối",
+          "outcome3Desc": "Các giải pháp có thể được kết nối để tạo thành một hệ thống thống nhất hơn thay vì vận hành hoàn toàn độc lập.",
+          "outcome4Title": "Sẵn sàng phát triển",
+          "outcome4Desc": "Hệ sinh thái liên tục mở rộng để đồng hành cùng những nhu cầu mới của doanh nghiệp."
+        },
+        "cta": {
+          "eyebrow": "Sẵn sàng bắt đầu?",
+          "heading1": "Mang đến thách thức.",
+          "heading2": "Chúng tôi mang đến hướng đi.",
+          "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
+          "secondaryButton": "Tất cả sản phẩm"
+        }
+      },
+      "meos365": {
+        "hero": {
+          "eyebrow": "Vũ trụ MeOS",
+          "heading": "MEOS 365 — Nền tảng quản trị vận hành doanh nghiệp",
+          "summary": "Số hóa toàn bộ hoạt động quản trị nội bộ: công việc, tài liệu, nhân sự và báo cáo trên một nền tảng thống nhất — doanh nghiệp vận hành mạch lạc mọi ngày trong năm.",
+          "secondaryButton": "Về MEOS Ecosystem"
+        },
+        "whatWeDo": {
+          "eyebrow": "MEOS 365 làm gì",
+          "heading": "Một nền tảng cho toàn bộ công tác quản trị.",
+          "summary": "MEOS 365 tập trung các nghiệp vụ vận hành cốt lõi thay cho bộ công cụ rời rạc mà doanh nghiệp đang phải dùng.",
+          "item1Title": "Quản lý công việc & quy trình",
+          "item1Desc": "Giao việc, theo dõi tiến độ, phê duyệt và tự động hóa các quy trình lặp lại trong doanh nghiệp.",
+          "item2Title": "Quản lý tài liệu & tri thức",
+          "item2Desc": "Lưu trữ, phân quyền và tìm kiếm tài liệu tập trung thay vì phân tán trên email và ổ cá nhân.",
+          "item3Title": "Quản lý nhân sự",
+          "item3Desc": "Hồ sơ nhân viên, chấm công, nghỉ phép và các nghiệp vụ HR cơ bản trên một hệ thống.",
+          "item4Title": "Báo cáo & tổng hợp",
+          "item4Desc": "Tổng hợp dữ liệu hoạt động thành báo cáo phục vụ quản lý và ra quyết định."
+        },
+        "approach": {
+          "eyebrow": "Cách triển khai",
+          "heading": "Số hóa từng bước, không đảo lộn vận hành.",
+          "summary": "MEOS 365 được đưa vào theo lộ trình phù hợp với mức độ sẵn sàng của từng doanh nghiệp.",
+          "step1Label": "Số hóa quy trình",
+          "step1Desc": "Đưa các quy trình giấy và xử lý tay lên hệ thống theo đúng cách doanh nghiệp đang vận hành.",
+          "step2Label": "Tập trung dữ liệu",
+          "step2Desc": "Thông tin công việc, nhân sự và tài liệu được lưu trữ trên một hệ thống thống nhất.",
+          "step3Label": "Tự động hóa",
+          "step3Desc": "Các bước lặp lại như phê duyệt, nhắc việc, tổng hợp được tự động hóa để giảm thao tác.",
+          "step4Label": "Mở rộng",
+          "step4Desc": "Bổ sung module và kết nối với các giải pháp khác trong hệ sinh thái MEOS khi cần."
+        },
+        "outcomes": {
+          "eyebrow": "Giá trị mang lại",
+          "heading": "Vận hành gọn hơn mỗi ngày.",
+          "summary": "Giá trị của MEOS 365 nằm ở sự ổn định và nhất quán trong vận hành hằng ngày của doanh nghiệp.",
+          "outcome1Title": "Giảm thao tác thủ công",
+          "outcome1Desc": "Các quy trình phê duyệt, theo dõi và tổng hợp không còn phụ thuộc vào xử lý tay.",
+          "outcome2Title": "Dữ liệu tập trung",
+          "outcome2Desc": "Thông tin vận hành được lưu trữ một nơi, dễ tra cứu và đối chiếu.",
+          "outcome3Title": "Minh bạch tiến độ",
+          "outcome3Desc": "Quản lý nắm được trạng thái công việc theo thời gian thực thay vì chờ báo cáo.",
+          "outcome4Title": "Sẵn sàng kết nối",
+          "outcome4Desc": "Kết nối với các giải pháp khác trong hệ sinh thái MEOS khi nhu cầu mở rộng."
+        },
+        "cta": {
+          "eyebrow": "Sẵn sàng bắt đầu?",
+          "heading1": "Mang đến thách thức.",
+          "heading2": "Chúng tôi mang đến hướng đi.",
+          "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
+          "secondaryButton": "Về MEOS Ecosystem"
+        }
+      },
+      "meosEcommerce": {
+        "hero": {
+          "eyebrow": "Vũ trụ MeOS",
+          "heading": "MEOS E-commerce — Nền tảng thương mại điện tử cho doanh nghiệp",
+          "summary": "Xây dựng kênh bán hàng trực tuyến đầy đủ: sản phẩm, đơn hàng, khách hàng và chương trình bán hàng trên một nền tảng có khả năng mở rộng.",
+          "secondaryButton": "Về MEOS Ecosystem"
+        },
+        "whatWeDo": {
+          "eyebrow": "MEOS E-commerce làm gì",
+          "heading": "Đầy đủ cho một kênh thương mại điện tử.",
+          "summary": "Từ trang bán hàng đến vận hành sau bán, các nghiệp vụ cốt lõi được tích hợp sẵn trong nền tảng.",
+          "item1Title": "Gian hàng & trải nghiệm mua",
+          "item1Desc": "Trang bán hàng trực tuyến với danh mục, tìm kiếm, giỏ hàng và thanh toán phục vụ trải nghiệm mua sắm.",
+          "item2Title": "Quản lý sản phẩm & đơn hàng",
+          "item2Desc": "Quản lý danh mục, tồn kho, giá bán và toàn bộ vòng đời đơn hàng trên một hệ thống.",
+          "item3Title": "Khách hàng & chương trình bán",
+          "item3Desc": "Quản lý thông tin khách hàng cùng các chương trình voucher, ưu đãi và khuyến mãi.",
+          "item4Title": "Vận hành & báo cáo",
+          "item4Desc": "Theo dõi doanh số, hiệu quả chương trình và hoạt động bán hàng qua báo cáo tập trung."
+        },
+        "approach": {
+          "eyebrow": "Cách triển khai",
+          "heading": "Lên kênh bán nhanh, vận hành bền.",
+          "summary": "MEOS E-commerce được triển khai theo mô hình bán hàng thực tế của từng doanh nghiệp.",
+          "step1Label": "Theo mô hình bán",
+          "step1Desc": "Thiết lập danh mục, giá, chương trình và quy trình đơn hàng đúng với cách doanh nghiệp kinh doanh.",
+          "step2Label": "Kết nối vận hành",
+          "step2Desc": "Đồng bộ đơn hàng, kho và dữ liệu khách hàng với các hệ thống hiện có qua API.",
+          "step3Label": "Chăm sóc sau bán",
+          "step3Desc": "Duy trì tương tác khách hàng bằng voucher, ưu đãi và các chương trình theo nhóm.",
+          "step4Label": "Mở rộng điểm chạm",
+          "step4Desc": "Kết nối với MEOS MiniApp, MEOS Omni và các kênh bán khác trong hệ sinh thái."
+        },
+        "outcomes": {
+          "eyebrow": "Giá trị mang lại",
+          "heading": "Bán hàng trực tuyến trên nền tảng của chính mình.",
+          "summary": "Doanh nghiệp sở hữu kênh thương mại riêng thay vì phụ thuộc hoàn toàn vào sàn bên ngoài.",
+          "outcome1Title": "Kênh bán độc lập",
+          "outcome1Desc": "Gian hàng trực tuyến mang thương hiệu doanh nghiệp, dữ liệu khách hàng thuộc về doanh nghiệp.",
+          "outcome2Title": "Vận hành tập trung",
+          "outcome2Desc": "Sản phẩm, đơn hàng, kho và khách hàng được quản lý trên một hệ thống.",
+          "outcome3Title": "Duy trì khách hàng",
+          "outcome3Desc": "Voucher, ưu đãi và chương trình chăm sóc giúp giữ chân và kích thích mua lại.",
+          "outcome4Title": "Mở rộng linh hoạt",
+          "outcome4Desc": "Kết nối thêm điểm chạm và tính năng khi quy mô kinh doanh tăng lên."
+        },
+        "cta": {
+          "eyebrow": "Sẵn sàng bắt đầu?",
+          "heading1": "Mang đến thách thức.",
+          "heading2": "Chúng tôi mang đến hướng đi.",
+          "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
+          "secondaryButton": "Về MEOS Ecosystem"
+        }
+      },
+      "meosMiniapp": {
+        "hero": {
+          "eyebrow": "Vũ trụ MeOS",
+          "heading": "MEOS MiniApp — Kênh bán hàng & chăm sóc khách hàng trên Mini App",
+          "summary": "Đưa hoạt động kinh doanh lên nền tảng Mini App: bán hàng, loyalty, voucher và affiliate trong một điểm chạm trực tiếp với khách hàng.",
+          "secondaryButton": "Về MEOS Ecosystem"
+        },
+        "whatWeDo": {
+          "eyebrow": "MEOS MiniApp làm gì",
+          "heading": "Gặp khách hàng ngay trên nền tảng họ dùng hằng ngày.",
+          "summary": "Mini App loại bỏ rào cản cài đặt — khách hàng tiếp cận dịch vụ của doanh nghiệp chỉ với một thao tác.",
+          "item1Title": "Shopping trên Mini App",
+          "item1Desc": "Danh mục sản phẩm, đặt hàng và thanh toán ngay trong Mini App mà không cần cài ứng dụng.",
+          "item2Title": "Loyalty & thành viên",
+          "item2Desc": "Tích điểm, hạng thành viên và đặc quyền giúp duy trì tương tác thường xuyên với khách hàng.",
+          "item3Title": "Voucher & ưu đãi",
+          "item3Desc": "Tạo và phân phối voucher, chương trình ưu đãi theo nhóm khách hàng hoặc hành vi mua sắm.",
+          "item4Title": "Affiliate & cộng tác viên",
+          "item4Desc": "Xây dựng mạng lưới cộng tác viên bán hàng với cơ chế affiliate và theo dõi hiệu quả."
+        },
+        "approach": {
+          "eyebrow": "Cách triển khai",
+          "heading": "Từ điểm chạm đầu tiên đến kênh kinh doanh.",
+          "summary": "MEOS MiniApp được phát triển theo nhu cầu — từ một tính năng đơn giản đến kênh kinh doanh đầy đủ.",
+          "step1Label": "Mở điểm chạm",
+          "step1Desc": "Đưa sản phẩm và dịch vụ lên Mini App để khách hàng tiếp cận nhanh nhất có thể.",
+          "step2Label": "Duy trì tương tác",
+          "step2Desc": "Loyalty, voucher và thông báo giúp khách hàng quay lại thường xuyên.",
+          "step3Label": "Mở rộng bán hàng",
+          "step3Desc": "Kích hoạt affiliate và cộng tác viên để mở rộng phạm vi tiếp cận.",
+          "step4Label": "Đồng bộ hệ sinh thái",
+          "step4Desc": "Kết nối dữ liệu với MEOS E-commerce và các giải pháp khác trong hệ sinh thái."
+        },
+        "outcomes": {
+          "eyebrow": "Giá trị mang lại",
+          "heading": "Kênh kinh doanh nằm trong tầm tay khách hàng.",
+          "summary": "Mini App biến lượng người dùng sẵn có của nền tảng thành khách hàng tiềm năng của doanh nghiệp.",
+          "outcome1Title": "Không rào cản cài đặt",
+          "outcome1Desc": "Khách hàng sử dụng ngay trên nền tảng quen thuộc, không cần tải ứng dụng riêng.",
+          "outcome2Title": "Tương tác thường xuyên",
+          "outcome2Desc": "Loyalty, voucher và thông báo duy trì mối liên hệ liên tục với khách hàng.",
+          "outcome3Title": "Nhân rộng kênh bán",
+          "outcome3Desc": "Affiliate và cộng tác viên mở rộng doanh số mà không tăng chi phí cố định.",
+          "outcome4Title": "Dữ liệu thống nhất",
+          "outcome4Desc": "Dữ liệu bán hàng và khách hàng đồng bộ với các giải pháp MEOS khác."
+        },
+        "cta": {
+          "eyebrow": "Sẵn sàng bắt đầu?",
+          "heading1": "Mang đến thách thức.",
+          "heading2": "Chúng tôi mang đến hướng đi.",
+          "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
+          "secondaryButton": "Về MEOS Ecosystem"
+        }
+      },
+      "meosOmni": {
+        "hero": {
+          "eyebrow": "Vũ trụ MeOS",
+          "heading": "MEOS Omni — Kết nối đa kênh và trải nghiệm khách hàng",
+          "summary": "Đồng bộ các điểm chạm bán hàng và chăm sóc khách hàng trên nhiều kênh thành một trải nghiệm thống nhất, dữ liệu một nguồn.",
+          "secondaryButton": "Về MEOS Ecosystem"
+        },
+        "whatWeDo": {
+          "eyebrow": "MEOS Omni làm gì",
+          "heading": "Nhiều kênh, một trải nghiệm.",
+          "summary": "Khách hàng tương tác ở nhiều nơi — website, mạng xã hội, cửa hàng, mini app. MEOS Omni kết nối chúng thành một hành trình liền mạch.",
+          "item1Title": "Kết nối điểm chạm",
+          "item1Desc": "Đồng bộ website, e-commerce, mini app và điểm bán để khách hàng được phục vụ nhất quán.",
+          "item2Title": "Dữ liệu khách hàng thống nhất",
+          "item2Desc": "Lịch sử mua hàng và tương tác từ mọi kênh được tập hợp thành một hồ sơ khách hàng duy nhất.",
+          "item3Title": "Hành trình xuyên kênh",
+          "item3Desc": "Khách hàng có thể bắt đầu ở kênh này và tiếp tục ở kênh khác mà không bị đứt gãy trải nghiệm.",
+          "item4Title": "Chiến dịch đa kênh",
+          "item4Desc": "Triển khai ưu đãi, voucher và chương trình chăm sóc đồng bộ trên toàn bộ điểm chạm."
+        },
+        "approach": {
+          "eyebrow": "Cách triển khai",
+          "heading": "Kết nối trước, tối ưu sau.",
+          "summary": "MEOS Omni bắt đầu bằng việc kết nối các kênh hiện có rồi nâng cấp trải nghiệm theo dữ liệu thực tế.",
+          "step1Label": "Kết nối kênh hiện có",
+          "step1Desc": "Tích hợp các điểm chạm đang vận hành thông qua API mà không thay thế hệ thống cũ.",
+          "step2Label": "Hợp nhất dữ liệu",
+          "step2Desc": "Dữ liệu khách hàng và giao dịch từ các kênh được đồng bộ về một nguồn.",
+          "step3Label": "Thiết kế hành trình",
+          "step3Desc": "Xây dựng các hành trình khách hàng xuyên kênh dựa trên dữ liệu thực tế.",
+          "step4Label": "Vận hành thống nhất",
+          "step4Desc": "Quản lý chương trình và tương tác trên toàn bộ kênh từ một nơi."
+        },
+        "outcomes": {
+          "eyebrow": "Giá trị mang lại",
+          "heading": "Khách hàng đi đâu, trải nghiệm theo đó.",
+          "summary": "Khi các kênh được kết nối, doanh nghiệp phục vụ khách hàng nhất quán bất kể họ xuất hiện ở đâu.",
+          "outcome1Title": "Trải nghiệm liền mạch",
+          "outcome1Desc": "Khách hàng không cảm nhận sự rời rạc giữa các kênh của doanh nghiệp.",
+          "outcome2Title": "Hiểu khách hàng đầy đủ",
+          "outcome2Desc": "Hồ sơ khách hàng thống nhất giúp nhận diện và chăm sóc chính xác hơn.",
+          "outcome3Title": "Vận hành hiệu quả",
+          "outcome3Desc": "Quản lý chương trình đa kênh từ một nơi thay vì vận hành từng kênh riêng lẻ.",
+          "outcome4Title": "Nền tảng mở rộng",
+          "outcome4Desc": "Thêm kênh mới vào hệ thống mà không phá vỡ kiến trúc hiện có."
+        },
+        "cta": {
+          "eyebrow": "Sẵn sàng bắt đầu?",
+          "heading1": "Mang đến thách thức.",
+          "heading2": "Chúng tôi mang đến hướng đi.",
+          "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
+          "secondaryButton": "Về MEOS Ecosystem"
+        }
       }
     }
   }

@@ -13,7 +13,7 @@ export interface ContactCreate {
   /** @maxLength 255 */
   email: string;
   /** @maxLength 30 */
-  phone: string;
+  phone?: string;
   /** @maxLength 255 */
   title: string;
   content: string;

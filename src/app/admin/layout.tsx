@@ -8,10 +8,49 @@ import { AdminAuthLoadingScreen, useAdminAuthStatus } from '@/components/layout/
 import { AdminSidebar } from '@/components/layout/admin/admin-sidebar';
 import { AdminHeader } from '@/components/layout/admin/admin-header';
 import { useSidebarStore } from '@/hooks/use-admin-sidebar';
+import { useGetApiV10AuthMe } from '@/api/endpoints/authentication';
+import useProfileStore from '@/store/useProfileStore';
 import { cn } from '@/lib/utils';
 
 function AdminShell({ children }: { children: ReactNode }) {
   const { close, isOpen } = useSidebarStore();
+  const meQuery = useGetApiV10AuthMe({ query: { enabled: false } });
+  const refetchMe = meQuery.refetch;
+
+  // Đồng bộ lại permissions (ability) mỗi lần vào admin / quay lại tab —
+  // profile persist trong storage nên quyền mới cấp cần /auth/me để cập nhật.
+  useEffect(() => {
+    const refresh = async () => {
+      try {
+        const res = await refetchMe();
+        const meData = (res.data as { responseData?: Record<string, unknown> } | undefined)?.responseData;
+        if (!meData?.id) return;
+        const prev = useProfileStore.getState().appUser;
+        useProfileStore.getState().setAppUser({
+          id: String(meData.id),
+          email: String(meData.email ?? prev?.email ?? ""),
+          username: String(meData.username ?? prev?.username ?? ""),
+          first_name: (meData.first_name as string | null) ?? null,
+          last_name: (meData.last_name as string | null) ?? null,
+          roles: Array.isArray(meData.roles) ? (meData.roles as string[]) : [],
+          permissions: Array.isArray(meData.permissions)
+            ? (meData.permissions as { module: string; action: string }[])
+            : [],
+          status: (meData.status as string | null) ?? null,
+          last_login_at: (meData.last_login_at as string | null) ?? prev?.last_login_at ?? null,
+          must_change_password: prev?.must_change_password ?? false,
+        });
+      } catch {
+        // Giữ session hiện tại nếu /me lỗi
+      }
+    };
+    void refresh();
+    const onVisible = () => {
+      if (document.visibilityState === "visible") void refresh();
+    };
+    document.addEventListener("visibilitychange", onVisible);
+    return () => document.removeEventListener("visibilitychange", onVisible);
+  }, [refetchMe]);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 1023px)');

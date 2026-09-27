@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Columns3, Plus } from "lucide-react";
 import { toast } from "sonner";
@@ -17,9 +17,11 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { useQueryClient } from "@tanstack/react-query";
 import {
-  deleteApiV10FooterId,
-  getApiV10Footer,
+  getGetApiV10FooterQueryKey,
+  useDeleteApiV10FooterId,
+  useGetApiV10Footer,
 } from "@/api/endpoints/footer";
 import type { Footer } from "@/api/models/footer";
 
@@ -28,47 +30,30 @@ const FOOTER_CREATE_ID = "00000000-0000-0000-0000-000000000000";
 
 export default function AdminFooterPage() {
   const router = useRouter();
-  const [items, setItems] = useState<Footer[]>([]);
+  const queryClient = useQueryClient();
   const [search, setSearch] = useState("");
-  const [ready, setReady] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [deleteTarget, setDeleteTarget] = useState<Footer | null>(null);
   const [page, setPage] = useState(1);
-  const [total, setTotal] = useState(0);
 
-  const loadFooters = useCallback(async () => {
-    setReady(false);
+  const keyword = search.trim();
+  const { data, isFetching } = useGetApiV10Footer({
+    page,
+    pageSize: PAGE_SIZE,
+    sortField: "created_at",
+    sortOrder: "desc",
+    filters: keyword ? `language@=${keyword}` : undefined,
+  });
+  const deleteFooter = useDeleteApiV10FooterId();
 
-    try {
-      const keyword = search.trim();
-      const response = await getApiV10Footer({
-        page,
-        pageSize: PAGE_SIZE,
-        sortField: "created_at",
-        sortOrder: "desc",
-        filters: keyword ? `language@=${keyword}` : undefined,
-      });
-      const pageData = (response as { responseData?: { rows?: Footer[]; count?: number } })
-        .responseData ?? {};
+  const pageData = (data as { responseData?: { rows?: Footer[]; count?: number } } | undefined)
+    ?.responseData ?? {};
+  const items = pageData.rows ?? [];
+  const total = pageData.count ?? 0;
+  const ready = !isFetching;
 
-      setItems(pageData.rows ?? []);
-      setTotal(pageData.count ?? 0);
-    } catch (error) {
-      toast.error(error instanceof Error ? error.message : "Không thể tải danh sách footer");
-      setItems([]);
-      setTotal(0);
-    } finally {
-      setReady(true);
-    }
-  }, [page, search]);
-
-  useEffect(() => {
-    void loadFooters();
-  }, [loadFooters]);
-
-  useEffect(() => {
-    setPage(1);
-  }, [search]);
+  const reload = () =>
+    queryClient.invalidateQueries({ queryKey: getGetApiV10FooterQueryKey() });
 
   const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
 
@@ -77,10 +62,10 @@ export default function AdminFooterPage() {
 
     setDeleting(true);
     try {
-      await deleteApiV10FooterId(String(deleteTarget.id));
+      await deleteFooter.mutateAsync({ id: String(deleteTarget.id) });
       toast.success("Đã xóa footer");
       setDeleteTarget(null);
-      await loadFooters();
+      await reload();
     } catch (error) {
       toast.error(error instanceof Error ? error.message : "Không thể xóa footer");
     } finally {
@@ -100,7 +85,10 @@ export default function AdminFooterPage() {
             Tổng số footer: {total}
           </div>
         }
-        onSearchChange={setSearch}
+        onSearchChange={(value) => {
+          setSearch(value);
+          setPage(1);
+        }}
         onActionClick={() => router.push(`/admin/footer/edit/${FOOTER_CREATE_ID}`)}
       >
         <Table>

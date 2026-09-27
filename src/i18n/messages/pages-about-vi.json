@@ -191,17 +191,17 @@
           "item3Desc": "Snowflake, BigQuery, PostgreSQL cho hạ tầng dữ liệu."
         },
         "clients": {
-          "eyebrow": "Quan hệ khách hàng",
-          "heading": "Cách làm việc với khách hàng.",
-          "summary": "Gia cố nhân sự, đội chuyên trách và dự án theo phạm vi.",
-          "note": "Logo khách hàng và chỉ số bàn giao xác thực được công bố sau phê duyệt."
+          "eyebrow": "Đối tác & Khách hàng",
+          "heading": "Đồng hành cùng các thương hiệu hàng đầu.",
+          "summary": "Từ ngân hàng, hàng không đến bán lẻ — các tổ chức tin chọn MeU cho những sản phẩm số trọng yếu của họ.",
+          "note": ""
         },
         "cta": {
-          "eyebrow": "Muốn hợp tác?",
-          "heading1": "Bắt đầu trò chuyện.",
-          "heading2": "Chúng tôi tìm sự phù hợp.",
-          "description": "Trò chuyện với đội về cách chúng tôi giúp.",
-          "primaryButton": "Trao đổi với chuyên gia",
+          "eyebrow": "Trở thành đối tác",
+          "heading1": "Liên hệ ngay để trở thành",
+          "heading2": "một trong những đối tác của chúng tôi.",
+          "description": "Từ ý tưởng đến sản phẩm hoàn chỉnh — đội ngũ MeU sẵn sàng đồng hành cùng bạn.",
+          "primaryButton": "Liên hệ ngay",
           "secondaryButton": "Về chúng tôi"
         }
       },
@@ -272,7 +272,15 @@
           "description": "Email careers@meusolutions.com hoặc trò chuyện với đội.",
           "primaryButton": "Trò chuyện với chúng tôi",
           "secondaryButton": "Về chúng tôi"
-        }
+        },
+        "openRoles": "Vị trí đang mở",
+        "openRolesHeading": "Gia nhập đội ngũ.",
+        "openRolesSummary": "Tất cả vị trí đang tuyển — lọc theo phòng ban hoặc mở chi tiết để xem mô tả đầy đủ.",
+        "location": "Địa điểm",
+        "deadline": "Hạn nộp",
+        "apply": "Ứng tuyển",
+        "viewRole": "Xem chi tiết",
+        "positions": "vị trí"
       }
     }
   }

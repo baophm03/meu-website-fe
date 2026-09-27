@@ -27,17 +27,4 @@ export interface ListResponse {
 export const PAGE_SIZE = 10;
 export const DEFAULT_NEW_PASSWORD = "vcci@2026";
 
-export function formatDate(dateStr?: string | null) {
-  if (!dateStr) return "-";
-  try {
-    return new Date(dateStr).toLocaleString("vi-VN", {
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-  } catch {
-    return "-";
-  }
-}
+

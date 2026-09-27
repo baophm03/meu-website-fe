@@ -6,9 +6,10 @@ import { AdminImagePicker } from "@/components/admin/image-picker";
 import { SafeImage } from "@/components/shared/safe-image";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import { getApiV10FileId } from "@/api/endpoints/file";
+import { useGetApiV10FileId } from "@/api/endpoints/file";
 import type { File as CmsFileItem } from "@/api/models/file";
 import { resolveCmsFileUrl } from "@/utils/file";
+import { useState } from "react";
 
 interface AdminImageFieldProps {
   label: string;
@@ -23,29 +24,15 @@ export function AdminImageField({
   value,
   onChange,
 }: AdminImageFieldProps) {
-  const [pickerOpen, setPickerOpen] = React.useState(false);
-  const [preview, setPreview] = React.useState("");
+  const [pickerOpen, setPickerOpen] = useState(false);
+  const [picked, setPicked] = useState<{ id: string; url: string } | null>(null);
 
-  React.useEffect(() => {
-    if (!value) {
-      setPreview("");
-      return;
-    }
-
-    let cancelled = false;
-    getApiV10FileId(value)
-      .then((response) => {
-        const file = (response as { responseData?: CmsFileItem }).responseData;
-        if (!cancelled && file?.path) setPreview(resolveCmsFileUrl(file.path));
-      })
-      .catch(() => {
-        if (!cancelled) setPreview("");
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [value]);
+  const { data: fileData } = useGetApiV10FileId(value ?? "", {
+    query: { enabled: !!value },
+  });
+  const file = (fileData as { responseData?: CmsFileItem } | undefined)?.responseData;
+  const fetchedUrl = file?.path ? resolveCmsFileUrl(file.path) : "";
+  const preview = picked?.id === value ? picked.url : fetchedUrl;
 
   return (
     <div>
@@ -90,8 +77,8 @@ export function AdminImageField({
         selectedId={value}
         onOpenChange={setPickerOpen}
         onSelect={(item) => {
+          setPicked({ id: item.id, url: item.url });
           onChange(item.id);
-          setPreview(item.url);
           setPickerOpen(false);
         }}
       />

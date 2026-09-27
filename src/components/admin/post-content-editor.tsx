@@ -18,7 +18,7 @@ import {
   type AdminMediaItem,
   type AdminNewsContentSection,
   createAdminNewsSectionId,
-} from "@/mockdata/admin-news";
+} from "@/utils/admin-news";
 
 interface AdminPostContentEditorProps {
   sections: AdminNewsContentSection[];

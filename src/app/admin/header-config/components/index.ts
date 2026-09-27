@@ -1,11 +1,11 @@
-export { HeaderCategoryDeleteDialog } from "./header-category-delete-dialog";
+export { HeaderConfigDeleteDialog } from "./header-config-delete-dialog";
 export {
-  HeaderCategoryFormDialog,
-  type HeaderCategoryFormValues,
-  type HeaderCategoryFormMode,
-} from "./header-category-form-dialog";
+  HeaderConfigFormDialog,
+  type HeaderConfigFormValues,
+  type HeaderConfigFormMode,
+} from "./header-config-form-dialog";
 export {
-  HeaderCategoryTable,
-  type HeaderCategoryFlatRow,
-} from "./header-category-table";
-export { HeaderCategoryStats } from "./header-category-stats";
+  HeaderConfigTable,
+  type HeaderConfigFlatRow,
+} from "./header-config-table";
+export { HeaderConfigStats } from "./header-config-stats";

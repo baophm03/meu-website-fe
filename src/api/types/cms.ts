@@ -1,5 +1,3 @@
-export type CmsHeaderCategoryType = "category" | "page" | "news";
-
 export interface CmsTagItem {
   id: string;
   name: string;
@@ -8,12 +6,11 @@ export interface CmsTagItem {
   updated_at?: string;
 }
 
-export interface CmsCategoryItem {
+export interface CmsHeaderConfigItem {
   id: string;
   name: string;
   name_en?: string | null;
-  slug: string;
-  type: string;
+  type?: string;
   url?: string | null;
   sort_order?: number | null;
   parent_id?: string | null;
@@ -66,11 +63,10 @@ export interface CmsNewsItem {
   title: string;
   slug: string;
   summary: string;
-  type: "tintuc" | "baiviettrang";
-  header_category_id: string;
-  category_ids: string[];
   tagsearch_values: string[];
   tag_ids: string[];
+  page_config_ids: string[];
+  page_configs: CmsPageConfigSummary[];
   is_featured: boolean;
   thumbnail: {
     id: string;
@@ -83,32 +79,21 @@ export interface CmsNewsItem {
   updated_at: string;
   published_at: string;
   expired_at: string;
-  started_at: string;
-  ended_at: string;
-  registration_deadline: string;
-  location: string;
-  participation_fee: string;
-  event_dates: string[];
   post_content: CmsPostContentSection[];
   creator: CmsUserSummary | null;
   editor: CmsUserSummary | null;
 }
 
-export interface CmsHeaderCategoryItem {
+export interface CmsHeaderConfigDetailItem {
   id: string;
   code: string;
   name: string;
   name_en?: string | null;
-  slug: string;
   static_link: string;
   sort_order: number;
-  type: CmsHeaderCategoryType;
-  is_article: boolean;
   parent_id: string | null;
   api_parent_id: string | null;
   level: number;
-  category_ids: string[];
-  tagsearch_values: string[];
   description?: string;
   description_en?: string | null;
   created_at?: string;
@@ -122,24 +107,9 @@ export interface CmsPagedResult<T> {
   rows: T[];
 }
 
-export interface CmsPageConfigNode {
-  id: string;
-  code?: string | null;
-  name?: string | null;
-  static_link?: string | null;
-  static_link_en?: string | null;
-  is_article?: boolean | null;
-  level?: number | null;
-  sort_order?: number | null;
-  slug?: string | null;
-  description?: string | null;
-  type?: string | null;
-  categories?: string[];
-  children?: CmsPageConfigNode[];
-}
 
-export interface CmsCategoryNode extends CmsCategoryItem {
-  children?: CmsCategoryNode[];
+export interface CmsHeaderConfigNode extends CmsHeaderConfigItem {
+  children?: CmsHeaderConfigNode[];
 }
 
 export interface CmsRawPostItem {
@@ -151,12 +121,11 @@ export interface CmsRawPostItem {
   release_mode?: string | null;
   slug?: string | null;
   summary?: string | null;
-  page_config_id?: string | null;
+  page_configs?: CmsPageConfigSummary[] | null;
   created_by?: string | null;
   updated_by?: string | null;
   status?: string | null;
   type?: string | null;
-  categories?: CmsCategoryItem[];
   thumbnail?: CmsFileItem | null;
   is_featured?: boolean | null;
   is_hidden?: boolean | null;
@@ -187,28 +156,30 @@ export interface CmsRawUser {
 
 export interface CmsPivotItem {
   post_id?: string;
-  category_id?: string;
+  headerConfig_id?: string;
   tag_id?: string;
   created_at?: string;
+}
+
+export interface CmsPageConfigSummary {
+  id?: string;
+  name?: string;
+  name_en?: string | null;
+  path?: string;
+  is_active?: boolean | null;
 }
 
 export interface CmsNewsPayloadInput {
   title: string;
   slug: string;
   summary: string;
-  type: "tintuc" | "baiviettrang";
-  category_ids: string[];
   tag_ids: string[];
+  page_config_id?: string | null;
+  page_config_ids?: string[];
   is_featured: boolean;
   thumbnail_id?: string | null;
   is_hidden: boolean;
   published_at?: string | null;
   expired_at?: string | null;
-  started_at?: string | null;
-  ended_at?: string | null;
-  registration_deadline?: string | null;
-  location?: string;
-  participation_fee?: string;
-  event_dates?: string[] | null;
   post_content: CmsPostContentSection[];
 }

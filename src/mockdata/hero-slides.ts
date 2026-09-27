@@ -16,7 +16,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     id: "s2",
     image: "/images/hero/hero-2.jpg",
     primaryHref: "/contact",
-    secondaryHref: "/about/us",
+    secondaryHref: "/about",
   },
   {
     id: "s3",
@@ -33,7 +33,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   {
     id: "s5",
     image: "/images/hero/hero-5.jpg",
-    primaryHref: "/about/us",
+    primaryHref: "/about",
     secondaryHref: "/solutions",
   },
 ];

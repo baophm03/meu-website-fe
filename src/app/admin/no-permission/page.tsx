@@ -24,7 +24,7 @@ export default function NoPermissionPage() {
             </svg>
           </div>
           <div>
-            <div className="text-sm font-semibold text-[#063e8e]">VCCI News Admin</div>
+            <div className="text-sm font-semibold text-[#063e8e]">MeU Solutions Admin</div>
             <div className="text-xs text-slate-500">Trang quản trị website</div>
           </div>
         </div>

@@ -10,9 +10,7 @@ const shell = "container";
 const displayHeading = "font-medium tracking-[-0.045em] text-balance";
 const label = "text-[10px] font-bold uppercase tracking-[0.16em] sm:text-[11px]";
 
-function Soft({ children, dark = false }: { children: ReactNode; dark?: boolean }) {
-  return <span className={dark ? "text-white/45" : "text-muted-foreground/70"}>{children}</span>;
-}
+function Soft({ children, dark = false }: { children: ReactNode; dark?: boolean }) { return <span className={dark ? "text-white/45" : "text-white/60"}>{children}</span>; }
 
 const buttonBase =
   "group inline-flex min-h-[52px] items-center justify-between gap-8 px-6 text-[12px] font-bold uppercase tracking-[0.08em] transition duration-200 focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-primary-light motion-reduce:transition-none";
@@ -23,7 +21,7 @@ function PrimaryButton({ href, children, className }: { href: string; children: 
       href={href}
       className={cn(
         buttonBase,
-        "border border-primary bg-primary text-white shadow-[0_0_44px_rgba(51,92,255,0.45)] hover:border-primary-hover hover:bg-primary-hover hover:shadow-[0_0_60px_rgba(0,240,255,0.4)]",
+        "border border-white/10 border-primary bg-primary text-white shadow-[0_0_44px_rgba(51,92,255,0.45)] hover:border-primary-hover hover:bg-primary-hover hover:shadow-[0_0_60px_rgba(0,240,255,0.4)]",
         className,
       )}
     >
@@ -39,7 +37,7 @@ function SecondaryButton({ href, children, tone = "light", className }: { href: 
       href={href}
       className={cn(
         buttonBase,
-        tone === "dark" ? "border border-white/35 text-white hover:border-white hover:bg-white/5" : "border border-border text-foreground hover:border-primary hover:text-primary",
+        tone === "dark" ? "border border-white/10 border-white/35 text-white hover:border-white hover:bg-white/5" : "border border-white/10 text-white hover:border-primary hover:text-primary-light",
         className,
       )}
     >

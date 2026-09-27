@@ -30,7 +30,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Can } from "@casl/react";
-import { formatDate } from "./utils";
+import { formatDateTime } from "@/utils/date";
 import { PAGE_SIZE, type User } from "./types";
 
 interface UserTableProps {
@@ -163,12 +163,12 @@ export function UserTable({
                   </TableCell>
                   <TableCell className="text-center">
                     <p className="text-sm text-slate-500 whitespace-nowrap">
-                      {user.created_at ? formatDate(user.created_at) : "-"}
+                      {formatDateTime(user.created_at)}
                     </p>
                   </TableCell>
                   <TableCell className="text-center">
                     <p className="text-sm text-slate-500 whitespace-nowrap">
-                      {user.updated_at ? formatDate(user.updated_at) : "-"}
+                      {formatDateTime(user.updated_at)}
                     </p>
                   </TableCell>
                   <TableCell>

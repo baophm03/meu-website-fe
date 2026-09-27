@@ -29,7 +29,7 @@ function PrimaryButton({ href, children, className }: { href: string; children: 
       href={href}
       className={cn(
         buttonBase,
-        "border border-primary bg-primary text-white shadow-[0_0_36px_rgba(51,92,255,0.35)] hover:border-primary-hover hover:bg-primary-hover hover:shadow-[0_0_48px_rgba(51,92,255,0.5)]",
+        "border border-white/10 border-primary bg-primary text-white shadow-[0_0_36px_rgba(51,92,255,0.35)] hover:border-primary-hover hover:bg-primary-hover hover:shadow-[0_0_48px_rgba(51,92,255,0.5)]",
         className,
       )}
     >
@@ -43,7 +43,7 @@ function SecondaryButton({ href, children, className }: { href: string; children
   return (
     <Link
       href={href}
-      className={cn(buttonBase, "border border-white/35 text-white backdrop-blur-sm hover:border-white hover:bg-white/5", className)}
+      className={cn(buttonBase, "border border-white/10 border-white/35 text-white backdrop-blur-sm hover:border-white hover:bg-white/5", className)}
     >
       {children}
       <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform group-hover:translate-x-1 motion-reduce:transform-none" />
@@ -60,7 +60,7 @@ export function Hero() {
     title2: t(`slides.${slide.id}.title2`),
     description: t(`slides.${slide.id}.description`),
     primaryCta: t(`slides.${slide.id}.primaryCta`),
-    secondaryCta: t(`slides.${slide.id}.secondaryCta`),
+    secondaryCta: t(`slides.${slide.id}.secondaryCta`)
   }));
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -80,9 +80,7 @@ export function Hero() {
         autoplay={reduceMotion ? false : { delay: 5500, disableOnInteraction: false, pauseOnMouseEnter: true }}
         pagination={{ el: ".hero-pagination", clickable: true }}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-        onAutoplayTimeLeft={(_, _time, progress) => {
-          progressRef.current?.style.setProperty("transform", `scaleX(${1 - progress})`);
-        }}
+        onAutoplayTimeLeft={(_, _time, progress) => { progressRef.current?.style.setProperty("transform", `scaleX(${1 - progress})`); }}
         className="h-full"
       >
         {slides.map((slide, index) => (

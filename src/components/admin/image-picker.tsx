@@ -13,13 +13,19 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { SafeImage } from "@/components/shared/safe-image";
-import type { AdminMediaItem } from "@/mockdata/admin-news";
+import type { AdminMediaItem } from "@/utils/admin-news";
 import { toAdminMediaItem, type CmsFileItem } from "@/utils/file";
-import { getApiV10File, postApiV10FileUpload } from "@/api/endpoints/file";
+import { useQueryClient } from "@tanstack/react-query";
+import {
+  getGetApiV10FileQueryKey,
+  useGetApiV10File,
+  usePostApiV10FileUpload,
+} from "@/api/endpoints/file";
 import { Pagination } from "@/components/shared/pagination";
 import { cn } from "@/lib/utils";
+import { ChangeEvent, useMemo, useRef, useState } from "react";
 
-const PAGE_SIZE = 10;
+const PAGE_SIZE = 15;
 
 interface AdminImagePickerProps {
   open: boolean;
@@ -41,67 +47,52 @@ export function AdminImagePicker({
   onOpenChange,
   onSelect,
 }: AdminImagePickerProps) {
-  const inputRef = React.useRef<HTMLInputElement | null>(null);
-  const [search, setSearch] = React.useState("");
-  const [items, setItems] = React.useState<AdminMediaItem[]>([]);
-  const [page, setPage] = React.useState(1);
-  const [total, setTotal] = React.useState(0);
-  const [ready, setReady] = React.useState(false);
-  const [uploading, setUploading] = React.useState(false);
+  const queryClient = useQueryClient();
+  const inputRef = useRef<HTMLInputElement | null>(null);
+  const [search, setSearch] = useState("");
+  const [page, setPage] = useState(1);
+  const [uploading, setUploading] = useState(false);
 
-  const load = React.useCallback(async () => {
-    if (!open) return;
+  const keyword = search.trim();
+  const filters = [
+    "mime@=image",
+    keyword ? `original@=${keyword}|path@=${keyword}` : "",
+  ].filter(Boolean).join(",");
 
-    setReady(false);
+  const { data, isFetching } = useGetApiV10File(
+    {
+      page,
+      pageSize: PAGE_SIZE,
+      sortField: "created_at",
+      sortOrder: "desc",
+      filters,
+    },
+    { query: { enabled: open } },
+  );
+  const uploadFile = usePostApiV10FileUpload();
 
-    try {
-      const keyword = search.trim();
-      const filters = [
-        "mime@=image",
-        keyword ? `original@=${keyword}|path@=${keyword}` : "",
-      ].filter(Boolean).join(",");
-
-      const response = await getApiV10File({
-        page,
-        pageSize: PAGE_SIZE,
-        sortField: "created_at",
-        sortOrder: "desc",
-        filters,
-      });
-      const pageData = response.responseData ?? {};
-
-      setItems(((pageData.rows ?? []) as unknown as CmsFileItem[]).map(toAdminMediaItem));
-      setTotal(pageData.count ?? 0);
-    } catch (error) {
-      toast.error(error instanceof Error ? error.message : "Không thể tải thư viện hình ảnh");
-      setItems([]);
-      setTotal(0);
-    } finally {
-      setReady(true);
-    }
-  }, [open, page, search]);
-
-  React.useEffect(() => {
-    void load();
-  }, [load]);
-
-  React.useEffect(() => {
-    if (!open) return;
-    setPage(1);
-  }, [open, search]);
+  const pageData = (data?.responseData ?? {}) as unknown as {
+    rows?: CmsFileItem[];
+    count?: number;
+  };
+  const items = useMemo(
+    () => (pageData.rows ?? []).map(toAdminMediaItem),
+    [pageData.rows],
+  );
+  const total = pageData.count ?? 0;
+  const ready = !isFetching;
 
   const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
 
-  const handleUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleUpload = async (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (!file) return;
 
     setUploading(true);
 
     try {
-      const response = await postApiV10FileUpload({
-        file,
-        original: file.name,
+      const response = await uploadFile.mutateAsync({
+        data: { file, original: file.name },
       });
       const uploaded = response.responseData ?? null;
 
@@ -109,6 +100,7 @@ export function AdminImagePicker({
         throw new Error("Không thể tải hình ảnh lên");
       }
 
+      void queryClient.invalidateQueries({ queryKey: getGetApiV10FileQueryKey() });
       const nextItem = toAdminMediaItem(uploaded);
       toast.success("Đã tải hình ảnh lên");
       onSelect(nextItem);
@@ -123,8 +115,8 @@ export function AdminImagePicker({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-h-[88vh] max-w-5xl overflow-hidden rounded-3xl border-[#063e8e]/15 bg-white p-0">
-        <DialogHeader className="border-b border-[#063e8e]/10 px-6 py-5">
+      <DialogContent className="flex max-h-[88vh] max-w-5xl flex-col overflow-hidden rounded-3xl border-[#063e8e]/15 bg-white p-0">
+        <DialogHeader className="shrink-0 border-b border-[#063e8e]/10 px-6 py-5">
           <div className="flex items-start justify-between gap-4">
             <div>
               <DialogTitle className="text-xl font-semibold text-black">
@@ -137,12 +129,15 @@ export function AdminImagePicker({
           </div>
         </DialogHeader>
 
-        <div className="flex flex-col gap-4 border-b border-[#063e8e]/10 px-6 py-4 lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex shrink-0 flex-col gap-4 border-b border-[#063e8e]/10 px-6 py-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="relative w-full lg:max-w-sm">
             <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-700" />
             <Input
               value={search}
-              onChange={(event) => setSearch(event.target.value)}
+              onChange={(event) => {
+                setSearch(event.target.value);
+                setPage(1);
+              }}
               placeholder="Tìm kiếm hình ảnh..."
               className="border-[#063e8e]/15 bg-white pl-9 text-gray-700 placeholder:text-gray-700"
             />
@@ -168,7 +163,7 @@ export function AdminImagePicker({
           </div>
         </div>
 
-        <div className="max-h-[60vh] overflow-y-auto px-6 py-6">
+        <div className="min-h-0 flex-1 overflow-y-auto px-6 py-6">
           {!ready ? (
             <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5">
               {Array.from({ length: PAGE_SIZE }).map((_, index) => (
@@ -236,7 +231,7 @@ export function AdminImagePicker({
         </div>
 
         {totalPages > 1 ? (
-          <div className="flex flex-col gap-3 border-t border-[#063e8e]/10 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex shrink-0 flex-col gap-3 border-t border-[#063e8e]/10 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="text-sm text-gray-700">
               Hiển thị {(page - 1) * PAGE_SIZE + 1} đến{" "}
               {Math.min(page * PAGE_SIZE, total)} của {total} ảnh
@@ -245,7 +240,7 @@ export function AdminImagePicker({
           </div>
         ) : null}
 
-        <div className="flex justify-end border-t border-[#063e8e]/10 px-6 py-4">
+        <div className="flex shrink-0 justify-end border-t border-[#063e8e]/10 px-6 py-4">
           <Button
             type="button"
             variant="outline"

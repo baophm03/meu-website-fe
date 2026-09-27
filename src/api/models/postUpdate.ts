@@ -7,7 +7,6 @@
  */
 import type { PostUpdateReleaseMode } from './postUpdateReleaseMode';
 import type { PostUpdateContentStructure } from './postUpdateContentStructure';
-import type { PostUpdateEventDates } from './postUpdateEventDates';
 
 export interface PostUpdate {
   title?: string;
@@ -21,6 +20,8 @@ export interface PostUpdate {
   release_mode?: PostUpdateReleaseMode;
   /** @nullable */
   page_config_id?: string | null;
+  /** @nullable */
+  page_config_ids?: string[] | null;
   /** @nullable */
   is_featured?: boolean | null;
   /**
@@ -65,5 +66,5 @@ export interface PostUpdate {
   /** @nullable */
   content_structure?: PostUpdateContentStructure;
   /** @nullable */
-  event_dates?: PostUpdateEventDates;
+  event_dates?: string[] | null;
 }

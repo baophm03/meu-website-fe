@@ -33,7 +33,7 @@ export function DeleteUserDialog({
         <DialogHeader>
           <DialogTitle className="text-xl text-red-600">Xác nhận xóa người dùng</DialogTitle>
           <DialogDescription>
-            Bạn có chắc muốn xóa người dùng "{userToDelete?.email}"? Hành động này không thể hoàn tác.
+            Bạn có chắc muốn xóa người dùng &quot;{userToDelete?.email}&quot;? Hành động này không thể hoàn tác.
           </DialogDescription>
         </DialogHeader>
         <DialogFooter className="gap-2">

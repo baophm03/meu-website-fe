@@ -34,7 +34,7 @@ export const footerColumns: FooterColumn[] = [
       { label: "MeOS Ecommerce", labelKey: "mega.meosEcommerce", href: "/products/meos-ecommerce" },
       { label: "MeOS MiniApp", labelKey: "mega.meosMiniApp", href: "/products/meos-miniapp" },
       { label: "MeOS Omni", labelKey: "mega.meosOmni", href: "/products/meos-omni" },
-      { label: "MeOS", labelKey: "mega.meos", href: "/products/meos" },
+      { label: "MeOS", labelKey: "mega.meos", href: "/solutions/meos-ecosystem" },
     ],
   },
   {
@@ -64,7 +64,7 @@ export const footerColumns: FooterColumn[] = [
     heading: "About MeU",
     headingKey: "mega.aboutMeu",
     links: [
-      { label: "About Us", labelKey: "mega.aboutUs", href: "/about/us" },
+      { label: "About Us", labelKey: "mega.aboutUs", href: "/about" },
       { label: "Vision | Mission | Core Values", labelKey: "mega.visionMission", href: "/about/vision-mission" },
       { label: "Partners & Clients", labelKey: "mega.partnersClients", href: "/about/partners-clients" },
       { label: "Careers", labelKey: "mega.careers", href: "/about/careers" },

@@ -2,32 +2,32 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useLocale } from "next-intl";
-import { getApiV10Category } from "@/api/endpoints/category";
+import { getApiV10HeaderConfig } from "@/api/endpoints/header-config";
 import {
-  buildCategoryTree,
-  type CmsCategoryItem,
+  buildHeaderConfigTree,
+  type CmsHeaderConfigItem,
   type CmsPagedResult,
 } from "@/utils/cms-transforms";
 import { navigation, type MegaColumn, type MegaLink, type NavItem } from "./nav-data";
 
-type CmsCategoryTreeNode = ReturnType<typeof buildCategoryTree>[number];
+type CmsHeaderConfigTreeNode = ReturnType<typeof buildHeaderConfigTree>[number];
 
-function labelOf(node: CmsCategoryTreeNode, locale: string) {
+function labelOf(node: CmsHeaderConfigTreeNode, locale: string) {
   const nameEn = node.name_en?.trim();
   return locale === "en" && nameEn ? nameEn : node.name;
 }
 
-function blurbOf(node: CmsCategoryTreeNode, locale: string) {
+function blurbOf(node: CmsHeaderConfigTreeNode, locale: string) {
   const descriptionEn = node.description_en?.trim();
   if (locale === "en" && descriptionEn) return descriptionEn;
   return node.description?.trim() ?? "";
 }
 
-function hrefOf(node: CmsCategoryTreeNode) {
+function hrefOf(node: CmsHeaderConfigTreeNode) {
   return node.url?.trim() || "#";
 }
 
-function toNavItems(nodes: CmsCategoryTreeNode[], locale: string): NavItem[] {
+function toNavItems(nodes: CmsHeaderConfigTreeNode[], locale: string): NavItem[] {
   return nodes.map((node) => {
     const item: NavItem = { label: labelOf(node, locale), href: hrefOf(node) };
     const children = node.children ?? [];
@@ -62,12 +62,12 @@ function toNavItems(nodes: CmsCategoryTreeNode[], locale: string): NavItem[] {
 
 export function useCmsNavigation(): NavItem[] {
   const locale = useLocale();
-  const [nodes, setNodes] = useState<CmsCategoryTreeNode[] | null>(null);
+  const [nodes, setNodes] = useState<CmsHeaderConfigTreeNode[] | null>(null);
 
   useEffect(() => {
     let cancelled = false;
 
-    getApiV10Category({
+    getApiV10HeaderConfig({
       page: 1,
       pageSize: 200,
       sortField: "sort_order",
@@ -75,8 +75,8 @@ export function useCmsNavigation(): NavItem[] {
     })
       .then((response) => {
         if (cancelled) return;
-        const result = (response.responseData ?? {}) as unknown as CmsPagedResult<CmsCategoryItem>;
-        setNodes(buildCategoryTree(result.rows ?? []));
+        const result = (response.responseData ?? {}) as unknown as CmsPagedResult<CmsHeaderConfigItem>;
+        setNodes(buildHeaderConfigTree(result.rows ?? []));
       })
       .catch(() => {
         if (!cancelled) setNodes(null);

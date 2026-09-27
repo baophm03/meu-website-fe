@@ -1,6 +1,6 @@
 "use client";
 
-import { Shield, Users, Edit, Trash2, KeyRound } from "lucide-react";
+import { Shield, Users, Edit, Trash2, KeyRound, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -13,10 +13,11 @@ import { Role, SYSTEM_ROLES } from "./types";
 interface RoleCardProps {
   role: Role;
   onEdit: (role: Role) => void;
+  onEditPermissions: (role: Role) => void;
   onDelete: (role: Role) => void;
 }
 
-export function RoleCard({ role, onEdit, onDelete }: RoleCardProps) {
+export function RoleCard({ role, onEdit, onEditPermissions, onDelete }: RoleCardProps) {
   return (
     <Card
       key={role.id}
@@ -66,6 +67,17 @@ export function RoleCard({ role, onEdit, onDelete }: RoleCardProps) {
               >
                 <Edit className="mr-1 h-4 w-4" />
                 Sửa
+              </Button>
+            </Can>
+            <Can I="UPDATE" a="ROLES">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => onEditPermissions(role)}
+                className="h-9 rounded-xl text-emerald-700 hover:bg-emerald-50 hover:text-emerald-700"
+              >
+                <ShieldCheck className="mr-1 h-4 w-4" />
+                Phân quyền
               </Button>
             </Can>
             <Can I="DELETE" a="ROLES">
