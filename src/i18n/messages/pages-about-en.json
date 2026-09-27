@@ -191,17 +191,17 @@
           "item3Desc": "Snowflake, BigQuery and PostgreSQL for data infrastructure."
         },
         "clients": {
-          "eyebrow": "Client relationships",
-          "heading": "How we work with clients.",
-          "summary": "We engage through staff augmentation, dedicated teams and project-based delivery.",
-          "note": "Client logos and verified delivery metrics are published here after approval."
+          "eyebrow": "Partners & Clients",
+          "heading": "Trusted by leading brands.",
+          "summary": "From banking and aviation to retail — organizations choose MeU for their most critical digital products.",
+          "note": ""
         },
         "cta": {
-          "eyebrow": "Want to work with us?",
-          "heading1": "Start a conversation.",
-          "heading2": "We will find the fit.",
-          "description": "Talk to our team about how we can help.",
-          "primaryButton": "Talk to an expert",
+          "eyebrow": "Become a partner",
+          "heading1": "Get in touch to become",
+          "heading2": "one of our partners.",
+          "description": "From idea to shipped product — the MeU team is ready to work with you.",
+          "primaryButton": "Contact us now",
           "secondaryButton": "About us"
         }
       },
@@ -272,7 +272,15 @@
           "description": "Email careers@meusolutions.com or talk to our team.",
           "primaryButton": "Talk to us",
           "secondaryButton": "About us"
-        }
+        },
+        "openRoles": "Open positions",
+        "openRolesHeading": "Join the team.",
+        "openRolesSummary": "Every role currently open — browse by department or open a posting for the full description.",
+        "location": "Location",
+        "deadline": "Apply by",
+        "apply": "Apply",
+        "viewRole": "View role",
+        "positions": "open roles"
       }
     }
   }

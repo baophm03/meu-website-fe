@@ -5,19 +5,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
+  Briefcase,
+  Building2,
   ChevronDown,
+  Globe,
   ImagePlus,
   Inbox,
   Layers,
+  LayoutDashboard,
   Mail,
-  Megaphone,
   Newspaper,
   PanelBottom,
   Tags,
   UserCog,
+  Users,
   Shield,
   KeyRound,
-  Video,
 } from "lucide-react";
 import { useSidebarStore } from "@/hooks/use-admin-sidebar";
 import { ability, type Actions } from "@/config/casl/ability";
@@ -40,20 +43,62 @@ type NavItem = {
 // Navigation với permissions
 const navigation: NavItem[] = [
   {
-    name: "Cấu hình danh mục",
+    name: "Dashboard",
+    href: "/admin/dashboard",
+    icon: LayoutDashboard,
+    permission: { action: "VIEW", subject: "DASHBOARD" },
+  },
+  {
+    name: "Quản lý header",
     href: "/admin/header-config",
     icon: Layers,
-    permission: { action: "VIEW", subject: "CATEGORIES" },
+    permission: { action: "VIEW", subject: "HEADER_CONFIGS" },
+  },
+  {
+    name: "Quản lý footer",
+    href: "/admin/footer",
+    icon: PanelBottom,
+    permission: { action: "VIEW", subject: "FOOTERS" },
+  },
+  {
+    name: "Quản lý trang",
+    href: "/admin/page-config",
+    icon: Globe,
+    permission: { action: "VIEW", subject: "PAGE_CONFIGS" },
   },
   {
     name: "Quản lý bài viết",
-    href: "/admin/news",
+    href: "/admin/posts",
     icon: Newspaper,
     permission: { action: "VIEW", subject: "POSTS" },
   },
   {
-    name: "Quản lý leads",
-    href: "/admin/contact-management/contact-requests",
+    name: "Quản lý đối tác",
+    href: "/admin/partners",
+    icon: Building2,
+    permission: { action: "VIEW", subject: "PARTNERS" },
+  },
+  {
+    name: "Quản lý tuyển dụng",
+    href: "/admin/jobs",
+    icon: Briefcase,
+    permission: { action: "VIEW", subject: "JOBS" },
+  },
+  {
+    name: "Quản lý lãnh đạo",
+    href: "/admin/leaders",
+    icon: Users,
+    permission: { action: "VIEW", subject: "LEADERS" },
+  },
+  {
+    name: "Quản lý Email đăng ký",
+    href: "/admin/newsletter-emails",
+    icon: Mail,
+    permission: { action: "VIEW", subject: "NEWSLETTER" },
+  },
+  {
+    name: "Quản lý liên hệ",
+    href: "/admin/contact-requests",
     icon: Inbox,
     permission: { action: "VIEW", subject: "CONTACT" },
   },
@@ -64,38 +109,14 @@ const navigation: NavItem[] = [
     permission: { action: "VIEW", subject: "TAGS" },
   },
   {
-    name: "Quản lý video",
-    href: "/admin/videos",
-    icon: Video,
-    permission: { action: "VIEW", subject: "VIDEOS" },
-  },
-  {
-    name: "Quản lý footer",
-    href: "/admin/footer",
-    icon: PanelBottom,
-    permission: { action: "VIEW", subject: "FOOTERS" },
-  },
-  {
-    name: "Quản lý Email đăng ký",
-    href: "/admin/contact-management/newsletter-emails",
-    icon: Mail,
-    permission: { action: "VIEW", subject: "NEWSLETTER" },
-  },
-  {
-    name: "Quản lý ảnh",
+    name: "Quản lý ảnh / video",
     href: "/admin/media",
     icon: ImagePlus,
     permission: { action: "VIEW", subject: "FILES" }
   },
-  {
-    name: "Quản lý quảng cáo",
-    href: "/admin/advertisements",
-    icon: Megaphone,
-    permission: { action: "VIEW", subject: "ADVERTISEMENTS" },
-  },
 ];
 
-// Admin system menu - chỉ system_admin thấy
+// Admin system menu - chỉ admin thấy
 const adminSystemMenu: NavItem[] = [
   {
     name: "Quản lý vai trò",
@@ -117,7 +138,6 @@ const adminSystemMenu: NavItem[] = [
   },
 ];
 
-const membersReservedSegments = new Set(["fields", "regions"]);
 
 export function AdminSidebar() {
   const pathname = usePathname();
@@ -132,14 +152,6 @@ export function AdminSidebar() {
 
   const isItemActive = React.useCallback(
     (href: string) => {
-      if (href === "/admin/members") {
-        if (pathname === href) return true;
-        if (!pathname.startsWith(`${href}/`)) return false;
-
-        const nextSegment = pathname.slice(`${href}/`.length).split("/")[0];
-        return Boolean(nextSegment) && !membersReservedSegments.has(nextSegment);
-      }
-
       return pathname === href || pathname.startsWith(`${href}/`);
     },
     [pathname]
@@ -195,7 +207,7 @@ export function AdminSidebar() {
             {isOpen ? (
               <div className="min-w-0">
                 <div className="truncate text-[13px] font-bold uppercase tracking-[0.22em] text-[#063e8e]">
-                  VCCI News
+                  MeU Solutions
                 </div>
                 <div className="mt-1 text-sm leading-5 text-slate-600">
                   Trang quản trị website
@@ -291,7 +303,7 @@ export function AdminSidebar() {
             );
           })}
 
-          {/* Admin System Menu - Chỉ system_admin thấy */}
+          {/* Admin System Menu - Chỉ admin thấy */}
           {filteredAdminMenu.length > 0 && (
             <>
               <div className="border-t border-[#063e8e]/10 pt-3" />

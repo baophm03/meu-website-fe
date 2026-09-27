@@ -44,24 +44,44 @@ export function ScrollReveal({
     if (!el) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
+    let tween: gsap.core.Tween | undefined;
     const ctx = gsap.context(() => {
-      const targets = itemSelector ? gsap.utils.toArray<HTMLElement>(itemSelector, el) : el;
-      gsap.from(targets, {
-        y,
-        opacity: 0,
-        duration,
-        delay,
-        stagger,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: el,
-          start,
-          once: true,
+      const targets = itemSelector ? gsap.utils.toArray<HTMLElement>(itemSelector, el) : [el];
+      if (!targets.length) return;
+
+      tween = gsap.fromTo(
+        targets,
+        { opacity: 0, y },
+        {
+          opacity: 1,
+          y: 0,
+          duration,
+          delay,
+          stagger,
+          ease: "power3.out",
+          clearProps: "opacity,transform",
+          scrollTrigger: {
+            trigger: el,
+            start,
+            once: true,
+          },
         },
-      });
+      );
     }, el);
 
-    return () => ctx.revert();
+    // Fail-safe: if the trigger already passed before refresh/layout settled,
+    // force completion so content never stays invisible.
+    const failsafe = window.setTimeout(() => {
+      if (tween && tween.progress() === 0) {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.95) tween.progress(1);
+      }
+    }, 1500);
+
+    return () => {
+      window.clearTimeout(failsafe);
+      ctx.revert();
+    };
   }, [itemSelector, y, stagger, duration, delay, start]);
 
   return (

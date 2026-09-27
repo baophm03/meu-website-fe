@@ -13,7 +13,6 @@ import {
 import { toast } from "sonner";
 import { useQueryClient } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
   Select,
@@ -41,8 +40,8 @@ import {
 import {
   type PasswordResetRequest,
   PAGE_SIZE,
-  formatDate,
 } from "./_components/types";
+import { formatDateTime } from "@/utils/date";
 import { ResolveDialog } from "./_components/resolve-dialog";
 import { RejectDialog } from "./_components/reject-dialog";
 
@@ -72,9 +71,13 @@ export default function PasswordResetRequestsPage() {
     sortOrder: "desc",
   });
 
-  const data = (queryData as any)?.responseData as
-    | { rows: PasswordResetRequest[]; count: number; totalPages: number }
-    | null;
+  const data = (
+    (queryData as { responseData?: unknown } | undefined)?.responseData ?? null
+  ) as {
+    rows: PasswordResetRequest[];
+    count: number;
+    totalPages: number;
+  } | null;
   const rows = data?.rows || [];
   const total = data?.count || 0;
   const totalPages = data?.totalPages || 1;
@@ -89,8 +92,8 @@ export default function PasswordResetRequestsPage() {
           queryKey: getGetApiV10PasswordResetRequestQueryKey(),
         });
       },
-      onError: (error: any) => {
-        toast.error(error?.message || "Xử lý yêu cầu thất bại");
+      onError: (error: unknown) => {
+        toast.error(error instanceof Error ? error.message : "Xử lý yêu cầu thất bại");
       },
       onSettled: () => setIsResolving(false),
     },
@@ -105,8 +108,8 @@ export default function PasswordResetRequestsPage() {
           queryKey: getGetApiV10PasswordResetRequestQueryKey(),
         });
       },
-      onError: (error: any) => {
-        toast.error(error?.message || "Xử lý yêu cầu thất bại");
+      onError: (error: unknown) => {
+        toast.error(error instanceof Error ? error.message : "Xử lý yêu cầu thất bại");
       },
       onSettled: () => setIsRejecting(false),
     },
@@ -261,7 +264,7 @@ export default function PasswordResetRequestsPage() {
                     </TableCell>
                     <TableCell>
                       <p className="text-sm text-slate-500 whitespace-nowrap">
-                        {formatDate(req.created_at)}
+                        {formatDateTime(req.created_at)}
                       </p>
                     </TableCell>
                     <TableCell>

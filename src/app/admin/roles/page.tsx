@@ -9,10 +9,12 @@ import { Can } from "@casl/react";
 import {
   buildPermissionSet,
   permissionSetToArray,
+  permKey,
   togglePermissionInSet,
 } from "@/config/permissions";
 
 import {
+  getGetApiV10RoleIdPermissionQueryKey,
   getGetApiV10RoleQueryKey,
   useDeleteApiV10RoleId,
   useGetApiV10Role,
@@ -26,6 +28,7 @@ import { useGetApiV10Permission } from "@/api/endpoints/permission";
 import { Role, EditForm, PermissionModuleDef } from "./_components/types";
 import { RoleCard } from "./_components/RoleCard";
 import { EditRoleDialog } from "./_components/EditRoleDialog";
+import { EditPermissionsDialog } from "./_components/EditPermissionsDialog";
 import { DeleteRoleDialog } from "./_components/DeleteRoleDialog";
 import { Pagination } from "./_components/Pagination";
 
@@ -38,8 +41,10 @@ export default function RolesPage() {
     description: "",
     permissions: new Set(),
   });
+  const [isPermDialogOpen, setIsPermDialogOpen] = useState(false);
   const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
   const [roleToDelete, setRoleToDelete] = useState<Role | null>(null);
+  const [permLoadedFor, setPermLoadedFor] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [isSaving, setIsSaving] = useState(false);
 
@@ -50,12 +55,12 @@ export default function RolesPage() {
 
   const { data: permissionsData, isLoading: isLoadingPermissions } =
     useGetApiV10Permission({
-      query: { enabled: isEditDialogOpen },
+      query: { enabled: isPermDialogOpen },
     });
 
   const { data: rolePermissionsData, isLoading: isLoadingRolePermissions } =
     useGetApiV10RoleIdPermission(selectedRole?.id ?? "", {
-      query: { enabled: isEditDialogOpen && !!selectedRole?.id },
+      query: { enabled: isPermDialogOpen && !!selectedRole?.id },
     });
 
   const createRole = usePostApiV10Role();
@@ -71,27 +76,51 @@ export default function RolesPage() {
   const totalRoles =
     ((rolesData as unknown as { responseData?: { count?: number } })?.responseData?.count) || 0;
 
-  // Nạp permissions hiện có của role vào Set khi API trả về
   useEffect(() => {
+    if (!isPermDialogOpen || !selectedRole || permLoadedFor === selectedRole.id) return;
     const rows = (rolePermissionsData as { responseData?: { module?: string; action?: string }[] })
       ?.responseData;
     if (!Array.isArray(rows)) return;
     setEditForm((prev) => ({ ...prev, permissions: buildPermissionSet(rows) }));
-  }, [rolePermissionsData]);
+    setPermLoadedFor(selectedRole.id);
+  }, [isPermDialogOpen, rolePermissionsData, selectedRole, permLoadedFor]);
 
   const invalidateRoles = () =>
     queryClient.invalidateQueries({ queryKey: getGetApiV10RoleQueryKey() });
 
   const handleCreateRole = () => {
     setSelectedRole(null);
+    setPermLoadedFor(null);
     setEditForm({ name: "", description: "", permissions: new Set() });
     setIsEditDialogOpen(true);
   };
 
   const handleEditRole = (role: Role) => {
     setSelectedRole(role);
-    setEditForm({ name: role.name, description: role.description || "", permissions: new Set() });
+    setEditForm({
+      name: role.name,
+      description: role.description || "",
+      permissions: new Set(),
+    });
     setIsEditDialogOpen(true);
+  };
+
+  const handleEditPermissions = (role: Role) => {
+    setSelectedRole(role);
+    // Nạp sẵn từ cache (đồng bộ) để mở lại dialog vẫn thấy quyền đã lưu;
+    // nếu chưa có cache thì để trống và chờ effect nạp khi fetch xong.
+    const cached = queryClient.getQueryData(
+      getGetApiV10RoleIdPermissionQueryKey(role.id),
+    ) as { responseData?: { module?: string; action?: string }[] } | undefined;
+    const rows = cached?.responseData;
+    setPermLoadedFor(Array.isArray(rows) ? role.id : null);
+    setEditForm((prev) => ({
+      ...prev,
+      name: role.name,
+      description: role.description || "",
+      permissions: Array.isArray(rows) ? buildPermissionSet(rows) : new Set(),
+    }));
+    setIsPermDialogOpen(true);
   };
 
   const handleDeleteRole = (role: Role) => {
@@ -110,29 +139,21 @@ export default function RolesPage() {
     if (isSaving) return;
     setIsSaving(true);
     try {
-      const permissions = permissionSetToArray(editForm.permissions);
-      let roleId = selectedRole?.id;
-
       if (selectedRole) {
         await updateRole.mutateAsync({
-          id: roleId!,
+          id: selectedRole.id,
           data: {
             name: editForm.name.trim(),
             description: editForm.description || undefined,
           },
         });
       } else {
-        const created = await createRole.mutateAsync({
+        await createRole.mutateAsync({
           data: {
             name: editForm.name.trim(),
             description: editForm.description || undefined,
           },
         });
-        roleId = (created as unknown as { responseData?: { id?: string } })?.responseData?.id;
-      }
-
-      if (roleId) {
-        await setRolePermissions.mutateAsync({ id: roleId, data: { permissions } });
       }
 
       toast.success(selectedRole ? "Đã cập nhật vai trò" : "Đã tạo vai trò mới");
@@ -140,6 +161,37 @@ export default function RolesPage() {
       await invalidateRoles();
     } catch {
       toast.error("Không thể lưu vai trò. Vui lòng thử lại.");
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
+  const handleSavePermissions = async () => {
+    if (!selectedRole || isSaving) return;
+    setIsSaving(true);
+    try {
+      // Chỉ gửi quyền còn hợp lệ trong registry — role cũ có thể còn quyền
+      // đã bị xoá (vd MEMBERS:*) nằm trong set nhưng không render trong form.
+      const validKeys = new Set(
+        permissionModules.flatMap((group) =>
+          group.actions.map((perm) => permKey(group.module, perm.action)),
+        ),
+      );
+      const permissions = permissionSetToArray(
+        new Set([...editForm.permissions].filter((key) => validKeys.has(key))),
+      );
+      await setRolePermissions.mutateAsync({
+        id: selectedRole.id,
+        data: { permissions },
+      });
+      queryClient.removeQueries({
+        queryKey: getGetApiV10RoleIdPermissionQueryKey(selectedRole.id),
+      });
+      toast.success("Đã cập nhật quyền hạn");
+      setIsPermDialogOpen(false);
+      await invalidateRoles();
+    } catch {
+      toast.error("Không thể lưu quyền hạn. Vui lòng thử lại.");
     } finally {
       setIsSaving(false);
     }
@@ -194,6 +246,7 @@ export default function RolesPage() {
               key={role.id}
               role={role}
               onEdit={handleEditRole}
+              onEditPermissions={handleEditPermissions}
               onDelete={handleDeleteRole}
             />
           ))}
@@ -221,8 +274,18 @@ export default function RolesPage() {
         selectedRole={selectedRole}
         editForm={editForm}
         setEditForm={setEditForm}
-        onTogglePermission={handleTogglePermission}
         onSave={handleSaveRole}
+        isPending={isSaving}
+      />
+
+      <EditPermissionsDialog
+        open={isPermDialogOpen}
+        onOpenChange={setIsPermDialogOpen}
+        selectedRole={selectedRole}
+        editForm={editForm}
+        setEditForm={setEditForm}
+        onTogglePermission={handleTogglePermission}
+        onSave={handleSavePermissions}
         isPending={isSaving}
         permissionModules={permissionModules}
         isLoadingPermissions={isLoadingPermissions || isLoadingRolePermissions}

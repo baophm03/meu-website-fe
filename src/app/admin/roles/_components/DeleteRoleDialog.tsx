@@ -33,7 +33,7 @@ export function DeleteRoleDialog({
         <DialogHeader>
           <DialogTitle className="text-xl text-red-600">Xác nhận xóa vai trò</DialogTitle>
           <DialogDescription>
-            Bạn có chắc muốn xóa vai trò "{roleToDelete?.name}"? Hành động này không thể
+            Bạn có chắc muốn xóa vai trò &quot;{roleToDelete?.name}&quot;? Hành động này không thể
             hoàn tác.
           </DialogDescription>
         </DialogHeader>

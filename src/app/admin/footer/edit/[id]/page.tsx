@@ -4,9 +4,15 @@ import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { ArrowLeft, Loader2, Plus, Save } from "lucide-react";
 import { toast } from "sonner";
+import { useQueryClient } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { getApiV10FooterId, postApiV10Footer, putApiV10FooterId } from "@/api/endpoints/footer";
+import {
+  getGetApiV10FooterQueryKey,
+  useGetApiV10FooterId,
+  usePostApiV10Footer,
+  usePutApiV10FooterId,
+} from "@/api/endpoints/footer";
 import type { Footer } from "@/api/models/footer";
 import type { FooterMutate } from "@/api/models/footerMutate";
 import { useFooterForm } from "../../_hooks/use-footer-form";
@@ -20,9 +26,8 @@ export default function FooterFormPage() {
   const id = String(params.id);
   const isEdit = id !== FOOTER_CREATE_ID;
 
-  const [loading, setLoading] = useState(isEdit);
+  const queryClient = useQueryClient();
   const [saving, setSaving] = useState(false);
-  const [footer, setFooter] = useState<Footer | null>(null);
 
   const {
     formData,
@@ -42,25 +47,20 @@ export default function FooterFormPage() {
     getSubmitData,
   } = useFooterForm();
 
+  const { data: footerRes, isFetching } = useGetApiV10FooterId(id, {
+    query: { enabled: isEdit },
+  });
+  const createFooter = usePostApiV10Footer();
+  const updateFooter = usePutApiV10FooterId();
+
+  const footer = (footerRes as { responseData?: Footer } | undefined)?.responseData ?? null;
+  const loading = isEdit && isFetching;
+
   useEffect(() => {
-    if (!isEdit) return;
-
-    const fetchFooter = async () => {
-      try {
-        const response = await getApiV10FooterId(id);
-        const data = (response as { responseData?: Footer }).responseData;
-        if (!data) throw new Error("Không tìm thấy footer");
-        setFooter(data);
-        loadFromApi(data);
-      } catch (error) {
-        toast.error(error instanceof Error ? error.message : "Không thể tải footer");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    void fetchFooter();
-  }, [id, isEdit, loadFromApi]);
+    if (footer) {
+      loadFromApi(footer);
+    }
+  }, [footer, loadFromApi]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -68,12 +68,13 @@ export default function FooterFormPage() {
     try {
       const payload = getSubmitData() as FooterMutate;
       if (isEdit) {
-        await putApiV10FooterId(id, payload);
+        await updateFooter.mutateAsync({ id, data: payload });
         toast.success("Đã cập nhật footer");
       } else {
-        await postApiV10Footer(payload);
+        await createFooter.mutateAsync({ data: payload });
         toast.success("Đã tạo footer mới");
       }
+      await queryClient.invalidateQueries({ queryKey: getGetApiV10FooterQueryKey() });
       router.push("/admin/footer");
     } catch (error) {
       toast.error(

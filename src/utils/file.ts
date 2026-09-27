@@ -1,6 +1,6 @@
 import links from "@/links";
 import type { File as CmsFileItem } from "@/api/models/file";
-import type { AdminMediaItem } from "@/mockdata/admin-news";
+import type { AdminMediaItem } from "@/utils/admin-news";
 
 export type { CmsFileItem };
 

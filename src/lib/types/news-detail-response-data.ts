@@ -10,7 +10,7 @@ export interface NewsDetailItem {
     updated_at: string
     updated_by: string | null
     mode: 'NOW' | string
-    category: string
+    headerConfig: string
 }
 
 export interface NewsDetailResponseData {

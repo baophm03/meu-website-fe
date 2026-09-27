@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useQueryClient } from "@tanstack/react-query";
 import { Plus } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -16,7 +16,6 @@ import {
   usePostApiV10UserIdResetPassword,
   usePostApiV10UserIdRole,
   useDeleteApiV10UserIdRole,
-  useGetApiV10UserId,
   usePutApiV10UserId,
 } from "@/api/endpoints/user";
 import type { UserUpdate } from "@/api/models/userUpdate";
@@ -107,12 +106,6 @@ export default function UsersPage() {
   // Fetch users with filters
   const { data: usersData, isLoading: usersLoading, isFetching } = useGetApiV10User(
     apiParams as Parameters<typeof useGetApiV10User>[0]
-  );
-
-  // Fetch single user for edit
-  const { data: editUserData } = useGetApiV10UserId(
-    selectedUser?.id || "",
-    selectedUser ? {} : { query: { enabled: false } } as Parameters<typeof useGetApiV10UserId>[1]
   );
 
   // Fetch roles

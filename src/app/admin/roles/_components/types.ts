@@ -32,4 +32,4 @@ export interface EditForm {
   permissions: Set<PermissionKey>;
 }
 
-export const SYSTEM_ROLES = ["system_admin", "admin", "user"];
+export const SYSTEM_ROLES = ["admin", "user"];

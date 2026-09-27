@@ -54,8 +54,8 @@ export function RoleDialog({
               <label
                 key={role.id}
                 className={`flex cursor-pointer items-center gap-4 rounded-2xl border p-4 transition-all ${isSelected
-                    ? "border-[#063e8e] bg-[#f8fbff]"
-                    : "border-[#063e8e]/10 hover:border-[#063e8e]/30"
+                  ? "border-[#063e8e] bg-[#f8fbff]"
+                  : "border-[#063e8e]/10 hover:border-[#063e8e]/30"
                   }`}
               >
                 <Checkbox
@@ -67,7 +67,7 @@ export function RoleDialog({
                   <div className="flex items-center gap-2">
                     <Shield className="h-4 w-4 text-[#063e8e]" />
                     <span className="font-semibold text-[#163b73]">{role.name}</span>
-                    {role.name === "system_admin" && (
+                    {role.name === "admin" && (
                       <Badge variant="outline" className="border-slate-200 bg-slate-50 text-slate-700 text-xs">
                         Hệ thống
                       </Badge>

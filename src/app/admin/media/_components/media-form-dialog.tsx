@@ -41,10 +41,10 @@ export function MediaFormDialog({
   const inputRef = useRef<HTMLInputElement | null>(null);
   const [form, setForm] = useState<MediaFormValues>(EMPTY_MEDIA_FORM);
 
-  useEffect(() => {
-    if (!open) return;
-    setForm(EMPTY_MEDIA_FORM);
-  }, [open]);
+  const handleOpenChange = (nextOpen: boolean) => {
+    if (nextOpen) setForm(EMPTY_MEDIA_FORM);
+    onOpenChange(nextOpen);
+  };
 
   const handleUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -89,7 +89,7 @@ export function MediaFormDialog({
   };
 
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
+    <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogContent className="flex max-h-[calc(100dvh-32px)] w-[calc(100vw-32px)] max-w-4xl flex-col overflow-hidden rounded-[32px] border border-[#063e8e]/15 bg-white p-0 shadow-[0_26px_70px_rgba(15,23,42,0.24)]">
         <DialogHeader className="shrink-0 border-b border-[#063e8e]/10 px-6 py-5 sm:px-7">
           <DialogTitle className="text-xl font-semibold text-[#063e8e]">
@@ -188,7 +188,7 @@ export function MediaFormDialog({
             <Button
               type="button"
               variant="outline"
-              onClick={() => onOpenChange(false)}
+              onClick={() => handleOpenChange(false)}
               className="rounded-2xl border-[#063e8e]/15 bg-white text-slate-600 hover:bg-slate-50"
               disabled={saving}
             >

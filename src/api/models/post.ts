@@ -6,8 +6,8 @@
  * OpenAPI spec version: 1.0.0
  */
 import type { PostReleaseMode } from './postReleaseMode';
+import type { PageConfig } from './pageConfig';
 import type { PostContentStructure } from './postContentStructure';
-import type { PostEventDates } from './postEventDates';
 
 export interface Post {
   id: string;
@@ -20,8 +20,7 @@ export interface Post {
   release_at?: string | null;
   is_active: boolean;
   release_mode: PostReleaseMode;
-  /** @nullable */
-  page_config_id?: string | null;
+  page_configs?: PageConfig[];
   created_at: string;
   /** @nullable */
   created_by?: string | null;
@@ -72,5 +71,5 @@ export interface Post {
   /** @nullable */
   content_structure?: PostContentStructure;
   /** @nullable */
-  event_dates?: PostEventDates;
+  event_dates?: string[] | null;
 }

@@ -2,14 +2,13 @@
 
 import { toCmsSlug } from "@/utils/cms-slug";
 import links from "@/links";
+import type { PostCreate } from "@/api/models/postCreate";
 import type {
-  CmsCategoryItem,
-  CmsCategoryNode,
-  CmsHeaderCategoryItem,
-  CmsHeaderCategoryType,
+  CmsHeaderConfigItem,
+  CmsHeaderConfigNode,
+  CmsHeaderConfigDetailItem,
   CmsNewsItem,
   CmsNewsPayloadInput,
-  CmsPageConfigNode,
   CmsPostContentSection,
   CmsRawPostItem,
   CmsRawUser,
@@ -51,19 +50,6 @@ export const toSlugFromPath = (staticLink?: string | null) => {
   return segments.at(-1) ?? "";
 };
 
-export const deriveHeaderType = (node: CmsPageConfigNode): CmsHeaderCategoryType => {
-  if ((node.children?.length ?? 0) > 0) return "category";
-  if (node.type === "news" || node.type === "page" || node.type === "category") {
-    return node.type;
-  }
-  return node.is_article ? "news" : "page";
-};
-
-export const deriveCategoryHeaderType = (type?: string | null): CmsHeaderCategoryType => {
-  if (type === "category") return "category";
-  if (type === "news") return "news";
-  return "page";
-};
 
 export const normalizeTagNames = (values: string[]) => {
   const seen = new Set<string>();
@@ -145,9 +131,6 @@ export const transformPost = (
   tagMap?: Map<string, CmsTagItem[]>,
 ): CmsNewsItem => {
   const tagItems = tagMap?.get(post.id ?? "") ?? [];
-  const categories = Array.isArray(post.categories) ? post.categories : [];
-  const primaryCategory = categories[0] ?? null;
-  const primaryCategoryType = primaryCategory?.type ?? null;
   const structuredContent = parsePostContent(post.content_structure);
   const fallbackContent =
     structuredContent.length > 0 ? structuredContent : parseLegacyPostContent(post.content);
@@ -157,16 +140,14 @@ export const transformPost = (
     title: post.title ?? "",
     slug: post.slug ?? "",
     summary: post.summary ?? "",
-    type:
-      post.type === "page" ||
-        primaryCategoryType === "post" ||
-        primaryCategoryType === "page"
-        ? "baiviettrang"
-        : "tintuc",
-    header_category_id: primaryCategory?.id ?? "",
-    category_ids: categories.map((item) => item.id),
     tagsearch_values: tagItems.map((item) => item.name),
     tag_ids: tagItems.map((item) => item.id),
+    page_configs: Array.isArray(post.page_configs) ? post.page_configs : [],
+    page_config_ids: Array.isArray(post.page_configs)
+      ? post.page_configs
+        .map((item) => item?.id)
+        .filter((value): value is string => Boolean(value))
+      : [],
     is_featured: Boolean(post.is_featured),
     thumbnail: post.thumbnail?.id
       ? {
@@ -181,24 +162,16 @@ export const transformPost = (
     updated_at: post.updated_at ?? "",
     published_at: normalizeDateTimeInput(post.published_at ?? post.release_at),
     expired_at: normalizeDateTimeInput(post.expired_at),
-    started_at: normalizeDateTimeInput(post.started_at),
-    ended_at: normalizeDateTimeInput(post.ended_at),
-    registration_deadline: normalizeDateTimeInput(post.registration_deadline),
-    location: post.location ?? "",
-    participation_fee: post.participation_fee ?? "",
-    event_dates: Array.isArray(post.event_dates)
-      ? post.event_dates.filter((d): d is string => typeof d === "string")
-      : [],
     post_content: fallbackContent,
     creator: normalizeUser(post.creator),
     editor: normalizeUser(post.editor),
   };
 };
 
-export function buildCategoryTree(rows: CmsCategoryItem[]) {
-  const nodeMap = new Map<string, CmsCategoryNode>();
-  const roots: CmsCategoryNode[] = [];
-  const sortNodes = (nodes: CmsCategoryNode[]) => {
+export function buildHeaderConfigTree(rows: CmsHeaderConfigItem[]) {
+  const nodeMap = new Map<string, CmsHeaderConfigNode>();
+  const roots: CmsHeaderConfigNode[] = [];
+  const sortNodes = (nodes: CmsHeaderConfigNode[]) => {
     nodes.sort((left, right) => {
       const leftOrder = left.sort_order ?? Number.MAX_SAFE_INTEGER;
       const rightOrder = right.sort_order ?? Number.MAX_SAFE_INTEGER;
@@ -232,28 +205,22 @@ export function buildCategoryTree(rows: CmsCategoryItem[]) {
   return roots;
 }
 
-export function buildHeaderItemsFromCategories(
-  nodes: CmsCategoryNode[],
+export function buildHeaderItemsFromHeaderConfigs(
+  nodes: CmsHeaderConfigNode[],
   parentId: string | null = null,
   depth = 0,
-): CmsHeaderCategoryItem[] {
+): CmsHeaderConfigDetailItem[] {
   return nodes.flatMap((node, index) => {
-    const type = deriveCategoryHeaderType(node.type);
-    const item: CmsHeaderCategoryItem = {
+    const item: CmsHeaderConfigDetailItem = {
       id: node.id,
-      code: node.slug || node.id,
+      code: node.id,
       name: node.name,
       name_en: node.name_en ?? null,
-      slug: node.slug,
       static_link: node.url ?? "",
       sort_order: node.sort_order ?? index + 1,
-      type,
-      is_article: type === "news",
       parent_id: parentId,
       api_parent_id: node.parent_id ?? null,
       level: depth + 1,
-      category_ids: type === "category" ? [] : [node.id],
-      tagsearch_values: [],
       description: node.description ?? "",
       description_en: node.description_en ?? null,
       created_at: node.created_at,
@@ -262,7 +229,7 @@ export function buildHeaderItemsFromCategories(
 
     return [
       item,
-      ...buildHeaderItemsFromCategories(node.children ?? [], node.id, depth + 1),
+      ...buildHeaderItemsFromHeaderConfigs(node.children ?? [], node.id, depth + 1),
     ];
   });
 }
@@ -281,33 +248,23 @@ export const buildStaticLink = (slug: string, parentStaticLink?: string | null) 
   return `${cleanParent}/${cleanSlug}`;
 };
 
-export const toCategoryApiType = (type: CmsHeaderCategoryType) => {
-  if (type === "category") return "category";
-  if (type === "news") return "news";
-  return "page";
-};
-
 export const toTagSlug = (value: string) => toCmsSlug(value);
 
-export const buildPostPayload = (input: CmsNewsPayloadInput) => ({
+export const buildPostPayload = (input: CmsNewsPayloadInput): PostCreate => ({
   title: input.title,
   slug: input.slug,
   summary: input.summary,
-  type: input.type === "baiviettrang" ? "page" : "news",
   content: input.summary || "",
-  category_ids: input.category_ids,
   thumbnail_id: input.thumbnail_id ?? null,
+  page_config_ids:
+    input.page_config_ids ?? (input.page_config_id ? [input.page_config_id] : []),
+  page_config_id:
+    input.page_config_ids?.[0] ?? input.page_config_id ?? null,
   is_featured: input.is_featured,
   is_hidden: input.is_hidden,
   is_active: !input.is_hidden,
   published_at: input.published_at || null,
   expired_at: input.expired_at || null,
-  started_at: input.started_at || null,
-  ended_at: input.ended_at || null,
-  registration_deadline: input.registration_deadline || null,
-  location: input.location?.trim() || null,
-  participation_fee: input.participation_fee?.trim() || null,
-  event_dates: input.event_dates ?? null,
   release_mode: input.published_at ? "SCHEDULED" : "NOW",
   release_at: input.published_at || null,
   content_structure: {

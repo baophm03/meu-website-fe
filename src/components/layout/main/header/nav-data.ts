@@ -17,7 +17,7 @@ const businessSolutions: MegaColumn = {
     { label: "Digital Transformation", labelKey: "mega.digitalTransformation", href: "/solutions/digital-transformation" },
     { label: "Enterprise Management", labelKey: "mega.enterpriseManagement", href: "/solutions/enterprise-management" },
     { label: "Custom Software Solutions", labelKey: "mega.customSoftware", href: "/solutions/custom-software-solutions" },
-    { label: "MeOS Ecosystem", labelKey: "mega.meosEcosystem", href: "/products/meos" },
+    { label: "MeOS Ecosystem", labelKey: "mega.meosEcosystem", href: "/solutions/meos-ecosystem" },
     { label: "Website Operations", labelKey: "mega.websiteOperations", href: "/solutions/website-operations" },
   ],
 };
@@ -92,7 +92,7 @@ export const navigation: NavItem[] = [
           { label: "MeOS Ecommerce", labelKey: "mega.meosEcommerce", href: "/products/meos-ecommerce" },
           { label: "MeOS MiniApp", labelKey: "mega.meosMiniApp", href: "/products/meos-miniapp" },
           { label: "MeOS Omni", labelKey: "mega.meosOmni", href: "/products/meos-omni" },
-          { label: "MeOS", labelKey: "mega.meos", href: "/products/meos" },
+          { label: "MeOS", labelKey: "mega.meos", href: "/solutions/meos-ecosystem" },
         ],
       },
     ],
@@ -149,7 +149,7 @@ export const navigation: NavItem[] = [
         blurb: "Who we are and how we work.",
         blurbKey: "mega.aboutMeuBlurb",
         links: [
-          { label: "About Us", labelKey: "mega.aboutUs", href: "/about/us" },
+          { label: "About Us", labelKey: "mega.aboutUs", href: "/about" },
           { label: "Vision | Mission | Core Values", labelKey: "mega.visionMission", href: "/about/vision-mission" },
           { label: "Partners & Clients", labelKey: "mega.partnersClients", href: "/about/partners-clients" },
           { label: "Careers", labelKey: "mega.careers", href: "/about/careers" },

@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
 import {
   Image as ImageIcon,
   Plus,
@@ -16,10 +16,12 @@ import {
   type CmsFileItem,
   resolveCmsFileUrl,
 } from "@/utils/file";
+import { useQueryClient } from "@tanstack/react-query";
 import {
-  deleteApiV10FileId,
-  getApiV10File,
-  postApiV10FileUpload,
+  getGetApiV10FileQueryKey,
+  useDeleteApiV10FileId,
+  useGetApiV10File,
+  usePostApiV10FileUpload,
 } from "@/api/endpoints/file";
 import { MediaCardSkeleton } from "./_components/media-card-skeleton";
 import { MediaFormDialog } from "./_components/media-form-dialog";
@@ -28,59 +30,46 @@ import {
   PAGE_SIZE,
 } from "./_components/types";
 import {
-  formatDate,
   formatFileSize,
   getFileSize,
   resolveApiError,
 } from "./_components/utils";
+import { formatDateTime } from "@/utils/date";
 
 export default function AdminMediaPage() {
-  const [items, setItems] = useState<CmsFileItem[]>([]);
+  const queryClient = useQueryClient();
   const [search, setSearch] = useState("");
-  const [ready, setReady] = useState(false);
   const [saving, setSaving] = useState(false);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [deleteTarget, setDeleteTarget] = useState<CmsFileItem | null>(null);
   const [page, setPage] = useState(1);
-  const [total, setTotal] = useState(0);
 
-  const load = useCallback(async () => {
-    setReady(false);
+  const keyword = search.trim();
+  const filters = [
+    "mime@=image",
+    keyword ? `original@=${keyword}|path@=${keyword}` : "",
+  ].filter(Boolean).join(",");
 
-    try {
-      const keyword = search.trim();
-      const filters = [
-        "mime@=image",
-        keyword ? `original@=${keyword}|path@=${keyword}` : "",
-      ].filter(Boolean).join(",");
+  const { data, isFetching } = useGetApiV10File({
+    page,
+    pageSize: PAGE_SIZE,
+    sortField: "created_at",
+    sortOrder: "desc",
+    filters,
+  });
+  const uploadFile = usePostApiV10FileUpload();
+  const deleteFile = useDeleteApiV10FileId();
 
-      const response = await getApiV10File({
-        page,
-        pageSize: PAGE_SIZE,
-        sortField: "created_at",
-        sortOrder: "desc",
-        filters,
-      });
-      const pageData = response.responseData ?? {};
+  const pageData = (data?.responseData ?? {}) as unknown as {
+    rows?: CmsFileItem[];
+    count?: number;
+  };
+  const items = pageData.rows ?? [];
+  const total = pageData.count ?? 0;
+  const ready = !isFetching;
 
-      setItems((pageData.rows ?? []) as unknown as CmsFileItem[]);
-      setTotal(pageData.count ?? 0);
-    } catch (error) {
-      toast.error(resolveApiError(error, "Không thể tải danh sách ảnh"));
-      setItems([]);
-      setTotal(0);
-    } finally {
-      setReady(true);
-    }
-  }, [page, search]);
-
-  useEffect(() => {
-    void load();
-  }, [load]);
-
-  useEffect(() => {
-    setPage(1);
-  }, [search]);
+  const reload = () =>
+    queryClient.invalidateQueries({ queryKey: getGetApiV10FileQueryKey() });
 
   const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
 
@@ -94,13 +83,15 @@ export default function AdminMediaPage() {
     setSaving(true);
 
     try {
-      await postApiV10FileUpload({
-        file: data.file,
-        original: data.name,
+      await uploadFile.mutateAsync({
+        data: {
+          file: data.file,
+          original: data.name,
+        },
       });
       toast.success("Đã tải ảnh lên thành công");
       setDialogOpen(false);
-      await load();
+      await reload();
     } catch (error) {
       toast.error(resolveApiError(error, "Không thể tải ảnh lên"));
     } finally {
@@ -112,10 +103,10 @@ export default function AdminMediaPage() {
     if (!deleteTarget) return;
 
     try {
-      await deleteApiV10FileId(deleteTarget.id ?? "");
+      await deleteFile.mutateAsync({ id: deleteTarget.id ?? "" });
       toast.success("Đã xóa ảnh thành công");
       setDeleteTarget(null);
-      await load();
+      await reload();
     } catch (error) {
       toast.error(resolveApiError(error, "Không thể xóa ảnh"));
     }
@@ -125,7 +116,7 @@ export default function AdminMediaPage() {
     <div className="space-y-8">
       <AdminTableLayout
         searchValue={search}
-        searchPlaceholder="Tìm kiếm ảnh..."
+        searchPlaceholder="Tìm kiếm ảnh và video..."
         actionLabel="Tải ảnh lên"
         actionIcon={<Plus className="mr-2 h-4 w-4" />}
         actionMeta={
@@ -133,7 +124,10 @@ export default function AdminMediaPage() {
             Tổng số ảnh: {total}
           </div>
         }
-        onSearchChange={setSearch}
+        onSearchChange={(value) => {
+          setSearch(value);
+          setPage(1);
+        }}
         onActionClick={openCreate}
       >
         <div className="bg-white p-4 sm:p-5">
@@ -201,7 +195,7 @@ export default function AdminMediaPage() {
                     </div>
 
                     <div className="border-t border-[#063e8e]/8 pt-3 text-xs text-slate-500">
-                      {formatDate(item.created_at)}
+                      {formatDateTime(item.created_at)}
                     </div>
                   </div>
                 </article>

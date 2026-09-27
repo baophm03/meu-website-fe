@@ -1,6 +1,6 @@
 "use client";
 
-import dayjs from "dayjs";
+import { formatDate } from "@/utils/date";
 import { Hash, Plus, Tag } from "lucide-react";
 import { AdminRowActions } from "@/components/admin/admin-row-actions";
 import { AdminTableLayout } from "@/components/admin/admin-table-layout";
@@ -111,10 +111,10 @@ export function TagsTable({
                   {item.slug}
                 </TableCell>
                 <TableCell className="px-4 py-4 text-center text-gray-700">
-                  {item.created_at ? dayjs(item.created_at).format("DD/MM/YYYY") : "-"}
+                  {formatDate(item.created_at)}
                 </TableCell>
                 <TableCell className="px-4 py-4 text-center text-gray-700">
-                  {item.updated_at ? dayjs(item.updated_at).format("DD/MM/YYYY") : "-"}
+                  {formatDate(item.updated_at)}
                 </TableCell>
                 <TableCell className="px-4 py-4">
                   <AdminRowActions

@@ -7,13 +7,12 @@
  */
 import type { PostCreateReleaseMode } from './postCreateReleaseMode';
 import type { PostCreateContentStructure } from './postCreateContentStructure';
-import type { PostCreateEventDates } from './postCreateEventDates';
 
 export interface PostCreate {
   title: string;
   /** @nullable */
   thumbnail_id?: string | null;
-  external_link: string;
+  external_link?: string;
   content: string;
   /** @nullable */
   release_at?: string | null;
@@ -21,6 +20,8 @@ export interface PostCreate {
   release_mode: PostCreateReleaseMode;
   /** @nullable */
   page_config_id?: string | null;
+  /** @nullable */
+  page_config_ids?: string[] | null;
   /** @nullable */
   is_featured?: boolean | null;
   /**
@@ -65,5 +66,5 @@ export interface PostCreate {
   /** @nullable */
   content_structure?: PostCreateContentStructure;
   /** @nullable */
-  event_dates?: PostCreateEventDates;
+  event_dates?: string[] | null;
 }
