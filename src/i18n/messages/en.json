@@ -9,7 +9,7 @@
     "trustCenter": "Trust Center"
   },
   "actions": {
-    "talkToExpert": "Contact MeU now",
+    "talkToExpert": "Contact MeU",
     "search": "Search the site",
     "searchPlaceholder": "Search solutions, industries, case studies, insights…",
     "switchLanguage": "Switch language, current {locale}",
@@ -102,6 +102,9 @@
   },
   "home": {
     "hero": {
+      "eyebrow": "MeU — Software Outsourcing Studio",
+      "primaryCta": "Start a project",
+      "secondaryCta": "Explore solutions",
       "slides": {
         "s1": {
           "eyebrow": "MeU — Software Outsourcing Studio",
@@ -124,7 +127,7 @@
           "title1": "Turn raw data into",
           "title2": "working AI products.",
           "description": "From LLM integration to production ML pipelines — we design, build and operate AI that earns its keep.",
-          "primaryCta": "Contact MeU now",
+          "primaryCta": "Contact MeU",
           "secondaryCta": "AI capabilities"
         },
         "s4": {

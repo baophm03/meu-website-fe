@@ -1,14 +1,15 @@
 "use client";
 
-import Image from "next/image";
 import { Link } from "@/i18n/navigation";
+import { SafeImage } from "@/components/shared/safe-image";
 import { useRef, useState, type ReactNode } from "react";
 import { ArrowRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
-import { HERO_SLIDES } from "@/mockdata/hero-slides";
+
+import type { HeroBannerSlide } from "./hero-banners";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -51,17 +52,12 @@ function SecondaryButton({ href, children, className }: { href: string; children
   );
 }
 
-export function Hero() {
+interface HeroProps {
+  slides: HeroBannerSlide[];
+}
+
+export function Hero({ slides }: HeroProps) {
   const t = useTranslations("home.hero");
-  const slides = HERO_SLIDES.map((slide) => ({
-    ...slide,
-    eyebrow: t(`slides.${slide.id}.eyebrow`),
-    title1: t(`slides.${slide.id}.title1`),
-    title2: t(`slides.${slide.id}.title2`),
-    description: t(`slides.${slide.id}.description`),
-    primaryCta: t(`slides.${slide.id}.primaryCta`),
-    secondaryCta: t(`slides.${slide.id}.secondaryCta`)
-  }));
 
   const [activeIndex, setActiveIndex] = useState(0);
   const progressRef = useRef<HTMLDivElement>(null);
@@ -85,19 +81,23 @@ export function Hero() {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={slide.id} className="relative overflow-hidden">
-            <Image
-              src={slide.image}
-              alt=""
-              fill
-              priority={index === 0}
-              sizes="100vw"
-              className="object-cover"
-            />
-            {/* Readability overlays: darken left side + top/bottom edges */}
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 bg-[linear-gradient(100deg,rgba(5,6,8,0.94)_0%,rgba(5,6,8,0.72)_42%,rgba(5,6,8,0.25)_75%,rgba(5,6,8,0.1)_100%)]"
-            />
+            {slide.image ? (
+              <SafeImage
+                src={slide.image}
+                alt=""
+                fill
+                priority={index === 0}
+                sizes="100vw"
+                className="object-cover"
+              />
+            ) : null}
+            {/* Readability overlays: darken left side (only when slide has text) + top/bottom edges */}
+            {slide.title || slide.description ? (
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 bg-[linear-gradient(100deg,rgba(5,6,8,0.94)_0%,rgba(5,6,8,0.72)_42%,rgba(5,6,8,0.25)_75%,rgba(5,6,8,0.1)_100%)]"
+              />
+            ) : null}
             <div
               aria-hidden="true"
               className="absolute inset-0 bg-[linear-gradient(to_top,rgba(5,6,8,0.9)_0%,transparent_30%),linear-gradient(to_bottom,rgba(5,6,8,0.55)_0%,transparent_25%)]"
@@ -106,35 +106,34 @@ export function Hero() {
             {/* Left content over image */}
             <div className="container relative flex h-full items-center pb-24 pt-[68px]">
               <div className="max-w-[660px]">
-                <span
-                  className={cn(label, revealItem, "inline-flex items-center gap-3 text-primary-light")}
-                  style={{ transitionDelay: "100ms" }}
-                >
-                  <i aria-hidden="true" className="h-px w-8 bg-primary-light/70" />
-                  {slide.eyebrow}
-                </span>
-                <h1
-                  className={cn(
-                    displayHeading,
-                    revealItem,
-                    "mt-6 text-[42px] font-semibold uppercase leading-[1.02] sm:text-[56px] lg:text-[64px] xl:text-[72px]",
-                  )}
-                  style={{ transitionDelay: "220ms" }}
-                >
-                  {slide.title1}
-                  <br />
-                  <span className="bg-[linear-gradient(100deg,#4d6bfe,#00f0ff)] bg-clip-text text-transparent">{slide.title2}</span>
-                </h1>
-                <p
-                  className={cn(revealItem, "mt-6 max-w-[540px] text-[16px] leading-[1.65] text-white/75 sm:text-[18px]")}
-                  style={{ transitionDelay: "340ms" }}
-                >
-                  {slide.description}
-                </p>
-                <div className={cn(revealItem, "mt-9 flex flex-col gap-3 sm:flex-row")} style={{ transitionDelay: "460ms" }}>
-                  <PrimaryButton href={slide.primaryHref}>{slide.primaryCta}</PrimaryButton>
-                  <SecondaryButton href={slide.secondaryHref}>{slide.secondaryCta}</SecondaryButton>
-                </div>
+                {slide.title ? (
+                  <h1
+                    className={cn(
+                      displayHeading,
+                      revealItem,
+                      "mt-6 text-[42px] font-semibold uppercase leading-[1.02] sm:text-[56px] lg:text-[64px] xl:text-[72px]",
+                    )}
+                    style={{ transitionDelay: "220ms" }}
+                  >
+                    {slide.title}
+                  </h1>
+                ) : (
+                  <h1 className="sr-only">MeU</h1>
+                )}
+                {slide.description ? (
+                  <p
+                    className={cn(revealItem, "mt-6 max-w-[540px] text-[16px] leading-[1.65] text-white/75 sm:text-[18px]")}
+                    style={{ transitionDelay: "340ms" }}
+                  >
+                    {slide.description}
+                  </p>
+                ) : null}
+                {slide.title || slide.description ? (
+                  <div className={cn(revealItem, "mt-9 flex flex-col gap-3 sm:flex-row")} style={{ transitionDelay: "460ms" }}>
+                    <PrimaryButton href="/contact">{t("primaryCta")}</PrimaryButton>
+                    <SecondaryButton href="/solutions">{t("secondaryCta")}</SecondaryButton>
+                  </div>
+                ) : null}
               </div>
             </div>
           </SwiperSlide>

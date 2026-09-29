@@ -102,6 +102,9 @@
   },
   "home": {
     "hero": {
+      "eyebrow": "MeU — Studio gia công phần mềm",
+      "primaryCta": "Bắt đầu dự án",
+      "secondaryCta": "Khám phá giải pháp",
       "slides": {
         "s1": {
           "eyebrow": "MeU — Studio gia công phần mềm",

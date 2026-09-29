@@ -1,7 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
-import Image from "next/image";
+import { SafeImage } from "@/components/shared/safe-image";
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
@@ -130,12 +130,12 @@ export function FooterView({
                           if (el.type === "image") {
                             if (!el.imageSrc) return null;
                             const img = (
-                              <Image
+                              <SafeImage
                                 src={el.imageSrc}
                                 alt={column.title ?? ""}
-                                width={120}
-                                height={48}
-                                className={cn("h-8 w-auto object-contain transition", theme.image)}
+                                width={480}
+                                height={160}
+                                className={cn("h-auto w-3/5 object-contain transition", theme.image)}
                               />
                             );
                             return (
