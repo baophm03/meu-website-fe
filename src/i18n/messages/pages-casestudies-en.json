@@ -6,7 +6,7 @@
         "heading1": "Progress you can see",
         "heading2": "in the work.",
         "summary": "Client names appear with written consent; NDA engagements are published in anonymised form. Every case study follows the same structure: challenge, solution, impact.",
-        "primaryButton": "Contact MeU now",
+        "primaryButton": "Contact MeU",
         "secondaryButton": "Browse all"
       },
       "featured": {
@@ -39,7 +39,7 @@
         "heading1": "Bring it to us.",
         "heading2": "We will map the path.",
         "description": "Start a focused conversation with a senior MeU technology partner.",
-        "primaryButton": "Contact MeU now",
+        "primaryButton": "Contact MeU",
         "secondaryButton": "Explore solutions"
       },
       "featured_sub": {
@@ -47,7 +47,7 @@
           "eyebrow": "Case Studies · Featured",
           "heading": "Featured case studies",
           "summary": "Our most impactful engagements, selected by outcome and client consent.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "All case studies"
         },
         "list": {
@@ -72,7 +72,7 @@
           "heading1": "Ask for the full case.",
           "heading2": "We share with NDA.",
           "description": "Full case studies with named clients are available under NDA.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "All case studies"
         }
       },
@@ -81,7 +81,7 @@
           "eyebrow": "Case Studies · By Industry",
           "heading": "Case studies by industry",
           "summary": "Filter our case study library by the industry you operate in.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "All case studies"
         },
         "list": {
@@ -106,7 +106,7 @@
           "heading1": "Ask us directly.",
           "heading2": "We may have an NDA case.",
           "description": "Some engagements are not publicly listed. Ask our team for relevant examples.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "All case studies"
         }
       },
@@ -115,7 +115,7 @@
           "eyebrow": "Case Studies · By Solution",
           "heading": "Case studies by solution",
           "summary": "Filter our case study library by the solution type you are exploring.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "All case studies"
         },
         "list": {
@@ -140,7 +140,7 @@
           "heading1": "Tell us the problem.",
           "heading2": "We will find the match.",
           "description": "We may have an unpublished case study that matches your situation.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "All case studies"
         }
       },
@@ -149,7 +149,7 @@
           "eyebrow": "Case Studies · By Technology",
           "heading": "Case studies by technology",
           "summary": "Filter our case study library by the core technology stack.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "All case studies"
         },
         "list": {
@@ -174,7 +174,7 @@
           "heading1": "Ask our team.",
           "heading2": "We will share what we can.",
           "description": "Technology-specific case studies are available on request.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "All case studies"
         }
       },
@@ -189,7 +189,7 @@
         "ctaHeading1": "You bring the challenge.",
         "ctaHeading2": "We bring the direction.",
         "ctaDesc": "Start a focused conversation with a senior MeU technology partner.",
-        "ctaPrimary": "Contact MeU now",
+        "ctaPrimary": "Contact MeU",
         "ctaSecondary": "All case studies",
         "overviewLabel": "Overview",
         "sidebarCtaEyebrow": "Need something similar?",

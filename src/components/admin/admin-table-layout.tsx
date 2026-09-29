@@ -14,6 +14,8 @@ interface AdminTableLayoutProps {
   actionDisabled?: boolean;
   children: React.ReactNode;
   filters?: React.ReactNode;
+  /** Extra classes for the content wrapper (override border/rounding when needed). */
+  contentClassName?: string;
   onSearchChange: (value: string) => void;
   onActionClick?: () => void;
 }
@@ -27,6 +29,7 @@ export function AdminTableLayout({
   actionDisabled = false,
   children,
   filters,
+  contentClassName,
   onSearchChange,
   onActionClick,
 }: AdminTableLayoutProps) {
@@ -61,7 +64,12 @@ export function AdminTableLayout({
         ) : null}
       </div>
 
-      <div className="overflow-x-auto rounded-xl border border-[#063e8e]/20 bg-white shadow-sm [&_table]:min-w-[760px] [&_tbody_td:not(:last-child)]:border-r [&_tbody_td:not(:last-child)]:border-[#063e8e]/20 [&_thead_th:not(:last-child)]:border-r [&_thead_th:not(:last-child)]:border-white/15">
+      <div
+        className={
+          contentClassName ??
+          "overflow-x-auto rounded-xl border border-[#063e8e]/20 bg-white shadow-sm [&_table]:min-w-[760px] [&_tbody_td:not(:last-child)]:border-r [&_tbody_td:not(:last-child)]:border-[#063e8e]/20 [&_thead_th:not(:last-child)]:border-r [&_thead_th:not(:last-child)]:border-white/15"
+        }
+      >
         {children}
       </div>
     </div>

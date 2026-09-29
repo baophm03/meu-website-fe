@@ -5,7 +5,7 @@
         "eyebrow": "Trust Center",
         "title": "How we protect your data, your privacy and your AI deployments.",
         "summary": "Trust is built into how we design, build and operate every system. This is the framework behind that commitment — security, privacy, data protection and responsible AI, under one accountable team.",
-        "primaryButton": "Contact MeU now",
+        "primaryButton": "Contact MeU",
         "secondaryButton": "Read the security overview"
       },
       "overview": {
@@ -53,14 +53,14 @@
         "heading2": "We answer in writing.",
         "description": "Security, privacy, data protection or responsible AI — send the question and a senior MeU partner responds with a documented answer, not a sales reply.",
         "primaryButton": "Contact the trust team",
-        "secondaryButton": "Contact MeU now"
+        "secondaryButton": "Contact MeU"
       },
       "security": {
         "hero": {
           "eyebrow": "Trust Center · Security",
           "title": "Security engineered into architecture, delivery and operations.",
           "summary": "The controls, environments and practices that keep the systems we build and operate protected — from first commit to daily operation.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "Read the privacy principles"
         },
         "architecture": {
@@ -116,7 +116,7 @@
           "eyebrow": "Trust Center · Privacy",
           "title": "Privacy treated as a design constraint, not a disclosure.",
           "summary": "How we collect, use, limit and protect personal data across the systems we build and operate — with the transparency to verify it.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "Read the data protection framework"
         },
         "principles": {
@@ -159,7 +159,7 @@
           "eyebrow": "Trust Center · Data Protection",
           "title": "Data handled, stored and retained under a defined framework.",
           "summary": "How client and personal data is classified, transferred, stored and retired across the systems we build and operate — agreed per engagement and enforced in practice.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "Read the responsible AI framework"
         },
         "framework": {
@@ -202,7 +202,7 @@
           "eyebrow": "Trust Center · Responsible AI",
           "title": "AI you can audit, with humans in control of what matters.",
           "summary": "The governance model behind every AI system we build: defined decisions, human control, full traceability and reversibility — designed in from the first workflow.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "Read the security overview"
         },
         "principles": {
@@ -245,7 +245,7 @@
           "eyebrow": "Trust Center · Cookie Policy",
           "title": "How we use cookies, stated plainly.",
           "summary": "Cookies are used only where they serve a clear purpose on this site — to keep the site working, to remember your preferences and to understand how content is used. No advertising or profiling cookies are set.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "Read the privacy principles"
         },
         "categories": {
@@ -286,7 +286,7 @@
           "eyebrow": "Trust Center · Terms of Use",
           "title": "The terms that govern use of this site, in plain language.",
           "summary": "These terms set out how this site may be used and what each party is responsible for. They are written to be read, not to obscure — if a clause is unclear, we will clarify it on request.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "Read the privacy principles"
         },
         "terms": {

@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Hero } from "./_components/hero";
+import { fetchHeroBanners } from "./_components/hero-banners";
 import { ProofStrip } from "./_components/proof-strip";
 import { Challenges } from "./_components/challenges";
 import { BusinessSolutions } from "./_components/business-solutions";
@@ -28,6 +29,7 @@ export default async function HomePage({ params }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations("home.finalCta");
   const tActions = await getTranslations("actions");
+  const heroSlides = await fetchHeroBanners(locale);
   return (
     <div className="relative bg-surface-dark text-white">
       <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -42,7 +44,7 @@ export default async function HomePage({ params }: Props) {
         <div className="absolute -top-1/4 right-[24%] h-[160%] w-px rotate-[24deg] bg-[linear-gradient(to_bottom,transparent,rgba(139,92,246,0.45),transparent)]" />
       </div>
       <div className="relative">
-        <Hero />
+        <Hero slides={heroSlides} />
         <ProofStrip />
         <Challenges />
         <BusinessSolutions />
