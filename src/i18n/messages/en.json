@@ -9,7 +9,7 @@
     "trustCenter": "Trust Center"
   },
   "actions": {
-    "talkToExpert": "Talk to an expert",
+    "talkToExpert": "Contact MeU now",
     "search": "Search the site",
     "searchPlaceholder": "Search solutions, industries, case studies, insights…",
     "switchLanguage": "Switch language, current {locale}",
@@ -17,7 +17,7 @@
     "closeMenu": "Close menu",
     "collapse": "Collapse",
     "expand": "Expand",
-    "serviceCardAriaLabel": "{title} — talk to an expert",
+    "serviceCardAriaLabel": "{title} — contact MeU now",
     "mainNavigation": "Main navigation",
     "mobileNavigation": "Mobile navigation"
   },
@@ -31,8 +31,6 @@
   },
   "footer": {
     "tagline": "Technology · Solutions · Transformation. We design, build and operate the systems that move your business forward.",
-    "address": "Ho Chi Minh City, Vietnam",
-    "contactTeam": "Contact our team",
     "rights": "© {year} MeU Solutions. All rights reserved.",
     "privacy": "Privacy",
     "security": "Security",
@@ -67,10 +65,10 @@
     "industriesWeWorkInBlurb": "Only sectors with validated domain knowledge and delivery evidence.",
     "meosUniverse": "MeOS Universe",
     "meosUniverseBlurb": "One ecosystem — diverse solutions — comprehensive capabilities. Productised platforms with a stable roadmap and a live demo.",
-    "meos365": "MeOS 365",
     "meosEcommerce": "MeOS Ecommerce",
     "meosMiniApp": "MeOS MiniApp",
     "meosOmni": "MeOS Omni",
+    "meosHiCare": "MeOS HiCare",
     "meos": "MeOS",
     "clientSuccess": "Client Success",
     "clientSuccessBlurb": "Challenge, solution and measured impact — filtered the way you buy.",
@@ -126,7 +124,7 @@
           "title1": "Turn raw data into",
           "title2": "working AI products.",
           "description": "From LLM integration to production ML pipelines — we design, build and operate AI that earns its keep.",
-          "primaryCta": "Talk to an expert",
+          "primaryCta": "Contact MeU now",
           "secondaryCta": "AI capabilities"
         },
         "s4": {
@@ -257,9 +255,7 @@
       "d5Desc": "Experienced Vietnamese engineering at a cost built for global competitiveness.",
       "stat1Label": "Years established",
       "stat2Label": "Years of experience",
-      "stat3Label": "Talented people",
-      "footerNote": "Client logos and verified delivery metrics are published here after approval.",
-      "proofNotPromises": "Proof, not promises."
+      "stat3Label": "Talented people"
     },
     "insights": {
       "eyebrow": "Insights",

@@ -6,7 +6,7 @@
         "heading1": "Tiến bộ thấy được",
         "heading2": "trong công việc.",
         "summary": "Tên khách hàng hiển thị khi có đồng ý bằng văn bản; dự án NDA được công bố ẩn danh. Mọi case study theo cùng cấu trúc: thách thức, giải pháp, kết quả.",
-        "primaryButton": "Trao đổi với chuyên gia",
+        "primaryButton": "Liên hệ ngay với MeU",
         "secondaryButton": "Xem tất cả"
       },
       "featured": {
@@ -39,7 +39,7 @@
         "heading1": "Mang đến cho chúng tôi.",
         "heading2": "Chúng tôi vẽ đường đi.",
         "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
-        "primaryButton": "Trao đổi với chuyên gia",
+        "primaryButton": "Liên hệ ngay với MeU",
         "secondaryButton": "Khám phá giải pháp"
       },
       "featured_sub": {
@@ -47,7 +47,7 @@
           "eyebrow": "Case study · Nổi bật",
           "heading": "Case study nổi bật",
           "summary": "Những dự án có tác động lớn nhất, được chọn theo kết quả và đồng ý của khách hàng.",
-          "primaryButton": "Trao đổi với chuyên gia",
+          "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả case study"
         },
         "list": {
@@ -72,7 +72,7 @@
           "heading1": "Xin case đầy đủ.",
           "heading2": "Chia sẻ theo NDA.",
           "description": "Case study đầy đủ với tên khách hàng có sẵn theo NDA.",
-          "primaryButton": "Trao đổi với chuyên gia",
+          "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả case study"
         }
       },
@@ -81,7 +81,7 @@
           "eyebrow": "Case study · Theo ngành",
           "heading": "Case study theo ngành",
           "summary": "Lọc thư viện case study theo ngành bạn hoạt động.",
-          "primaryButton": "Trao đổi với chuyên gia",
+          "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả case study"
         },
         "list": {
@@ -106,7 +106,7 @@
           "heading1": "Hỏi trực tiếp.",
           "heading2": "Có thể có case NDA.",
           "description": "Một số dự án không công khai. Hỏi đội ngũ để lấy ví dụ liên quan.",
-          "primaryButton": "Trao đổi với chuyên gia",
+          "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả case study"
         }
       },
@@ -115,7 +115,7 @@
           "eyebrow": "Case study · Theo giải pháp",
           "heading": "Case study theo giải pháp",
           "summary": "Lọc thư viện case study theo loại giải pháp bạn đang tìm.",
-          "primaryButton": "Trao đổi với chuyên gia",
+          "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả case study"
         },
         "list": {
@@ -140,7 +140,7 @@
           "heading1": "Cho chúng tôi biết vấn đề.",
           "heading2": "Chúng tôi tìm case phù hợp.",
           "description": "Có thể có case study chưa công khai phù hợp tình huống của bạn.",
-          "primaryButton": "Trao đổi với chuyên gia",
+          "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả case study"
         }
       },
@@ -149,7 +149,7 @@
           "eyebrow": "Case study · Theo công nghệ",
           "heading": "Case study theo công nghệ",
           "summary": "Lọc thư viện case study theo công nghệ lõi.",
-          "primaryButton": "Trao đổi với chuyên gia",
+          "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả case study"
         },
         "list": {
@@ -174,17 +174,14 @@
           "heading1": "Hỏi đội ngũ.",
           "heading2": "Chúng tôi chia sẻ nếu có.",
           "description": "Case study theo công nghệ có sẵn theo yêu cầu.",
-          "primaryButton": "Trao đổi với chuyên gia",
+          "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả case study"
         }
       },
       "detail": {
-        "backToCaseStudies": "Tất cả case study",
         "eyebrow": "Case Study",
         "groupLabel": "Nhóm",
-        "dateLabel": "Ngày đăng",
         "readingLabel": "Thời lượng",
-        "readingTime": "{minutes} phút đọc",
         "relatedEyebrow": "Đọc tiếp",
         "relatedTitle": "Case study liên quan.",
         "readCaseStudy": "Xem case study",
@@ -192,7 +189,7 @@
         "ctaHeading1": "Mang đến thách thức.",
         "ctaHeading2": "Chúng tôi mang đến hướng đi.",
         "ctaDesc": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
-        "ctaPrimary": "Nói chuyện với chuyên gia",
+        "ctaPrimary": "Liên hệ ngay với MeU",
         "ctaSecondary": "Xem tất cả case study",
         "overviewLabel": "Tổng quan",
         "sidebarCtaEyebrow": "Cần giải pháp tương tự?",

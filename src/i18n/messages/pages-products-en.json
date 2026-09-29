@@ -7,7 +7,7 @@
         "heading2": "Operational by design.",
         "summary": "Platforms with standard core IP, a repeatable deployment model and a demo you can run. Everything else is delivered as a tailored solution.",
         "primaryButton": "Request a demo",
-        "secondaryButton": "Talk to an expert",
+        "secondaryButton": "Contact MeU now",
         "proof1": "Standard core IP",
         "proof2": "Repeatable deployment",
         "proof3": "Demo you can run",
@@ -75,7 +75,7 @@
           "heading2": "on one platform.",
           "summary": "Modular business software shaped to each operating model — from workflow and CRM to analytics and membership — on a shared data layer.",
           "primaryButton": "Request a demo",
-          "secondaryButton": "Talk to an expert"
+          "secondaryButton": "Contact MeU now"
         },
         "modules": {
           "eyebrow": "Modules",
@@ -144,7 +144,7 @@
           "heading2": "human control built in.",
           "summary": "Document intelligence, operational copilots and decision automation — each with context, controls and human judgment designed into the system.",
           "primaryButton": "Request a demo",
-          "secondaryButton": "Talk to an expert"
+          "secondaryButton": "Contact MeU now"
         },
         "platforms": {
           "eyebrow": "Platforms",
@@ -205,7 +205,7 @@
           "heading2": "that scale with you.",
           "summary": "Omnichannel selling, POS, inventory and fulfillment connected end to end — so every channel sees the same stock, price and order.",
           "primaryButton": "Request a demo",
-          "secondaryButton": "Talk to an expert"
+          "secondaryButton": "Contact MeU now"
         },
         "platforms": {
           "eyebrow": "Platforms",
@@ -274,7 +274,7 @@
           "heading2": "with real domain depth.",
           "summary": "Pre-built domain modules for healthcare, logistics and education — shaped by delivery experience, not generic templates.",
           "primaryButton": "Request a demo",
-          "secondaryButton": "Talk to an expert"
+          "secondaryButton": "Contact MeU now"
         },
         "platforms": {
           "eyebrow": "Platforms",
@@ -334,272 +334,422 @@
       },
       "meos": {
         "hero": {
-          "eyebrow": "Products & platforms",
-          "heading": "The MEOS Technology Ecosystem",
-          "summary": "One ecosystem, many solutions for enterprise needs — MEOS brings together digital solutions built by MeU Solutions for different needs across business and operations.",
-          "secondaryButton": "All products"
+          "eyebrow": "MeOS — One Ecosystem. Infinite Possibilities.",
+          "heading": "One ecosystem. Unlimited possibilities.",
+          "summary": "A technology solution ecosystem developed by MeU Solutions, designed to help businesses manage, operate and grow in the digital era.",
+          "primaryButton": "Explore the ecosystem",
+          "secondaryButton": "Talk to us"
         },
-        "whatWeDo": {
-          "eyebrow": "The MEOS ecosystem",
-          "heading": "Many solutions growing inside one ecosystem.",
-          "summary": "MEOS is built to be open: each solution covers a distinct set of needs while remaining able to connect and grow together.",
-          "item1Title": "MEOS Mini App",
-          "item1Desc": "Helps enterprises build sales channels, customer care, loyalty, vouchers and affiliate programs on the Mini App platform.",
-          "item2Title": "MEOS E-commerce",
-          "item2Desc": "Supports e-commerce operations — from product, order and customer management to running an online business.",
-          "item3Title": "MEOS Omni",
-          "item3Desc": "Focuses on connecting touchpoints and customer interactions across multiple channels.",
-          "item4Title": "Extended solutions",
-          "item4Desc": "The ecosystem keeps growing with new solutions and platforms for different enterprise needs."
+        "about": {
+          "eyebrow": "What is MeOS?",
+          "heading": "MeOS — A technology ecosystem for the modern enterprise",
+          "p1": "MeOS is a technology solution ecosystem researched and developed by MeU Solutions, built to help businesses solve real problems across management, operations, commerce and customer engagement.",
+          "p2": "Through specialised solutions, MeOS makes it possible for businesses to choose the technology that fits their operating model and stage of growth.",
+          "p3": "From e-commerce and omnichannel sales to mobile experiences and healthcare solutions, MeOS steadily builds a diverse technology portfolio oriented toward connection and expansion."
         },
-        "approach": {
-          "eyebrow": "How MEOS is developed",
-          "heading": "Each solution solves one need — all aim at one ecosystem.",
-          "summary": "Enterprises can adopt each solution for real needs while keeping the ability to connect and expand as they grow.",
-          "step1Label": "By need",
-          "step1Desc": "Each solution focuses on a specific set of problems in business and operations.",
-          "step2Label": "By stage",
-          "step2Desc": "Start with one fitting solution instead of deploying the whole system upfront.",
-          "step3Label": "Connected solutions",
-          "step3Desc": "Components in the ecosystem can share data and support each other in operation.",
-          "step4Label": "Continuously expanding",
-          "step4Desc": "New solutions can be added to meet new needs as the enterprise develops."
+        "values": {
+          "eyebrow": "Core value",
+          "heading": "The right technology for each need. One unified direction.",
+          "summary": "Every business has its own needs and challenges. MeOS builds a diverse solution portfolio so businesses can approach technology through real problems, at every stage of growth.",
+          "item1Title": "The right fit",
+          "item1Desc": "Choose products by need and business model.",
+          "item2Title": "A diverse ecosystem",
+          "item2Desc": "Products serving many industries and use cases.",
+          "item3Title": "Oriented to connect",
+          "item3Desc": "Developing links between solutions over time.",
+          "item4Title": "Ready to grow",
+          "item4Desc": "Discover additional solutions as your needs evolve."
         },
-        "outcomes": {
-          "eyebrow": "The value of the MEOS ecosystem",
-          "heading": "From separate solutions to one connected ecosystem.",
-          "summary": "MEOS is not built around a single product — it is an ecosystem of solutions that can grow together with the enterprise's needs.",
-          "outcome1Title": "Diverse solutions",
-          "outcome1Desc": "Multiple platforms built for different needs in sales, e-commerce, customers and operations.",
-          "outcome2Title": "Flexible choices",
-          "outcome2Desc": "Choose the solution that fits your needs and scale at each stage.",
-          "outcome3Title": "Connectable",
-          "outcome3Desc": "Solutions can be connected into a more unified system instead of running fully independently.",
-          "outcome4Title": "Ready to grow",
-          "outcome4Desc": "The ecosystem keeps expanding to accompany new enterprise needs."
+        "products": {
+          "eyebrow": "Product portfolio",
+          "heading": "Explore the MeOS solution ecosystem",
+          "summary": "MeOS solutions are developed around specific use cases — from e-commerce and multichannel sales to mobile experiences and specialised service digitisation.",
+          "ecommerceDesc": "The e-commerce solution for building and running an online sales channel.",
+          "ecommerceCta": "Explore Ecommerce",
+          "miniappDesc": "The solution for building service experiences and customer engagement on Mini App.",
+          "miniappCta": "Explore Mini App",
+          "omniDesc": "Designed to centrally manage sales activities across multiple channels.",
+          "omniCta": "Explore Omni",
+          "hicareDesc": "The technology solution for digitising healthcare workflows and service experiences.",
+          "hicareCta": "Explore HiCare",
+          "m365Eyebrow": "Business Management",
+          "m365Desc": "A solution designed to help businesses organise, manage, and optimise operations in the digital environment.",
+          "m365Badge": "Coming soon",
+          "m365Cta": "Register for updates"
         },
-        "cta": {
-          "eyebrow": "Ready to move?",
-          "heading1": "Bring us the challenge.",
-          "heading2": "We will bring a way forward.",
-          "description": "Start a focused conversation with a senior MeU technology partner.",
-          "secondaryButton": "All products"
-        }
-      },
-      "meos365": {
-        "hero": {
-          "eyebrow": "MeOS Universe",
-          "heading": "MEOS 365 — Business operations management platform",
-          "summary": "Digitize internal operations end to end: tasks, documents, HR and reporting on a single platform — keeping your business running smoothly every day of the year.",
-          "secondaryButton": "Back to MEOS Ecosystem"
+        "architecture": {
+          "eyebrow": "Ecosystem architecture",
+          "heading": "Many solutions. One technology ecosystem.",
+          "summary": "MeOS solutions are built to serve specific problems while sharing a common direction for technology and connectivity.",
+          "summary2": "Businesses can start with the solution that fits their current needs and discover more products as their operations, sales or services expand.",
+          "cta": "Learn about the MeOS platform"
         },
-        "whatWeDo": {
-          "eyebrow": "What MEOS 365 does",
-          "heading": "One platform for core business administration.",
-          "summary": "MEOS 365 consolidates core operational workflows that businesses currently handle across disconnected tools.",
-          "item1Title": "Task & workflow management",
-          "item1Desc": "Assign work, track progress, approve requests and automate recurring business processes.",
-          "item2Title": "Document & knowledge management",
-          "item2Desc": "Centralized storage, permissions and search — replacing files scattered across email and personal drives.",
-          "item3Title": "HR management",
-          "item3Desc": "Employee records, timekeeping, leave and core HR operations on one system.",
-          "item4Title": "Reporting & consolidation",
-          "item4Desc": "Aggregate operational data into reports that support management and decision-making."
+        "discovery": {
+          "eyebrow": "Solutions by need",
+          "heading": "What problem are you looking to solve?",
+          "summary": "Explore MeOS products by the real problems your business needs to solve.",
+          "need1": "Building an online sales channel",
+          "need1Product": "MeOS Ecommerce",
+          "need1Desc": "The e-commerce solution for building and running an online sales channel.",
+          "need2": "Launching a Mini App for customers",
+          "need2Product": "MeOS Mini App",
+          "need2Desc": "The solution for building service experiences and customer engagement on Mini App.",
+          "need3": "Managing multiple sales channels",
+          "need3Product": "MeOS Omni",
+          "need3Desc": "Designed to centrally manage sales activities across multiple channels.",
+          "need4": "Digitising healthcare services",
+          "need4Product": "MeOS HiCare",
+          "need4Desc": "The technology solution for digitising healthcare workflows and service experiences.",
+          "need365": "Managing business operations",
+          "need365Product": "MeOS 365",
+          "need365Desc": "A solution designed to help businesses organise, manage, and optimise operations in the digital environment."
         },
-        "approach": {
-          "eyebrow": "How it's deployed",
-          "heading": "Digitize step by step, without disrupting operations.",
-          "summary": "MEOS 365 rolls out on a roadmap matched to each business's readiness.",
-          "step1Label": "Digitize processes",
-          "step1Desc": "Bring paper-based and manual workflows onto the system exactly as the business operates.",
-          "step2Label": "Centralize data",
-          "step2Desc": "Tasks, HR and documents live on one unified system.",
-          "step3Label": "Automate",
-          "step3Desc": "Recurring steps — approvals, reminders, consolidation — run automatically to cut manual work.",
-          "step4Label": "Extend",
-          "step4Desc": "Add modules and connect with other MEOS ecosystem solutions as needs grow."
-        },
-        "outcomes": {
-          "eyebrow": "What it delivers",
-          "heading": "Leaner operations, every day.",
-          "summary": "MEOS 365's value lies in the consistency and stability it brings to daily operations.",
-          "outcome1Title": "Less manual work",
-          "outcome1Desc": "Approvals, tracking and reporting no longer depend on manual handling.",
-          "outcome2Title": "Centralized data",
-          "outcome2Desc": "Operational information stored in one place — easy to find and reconcile.",
-          "outcome3Title": "Transparent progress",
-          "outcome3Desc": "Managers see work status in real time instead of waiting for reports.",
-          "outcome4Title": "Ready to connect",
-          "outcome4Desc": "Integrates with other MEOS ecosystem solutions as needs expand."
+        "experience": {
+          "eyebrow": "Product experience",
+          "heading": "Explore MeOS through real experiences",
+          "summary": "See how MeOS solutions support business and operations through product interfaces, introduction videos and concrete usage scenarios.",
+          "card1Title": "See the real interface",
+          "card1Desc": "MeOS product interfaces are updated with each actual release.",
+          "card2Title": "Watch the introduction video",
+          "card2Desc": "Overview videos of the ecosystem and each MeOS solution.",
+          "card3Title": "Book a demo with a specialist",
+          "card3Desc": "Schedule a demo around your business's needs and operating model."
         },
         "cta": {
-          "eyebrow": "Ready to get started?",
-          "heading1": "You bring the challenge.",
-          "heading2": "We bring the way forward.",
-          "description": "Start a focused conversation with MeU's senior technology partner.",
-          "secondaryButton": "Back to MEOS Ecosystem"
+          "heading1": "Start your digital transformation",
+          "heading2": "with MeOS.",
+          "description": "Share your business needs. MeOS will help you find the right technology solution.",
+          "primaryButton": "Get a consultation",
+          "secondaryButton": "Explore MeOS products",
+          "credit": "MeOS — Developed by MeU Solutions."
         }
       },
       "meosEcommerce": {
         "hero": {
-          "eyebrow": "MeOS Universe",
-          "heading": "MEOS E-commerce — Commerce platform for businesses",
-          "summary": "Build a complete online sales channel: products, orders, customers and sales programs on a scalable platform.",
-          "secondaryButton": "Back to MEOS Ecosystem"
+          "label": "MeOS Ecommerce | E-commerce Solution",
+          "heading": "Simplify operations. Accelerate revenue.",
+          "summary": "MeOS Ecommerce is the e-commerce solution that helps businesses build an online sales channel, organise commerce operations and develop a convenient shopping experience.",
+          "primaryButton": "Book a demo",
+          "secondaryButton": "Explore features"
         },
-        "whatWeDo": {
-          "eyebrow": "What MEOS E-commerce does",
-          "heading": "Everything an e-commerce channel needs.",
-          "summary": "From storefront to post-sale operations, core commerce capabilities come built into the platform.",
-          "item1Title": "Storefront & shopping experience",
-          "item1Desc": "Online storefront with catalogs, search, cart and checkout designed for a smooth buying experience.",
-          "item2Title": "Product & order management",
-          "item2Desc": "Manage catalogs, inventory, pricing and the full order lifecycle on one system.",
-          "item3Title": "Customers & sales programs",
-          "item3Desc": "Customer management plus vouchers, promotions and discount programs.",
-          "item4Title": "Operations & reporting",
-          "item4Desc": "Track revenue, campaign performance and sales activity through centralized reports."
+        "value": {
+          "eyebrow": "Solution value",
+          "heading": "Simpler online business with MeOS Ecommerce.",
+          "summary": "Three common online retail problems and how MeOS Ecommerce approaches each one.",
+          "item1Problem": "No dedicated sales channel",
+          "item1Value": "Build an e-commerce website aligned with your brand.",
+          "item2Problem": "Complex product information",
+          "item2Value": "Organise catalogues and update products systematically.",
+          "item3Problem": "Orders handled manually",
+          "item3Value": "Centralised order intake and tracking."
         },
-        "approach": {
-          "eyebrow": "How it's deployed",
-          "heading": "Launch fast, operate sustainably.",
-          "summary": "MEOS E-commerce is deployed around each business's actual selling model.",
-          "step1Label": "Match your model",
-          "step1Desc": "Configure catalogs, pricing, programs and order flows to mirror how you sell.",
-          "step2Label": "Connect operations",
-          "step2Desc": "Sync orders, inventory and customer data with existing systems via API.",
-          "step3Label": "Post-sale engagement",
-          "step3Desc": "Retain customers with vouchers, offers and segment-based programs.",
-          "step4Label": "Extend touchpoints",
-          "step4Desc": "Connect MEOS MiniApp, MEOS Omni and other channels within the ecosystem."
+        "features": {
+          "eyebrow": "Key features",
+          "heading": "The tools e-commerce operations need.",
+          "summary": "Explore the main function groups that help businesses build the shopping experience and organise online sales.",
+          "tab1Title": "Sales website",
+          "tab1Desc": "Build an online shopping space with interfaces for both desktop and mobile.",
+          "tab1Point1": "Storefront aligned with your brand",
+          "tab1Point2": "Catalogue and product search",
+          "tab1Point3": "Cart and checkout",
+          "tab2Title": "Product management",
+          "tab2Desc": "Organise catalogues, images and product information clearly.",
+          "tab2Point1": "Systematic product catalogue",
+          "tab2Point2": "Product images and descriptions",
+          "tab2Point3": "Price and promotion updates",
+          "tab3Title": "Order management",
+          "tab3Desc": "Supports order intake and tracking through the fulfilment process.",
+          "tab3Point1": "Centralised order intake",
+          "tab3Point2": "Processing status tracking",
+          "tab3Point3": "Customer order history",
+          "tab4Title": "Business reports",
+          "tab4Desc": "Track sales information and the metrics supported by the system.",
+          "tab4Point1": "Revenue over time",
+          "tab4Point2": "Best-selling products",
+          "tab4Point3": "Sales campaign performance"
         },
-        "outcomes": {
-          "eyebrow": "What it delivers",
-          "heading": "Online sales on your own platform.",
-          "summary": "Own your commerce channel instead of depending entirely on third-party marketplaces.",
-          "outcome1Title": "Independent channel",
-          "outcome1Desc": "A storefront under your brand — customer data belongs to you.",
-          "outcome2Title": "Centralized operations",
-          "outcome2Desc": "Products, orders, inventory and customers managed on one system.",
-          "outcome3Title": "Customer retention",
-          "outcome3Desc": "Vouchers, offers and care programs drive repeat purchases.",
-          "outcome4Title": "Flexible growth",
-          "outcome4Desc": "Add touchpoints and features as the business scales."
+        "experience": {
+          "eyebrow": "Product experience",
+          "heading": "Explore MeOS Ecommerce through real experience.",
+          "summary": "See how customers discover products and place orders, and how businesses receive and process orders, through illustrative interfaces or a live demo.",
+          "step1Title": "Discover products",
+          "step1Desc": "Customers browse the catalogue, search and choose products on the storefront.",
+          "step2Title": "Place an order",
+          "step2Desc": "Ordering and payment happen conveniently in the shopping interface.",
+          "step3Title": "Run the order",
+          "step3Desc": "The business receives, processes and tracks orders centrally in the system.",
+          "primaryButton": "Book a demo"
+        },
+        "ecosystem": {
+          "heading": "One solution inside the MeOS ecosystem.",
+          "summary": "MeOS Ecommerce is part of the MeOS technology solution ecosystem. Discover more products for multichannel sales management and mobile experiences.",
+          "link1Title": "MeOS Omni",
+          "link1Desc": "Multichannel sales management",
+          "link2Title": "MeOS Mini App",
+          "link2Desc": "Business on Mini App",
+          "allButton": "Explore the MeOS ecosystem"
         },
         "cta": {
-          "eyebrow": "Ready to get started?",
-          "heading1": "You bring the challenge.",
-          "heading2": "We bring the way forward.",
-          "description": "Start a focused conversation with MeU's senior technology partner.",
-          "secondaryButton": "Back to MEOS Ecosystem"
+          "heading1": "Ready to grow your e-commerce channel?",
+          "description": "Share your business needs and MeU Solutions will help you find the right way to deploy MeOS Ecommerce for your business.",
+          "primaryButton": "Get a consultation",
+          "credit": "Developed by MeU Solutions."
+        },
+        "faq": {
+          "q1": "Which business models is MeOS Ecommerce for?",
+          "a1": "MeOS Ecommerce is for businesses building and running an online sales channel — from brick-and-mortar stores going online to purely online businesses.",
+          "q2": "Can we use our own domain and branding?",
+          "a2": "The storefront is organised around your brand identity. Domain and customisation details will be discussed during the consultation.",
+          "q3": "How does the system handle payments and shipping?",
+          "a3": "Order intake and tracking are centralised in the system. Payment and shipping methods are configured around your real-world needs.",
+          "q4": "How are cost and timeline determined?",
+          "a4": "It depends on the scope of functions and your readiness. The MeU Solutions team will discuss and propose the right approach after understanding your needs."
         }
       },
       "meosMiniapp": {
         "hero": {
-          "eyebrow": "MeOS Universe",
-          "heading": "MEOS MiniApp — Sales & customer care on Mini App",
-          "summary": "Bring your business onto Mini App platforms: shopping, loyalty, vouchers and affiliate in one direct customer touchpoint.",
-          "secondaryButton": "Back to MEOS Ecosystem"
+          "label": "MeOS Mini App | Service experiences on Mini App",
+          "heading": "Connect customers. Convenient growth.",
+          "summary": "MeOS Mini App builds service experiences and customer engagement on Mini App platforms — sales, loyalty, vouchers and affiliate in one direct touchpoint.",
+          "primaryButton": "Book a demo",
+          "secondaryButton": "Explore features"
         },
-        "whatWeDo": {
-          "eyebrow": "What MEOS MiniApp does",
-          "heading": "Meet customers where they already are.",
-          "summary": "Mini App removes the install barrier — customers reach your services in a single tap.",
-          "item1Title": "Shopping on Mini App",
-          "item1Desc": "Product catalog, ordering and payment inside the Mini App — no separate app needed.",
-          "item2Title": "Loyalty & membership",
-          "item2Desc": "Points, membership tiers and privileges that keep customers coming back.",
-          "item3Title": "Vouchers & offers",
-          "item3Desc": "Create and distribute vouchers and promotions by customer segment or purchase behavior.",
-          "item4Title": "Affiliate & collaborators",
-          "item4Desc": "Build a collaborator sales network with affiliate mechanics and performance tracking."
+        "value": {
+          "eyebrow": "Solution value",
+          "heading": "Meet customers on the platforms they use every day.",
+          "summary": "Three common customer-reach problems and how MeOS Mini App approaches each one.",
+          "item1Problem": "Hard-to-reach services",
+          "item1Value": "Mini App removes the installation barrier — customers use it right on familiar platforms.",
+          "item2Problem": "Fragmented engagement",
+          "item2Value": "Fast, frequent engagement through notifications, loyalty and in-app utilities.",
+          "item3Problem": "Manual customer care",
+          "item3Value": "Care utilities integrated in a single touchpoint."
         },
-        "approach": {
-          "eyebrow": "How it's deployed",
-          "heading": "From first touchpoint to full sales channel.",
-          "summary": "MEOS MiniApp grows with your needs — from a single feature to a complete business channel.",
-          "step1Label": "Open a touchpoint",
-          "step1Desc": "Put products and services on Mini App so customers can reach you instantly.",
-          "step2Label": "Sustain engagement",
+        "features": {
+          "eyebrow": "Key features",
+          "heading": "The tools a Mini App channel needs.",
+          "summary": "Explore the main function groups that help businesses build service experiences on Mini App.",
+          "tab1Title": "Shopping on Mini App",
+          "tab1Desc": "Catalogue, ordering and payment right inside the Mini App without installing an app.",
+          "tab1Point1": "Intuitive product catalogue",
+          "tab1Point2": "In-app ordering and payment",
+          "tab1Point3": "Customer order tracking",
+          "tab2Title": "Loyalty & membership",
+          "tab2Desc": "Points, membership tiers and perks that keep customers engaged regularly.",
+          "tab2Point1": "Points and rewards",
+          "tab2Point2": "Membership tiers and perks",
+          "tab2Point3": "Customer interaction history",
+          "tab3Title": "Vouchers & offers",
+          "tab3Desc": "Create and distribute vouchers and offer programmes by customer group or shopping behaviour.",
+          "tab3Point1": "Create and distribute vouchers",
+          "tab3Point2": "Offers by customer group",
+          "tab3Point3": "Campaign performance tracking",
+          "tab4Title": "Affiliate & partners",
+          "tab4Desc": "Build a sales collaborator network with affiliate mechanics and performance tracking.",
+          "tab4Point1": "Collaborator network management",
+          "tab4Point2": "Affiliate commission mechanics",
+          "tab4Point3": "Per-collaborator performance reports"
+        },
+        "experience": {
+          "eyebrow": "Product experience",
+          "heading": "Explore MeOS Mini App through real experience.",
+          "summary": "See how customers reach your services and how businesses run the Mini App channel through illustrative interfaces or a live demo.",
+          "step1Title": "Open the touchpoint",
+          "step1Desc": "Bring products and services onto the Mini App so customers can reach them fastest.",
+          "step2Title": "Keep engagement",
           "step2Desc": "Loyalty, vouchers and notifications bring customers back regularly.",
-          "step3Label": "Expand selling",
+          "step3Title": "Expand sales",
           "step3Desc": "Activate affiliate and collaborators to widen your reach.",
-          "step4Label": "Sync the ecosystem",
-          "step4Desc": "Connect data with MEOS E-commerce and other ecosystem solutions."
+          "primaryButton": "Book a demo"
         },
-        "outcomes": {
-          "eyebrow": "What it delivers",
-          "heading": "A sales channel within arm's reach.",
-          "summary": "Mini App turns the platform's existing user base into your potential customers.",
-          "outcome1Title": "No install barrier",
-          "outcome1Desc": "Customers use it instantly on a platform they already know.",
-          "outcome2Title": "Continuous engagement",
-          "outcome2Desc": "Loyalty, vouchers and notifications keep the relationship alive.",
-          "outcome3Title": "Multiply sales reach",
-          "outcome3Desc": "Affiliates and collaborators expand sales without raising fixed costs.",
-          "outcome4Title": "Unified data",
-          "outcome4Desc": "Sales and customer data syncs with other MEOS solutions."
+        "ecosystem": {
+          "heading": "One solution inside the MeOS ecosystem.",
+          "summary": "MeOS Mini App is part of the MeOS technology solution ecosystem. Discover more products for online sales and multichannel retail.",
+          "link1Title": "MeOS Ecommerce",
+          "link1Desc": "The online sales channel for your business",
+          "link2Title": "MeOS Omni",
+          "link2Desc": "Multichannel sales management",
+          "allButton": "Explore the MeOS ecosystem"
         },
         "cta": {
-          "eyebrow": "Ready to get started?",
-          "heading1": "You bring the challenge.",
-          "heading2": "We bring the way forward.",
-          "description": "Start a focused conversation with MeU's senior technology partner.",
-          "secondaryButton": "Back to MEOS Ecosystem"
+          "heading1": "Ready to connect customers on Mini App?",
+          "description": "Share your business needs and MeU Solutions will help you find the right way to build MeOS Mini App for your business.",
+          "primaryButton": "Get a consultation",
+          "credit": "Developed by MeU Solutions."
+        },
+        "faq": {
+          "q1": "Which platforms does MeOS Mini App run on?",
+          "a1": "MeOS Mini App targets the popular Mini App platforms in Vietnam. The specific platform is discussed based on your needs and customer base.",
+          "q2": "What does a business need to prepare?",
+          "a2": "Prepare product and service information plus the interaction scenarios you want. The MeU Solutions team will help design the right experience.",
+          "q3": "Can it connect to existing sales channels?",
+          "a3": "Data connection options with existing channels are discussed based on your current systems.",
+          "q4": "How are cost and timeline determined?",
+          "a4": "It depends on the scope of features and usage scenarios. The MeU Solutions team will discuss and propose the right approach after understanding your needs."
         }
       },
       "meosOmni": {
         "hero": {
-          "eyebrow": "MeOS Universe",
-          "heading": "MEOS Omni — Omnichannel connection & customer experience",
-          "summary": "Sync sales and customer-care touchpoints across channels into one seamless experience powered by a single source of data.",
-          "secondaryButton": "Back to MEOS Ecosystem"
+          "label": "MeOS Omni | Multichannel Sales Management",
+          "heading": "One place to manage. Every sales channel.",
+          "summary": "MeOS Omni is designed to centrally manage sales activities across channels: stores, websites, marketplaces and social channels.",
+          "primaryButton": "Book a demo",
+          "secondaryButton": "Explore features"
         },
-        "whatWeDo": {
-          "eyebrow": "What MEOS Omni does",
-          "heading": "Many channels, one experience.",
-          "summary": "Customers interact everywhere — website, social, stores, mini app. MEOS Omni connects them into one continuous journey.",
-          "item1Title": "Touchpoint connection",
-          "item1Desc": "Sync website, e-commerce, mini app and stores so customers are served consistently.",
-          "item2Title": "Unified customer data",
-          "item2Desc": "Purchase and interaction history from every channel merges into a single customer profile.",
-          "item3Title": "Cross-channel journeys",
-          "item3Desc": "Customers can start on one channel and continue on another without a broken experience.",
-          "item4Title": "Omnichannel campaigns",
-          "item4Desc": "Run offers, vouchers and care programs in sync across every touchpoint."
+        "value": {
+          "eyebrow": "Solution value",
+          "heading": "Multichannel selling without the operational burden.",
+          "summary": "Three common multichannel operations problems and how MeOS Omni approaches each one.",
+          "item1Problem": "One system per channel",
+          "item1Value": "Manage sales across channels centrally from one place.",
+          "item2Problem": "Hard-to-track stock and orders",
+          "item2Value": "Track sales, inventory and orders per channel.",
+          "item3Problem": "No full picture",
+          "item3Value": "Reports by channel that support business decisions."
         },
-        "approach": {
-          "eyebrow": "How it's deployed",
-          "heading": "Connect first, optimize next.",
-          "summary": "MEOS Omni starts by connecting your existing channels, then upgrades the experience based on real data.",
-          "step1Label": "Connect channels",
-          "step1Desc": "Integrate running touchpoints via API without replacing existing systems.",
-          "step2Label": "Merge data",
-          "step2Desc": "Customer and transaction data from all channels syncs into one source.",
-          "step3Label": "Design journeys",
-          "step3Desc": "Build cross-channel customer journeys informed by real behavior.",
-          "step4Label": "Operate as one",
-          "step4Desc": "Manage programs and interactions across all channels from a single place."
+        "features": {
+          "eyebrow": "Key features",
+          "heading": "The tools multichannel sales management needs.",
+          "summary": "Explore the main function groups that help businesses organise sales across channels.",
+          "tab1Title": "Sales channel management",
+          "tab1Desc": "Organise and track channels: stores, websites, marketplaces and social channels.",
+          "tab1Point1": "Centralised channel catalogue",
+          "tab1Point2": "Channel activity status",
+          "tab1Point3": "Permissions by channel",
+          "tab2Title": "Products & inventory",
+          "tab2Desc": "Manage product catalogues and inventory per channel.",
+          "tab2Point1": "Shared product catalogue",
+          "tab2Point2": "Inventory per channel",
+          "tab2Point3": "Stock alerts",
+          "tab3Title": "Multichannel orders",
+          "tab3Desc": "Receive and track orders from multiple channels in one central queue.",
+          "tab3Point1": "Centralised order intake",
+          "tab3Point2": "Processing status tracking",
+          "tab3Point3": "Order history by channel",
+          "tab4Title": "Reports by channel",
+          "tab4Desc": "Track revenue and sales performance per channel.",
+          "tab4Point1": "Revenue by channel",
+          "tab4Point2": "Channel performance comparison",
+          "tab4Point3": "Reports by period"
         },
-        "outcomes": {
-          "eyebrow": "What it delivers",
-          "heading": "Wherever customers go, the experience follows.",
-          "summary": "With connected channels, you serve customers consistently no matter where they appear.",
-          "outcome1Title": "Seamless experience",
-          "outcome1Desc": "Customers never feel the gaps between your channels.",
-          "outcome2Title": "Complete customer view",
-          "outcome2Desc": "A unified profile enables sharper identification and care.",
-          "outcome3Title": "Efficient operations",
-          "outcome3Desc": "Run omnichannel programs from one place instead of managing each channel separately.",
-          "outcome4Title": "Platform for growth",
-          "outcome4Desc": "Add new channels without breaking the existing architecture."
+        "experience": {
+          "eyebrow": "Product experience",
+          "heading": "Explore MeOS Omni through real experience.",
+          "summary": "See how businesses organise multichannel sales through illustrative interfaces or a live demo.",
+          "step1Title": "Connect channels",
+          "step1Desc": "Set up your existing sales channels in the system.",
+          "step2Title": "Manage centrally",
+          "step2Desc": "Products, inventory and orders managed from one place.",
+          "step3Title": "Add new channels",
+          "step3Desc": "Add new sales channels as your business model grows.",
+          "primaryButton": "Book a demo"
+        },
+        "ecosystem": {
+          "heading": "One solution inside the MeOS ecosystem.",
+          "summary": "MeOS Omni is part of the MeOS technology solution ecosystem. Discover more products for online sales and mobile experiences.",
+          "link1Title": "MeOS Ecommerce",
+          "link1Desc": "The online sales channel for your business",
+          "link2Title": "MeOS Mini App",
+          "link2Desc": "Business on Mini App",
+          "allButton": "Explore the MeOS ecosystem"
         },
         "cta": {
-          "eyebrow": "Ready to get started?",
-          "heading1": "You bring the challenge.",
-          "heading2": "We bring the way forward.",
-          "description": "Start a focused conversation with MeU's senior technology partner.",
-          "secondaryButton": "Back to MEOS Ecosystem"
+          "heading1": "Ready to manage multichannel sales?",
+          "description": "Share your business model and MeU Solutions will help you find the right way to deploy MeOS Omni for your business.",
+          "primaryButton": "Get a consultation",
+          "credit": "Developed by MeU Solutions."
+        },
+        "faq": {
+          "q1": "Which business models is MeOS Omni for?",
+          "a1": "MeOS Omni is for businesses selling across channels such as stores, websites, marketplaces and social channels.",
+          "q2": "How are sales channels connected?",
+          "a2": "The channel list and connection approach are discussed during the consultation based on your current systems.",
+          "q3": "How is inventory managed per channel?",
+          "a3": "Inventory is organised per sales channel, helping you track and allocate stock across channels.",
+          "q4": "How are cost and timeline determined?",
+          "a4": "It depends on the number of channels and scope of functions. The MeU Solutions team will discuss and propose the right approach after understanding your needs."
+        }
+      },
+      "meosHicare": {
+        "hero": {
+          "label": "MeOS HiCare | Smart Healthcare Management",
+          "heading": "Technology that cares for everyone's health.",
+          "summary": "MeOS HiCare is a technology solution for digitising healthcare workflows and service experiences, helping clinics organise operations and care for patients more effectively.",
+          "primaryButton": "Book a demo",
+          "secondaryButton": "Explore features"
+        },
+        "value": {
+          "eyebrow": "Solution value",
+          "heading": "Digitised healthcare services, more thoughtful patient care.",
+          "summary": "Three common healthcare operations problems and how MeOS HiCare approaches each one.",
+          "item1Problem": "Manual booking and check-in",
+          "item1Value": "Digital appointment booking and check-in reduce waiting for patients.",
+          "item2Problem": "Scattered health records",
+          "item2Value": "Health records organised centrally, tracked per patient.",
+          "item3Problem": "Heavy manual clinic operations",
+          "item3Value": "Healthcare workflows reorganised on one unified system."
+        },
+        "features": {
+          "eyebrow": "Key features",
+          "heading": "The tools healthcare facilities need.",
+          "summary": "Explore the main function groups that help healthcare facilities organise operations and patient care.",
+          "tab1Title": "Appointment booking",
+          "tab1Desc": "Patients book appointments online while the facility manages schedules and visits.",
+          "tab1Point1": "Online appointment booking",
+          "tab1Point2": "Doctor schedule management",
+          "tab1Point3": "Confirmations and reminders",
+          "tab2Title": "Health records",
+          "tab2Desc": "Records and results organised per patient, easy to look up when needed.",
+          "tab2Point1": "Centralised patient records",
+          "tab2Point2": "Visit history and results",
+          "tab2Point3": "Tracked health metrics",
+          "tab3Title": "Online consultation",
+          "tab3Desc": "A remote consultation channel connecting patients with doctors without a visit.",
+          "tab3Point1": "Remote consultation booking",
+          "tab3Point2": "In-app doctor conversations",
+          "tab3Point3": "Results stored in the record",
+          "tab4Title": "Smart reminders",
+          "tab4Desc": "Reminders for follow-up visits, medication schedules and periodic check-ups.",
+          "tab4Point1": "Periodic follow-up reminders",
+          "tab4Point2": "Upcoming appointment reminders",
+          "tab4Point3": "Notifications from patient records"
+        },
+        "experience": {
+          "eyebrow": "Product experience",
+          "heading": "Explore MeOS HiCare through real experience.",
+          "summary": "See how patients book and track their health records, and how facilities run their services, through illustrative interfaces or a live demo.",
+          "step1Title": "Book an appointment",
+          "step1Desc": "Patients choose the specialty, doctor and time slot that fit.",
+          "step2Title": "Visit & consultation",
+          "step2Desc": "Check-in, examination and consultation follow the facility's workflow.",
+          "step3Title": "Track health",
+          "step3Desc": "Results, reminders and health metrics are tracked in the patient record.",
+          "primaryButton": "Book a demo"
+        },
+        "ecosystem": {
+          "heading": "One solution inside the MeOS ecosystem.",
+          "summary": "MeOS HiCare is part of the MeOS technology solution ecosystem. Discover more products for mobile experiences and multichannel retail.",
+          "link1Title": "MeOS Mini App",
+          "link1Desc": "Business on Mini App",
+          "link2Title": "MeOS Omni",
+          "link2Desc": "Multichannel sales management",
+          "allButton": "Explore the MeOS ecosystem"
+        },
+        "cta": {
+          "heading1": "Ready to digitise your healthcare services?",
+          "description": "Share your operating model and MeU Solutions will help you find the right way to deploy MeOS HiCare for your facility.",
+          "primaryButton": "Get a consultation",
+          "credit": "Developed by MeU Solutions."
+        },
+        "faq": {
+          "q1": "Which healthcare facilities is MeOS HiCare for?",
+          "a1": "MeOS HiCare is for clinics and healthcare facilities that want to digitise appointment booking, records and patient care workflows.",
+          "q2": "How is patient data protected?",
+          "a2": "Data is organised with role-based access permissions. Security and storage details are discussed during the consultation.",
+          "q3": "How do patients use it?",
+          "a3": "Patients book appointments, view records and receive reminders right in the mobile app without complex installation.",
+          "q4": "How are cost and timeline determined?",
+          "a4": "It depends on the facility's scale and the scope of functions. The MeU Solutions team will discuss and propose the right approach after understanding your needs."
         }
       }
     }

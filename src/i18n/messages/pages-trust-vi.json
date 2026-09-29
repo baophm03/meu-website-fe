@@ -5,7 +5,7 @@
         "eyebrow": "Trust Center",
         "title": "Cách chúng tôi bảo vệ dữ liệu, quyền riêng tư và triển khai AI của bạn.",
         "summary": "Niềm tin được xây vào cách chúng tôi thiết kế, xây và vận hành mọi hệ thống. Đây là framework đằng sau cam kết đó — bảo mật, quyền riêng tư, bảo vệ dữ liệu và AI có trách nhiệm, dưới một đội ngũ chịu trách nhiệm.",
-        "primaryButton": "Trao đổi với chuyên gia",
+        "primaryButton": "Liên hệ ngay với MeU",
         "secondaryButton": "Đọc tổng quan bảo mật"
       },
       "overview": {
@@ -53,14 +53,14 @@
         "heading2": "Chúng tôi trả lời bằng văn bản.",
         "description": "Bảo mật, quyền riêng tư, bảo vệ dữ liệu hoặc AI có trách nhiệm — gửi câu hỏi và một đối tác cấp cao của MeU sẽ phản hồi với câu trả lời có tài liệu, không phải phản hồi sales.",
         "primaryButton": "Liên hệ đội trust",
-        "secondaryButton": "Trao đổi với chuyên gia"
+        "secondaryButton": "Liên hệ ngay với MeU"
       },
       "security": {
         "hero": {
           "eyebrow": "Trust Center · Bảo mật",
           "title": "Bảo mật được thiết kế vào kiến trúc, bàn giao và vận hành.",
           "summary": "Các kiểm soát, môi trường và thực tiễn giữ hệ thống chúng tôi xây và vận hành được bảo vệ — từ commit đầu tiên đến vận hành hàng ngày.",
-          "primaryButton": "Trao đổi với chuyên gia",
+          "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Đọc nguyên tắc quyền riêng tư"
         },
         "architecture": {
@@ -116,7 +116,7 @@
           "eyebrow": "Trust Center · Quyền riêng tư",
           "title": "Quyền riêng tư được coi là ràng buộc thiết kế, không phải tuyên bố.",
           "summary": "Cách chúng tôi thu thập, sử dụng, giới hạn và bảo vệ dữ liệu cá nhân trên các hệ thống chúng tôi xây và vận hành — với tính minh bạch để kiểm chứng.",
-          "primaryButton": "Trao đổi với chuyên gia",
+          "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Đọc framework bảo vệ dữ liệu"
         },
         "principles": {
@@ -159,7 +159,7 @@
           "eyebrow": "Trust Center · Bảo vệ dữ liệu",
           "title": "Dữ liệu được xử lý, lưu trữ và lưu giữ dưới một framework đã định nghĩa.",
           "summary": "Cách dữ liệu khách hàng và cá nhân được phân loại, chuyển, lưu trữ và nghỉ hưu trên các hệ thống chúng tôi xây và vận hành — thỏa thuận theo dự án và thực thi trong thực tế.",
-          "primaryButton": "Trao đổi với chuyên gia",
+          "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Đọc framework AI có trách nhiệm"
         },
         "framework": {
@@ -202,7 +202,7 @@
           "eyebrow": "Trust Center · AI có trách nhiệm",
           "title": "AI bạn có thể audit, với con người kiểm soát điều quan trọng.",
           "summary": "Mô hình governance đằng sau mọi hệ thống AI chúng tôi xây: quyết định được định nghĩa, kiểm soát của con người, truy vết đầy đủ và khả năng đảo ngược — thiết kế vào từ workflow đầu tiên.",
-          "primaryButton": "Trao đổi với chuyên gia",
+          "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Đọc tổng quan bảo mật"
         },
         "principles": {
@@ -245,7 +245,7 @@
           "eyebrow": "Trust Center · Chính sách Cookie",
           "title": "Cách chúng tôi dùng cookie, nói rõ ràng.",
           "summary": "Cookie chỉ được dùng khi phục vụ mục đích rõ ràng trên site — giữ site hoạt động, ghi nhớ tuỳ chọn và hiểu cách nội dung được sử dụng. Không có cookie quảng cáo hoặc profiling.",
-          "primaryButton": "Trao đổi với chuyên gia",
+          "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Đọc nguyên tắc riêng tư"
         },
         "categories": {
@@ -286,7 +286,7 @@
           "eyebrow": "Trust Center · Điều khoản sử dụng",
           "title": "Điều khoản chi phối việc dùng site này, bằng ngôn ngữ rõ ràng.",
           "summary": "Điều khoản này quy định cách site có thể được sử dụng và trách nhiệm của mỗi bên. Được viết để đọc, không để che giấu — nếu một điều khoản chưa rõ, chúng tôi sẽ làm rõ theo yêu cầu.",
-          "primaryButton": "Trao đổi với chuyên gia",
+          "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Đọc nguyên tắc riêng tư"
         },
         "terms": {

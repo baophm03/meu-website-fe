@@ -88,10 +88,10 @@ export const navigation: NavItem[] = [
         blurb: "One ecosystem — diverse solutions — comprehensive capabilities. Productised platforms with a stable roadmap and a live demo.",
         blurbKey: "mega.meosUniverseBlurb",
         links: [
-          { label: "MeOS 365", labelKey: "mega.meos365", href: "/products/meos-365" },
           { label: "MeOS Ecommerce", labelKey: "mega.meosEcommerce", href: "/products/meos-ecommerce" },
           { label: "MeOS MiniApp", labelKey: "mega.meosMiniApp", href: "/products/meos-miniapp" },
           { label: "MeOS Omni", labelKey: "mega.meosOmni", href: "/products/meos-omni" },
+          { label: "MeOS HiCare", labelKey: "mega.meosHiCare", href: "/products/meos-hicare" },
           { label: "MeOS", labelKey: "mega.meos", href: "/solutions/meos-ecosystem" },
         ],
       },

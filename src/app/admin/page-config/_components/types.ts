@@ -1,10 +1,12 @@
 import type { PageConfig } from "@/api/models/pageConfig";
+import type { PageConfigType } from "@/api/models/pageConfigType";
 
 export interface PageConfigFormValues {
 	id?: string;
 	name: string;
 	name_en: string;
 	path: string;
+	type: PageConfigType;
 	description: string;
 	description_en: string;
 	is_active: boolean;
@@ -16,6 +18,7 @@ export const EMPTY_FORM: PageConfigFormValues = {
 	name: "",
 	name_en: "",
 	path: "",
+	type: "designed",
 	description: "",
 	description_en: "",
 	is_active: true,

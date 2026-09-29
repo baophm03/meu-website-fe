@@ -2,8 +2,8 @@
   "pages": {
     "industries": {
       "eyebrow": "Ngành",
-      "heading": "Sáu lĩnh vực. Một mô hình vận hành.",
-      "summary": "Chúng tôi hoạt động ở những nơi có kiến thức chuyên môn đã được kiểm chứng và kinh nghiệm bàn giao thực tế. Mỗi trang ngành trình bày các điểm nghẽn vận hành mà chúng tôi quan sát, các giải pháp chúng tôi triển khai và những năng lực giúp chúng hoạt động.",
+      "heading": "Vận hành cả thế giới.",
+      "summary": "Chúng tôi giải quyết vấn đề khi đã có chuyên môn thực tế và minh chứng bàn giao rõ ràng.",
       "card1Title": "Y tế",
       "card1Desc": "Tiếp cận bệnh nhân, vận hành lâm sàng và tích hợp hệ thống cho bệnh viện, mạng lưới phòng khám và đơn vị chẩn đoán.",
       "card2Title": "Logistics & Chuỗi cung ứng",
@@ -433,6 +433,9 @@
         "ctaHeading2": "Chúng tôi mang đến hướng đi.",
         "ctaDesc": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
         "ctaSecondary": "Tất cả ngành"
+      },
+      "postDetail": {
+        "ctaSecondary": "Khám phá ngành"
       }
     }
   }

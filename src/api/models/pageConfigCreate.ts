@@ -5,12 +5,15 @@
  * Coded by Meu TEAM
  * OpenAPI spec version: 1.0.0
  */
+import type { PageConfigCreateType } from './pageConfigCreateType';
 
 export interface PageConfigCreate {
   name: string;
   /** @nullable */
   name_en?: string | null;
   path: string;
+  /** @nullable */
+  type?: PageConfigCreateType;
   /** @nullable */
   description?: string | null;
   /** @nullable */

@@ -11,10 +11,24 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import {
+	Select,
+	SelectContent,
+	SelectItem,
+	SelectTrigger,
+	SelectValue,
+} from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
 
 import { fieldClassName, type PageConfigFormValues } from "./types";
+
+const selectTriggerClassName =
+	"rounded-xl border-[#063e8e]/15 bg-white text-gray-700 data-[placeholder]:text-gray-700 focus:ring-[#063e8e]/30";
+
+const selectContentClassName = "border-[#063e8e]/15 bg-white text-gray-700";
+
+const selectItemClassName = "text-gray-700 focus:bg-[#063e8e]/10 focus:text-[#063e8e]";
 
 interface PageConfigFormDialogProps {
 	open: boolean;
@@ -80,6 +94,29 @@ export function PageConfigFormDialog({
 							placeholder="/digital-transformation"
 							className={`${fieldClassName} font-mono cursor-not-allowed bg-gray-50 text-gray-500`}
 						/>
+					</div>
+
+					<div>
+						<Label className="mb-1.5 block text-gray-700">Loại trang</Label>
+						<Select
+							value={formValues.type}
+							onValueChange={(value) => setField("type", value as PageConfigFormValues["type"])}
+						>
+							<SelectTrigger className={selectTriggerClassName}>
+								<SelectValue />
+							</SelectTrigger>
+							<SelectContent className={selectContentClassName}>
+								<SelectItem value="designed" className={selectItemClassName}>
+									Đã thiết kế
+								</SelectItem>
+								<SelectItem value="content" className={selectItemClassName}>
+									Nội dung
+								</SelectItem>
+							</SelectContent>
+						</Select>
+						<p className="mt-1 text-xs text-gray-500">
+							&ldquo;Đã thiết kế&rdquo;: render UI tĩnh có sẵn. &ldquo;Nội dung&rdquo;: hiển thị các bài viết gắn với trang.
+						</p>
 					</div>
 
 					<div>

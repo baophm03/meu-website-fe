@@ -3,11 +3,23 @@ import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { getStaticPageMeta } from "@/mockdata/pages";
 import { getPostBySlug, getRelatedPosts } from "@/mockdata/posts";
-import { fetchPublicCaseStudyBySlug, fetchPublicPostBySlug } from "@/utils/public-posts";
+import {
+  apiPostToMockPost,
+  fetchPageConfigByPath,
+  fetchPostsPageByPageConfigId,
+  fetchPostsPageBySlugPath,
+  fetchPublicCaseStudyBySlug,
+  fetchPublicPostBySlug,
+  fetchPublicPostInGroupBySlug,
+  pagePathCandidatesOf,
+} from "@/utils/public-posts";
 import { fetchPublicJobBySlug } from "@/utils/public-jobs";
 import PostDetailPage from "./templates/post-detail";
 import JobDetailPage from "./templates/job-detail";
 import CaseStudyDetailPage from "./templates/case-study-detail";
+import SolutionDetailPage from "./templates/solution-detail";
+import IndustryDetailPage from "./templates/industry-detail";
+import PagePostsSection from "./static-pages/_components/page-posts-section";
 import AboutPage from "./static-pages/about";
 import CaseStudiesPage from "./static-pages/case-studies";
 import ContactPage from "./static-pages/contact";
@@ -48,9 +60,9 @@ import ProductsAiPage from "./static-pages/products-ai";
 import ProductsCommercePage from "./static-pages/products-commerce";
 import ProductsEnterprisePage from "./static-pages/products-enterprise";
 import ProductsIndustryPage from "./static-pages/products-industry";
-import ProductsMeosPage from "./static-pages/products-meos";
-import ProductsMeos365Page from "./static-pages/products-meos-365";
+import ProductsMeosEcosystemPage from "./static-pages/products-meos-ecosystem";
 import ProductsMeosEcommercePage from "./static-pages/products-meos-ecommerce";
+import ProductsMeosHicarePage from "./static-pages/products-meos-hicare";
 import ProductsMeosMiniappPage from "./static-pages/products-meos-miniapp";
 import ProductsMeosOmniPage from "./static-pages/products-meos-omni";
 // solutions
@@ -89,7 +101,6 @@ type Props = {
   searchParams?: Promise<Record<string, string | string[] | undefined>>;
 };
 
-/** `?type=jobs` marks the leaf slug as a job posting instead of a news post. */
 const contentTypeOf = (
   searchParams: Record<string, string | string[] | undefined> | undefined,
 ) => {
@@ -100,22 +111,54 @@ const contentTypeOf = (
 const endingSlugOf = (slug: string[] | undefined) =>
   slug && slug.length > 0 ? String(slug[slug.length - 1] ?? "") : "";
 
-/** `parent/leaf` key — disambiguates leaf slugs shared across branches. */
 const pathKeyOf = (slug: string[] | undefined) =>
   slug && slug.length > 1 ? slug[slug.length - 2] + "/" + slug[slug.length - 1] : "";
 
 /**
- * Catch-all resolver — mirrors vcci-news: a page is reachable whenever the
- * LAST path segment matches a static page or a news post slug. The preceding
- * path is ignored; colliding leaf slugs are disambiguated by the parent
- * segment via `parent/leaf` cases.
+ * Resolve the page_config for the current path; when it is a "content" page,
+ * return metadata derived from its posts (single post = the post itself,
+ * multiple posts = the page name/description).
  */
+const contentPageMetadataOf = async (
+  slug: string[],
+  isVi: boolean,
+): Promise<Metadata | null> => {
+  const pageConfig = await fetchPageConfigByPath(pagePathCandidatesOf(slug));
+  if (pageConfig?.type !== "content" || !pageConfig.id) return null;
+
+  const { posts, total } = await fetchPostsPageByPageConfigId(pageConfig.id, 1, 1);
+  if (total === 1 && posts[0]) {
+    return { title: posts[0].title, description: posts[0].summary ?? undefined };
+  }
+
+  const title = isVi ? pageConfig.name : pageConfig.name_en || pageConfig.name;
+  const description = isVi
+    ? pageConfig.description ?? undefined
+    : pageConfig.description_en ?? pageConfig.description ?? undefined;
+  return title ? { title, description } : null;
+};
+
+/** Render a "content" page: 1 post = full article, 2+ posts = posts listing. */
+const contentPageOf = async (slug: string[], locale: string) => {
+  const { pageConfig, posts, total } = await fetchPostsPageBySlugPath(slug, 1, 13);
+  if (pageConfig?.type !== "content" || posts.length === 0) return notFound();
+
+  if (total === 1) {
+    return <PostDetailPage post={apiPostToMockPost(posts[0])} related={[]} locale={locale} />;
+  }
+  return <PagePostsSection slug={slug} tone="light" linkSuffix="?type=posts" />;
+};
+
 export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   const sp = await searchParams;
   setRequestLocale(locale);
   const endingSlug = endingSlugOf(slug);
   const isVi = locale === "vi";
+
+  // Content-type pages take their metadata from the attached posts
+  const contentMeta = await contentPageMetadataOf(slug, isVi);
+  if (contentMeta) return contentMeta;
 
   const pageMeta = getStaticPageMeta(endingSlug);
   if (pageMeta) {
@@ -137,16 +180,21 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
     return {};
   }
 
-  const post = getPostBySlug(endingSlug);
-  if (post) {
-    return {
-      title: isVi ? post.title : post.titleEn,
-      description: isVi ? post.excerpt : post.excerptEn
-    };
-  }
+  const postType = contentTypeOf(sp);
+  if (postType === "posts" || postType === "solutions" || postType === "industries") {
+    const post = getPostBySlug(endingSlug);
+    if (post) {
+      return {
+        title: isVi ? post.title : post.titleEn,
+        description: isVi ? post.excerpt : post.excerptEn
+      };
+    }
 
-  const apiPost = await fetchPublicPostBySlug(endingSlug);
-  if (apiPost) { return { title: apiPost.post.title, description: apiPost.post.excerpt }; }
+    const apiPost = postType === "posts"
+      ? await fetchPublicPostBySlug(endingSlug)
+      : await fetchPublicPostInGroupBySlug(endingSlug, `/${postType}`);
+    if (apiPost) { return { title: apiPost.post.title, description: apiPost.post.excerpt }; }
+  }
 
   return {};
 }
@@ -157,6 +205,13 @@ export default async function Page({ params, searchParams }: Props) {
   setRequestLocale(locale);
   const endingSlug = endingSlugOf(slug);
   if (!endingSlug) return notFound();
+
+  // 0. CMS page type — "content" pages render their posts instead of the
+  // pre-designed static UI
+  const pageConfig = await fetchPageConfigByPath(pagePathCandidatesOf(slug));
+  if (pageConfig?.type === "content") {
+    return contentPageOf(slug, locale);
+  }
 
   // 1. Colliding leaf slugs — parent/leaf keeps each branch's URL correct
   switch (pathKeyOf(slug)) {
@@ -245,15 +300,15 @@ export default async function Page({ params, searchParams }: Props) {
     case "enterprise":
       return <ProductsEnterprisePage />;
     case "meos-ecosystem":
-      return <ProductsMeosPage />;
-    case "meos-365":
-      return <ProductsMeos365Page />;
+      return <ProductsMeosEcosystemPage />;
     case "meos-ecommerce":
       return <ProductsMeosEcommercePage />;
     case "meos-miniapp":
       return <ProductsMeosMiniappPage />;
     case "meos-omni":
       return <ProductsMeosOmniPage />;
+    case "meos-hicare":
+      return <ProductsMeosHicarePage />;
     case "ai-consulting":
       return <SolutionsAiConsultingPage slug={slug} />;
     case "ai-engineering":
@@ -308,28 +363,43 @@ export default async function Page({ params, searchParams }: Props) {
       return <TrustTermsOfUsePage />;
   }
 
-  // 3. Job detail — jobs table entity, only resolved when explicitly
-  //    marked via ?type=jobs so a slug never needs a posts-table miss first
   if (contentTypeOf(sp) === "jobs") {
     const apiJob = await fetchPublicJobBySlug(endingSlug);
     if (apiJob) { return <JobDetailPage job={apiJob.job} related={apiJob.related} locale={locale} />; }
     return notFound();
   }
 
-  // 3b. Case-study detail — posts attached to a case-studies page config,
-  //     rendered with the case-study template when marked ?type=case-studies
   if (contentTypeOf(sp) === "case-studies") {
     const apiCaseStudy = await fetchPublicCaseStudyBySlug(endingSlug);
     if (apiCaseStudy) { return <CaseStudyDetailPage post={apiCaseStudy.post} related={apiCaseStudy.related} locale={locale} />; }
     return notFound();
   }
 
-  // 4. News post detail — posts created under /admin/posts render here
-  const post = getPostBySlug(endingSlug);
-  if (post) { return <PostDetailPage post={post} related={getRelatedPosts(post.slug)} locale={locale} />; }
+  if (contentTypeOf(sp) === "solutions") {
+    const post = getPostBySlug(endingSlug);
+    if (post) { return <SolutionDetailPage post={post} related={getRelatedPosts(post.slug)} locale={locale} />; }
 
-  const apiPost = await fetchPublicPostBySlug(endingSlug);
-  if (apiPost) { return <PostDetailPage post={apiPost.post} related={apiPost.related} locale={locale} />; }
+    const apiPost = await fetchPublicPostInGroupBySlug(endingSlug, "/solutions");
+    if (apiPost) { return <SolutionDetailPage post={apiPost.post} related={apiPost.related} locale={locale} />; }
+    return notFound();
+  }
+
+  if (contentTypeOf(sp) === "industries") {
+    const post = getPostBySlug(endingSlug);
+    if (post) { return <IndustryDetailPage post={post} related={getRelatedPosts(post.slug)} locale={locale} />; }
+
+    const apiPost = await fetchPublicPostInGroupBySlug(endingSlug, "/industries");
+    if (apiPost) { return <IndustryDetailPage post={apiPost.post} related={apiPost.related} locale={locale} />; }
+    return notFound();
+  }
+
+  if (contentTypeOf(sp) === "posts") {
+    const post = getPostBySlug(endingSlug);
+    if (post) { return <PostDetailPage post={post} related={getRelatedPosts(post.slug)} locale={locale} />; }
+
+    const apiPost = await fetchPublicPostBySlug(endingSlug);
+    if (apiPost) { return <PostDetailPage post={apiPost.post} related={apiPost.related} locale={locale} />; }
+  }
 
   return notFound();
 }

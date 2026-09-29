@@ -12,7 +12,7 @@ export default function PostGridInfinite({ pageConfigId,
 	isVi,
 	readMore,
 	tone = "light",
-	linkSuffix = "" }: {
+	linkSuffix = "?type=posts" }: {
 		pageConfigId: string;
 		initialPosts: PublicPost[];
 		total: number;
