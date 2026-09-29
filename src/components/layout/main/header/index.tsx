@@ -22,7 +22,12 @@ export default function Header() {
   const navItems = useCmsNavigation();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    const onScroll = () => {
+      setScrolled((previous) => {
+        if (previous) return window.scrollY > 8;
+        return window.scrollY > 32;
+      });
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -58,14 +63,21 @@ export default function Header() {
   const activeItem = navItems.find((item) => item.label === openMenu && item.columns);
   const isHome = pathname === "/en" || pathname === "/vi" || pathname === "/";
   const overlay = isHome && !scrolled && !mobileOpen;
+  const isInteracting = Boolean(openMenu || hoveredLabel || searchOpen);
+  const fullyTransparent = overlay && !isInteracting;
 
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 h-[68px] transition-colors duration-300",
-        overlay
-          ? "bg-transparent text-white"
-          : "bg-surface-dark text-white shadow-[0_2px_12px_rgba(0,0,0,0.3)]",
+        "sticky top-0 z-50 h-[68px] border-b",
+        isHome ? "transition-colors duration-300" : "transition-none",
+        fullyTransparent
+          ? "border-transparent bg-transparent text-white"
+          : overlay
+            ? "border-transparent bg-white/[0.03] text-white backdrop-blur-sm"
+            : isHome
+              ? "border-white/10 bg-black/30 text-white shadow-[0_8px_32px_-12px_rgba(0,0,0,0.5)] backdrop-blur-xl backdrop-saturate-150"
+              : "border-white/10 bg-black/80 text-white shadow-[0_8px_32px_-12px_rgba(0,0,0,0.6)] backdrop-blur-xl backdrop-saturate-150",
       )}
       onMouseLeave={() => {
         cancelHover();

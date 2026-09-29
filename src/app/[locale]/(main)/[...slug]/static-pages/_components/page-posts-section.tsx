@@ -3,11 +3,12 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { SafeImage } from "@/components/shared/safe-image";
-import { Section, label, displayHeading } from "@/app/[locale]/(main)/_components/section-primitives";
 import { fetchPostsPageBySlugPath } from "@/utils/public-posts";
 import { resolveCmsFileUrl } from "@/utils/file";
 import NewsSectionHead from "./news-section-head";
 import PostGridInfinite from "./post-grid-infinite";
+import { Reveal } from "@/components/shared/reveal";
+import type { ReactNode } from "react";
 
 /** First page = hero + 12 grid cards; subsequent pages keep the same size. */
 const PAGE_SIZE = 13;
@@ -21,7 +22,7 @@ const PAGE_SIZE = 13;
 export default async function PagePostsSection({ slug,
 	tone = "light",
 	eyebrowKey = "eyebrow",
-	linkSuffix = "" }: {
+	linkSuffix = "?type=posts" }: {
 		slug: string[];
 		tone?: "light" | "dark";
 		eyebrowKey?: string;
@@ -111,4 +112,29 @@ export default async function PagePostsSection({ slug,
 			) : null}
 		</Section>
 	);
+}
+
+const shell = "container";
+
+const displayHeading = "font-medium tracking-[-0.045em] text-balance";
+
+const label = "text-[10px] font-bold uppercase tracking-[0.16em] sm:text-[11px]";
+
+function Section({ id,
+  variant = "white",
+  className,
+  children,
+  labelledBy }: {
+    id?: string;
+    variant?: "white" | "surface" | "dark" | "light";
+    className?: string;
+    children: ReactNode;
+    labelledBy?: string;
+  }) { // All variants render transparent dark — the shared ambient backdrop
+  // on the (main) layout carries the visual field across every page.
+  return (
+    <section id={id} aria-labelledby={labelledBy} data-variant={variant} className={cn("scroll-mt-20 py-16 sm:py-24 lg:py-[128px]", variant === "light" ? "text-foreground" : "text-white", className)}>
+      <Reveal className={shell}>{children}</Reveal>
+    </section>
+  );
 }

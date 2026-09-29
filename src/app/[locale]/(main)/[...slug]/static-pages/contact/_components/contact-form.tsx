@@ -3,11 +3,10 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
-import { label } from "@/app/[locale]/(main)/_components/section-primitives";
 import { postApiV10Contact } from "@/api/endpoints/contact";
 
 const inputClass =
-	"h-12 border border-border bg-white px-4 text-[15px] text-foreground placeholder:text-muted-foreground/70 transition focus:border-primary focus-visible:outline-2 focus-visible:outline-primary";
+	"h-12 rounded-lg border border-border bg-muted/40 px-4 text-[15px] text-foreground placeholder:text-muted-foreground/70 transition focus:border-primary focus:bg-white focus-visible:outline-2 focus-visible:outline-primary";
 
 export default function ContactForm() {
 	const t = useTranslations("pages.contact.form");
@@ -58,7 +57,7 @@ export default function ContactForm() {
 			<button
 				type="submit"
 				disabled={status === "submitting"}
-				className="inline-flex h-12 items-center justify-center border border-primary bg-primary px-8 text-[12px] font-bold uppercase tracking-[0.08em] text-white transition hover:bg-primary-hover focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary disabled:cursor-not-allowed disabled:opacity-60"
+				className="inline-flex h-12 items-center justify-center rounded-lg bg-primary px-8 text-[12px] font-bold uppercase tracking-[0.08em] text-white transition hover:bg-primary-hover focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary disabled:cursor-not-allowed disabled:opacity-60"
 			>
 				{status === "submitting" ? t("submitting") : t("submitButton")}
 			</button>
@@ -68,3 +67,5 @@ export default function ContactForm() {
 		</form>
 	);
 }
+
+const label = "text-[10px] font-bold uppercase tracking-[0.16em] sm:text-[11px]";

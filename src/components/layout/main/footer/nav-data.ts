@@ -30,7 +30,6 @@ export const footerColumns: FooterColumn[] = [
     heading: "MeOS Universe",
     headingKey: "mega.meosUniverse",
     links: [
-      { label: "MeOS 365", labelKey: "mega.meos365", href: "/products/meos-365" },
       { label: "MeOS Ecommerce", labelKey: "mega.meosEcommerce", href: "/products/meos-ecommerce" },
       { label: "MeOS MiniApp", labelKey: "mega.meosMiniApp", href: "/products/meos-miniapp" },
       { label: "MeOS Omni", labelKey: "mega.meosOmni", href: "/products/meos-omni" },

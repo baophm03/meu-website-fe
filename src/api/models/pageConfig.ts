@@ -5,6 +5,7 @@
  * Coded by Meu TEAM
  * OpenAPI spec version: 1.0.0
  */
+import type { PageConfigType } from './pageConfigType';
 
 export interface PageConfig {
   id: string;
@@ -12,6 +13,7 @@ export interface PageConfig {
   /** @nullable */
   name_en?: string | null;
   path: string;
+  type: PageConfigType;
   /** @nullable */
   description?: string | null;
   /** @nullable */

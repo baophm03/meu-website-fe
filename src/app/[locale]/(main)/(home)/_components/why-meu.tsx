@@ -12,28 +12,37 @@ function Section({ id,
   variant = "white",
   className,
   children,
-  labelledBy }: { id?: string;
-  variant?: "white" | "surface" | "dark";
-  className?: string;
-  children: ReactNode;
-  labelledBy?: string; }) { const variants = { white: "bg-transparent text-white",
-    surface: "bg-white/5 text-white",
-    dark: "text-white" } as const;
+  labelledBy }: {
+    id?: string;
+    variant?: "white" | "surface" | "dark";
+    className?: string;
+    children: ReactNode;
+    labelledBy?: string;
+  }) {
+    const variants = {
+      white: "bg-transparent text-white",
+      surface: "bg-white/5 text-white",
+      dark: "text-white"
+    } as const;
   return (
     <section id={id} aria-labelledby={labelledBy} className={cn("scroll-mt-20 py-16 sm:py-24 lg:py-[128px]", variants[variant], className)}>
       <Reveal className={shell}>{children}</Reveal>
     </section>
-  ); }
+  );
+}
 
 function SectionHead({ id,
   title,
   summary,
   tone = "light",
-  action }: { id?: string;
-  title: ReactNode;
-  summary?: string;
-  tone?: "light" | "dark";
-  action?: ReactNode; }) { const dark = tone === "dark";
+  action }: {
+    id?: string;
+    title: ReactNode;
+    summary?: string;
+    tone?: "light" | "dark";
+    action?: ReactNode;
+  }) {
+    const dark = tone === "dark";
   return (
     <div className="mb-12 sm:mb-16">
       <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
@@ -44,9 +53,11 @@ function SectionHead({ id,
         </div>
       </div>
     </div>
-  ); }
+  );
+}
 
-export function WhyMeu() { const t = useTranslations("home.whyMeu");
+export function WhyMeu() {
+  const t = useTranslations("home.whyMeu");
 
   const differentiators = [
     ["01", t("d1Title"), t("d1Desc")],
@@ -66,9 +77,9 @@ export function WhyMeu() { const t = useTranslations("home.whyMeu");
     <Section variant="dark" id="why-meu">
       <SectionHead
         tone="dark"
-        title={ <>
-            {t("heading")}
-          </> }
+        title={<>
+          {t("heading")}
+        </>}
         summary={t("summary")}
       />
 
@@ -94,10 +105,6 @@ export function WhyMeu() { const t = useTranslations("home.whyMeu");
           </article>
         ))}
       </div>
-
-      <div className={cn(label, "mt-8 flex flex-col justify-between gap-3 border-t border-white/10 pt-6 normal-case tracking-[0.06em] text-white/50 sm:flex-row sm:items-center")}>
-        <span>{t("footerNote")}</span>
-        <span className="uppercase tracking-[0.14em] text-primary-light">{t("proofNotPromises")}</span>
-      </div>
     </Section>
-  ); }
+  );
+}

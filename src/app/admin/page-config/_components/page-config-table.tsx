@@ -58,6 +58,7 @@ export function PageConfigTable({
 						<TableHead className="w-[240px] py-4 text-center text-white">Tên trang (VI)</TableHead>
 						<TableHead className="w-[240px] py-4 text-center text-white">Tên trang (EN)</TableHead>
 						<TableHead className="py-4 text-center text-white">Đường dẫn</TableHead>
+						<TableHead className="w-[140px] py-4 text-center text-white">Loại trang</TableHead>
 						<TableHead className="w-[140px] py-4 text-center text-white">Trạng thái</TableHead>
 						<TableHead className="w-[170px] py-4 text-center text-white">Ngày tạo</TableHead>
 						<TableHead className="w-[170px] py-4 text-center text-white">Ngày cập nhật</TableHead>
@@ -68,7 +69,7 @@ export function PageConfigTable({
 					{!isReady ? (
 						Array.from({ length: 4 }).map((_, index) => (
 							<TableRow key={index} className="hover:bg-transparent">
-								{Array.from({ length: 7 }).map((__, cellIndex) => (
+								{Array.from({ length: 8 }).map((__, cellIndex) => (
 									<TableCell key={cellIndex} className="py-4">
 										<div className="h-5 rounded-full bg-[#063e8e]/10" />
 									</TableCell>
@@ -77,7 +78,7 @@ export function PageConfigTable({
 						))
 					) : items.length === 0 ? (
 						<TableRow>
-							<TableCell colSpan={7} className="py-14 text-center text-gray-700">
+							<TableCell colSpan={8} className="py-14 text-center text-gray-700">
 								Không có trang nào phù hợp.
 							</TableCell>
 						</TableRow>
@@ -92,6 +93,17 @@ export function PageConfigTable({
 								</TableCell>
 								<TableCell className="px-4 py-4 font-mono text-sm text-gray-700">
 									{item.path}
+								</TableCell>
+								<TableCell className="px-4 py-4 text-center">
+									{item.type === "content" ? (
+										<Badge className="border-transparent bg-blue-100 text-blue-700 hover:bg-blue-100">
+											Nội dung
+										</Badge>
+									) : (
+										<Badge variant="outline" className="border-[#063e8e]/20 text-[#063e8e]">
+											Đã thiết kế
+										</Badge>
+									)}
 								</TableCell>
 								<TableCell className="px-4 py-4 text-center">
 									{item.is_active ? (

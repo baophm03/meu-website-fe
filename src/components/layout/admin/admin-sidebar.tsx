@@ -103,6 +103,12 @@ const navigation: NavItem[] = [
     permission: { action: "VIEW", subject: "CONTACT" },
   },
   {
+    name: "Quản lý website",
+    href: "/admin/website",
+    icon: Globe,
+    permission: { action: "VIEW", subject: "CONTACT_INFOS" },
+  },
+  {
     name: "Quản lý tag tìm kiếm",
     href: "/admin/tags",
     icon: Tags,

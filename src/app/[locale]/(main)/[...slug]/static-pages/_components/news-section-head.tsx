@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
-import { displayHeading } from "@/app/[locale]/(main)/_components/section-primitives";
 
 /**
  * Compact news-style section header — small eyebrow + heading on the left,
@@ -24,3 +23,5 @@ export default function NewsSectionHead({ eyebrow,
 			</div>
 		</header>
 	); }
+
+const displayHeading = "font-medium tracking-[-0.045em] text-balance";

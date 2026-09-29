@@ -3,8 +3,11 @@ import { Check, ClipboardList, Wrench } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SafeImage } from "@/components/shared/safe-image";
 import { ScrollReveal } from "@/components/shared/scroll-reveal";
-import { PageHero, Section, SectionHead, CtaSection, label, displayHeading } from "@/app/[locale]/(main)/_components/section-primitives";
+import { CtaSplitMedia } from "@/app/[locale]/(main)/_components/cta/cta-split-media";
 import PagePostsSection from "./_components/page-posts-section";
+import { Reveal } from "@/components/shared/reveal";
+import Image from "next/image";
+import type { ReactNode } from "react";
 
 /**
  * IndustriesPharmaceuticalLifeSciencesPage — "lab sheet" layout: data-sheet
@@ -197,8 +200,8 @@ export default function IndustriesPharmaceuticalLifeSciencesPage({ slug }: { slu
       <CapabilitiesSection t={t} />
       <BridgeSection t={t} />
       <CaseStudiesSection t={t} />
-      <PagePostsSection slug={slug} tone="light" />
-      <CtaSection
+      <PagePostsSection slug={slug} tone="light" linkSuffix="?type=industries" />
+      <CtaSplitMedia
         eyebrow={t("ctaEyebrow")}
         heading1={t("ctaHeading1")}
         heading2={t("ctaHeading2")}
@@ -209,5 +212,118 @@ export default function IndustriesPharmaceuticalLifeSciencesPage({ slug }: { slu
         secondaryLabel={t("ctaSecondary")}
       />
     </div>
+  );
+}
+
+const shell = "container";
+
+const displayHeading = "font-medium tracking-[-0.045em] text-balance";
+
+const label = "text-[10px] font-bold uppercase tracking-[0.16em] sm:text-[11px]";
+
+function Section({ id,
+  variant = "white",
+  className,
+  children,
+  labelledBy }: {
+    id?: string;
+    variant?: "white" | "surface" | "dark" | "light";
+    className?: string;
+    children: ReactNode;
+    labelledBy?: string;
+  }) { // All variants render transparent dark — the shared ambient backdrop
+  // on the (main) layout carries the visual field across every page.
+  return (
+    <section id={id} aria-labelledby={labelledBy} data-variant={variant} className={cn("scroll-mt-20 py-16 sm:py-24 lg:py-[128px]", variant === "light" ? "text-foreground" : "text-white", className)}>
+      <Reveal className={shell}>{children}</Reveal>
+    </section>
+  );
+}
+
+function SectionHead({ id,
+  index,
+  eyebrow,
+  title,
+  summary,
+  tone = "light",
+  action }: {
+    id?: string;
+    index?: string;
+    eyebrow: string;
+    title: ReactNode;
+    summary?: string;
+    tone?: "light" | "dark";
+    action?: ReactNode;
+  }) {
+  const dark = tone === "dark";
+  return (
+    <div className="mb-12 grid gap-6 sm:mb-16 lg:mb-20 lg:grid-cols-[minmax(0,1fr)_2.15fr] lg:gap-12">
+      <div className={cn("flex items-start gap-5 lg:pt-3", label)}>
+        {index ? <span className={dark ? "text-primary-light" : "text-primary"}>{index}</span> : null}
+        <span className={dark ? "text-white/50" : "text-muted-foreground"}>{eyebrow}</span>
+      </div>
+      <div className="grid gap-6 lg:grid-cols-[1.55fr_1fr] lg:gap-12">
+        <h2 id={id} className={cn(displayHeading, "text-[34px] leading-[1.04] sm:text-[46px] lg:text-[62px]", dark ? "text-white" : "text-foreground")}>{title}</h2>
+        <div className="flex flex-col items-start gap-6 lg:pt-2">
+          {summary ? <p className={cn("max-w-md text-[15px] leading-[1.7]", dark ? "text-white/60" : "text-muted-foreground")}>{summary}</p> : null}
+          {action ? <div className="shrink-0">{action}</div> : null}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function PageHero({ eyebrow,
+  title,
+  summary,
+  image = "/images/industries/pharma/pharma-1.jpg" }: {
+    eyebrow: string;
+    title: ReactNode;
+    summary?: string;
+    image?: string | null;
+    children?: ReactNode;
+  }) {
+  return (
+    <section aria-labelledby="page-hero-title" className="relative -mt-[68px] overflow-hidden bg-surface-dark text-white">
+      {image ? (
+        <>
+          <Image
+            src={image}
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="pointer-events-none object-cover"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 bg-[linear-gradient(100deg,rgba(5,6,8,0.9)_0%,rgba(5,6,8,0.7)_50%,rgba(5,6,8,0.4)_100%)]"
+          />
+        </>
+      ) : (
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_90%_at_20%_100%,rgba(51,92,255,0.28),transparent_60%),radial-gradient(ellipse_50%_70%_at_85%_10%,rgba(0,240,255,0.14),transparent_60%)]"
+        />
+      )}
+      <Reveal className={cn(shell, "relative")}>
+        <div className="flex min-h-[420px] items-end pb-12 pt-28 sm:min-h-[460px] sm:pb-14">
+          <div>
+            <p className={cn(label, "text-primary-light")}>{eyebrow}</p>
+            <h1
+              id="page-hero-title"
+              className={cn(displayHeading, "mt-4 max-w-[640px] text-[30px] uppercase leading-[1.05] sm:text-[38px] lg:text-[44px]")}
+            >
+              {title}
+            </h1>
+            {summary ? (
+              <p className="mt-4 max-w-[520px] text-[14px] leading-[1.65] text-white/65 sm:text-[15px]">
+                {summary}
+              </p>
+            ) : null}
+          </div>
+        </div>
+      </Reveal>
+    </section>
   );
 }

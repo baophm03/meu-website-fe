@@ -1,8 +1,8 @@
 import { Link } from "@/i18n/navigation";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowRight, CalendarDays } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SafeImage } from "@/components/shared/safe-image";
-import { CtaSection, displayHeading } from "../../_components/section-primitives";
+import { CtaGrid } from "@/app/[locale]/(main)/_components/cta/cta-grid";
 import { useTranslations } from "next-intl";
 import type { MockPost } from "@/mockdata/posts";
 
@@ -34,16 +34,8 @@ export default function CaseStudyDetailPage({
   return (
     <>
       {/* Header — quiet, centered, no colored bands */}
-      <header className="container pb-10 pt-28 sm:pt-36">
+      <header className="container pb-10 pt-20 sm:pt-30">
         <div className="mx-auto max-w-[1020px]">
-          <Link
-            href="/case-studies"
-            className="inline-flex items-center gap-2 text-[13px] text-muted-foreground transition hover:text-foreground"
-          >
-            <ArrowLeft aria-hidden="true" className="h-3.5 w-3.5" />
-            {t("backToCaseStudies")}
-          </Link>
-
           {headerConfig ? (
             <p className="mt-8 text-[13px] font-medium text-primary">{headerConfig}</p>
           ) : null}
@@ -59,9 +51,12 @@ export default function CaseStudyDetailPage({
             <p className="mt-5 text-[16px] leading-[1.75] text-muted-foreground sm:text-[17px]">{excerpt}</p>
           ) : null}
 
-          <p className="mt-6 text-[13px] text-muted-foreground/80">
-            {t("dateLabel")} · {dateLabel} · {t("readingTime", { minutes: post.readingMinutes })}
-          </p>
+          <div className={cn(label, "mt-6 flex flex-wrap items-center gap-6 normal-case tracking-[0.04em] text-muted-foreground")}>
+            <span className="inline-flex items-center gap-2">
+              <CalendarDays aria-hidden="true" className="h-4 w-4" />
+              {dateLabel}
+            </span>
+          </div>
         </div>
       </header>
 
@@ -167,7 +162,7 @@ export default function CaseStudyDetailPage({
         </section>
       ) : null}
 
-      <CtaSection
+      <CtaGrid
         eyebrow={t("ctaEyebrow")}
         heading1={t("ctaHeading1")}
         heading2={t("ctaHeading2")}
@@ -180,3 +175,7 @@ export default function CaseStudyDetailPage({
     </>
   );
 }
+
+const displayHeading = "font-medium tracking-[-0.045em] text-balance";
+
+const label = "text-[10px] font-bold uppercase tracking-[0.16em] sm:text-[11px]";

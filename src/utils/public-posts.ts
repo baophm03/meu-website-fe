@@ -81,7 +81,7 @@ export async function fetchPostsPageBySlugPath(
   return { pageConfig, posts, total };
 }
 
-const stripHtml = (html: string) => html.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+
 
 const postHtmlOf = (post: PublicPost): string => {
   const items = (post.content_structure as { post_content?: Array<{ type?: string; position?: number; content?: string }> } | null)?.post_content;
@@ -95,7 +95,6 @@ const postHtmlOf = (post: PublicPost): string => {
 
 export const apiPostToMockPost = (post: PublicPost): MockPost => {
   const html = postHtmlOf(post);
-  const words = stripHtml(html).split(" ").filter(Boolean).length;
   const primaryConfig = post.page_configs?.[0];
   const sections: MockPostSection[] = html
     ? [{ heading: "", headingEn: "", body: html, bodyEn: html }]
@@ -111,7 +110,6 @@ export const apiPostToMockPost = (post: PublicPost): MockPost => {
     excerptEn: post.summary ?? "",
     image: post.thumbnail?.path ? resolveCmsFileUrl(post.thumbnail.path) : "/images/insights/insight-1.jpg",
     publishedAt: post.published_at ?? post.created_at,
-    readingMinutes: Math.max(1, Math.ceil(words / 200)),
     sections,
   };
 };
@@ -173,6 +171,42 @@ export async function fetchPublicPostBySlug(
 
     const pageConfigId = row.page_configs?.[0]?.id;
     const siblings = pageConfigId ? await fetchPostsByPageConfigId(pageConfigId, 4) : [];
+    const related = siblings
+      .filter((item) => item.slug && item.slug !== row.slug)
+      .slice(0, 3)
+      .map(apiPostToMockPost);
+
+    return { post: apiPostToMockPost(row), related };
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Fetch a post attached to a page config inside a path group (e.g. `/solutions`
+ * or `/solutions-*`) — used for the `?type=solutions`/`?type=industries` detail
+ * routes so a regular post never renders with a group template.
+ */
+export async function fetchPublicPostInGroupBySlug(
+  slug: string,
+  groupPath: string,
+): Promise<{ post: MockPost; related: MockPost[] } | null> {
+  try {
+    const res = await getApiV10Post({
+      page: 1,
+      pageSize: 1,
+      filters: `slug==${slug},is_active==true,is_hidden==false`,
+    });
+    const row = rowsOf<PublicPost>(res)[0];
+    if (!row?.id) return null;
+
+    const configs = Array.isArray(row.page_configs) ? row.page_configs : [];
+    const groupConfig = configs.find(
+      (pc) => pc?.path === groupPath || pc?.path?.startsWith(`${groupPath}-`),
+    );
+    if (!groupConfig?.id) return null;
+
+    const siblings = await fetchPostsByPageConfigId(groupConfig.id, 4);
     const related = siblings
       .filter((item) => item.slug && item.slug !== row.slug)
       .slice(0, 3)

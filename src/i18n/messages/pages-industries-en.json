@@ -2,8 +2,8 @@
   "pages": {
     "industries": {
       "eyebrow": "Industries",
-      "heading": "Six sectors. One operating model.",
-      "summary": "We work where we have validated domain knowledge and delivery evidence. Each industry page sets out the operational bottlenecks we see, the solutions we ship, and the capabilities that make them run.",
+      "heading": "Operating the whole world.",
+      "summary": "We only deliver in industries where we have proven, hands-on expertise and a clear track record of handover.",
       "card1Title": "Healthcare",
       "card1Desc": "Patient access, clinical operations and system integration for hospitals, clinic networks and diagnostic providers.",
       "card2Title": "Logistics & Supply Chain",
@@ -433,6 +433,9 @@
         "ctaHeading2": "We will bring a way forward.",
         "ctaDesc": "Start a focused conversation with a senior MeU technology partner.",
         "ctaSecondary": "All industries"
+      },
+      "postDetail": {
+        "ctaSecondary": "Explore industries"
       }
     }
   }

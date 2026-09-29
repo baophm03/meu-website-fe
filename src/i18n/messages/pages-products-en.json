@@ -7,7 +7,7 @@
         "heading2": "Operational by design.",
         "summary": "Platforms with standard core IP, a repeatable deployment model and a demo you can run. Everything else is delivered as a tailored solution.",
         "primaryButton": "Request a demo",
-        "secondaryButton": "Talk to an expert",
+        "secondaryButton": "Contact MeU now",
         "proof1": "Standard core IP",
         "proof2": "Repeatable deployment",
         "proof3": "Demo you can run",
@@ -75,7 +75,7 @@
           "heading2": "on one platform.",
           "summary": "Modular business software shaped to each operating model — from workflow and CRM to analytics and membership — on a shared data layer.",
           "primaryButton": "Request a demo",
-          "secondaryButton": "Talk to an expert"
+          "secondaryButton": "Contact MeU now"
         },
         "modules": {
           "eyebrow": "Modules",
@@ -144,7 +144,7 @@
           "heading2": "human control built in.",
           "summary": "Document intelligence, operational copilots and decision automation — each with context, controls and human judgment designed into the system.",
           "primaryButton": "Request a demo",
-          "secondaryButton": "Talk to an expert"
+          "secondaryButton": "Contact MeU now"
         },
         "platforms": {
           "eyebrow": "Platforms",
@@ -205,7 +205,7 @@
           "heading2": "that scale with you.",
           "summary": "Omnichannel selling, POS, inventory and fulfillment connected end to end — so every channel sees the same stock, price and order.",
           "primaryButton": "Request a demo",
-          "secondaryButton": "Talk to an expert"
+          "secondaryButton": "Contact MeU now"
         },
         "platforms": {
           "eyebrow": "Platforms",
@@ -274,7 +274,7 @@
           "heading2": "with real domain depth.",
           "summary": "Pre-built domain modules for healthcare, logistics and education — shaped by delivery experience, not generic templates.",
           "primaryButton": "Request a demo",
-          "secondaryButton": "Talk to an expert"
+          "secondaryButton": "Contact MeU now"
         },
         "platforms": {
           "eyebrow": "Platforms",
@@ -345,7 +345,7 @@
           "heading": "MeOS — A technology ecosystem for the modern enterprise",
           "p1": "MeOS is a technology solution ecosystem researched and developed by MeU Solutions, built to help businesses solve real problems across management, operations, commerce and customer engagement.",
           "p2": "Through specialised solutions, MeOS makes it possible for businesses to choose the technology that fits their operating model and stage of growth.",
-          "p3": "From enterprise management, e-commerce and omnichannel sales to mobile experiences and healthcare solutions, MeOS steadily builds a diverse technology portfolio oriented toward connection and expansion."
+          "p3": "From e-commerce and omnichannel sales to mobile experiences and healthcare solutions, MeOS steadily builds a diverse technology portfolio oriented toward connection and expansion."
         },
         "values": {
           "eyebrow": "Core value",
@@ -363,9 +363,7 @@
         "products": {
           "eyebrow": "Product portfolio",
           "heading": "Explore the MeOS solution ecosystem",
-          "summary": "MeOS solutions are developed around specific use cases — from enterprise management to e-commerce, multichannel sales, mobile experiences and specialised service digitisation.",
-          "meos365Desc": "Designed to help businesses organise, manage and optimise their operations.",
-          "meos365Cta": "Explore MeOS 365",
+          "summary": "MeOS solutions are developed around specific use cases — from e-commerce and multichannel sales to mobile experiences and specialised service digitisation.",
           "ecommerceDesc": "The e-commerce solution for building and running an online sales channel.",
           "ecommerceCta": "Explore Ecommerce",
           "miniappDesc": "The solution for building service experiences and customer engagement on Mini App.",
@@ -373,7 +371,11 @@
           "omniDesc": "Designed to centrally manage sales activities across multiple channels.",
           "omniCta": "Explore Omni",
           "hicareDesc": "The technology solution for digitising healthcare workflows and service experiences.",
-          "hicareCta": "Explore HiCare"
+          "hicareCta": "Explore HiCare",
+          "m365Eyebrow": "Business Management",
+          "m365Desc": "A solution designed to help businesses organise, manage, and optimise operations in the digital environment.",
+          "m365Badge": "Coming soon",
+          "m365Cta": "Register for updates"
         },
         "architecture": {
           "eyebrow": "Ecosystem architecture",
@@ -386,21 +388,21 @@
           "eyebrow": "Solutions by need",
           "heading": "What problem are you looking to solve?",
           "summary": "Explore MeOS products by the real problems your business needs to solve.",
-          "need1": "Managing business operations",
-          "need1Product": "MeOS 365",
-          "need1Desc": "Designed to help businesses organise, manage and optimise their operations.",
-          "need2": "Building an online sales channel",
-          "need2Product": "MeOS Ecommerce",
-          "need2Desc": "The e-commerce solution for building and running an online sales channel.",
-          "need3": "Launching a Mini App for customers",
-          "need3Product": "MeOS Mini App",
-          "need3Desc": "The solution for building service experiences and customer engagement on Mini App.",
-          "need4": "Managing multiple sales channels",
-          "need4Product": "MeOS Omni",
-          "need4Desc": "Designed to centrally manage sales activities across multiple channels.",
-          "need5": "Digitising healthcare services",
-          "need5Product": "MeOS HiCare",
-          "need5Desc": "The technology solution for digitising healthcare workflows and service experiences."
+          "need1": "Building an online sales channel",
+          "need1Product": "MeOS Ecommerce",
+          "need1Desc": "The e-commerce solution for building and running an online sales channel.",
+          "need2": "Launching a Mini App for customers",
+          "need2Product": "MeOS Mini App",
+          "need2Desc": "The solution for building service experiences and customer engagement on Mini App.",
+          "need3": "Managing multiple sales channels",
+          "need3Product": "MeOS Omni",
+          "need3Desc": "Designed to centrally manage sales activities across multiple channels.",
+          "need4": "Digitising healthcare services",
+          "need4Product": "MeOS HiCare",
+          "need4Desc": "The technology solution for digitising healthcare workflows and service experiences.",
+          "need365": "Managing business operations",
+          "need365Product": "MeOS 365",
+          "need365Desc": "A solution designed to help businesses organise, manage, and optimise operations in the digital environment."
         },
         "experience": {
           "eyebrow": "Product experience",
@@ -420,88 +422,6 @@
           "primaryButton": "Get a consultation",
           "secondaryButton": "Explore MeOS products",
           "credit": "MeOS — Developed by MeU Solutions."
-        }
-      },
-      "meos365": {
-        "hero": {
-          "label": "MeOS 365 | Operations Management Platform",
-          "heading": "Unified management. Smooth operations.",
-          "summary": "MeOS 365 is an operations management platform that helps businesses digitise work, documents, HR and reporting on one unified system.",
-          "primaryButton": "Book a demo",
-          "secondaryButton": "Explore features"
-        },
-        "value": {
-          "eyebrow": "Solution value",
-          "heading": "Simpler business management with MeOS 365.",
-          "summary": "Three common management problems and how MeOS 365 approaches each one.",
-          "item1Problem": "Scattered work and processes",
-          "item1Value": "Assignments, progress tracking and approvals centralised in one system.",
-          "item2Problem": "Documents spread everywhere",
-          "item2Value": "Centralised document storage, permissions and search — instead of email and personal drives.",
-          "item3Problem": "Manual report compilation",
-          "item3Value": "Operational data compiled into reports for management and decision-making."
-        },
-        "features": {
-          "eyebrow": "Key features",
-          "heading": "The tools management work needs.",
-          "summary": "Explore the main function groups that help businesses organise and run internal operations.",
-          "tab1Title": "Work & process management",
-          "tab1Desc": "Assignments, progress tracking, approvals and automation of repetitive processes.",
-          "tab1Point1": "Work boards by department and project",
-          "tab1Point2": "Step-by-step approval workflows",
-          "tab1Point3": "Reminders and progress tracking",
-          "tab2Title": "Documents & knowledge",
-          "tab2Desc": "Centralised document storage, permissions and search instead of scattered email and drives.",
-          "tab2Point1": "Folders and permissions by department",
-          "tab2Point2": "Fast document search",
-          "tab2Point3": "Versions and change history",
-          "tab3Title": "HR management",
-          "tab3Desc": "Employee records, attendance, leave and core HR operations in one system.",
-          "tab3Point1": "Centralised employee records",
-          "tab3Point2": "Attendance and leave",
-          "tab3Point3": "Internal onboarding workflow",
-          "tab4Title": "Reports & compilation",
-          "tab4Desc": "Compiles operational data into reports for management and decision-making.",
-          "tab4Point1": "Reports by department",
-          "tab4Point2": "Compilation by period",
-          "tab4Point3": "Data for leadership meetings"
-        },
-        "experience": {
-          "eyebrow": "Product experience",
-          "heading": "Explore MeOS 365 through real experience.",
-          "summary": "See how businesses organise work, documents and reporting through illustrative interfaces or a live demo.",
-          "step1Title": "Digitise processes",
-          "step1Desc": "Bring paper-based and manual workflows into the system exactly the way your business operates.",
-          "step2Title": "Centralise data",
-          "step2Desc": "Work, HR and document information stored in one unified system.",
-          "step3Title": "Automate & expand",
-          "step3Desc": "Automate repetitive steps and add modules as needs grow.",
-          "primaryButton": "Book a demo"
-        },
-        "ecosystem": {
-          "heading": "One solution inside the MeOS ecosystem.",
-          "summary": "MeOS 365 is part of the MeOS technology solution ecosystem. Discover more products for online sales and multichannel retail.",
-          "link1Title": "MeOS Ecommerce",
-          "link1Desc": "The online sales channel for your business",
-          "link2Title": "MeOS Omni",
-          "link2Desc": "Multichannel sales management",
-          "allButton": "Explore the MeOS ecosystem"
-        },
-        "cta": {
-          "heading1": "Ready to digitise your management work?",
-          "description": "Share your management needs and MeU Solutions will help you find the right way to deploy MeOS 365 for your business.",
-          "primaryButton": "Get a consultation",
-          "credit": "Developed by MeU Solutions."
-        },
-        "faq": {
-          "q1": "Which businesses is MeOS 365 for?",
-          "a1": "MeOS 365 is for businesses that need to organise work, documents, HR and reporting in one unified system — from small teams to multiple departments.",
-          "q2": "Can it be deployed in phases?",
-          "a2": "Businesses can start with the function groups they need most and add more over time based on real usage.",
-          "q3": "How is our existing data handled?",
-          "a3": "Existing work, document and HR data will be discussed during the consultation, with a migration approach that fits your readiness.",
-          "q4": "How are cost and timeline determined?",
-          "a4": "It depends on the scope of functions and scale of use. The MeU Solutions team will discuss and propose the right approach after understanding your needs."
         }
       },
       "meosEcommerce": {
@@ -808,9 +728,9 @@
         },
         "ecosystem": {
           "heading": "One solution inside the MeOS ecosystem.",
-          "summary": "MeOS HiCare is part of the MeOS technology solution ecosystem. Discover more products for operations management and multichannel retail.",
-          "link1Title": "MeOS 365",
-          "link1Desc": "The operations management platform for business",
+          "summary": "MeOS HiCare is part of the MeOS technology solution ecosystem. Discover more products for mobile experiences and multichannel retail.",
+          "link1Title": "MeOS Mini App",
+          "link1Desc": "Business on Mini App",
           "link2Title": "MeOS Omni",
           "link2Desc": "Multichannel sales management",
           "allButton": "Explore the MeOS ecosystem"
