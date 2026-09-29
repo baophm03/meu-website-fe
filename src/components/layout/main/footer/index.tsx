@@ -64,20 +64,46 @@ export default async function Footer() {
         .filter((row) => row.items.length > 0);
       return { key: String(column.id ?? colIdx), title: column.title ?? null, rows: rowData };
     })
-    : footerColumns.map((column) => ({
-      key: column.heading,
-      title: column.headingKey ? t(column.headingKey) : column.heading,
-      rows: column.links.map((link) => ({
-        key: link.href,
-        items: [{
-          key: link.href,
-          type: "text" as const,
-          content: link.labelKey ? t(link.labelKey) : link.label,
-          href: link.href,
-          isExternal: isExternal(link.href),
+    : [
+      {
+        key: "brand",
+        title: null,
+        rows: [{
+          key: "brand-row",
+          items: [
+            {
+              key: "brand-logo",
+              type: "image" as const,
+              content: "",
+              href: "/",
+              isExternal: false,
+              imageSrc: "/logo-full.png",
+            },
+            {
+              key: "brand-tagline",
+              type: "text" as const,
+              content: t("footer.tagline"),
+              href: null,
+              isExternal: false,
+            },
+          ],
         }],
+      },
+      ...footerColumns.map((column) => ({
+        key: column.heading,
+        title: column.headingKey ? t(column.headingKey) : column.heading,
+        rows: column.links.map((link) => ({
+          key: link.href,
+          items: [{
+            key: link.href,
+            type: "text" as const,
+            content: link.labelKey ? t(link.labelKey) : link.label,
+            href: link.href,
+            isExternal: isExternal(link.href),
+          }],
+        })),
       })),
-    }));
+    ];
 
   return (
     <FooterView

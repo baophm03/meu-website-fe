@@ -6,7 +6,7 @@
         "heading1": "Ideas for leaders",
         "heading2": "building what's next.",
         "summary": "Practical perspective for leaders making technology decisions — field notes, frameworks and reports from the work we do with clients every day.",
-        "primaryButton": "Contact MeU now",
+        "primaryButton": "Contact MeU",
         "secondaryButton": "Browse by category"
       },
       "featured": {
@@ -46,7 +46,7 @@
         "heading1": "Bring us the challenge.",
         "heading2": "We'll bring a way forward.",
         "description": "Start a focused conversation with a senior MeU technology partner. You leave with a point of view on the problem, the options and a realistic next step.",
-        "primaryButton": "Contact MeU now",
+        "primaryButton": "Contact MeU",
         "secondaryButton": "See how we've done it"
       },
       "aiAutomation": {
@@ -55,7 +55,7 @@
           "heading1": "Intelligence inside",
           "heading2": "the workflow.",
           "summary": "Where AI creates real value before it creates noise — field notes and frameworks for leaders selecting workflows that are ready for intelligent automation.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "Assess an AI use case"
         },
         "featured": {
@@ -91,7 +91,7 @@
           "heading1": "Find the workflow",
           "heading2": "worth automating first.",
           "description": "Bring us a candidate use case. We will score it for readiness and outline what a governed production deployment would look like.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "View AI platforms"
         }
       },
@@ -101,7 +101,7 @@
           "heading1": "From ambition to",
           "heading2": "measurable change.",
           "summary": "How leadership teams turn strategic ambition into sequenced roadmaps, modern platforms and operating change that sticks.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "Explore solutions"
         },
         "featured": {
@@ -137,7 +137,7 @@
           "heading1": "Define the result.",
           "heading2": "Then the roadmap.",
           "description": "Bring us the strategic ambition. We will help you sequence it into a roadmap with measurable operating change.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "Explore solutions"
         }
       },
@@ -147,7 +147,7 @@
           "heading1": "The systems that hold",
           "heading2": "the operation together.",
           "summary": "Architecture, integration and the engineering decisions that determine how quickly a company can change.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "Explore capabilities"
         },
         "featured": {
@@ -183,7 +183,7 @@
           "heading1": "Stress-test",
           "heading2": "your architecture.",
           "description": "Bring us your current architecture and the change you need to absorb. We will identify where it will bend — and where it will break.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "Explore capabilities"
         }
       },
@@ -193,7 +193,7 @@
           "heading1": "Resilient software,",
           "heading2": "built around real work.",
           "summary": "How we design, build and operate software that stays useful — from product and UI/UX design to quality engineering and managed services.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "Explore capabilities"
         },
         "featured": {
@@ -229,7 +229,7 @@
           "heading1": "Bring the product",
           "heading2": "you need to ship.",
           "description": "Tell us what you need to build. We will bring the design, engineering and quality practices to ship it — and operate it after.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "Explore capabilities"
         }
       },
@@ -239,7 +239,7 @@
           "heading1": "Domain depth you",
           "heading2": "can build on.",
           "summary": "Industry-specific perspective from delivery experience — healthcare, logistics, retail, life sciences, education and associations.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "Explore industries"
         },
         "featured": {
@@ -275,7 +275,7 @@
           "heading1": "Built around",
           "heading2": "your world.",
           "description": "Bring us the operational bottleneck in your industry. We will share what we have seen and outline a practical path forward.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "Explore industries"
         }
       },
@@ -285,7 +285,7 @@
           "heading1": "Reports & whitepapers",
           "heading2": "for technology leaders.",
           "summary": "Structured research and readiness frameworks — the artifacts we use with clients to align leadership before committing to delivery.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "Browse all insights"
         },
         "featured": {
@@ -321,7 +321,7 @@
           "heading1": "Bring the framework",
           "heading2": "to your next review.",
           "description": "Request a walkthrough of any report with a senior MeU specialist, tailored to your operation.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "Browse all insights"
         }
       },
@@ -331,7 +331,7 @@
           "heading1": "What's happening",
           "heading2": "at MeU.",
           "summary": "Company news, partnerships, events and announcements — the operational updates leaders ask us about.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "See client success"
         },
         "featured": {
@@ -367,7 +367,7 @@
           "heading1": "See us",
           "heading2": "at the next event.",
           "description": "Want to meet at an upcoming event or arrange a briefing? Reach out and we will find a time.",
-          "primaryButton": "Contact MeU now",
+          "primaryButton": "Contact MeU",
           "secondaryButton": "See client success"
         }
       },
@@ -388,7 +388,7 @@
       "ctaHeading1": "Bring us the challenge.",
       "ctaHeading2": "We will bring a way forward.",
       "ctaDesc": "Start a focused conversation with a senior MeU technology partner.",
-      "ctaPrimary": "Contact MeU now",
+      "ctaPrimary": "Contact MeU",
       "ctaSecondary": "Explore insights",
       "sidebarCtaTitle": "The MeU team is ready to discuss your challenge.",
       "sidebarCtaButton": "Book a consultation"
