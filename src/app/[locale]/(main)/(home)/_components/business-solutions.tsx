@@ -15,8 +15,8 @@ function ArrowLink({ href, children, tone = "light", className }: { href: string
     <Link
       href={href}
       className={cn(
-        "group inline-flex items-center gap-4 border-b border-white/10 pb-2 text-[11px] font-bold uppercase tracking-[0.1em] transition focus-visible:outline-2 focus-visible:outline-offset-4",
-        tone === "dark" ? "border-white/35 text-white hover:border-primary-light focus-visible:outline-primary-light" : "border-white/10 text-white hover:border-primary hover:text-primary-light focus-visible:outline-primary",
+        "group inline-flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.1em] transition focus-visible:outline-2 focus-visible:outline-offset-4",
+        tone === "dark" ? "text-white hover:text-primary-light focus-visible:outline-primary-light" : "text-white hover:text-primary-light focus-visible:outline-primary",
         className,
       )}
     >

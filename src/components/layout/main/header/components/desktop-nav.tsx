@@ -53,7 +53,7 @@ export function DesktopNav({
                 aria-expanded={expanded}
                 className={cn(
                   "relative flex items-center gap-1.5 px-3 text-[13px] font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-primary",
-                  hovered ? "text-primary" : dark ? "text-white/85 hover:text-white" : "text-foreground hover:text-primary",
+                  hovered ? "text-[#FBAE0C]" : dark ? "text-white/85 hover:text-[#FBAE0C]" : "text-foreground hover:text-[#FBAE0C]",
                 )}
               >
                 {displayLabel}
@@ -64,7 +64,7 @@ export function DesktopNav({
                 href={item.href}
                 className={cn(
                   "flex items-center px-3 text-[13px] font-semibold transition",
-                  dark ? "text-white/85 hover:text-white" : "text-foreground hover:text-primary",
+                  dark ? "text-white/85 hover:text-[#FBAE0C]" : "text-foreground hover:text-[#FBAE0C]",
                 )}
               >
                 {displayLabel}

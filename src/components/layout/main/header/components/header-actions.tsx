@@ -31,7 +31,7 @@ export function HeaderActions({
         aria-label={t("actions.search")}
         className={cn(
           "grid size-10 place-items-center rounded-lg transition",
-          dark ? "text-white/80 hover:bg-white/10 hover:text-white" : "text-muted-foreground hover:bg-muted hover:text-foreground",
+          dark ? "text-white/80 hover:bg-white/10 hover:text-[#FBAE0C]" : "text-muted-foreground hover:bg-muted hover:text-foreground",
         )}
       >
         {searchOpen ? <X className="h-5 w-5" /> : <Search className="h-5 w-5" />}

@@ -2,7 +2,6 @@ import { ArrowUpRight, CalendarDays, MapPin } from "lucide-react";
 import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
-import { label, displayHeading } from "@/app/[locale]/(main)/_components/section-primitives";
 import { fetchPublicJobs } from "@/utils/public-jobs";
 
 /**
@@ -81,3 +80,7 @@ export default async function CareersJobs() {
     </div>
   );
 }
+
+const displayHeading = "font-medium tracking-[-0.045em] text-balance";
+
+const label = "text-[10px] font-bold uppercase tracking-[0.16em] sm:text-[11px]";

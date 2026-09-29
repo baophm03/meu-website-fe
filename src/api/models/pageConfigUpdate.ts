@@ -5,6 +5,7 @@
  * Coded by Meu TEAM
  * OpenAPI spec version: 1.0.0
  */
+import type { PageConfigUpdateType } from './pageConfigUpdateType';
 
 export interface PageConfigUpdate {
   /** @nullable */
@@ -13,6 +14,8 @@ export interface PageConfigUpdate {
   name_en?: string | null;
   /** @nullable */
   path?: string | null;
+  /** @nullable */
+  type?: PageConfigUpdateType;
   /** @nullable */
   description?: string | null;
   /** @nullable */

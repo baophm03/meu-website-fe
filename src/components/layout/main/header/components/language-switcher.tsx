@@ -73,7 +73,7 @@ export function LanguageSwitcher({ dark }: { dark: boolean }) {
         aria-label={t("actions.switchLanguage", { locale: locale.toUpperCase() })}
         className={cn(
           "flex h-10 items-center gap-1.5 rounded-lg px-2.5 transition",
-          dark ? "text-white/80 hover:bg-white/10 hover:text-white" : "text-muted-foreground hover:bg-muted hover:text-foreground",
+          dark ? "text-white/80 hover:bg-white/10 hover:text-[#FBAE0C]" : "text-muted-foreground hover:bg-muted hover:text-foreground",
         )}
       >
         <FlagIcon locale={locale} className="h-[14px] w-[21px]" />

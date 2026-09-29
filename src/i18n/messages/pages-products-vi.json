@@ -7,7 +7,7 @@
         "heading2": "Vận hành theo thiết kế.",
         "summary": "Các nền tảng với IP lõi chuẩn, mô hình triển khai lặp lại và demo bạn có thể chạy. Mọi thứ khác được bàn giao dưới dạng giải pháp tùy chỉnh.",
         "primaryButton": "Yêu cầu demo",
-        "secondaryButton": "Trao đổi với chuyên gia",
+        "secondaryButton": "Liên hệ ngay với MeU",
         "proof1": "IP lõi chuẩn",
         "proof2": "Triển khai lặp lại",
         "proof3": "Demo bạn có thể chạy",
@@ -75,7 +75,7 @@
           "heading2": "trên một nền tảng.",
           "summary": "Phần mềm doanh nghiệp module hóa được điều chỉnh theo từng mô hình vận hành — từ workflow và CRM đến phân tích và thành viên — trên một lớp dữ liệu chung.",
           "primaryButton": "Yêu cầu demo",
-          "secondaryButton": "Trao đổi với chuyên gia"
+          "secondaryButton": "Liên hệ ngay với MeU"
         },
         "modules": {
           "eyebrow": "Module",
@@ -144,7 +144,7 @@
           "heading2": "kiểm soát của người được tích hợp sẵn.",
           "summary": "Tài liệu thông minh, copilot vận hành và tự động hóa quyết định — mỗi nền tảng đều có ngữ cảnh, kiểm soát và phán đoán của người được thiết kế vào hệ thống.",
           "primaryButton": "Yêu cầu demo",
-          "secondaryButton": "Trao đổi với chuyên gia"
+          "secondaryButton": "Liên hệ ngay với MeU"
         },
         "platforms": {
           "eyebrow": "Nền tảng",
@@ -205,7 +205,7 @@
           "heading2": "mở rộng cùng bạn.",
           "summary": "Bán hàng đa kênh, POS, tồn kho và hoàn tất đơn hàng kết nối đầu cuối — nên mọi kênh thấy cùng tồn kho, giá và đơn hàng.",
           "primaryButton": "Yêu cầu demo",
-          "secondaryButton": "Trao đổi với chuyên gia"
+          "secondaryButton": "Liên hệ ngay với MeU"
         },
         "platforms": {
           "eyebrow": "Nền tảng",
@@ -274,7 +274,7 @@
           "heading2": "với chiều sâu chuyên môn thực sự.",
           "summary": "Module chuyên ngành dựng sẵn cho y tế, logistics và giáo dục — được định hình bởi kinh nghiệm bàn giao, không phải template chung chung.",
           "primaryButton": "Yêu cầu demo",
-          "secondaryButton": "Trao đổi với chuyên gia"
+          "secondaryButton": "Liên hệ ngay với MeU"
         },
         "platforms": {
           "eyebrow": "Nền tảng",
@@ -345,7 +345,7 @@
           "heading": "MeOS — Hệ sinh thái công nghệ dành cho doanh nghiệp hiện đại",
           "p1": "MeOS là hệ sinh thái giải pháp công nghệ được nghiên cứu và phát triển bởi MeU Solutions, hướng đến hỗ trợ doanh nghiệp giải quyết những bài toán thực tế trong quản trị, vận hành, kinh doanh và tương tác với khách hàng.",
           "p2": "Thông qua các giải pháp chuyên biệt, MeOS tạo điều kiện để doanh nghiệp lựa chọn công nghệ phù hợp với mô hình hoạt động và từng giai đoạn phát triển.",
-          "p3": "Từ quản trị doanh nghiệp, thương mại điện tử, bán hàng đa kênh đến trải nghiệm di động và giải pháp y tế, MeOS từng bước xây dựng danh mục công nghệ đa dạng, hướng đến khả năng kết nối và mở rộng."
+          "p3": "Từ thương mại điện tử, bán hàng đa kênh đến trải nghiệm di động và giải pháp y tế, MeOS từng bước xây dựng danh mục công nghệ đa dạng, hướng đến khả năng kết nối và mở rộng."
         },
         "values": {
           "eyebrow": "Giá trị cốt lõi",
@@ -363,9 +363,7 @@
         "products": {
           "eyebrow": "Danh mục sản phẩm",
           "heading": "Khám phá hệ sinh thái giải pháp MeOS",
-          "summary": "Các giải pháp MeOS được định hướng phát triển theo từng nhu cầu ứng dụng, từ quản trị doanh nghiệp đến thương mại điện tử, quản lý bán hàng, trải nghiệm di động và số hóa dịch vụ chuyên ngành.",
-          "meos365Desc": "Hướng đến hỗ trợ doanh nghiệp tổ chức, quản lý và tối ưu hoạt động vận hành.",
-          "meos365Cta": "Khám phá MeOS 365",
+          "summary": "Các giải pháp MeOS được định hướng phát triển theo từng nhu cầu ứng dụng, từ thương mại điện tử và quản lý bán hàng đa kênh đến trải nghiệm di động và số hóa dịch vụ chuyên ngành.",
           "ecommerceDesc": "Giải pháp thương mại điện tử phục vụ xây dựng và vận hành kênh bán hàng trực tuyến.",
           "ecommerceCta": "Khám phá Ecommerce",
           "miniappDesc": "Giải pháp phát triển trải nghiệm dịch vụ và kết nối khách hàng trên Mini App.",
@@ -373,7 +371,11 @@
           "omniDesc": "Hướng đến quản lý tập trung các hoạt động bán hàng trên nhiều kênh kinh doanh.",
           "omniCta": "Khám phá Omni",
           "hicareDesc": "Giải pháp công nghệ hướng đến số hóa quy trình và trải nghiệm dịch vụ y tế.",
-          "hicareCta": "Khám phá HiCare"
+          "hicareCta": "Khám phá HiCare",
+          "m365Eyebrow": "Business Management",
+          "m365Desc": "Giải pháp hướng đến việc hỗ trợ doanh nghiệp tổ chức, quản lý và tối ưu hoạt động vận hành trên môi trường số.",
+          "m365Badge": "Sắp ra mắt",
+          "m365Cta": "Đăng ký nhận thông tin"
         },
         "architecture": {
           "eyebrow": "Kiến trúc hệ sinh thái",
@@ -386,21 +388,21 @@
           "eyebrow": "Giải pháp theo nhu cầu",
           "heading": "Bạn đang tìm kiếm giải pháp cho nhu cầu nào?",
           "summary": "Khám phá các sản phẩm MeOS theo bài toán thực tế mà doanh nghiệp đang cần giải quyết.",
-          "need1": "Quản lý hoạt động doanh nghiệp",
-          "need1Product": "MeOS 365",
-          "need1Desc": "Hướng đến hỗ trợ doanh nghiệp tổ chức, quản lý và tối ưu hoạt động vận hành.",
-          "need2": "Xây dựng kênh bán hàng trực tuyến",
-          "need2Product": "MeOS Ecommerce",
-          "need2Desc": "Giải pháp thương mại điện tử phục vụ xây dựng và vận hành kênh bán hàng trực tuyến.",
-          "need3": "Phát triển Mini App cho khách hàng",
-          "need3Product": "MeOS Mini App",
-          "need3Desc": "Giải pháp phát triển trải nghiệm dịch vụ và kết nối khách hàng trên Mini App.",
-          "need4": "Quản lý nhiều kênh bán hàng",
-          "need4Product": "MeOS Omni",
-          "need4Desc": "Hướng đến quản lý tập trung các hoạt động bán hàng trên nhiều kênh kinh doanh.",
-          "need5": "Số hóa hoạt động và dịch vụ y tế",
-          "need5Product": "MeOS HiCare",
-          "need5Desc": "Giải pháp công nghệ hướng đến số hóa quy trình và trải nghiệm dịch vụ y tế."
+          "need1": "Xây dựng kênh bán hàng trực tuyến",
+          "need1Product": "MeOS Ecommerce",
+          "need1Desc": "Giải pháp thương mại điện tử phục vụ xây dựng và vận hành kênh bán hàng trực tuyến.",
+          "need2": "Phát triển Mini App cho khách hàng",
+          "need2Product": "MeOS Mini App",
+          "need2Desc": "Giải pháp phát triển trải nghiệm dịch vụ và kết nối khách hàng trên Mini App.",
+          "need3": "Quản lý nhiều kênh bán hàng",
+          "need3Product": "MeOS Omni",
+          "need3Desc": "Hướng đến quản lý tập trung các hoạt động bán hàng trên nhiều kênh kinh doanh.",
+          "need4": "Số hóa hoạt động và dịch vụ y tế",
+          "need4Product": "MeOS HiCare",
+          "need4Desc": "Giải pháp công nghệ hướng đến số hóa quy trình và trải nghiệm dịch vụ y tế.",
+          "need365": "Quản lý hoạt động doanh nghiệp",
+          "need365Product": "MeOS 365",
+          "need365Desc": "Giải pháp hướng đến việc hỗ trợ doanh nghiệp tổ chức, quản lý và tối ưu hoạt động vận hành trên môi trường số."
         },
         "experience": {
           "eyebrow": "Trải nghiệm sản phẩm",
@@ -420,88 +422,6 @@
           "primaryButton": "Nhận tư vấn giải pháp",
           "secondaryButton": "Khám phá sản phẩm MeOS",
           "credit": "MeOS — Developed by MeU Solutions."
-        }
-      },
-      "meos365": {
-        "hero": {
-          "label": "MeOS 365 | Nền tảng quản trị vận hành",
-          "heading": "Quản trị xuyên suốt. Vận hành mạch lạc.",
-          "summary": "MeOS 365 là nền tảng quản trị vận hành giúp doanh nghiệp số hóa công việc, tài liệu, nhân sự và báo cáo trên một hệ thống thống nhất.",
-          "primaryButton": "Đăng ký Demo",
-          "secondaryButton": "Khám phá tính năng"
-        },
-        "value": {
-          "eyebrow": "Giá trị giải pháp",
-          "heading": "Quản trị doanh nghiệp đơn giản hơn cùng MeOS 365.",
-          "summary": "Ba bài toán quản trị phổ biến và cách MeOS 365 tiếp cận từng bài toán.",
-          "item1Problem": "Công việc và quy trình phân tán",
-          "item1Value": "Giao việc, theo dõi tiến độ và phê duyệt tập trung trên một hệ thống.",
-          "item2Problem": "Tài liệu nằm rải rác nhiều nơi",
-          "item2Value": "Lưu trữ, phân quyền và tìm kiếm tài liệu tập trung, thay cho email và ổ đĩa cá nhân.",
-          "item3Problem": "Báo cáo tổng hợp thủ công",
-          "item3Value": "Dữ liệu hoạt động được tổng hợp thành báo cáo phục vụ quản lý và ra quyết định."
-        },
-        "features": {
-          "eyebrow": "Tính năng nổi bật",
-          "heading": "Các công cụ cần thiết cho công tác quản trị.",
-          "summary": "Khám phá các nhóm chức năng chính hỗ trợ doanh nghiệp tổ chức và vận hành hoạt động nội bộ.",
-          "tab1Title": "Quản lý công việc & quy trình",
-          "tab1Desc": "Giao việc, theo dõi tiến độ, phê duyệt và tự động hóa các quy trình lặp lại trong doanh nghiệp.",
-          "tab1Point1": "Bảng công việc theo phòng ban và dự án",
-          "tab1Point2": "Quy trình phê duyệt từng bước",
-          "tab1Point3": "Nhắc việc và theo dõi tiến độ",
-          "tab2Title": "Quản lý tài liệu & tri thức",
-          "tab2Desc": "Lưu trữ, phân quyền và tìm kiếm tài liệu tập trung thay vì phân tán trên email và ổ cá nhân.",
-          "tab2Point1": "Thư mục và phân quyền theo phòng ban",
-          "tab2Point2": "Tìm kiếm tài liệu nhanh",
-          "tab2Point3": "Phiên bản và lịch sử thay đổi",
-          "tab3Title": "Quản lý nhân sự",
-          "tab3Desc": "Hồ sơ nhân viên, chấm công, nghỉ phép và các nghiệp vụ HR cơ bản trên một hệ thống.",
-          "tab3Point1": "Hồ sơ nhân viên tập trung",
-          "tab3Point2": "Chấm công và nghỉ phép",
-          "tab3Point3": "Quy trình onboarding nội bộ",
-          "tab4Title": "Báo cáo & tổng hợp",
-          "tab4Desc": "Tổng hợp dữ liệu hoạt động thành báo cáo phục vụ quản lý và ra quyết định.",
-          "tab4Point1": "Báo cáo theo phòng ban",
-          "tab4Point2": "Tổng hợp theo kỳ",
-          "tab4Point3": "Dữ liệu phục vụ họp lãnh đạo"
-        },
-        "experience": {
-          "eyebrow": "Trải nghiệm sản phẩm",
-          "heading": "Khám phá MeOS 365 qua trải nghiệm thực tế.",
-          "summary": "Xem cách doanh nghiệp tổ chức công việc, tài liệu và báo cáo thông qua giao diện minh họa hoặc demo thực tế.",
-          "step1Title": "Số hóa quy trình",
-          "step1Desc": "Đưa các quy trình giấy và xử lý tay lên hệ thống theo đúng cách doanh nghiệp đang vận hành.",
-          "step2Title": "Tập trung dữ liệu",
-          "step2Desc": "Thông tin công việc, nhân sự và tài liệu được lưu trữ trên một hệ thống thống nhất.",
-          "step3Title": "Tự động hóa & mở rộng",
-          "step3Desc": "Tự động hóa các bước lặp lại và bổ sung module khi nhu cầu phát triển.",
-          "primaryButton": "Đặt lịch Demo"
-        },
-        "ecosystem": {
-          "heading": "Một giải pháp trong hệ sinh thái MeOS.",
-          "summary": "MeOS 365 là một phần của hệ sinh thái giải pháp công nghệ MeOS. Khám phá thêm những sản phẩm phục vụ nhu cầu bán hàng trực tuyến và bán hàng đa kênh.",
-          "link1Title": "MeOS Ecommerce",
-          "link1Desc": "Kênh bán hàng trực tuyến cho doanh nghiệp",
-          "link2Title": "MeOS Omni",
-          "link2Desc": "Quản lý bán hàng đa kênh",
-          "allButton": "Khám phá hệ sinh thái MeOS"
-        },
-        "cta": {
-          "heading1": "Sẵn sàng số hóa công tác quản trị của bạn?",
-          "description": "Chia sẻ nhu cầu quản trị để cùng MeU Solutions tìm hiểu phương án triển khai MeOS 365 phù hợp với doanh nghiệp.",
-          "primaryButton": "Đăng ký tư vấn",
-          "credit": "Developed by MeU Solutions."
-        },
-        "faq": {
-          "q1": "MeOS 365 phù hợp với doanh nghiệp nào?",
-          "a1": "MeOS 365 hướng đến doanh nghiệp cần tổ chức lại công việc, tài liệu, nhân sự và báo cáo trên một hệ thống thống nhất, từ đội ngũ nhỏ đến nhiều phòng ban.",
-          "q2": "Có thể triển khai theo từng phần không?",
-          "a2": "Doanh nghiệp có thể bắt đầu với nhóm chức năng cần thiết nhất và bổ sung dần theo lộ trình sử dụng thực tế.",
-          "q3": "Dữ liệu hiện có của doanh nghiệp xử lý thế nào?",
-          "a3": "Dữ liệu công việc, tài liệu và nhân sự hiện có sẽ được trao đổi phương án chuyển đổi trong buổi tư vấn, phù hợp với tình trạng sẵn sàng của doanh nghiệp.",
-          "q4": "Chi phí và thời gian triển khai được xác định ra sao?",
-          "a4": "Phụ thuộc phạm vi chức năng và quy mô sử dụng. Đội ngũ MeU Solutions sẽ trao đổi và đưa ra phương án phù hợp sau khi hiểu nhu cầu của bạn."
         }
       },
       "meosEcommerce": {
@@ -808,9 +728,9 @@
         },
         "ecosystem": {
           "heading": "Một giải pháp trong hệ sinh thái MeOS.",
-          "summary": "MeOS HiCare là một phần của hệ sinh thái giải pháp công nghệ MeOS. Khám phá thêm những sản phẩm phục vụ nhu cầu quản trị vận hành và bán hàng đa kênh.",
-          "link1Title": "MeOS 365",
-          "link1Desc": "Nền tảng quản trị vận hành doanh nghiệp",
+          "summary": "MeOS HiCare là một phần của hệ sinh thái giải pháp công nghệ MeOS. Khám phá thêm những sản phẩm phục vụ nhu cầu trải nghiệm di động và bán hàng đa kênh.",
+          "link1Title": "MeOS Mini App",
+          "link1Desc": "Trải nghiệm kinh doanh trên Mini App",
           "link2Title": "MeOS Omni",
           "link2Desc": "Quản lý bán hàng đa kênh",
           "allButton": "Khám phá hệ sinh thái MeOS"

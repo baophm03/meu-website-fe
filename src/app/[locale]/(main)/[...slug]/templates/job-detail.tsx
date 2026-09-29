@@ -1,9 +1,10 @@
 import { Link } from "@/i18n/navigation";
-import { ArrowLeft, ArrowUpRight, Briefcase, CalendarDays, Clock3, MapPin } from "lucide-react";
+import { ArrowUpRight, Briefcase, CalendarDays, Clock3, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Section, label, displayHeading } from "../../_components/section-primitives";
 import { useTranslations } from "next-intl";
 import type { Job } from "@/api/models/job";
+import { Reveal } from "@/components/shared/reveal";
+import type { ReactNode } from "react";
 
 /**
  * Job-posting detail — jobs are their own CMS entity (`jobs` table), resolved
@@ -27,14 +28,7 @@ export default function JobDetailPage({ job,
   return (
     <>
       <section aria-labelledby="job-title" className="container pb-10 pt-32 sm:pb-12 sm:pt-40">
-        <Link
-          href="/about/careers"
-          className="group inline-flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.14em] text-muted-foreground transition hover:text-foreground"
-        >
-          <ArrowLeft aria-hidden="true" className="h-3.5 w-3.5 transition-transform group-hover:-translate-x-1" />
-          {t("backToCareers")}
-        </Link>
-        <div className="mt-10 grid gap-10 lg:grid-cols-[1.6fr_1fr] lg:items-start">
+        <div className="grid gap-10 lg:grid-cols-[1.6fr_1fr] lg:items-start">
           <div>
             {job.department ? (
               <span className={cn(label, "inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/[0.06] px-4 py-1.5 text-primary")}>
@@ -143,5 +137,30 @@ export default function JobDetailPage({ job,
         </Section>
       ) : null}
     </>
+  );
+}
+
+const shell = "container";
+
+const displayHeading = "font-medium tracking-[-0.045em] text-balance";
+
+const label = "text-[10px] font-bold uppercase tracking-[0.16em] sm:text-[11px]";
+
+function Section({ id,
+  variant = "white",
+  className,
+  children,
+  labelledBy }: {
+    id?: string;
+    variant?: "white" | "surface" | "dark" | "light";
+    className?: string;
+    children: ReactNode;
+    labelledBy?: string;
+  }) { // All variants render transparent dark — the shared ambient backdrop
+  // on the (main) layout carries the visual field across every page.
+  return (
+    <section id={id} aria-labelledby={labelledBy} data-variant={variant} className={cn("scroll-mt-20 py-16 sm:py-24 lg:py-[128px]", variant === "light" ? "text-foreground" : "text-white", className)}>
+      <Reveal className={shell}>{children}</Reveal>
+    </section>
   );
 }

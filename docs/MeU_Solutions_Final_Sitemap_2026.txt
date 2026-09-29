@@ -1,0 +1,294 @@
+﻿
+MEU SOLUTIONS
+FINAL WEBSITE SITEMAP
+Global-ready Information Architecture for Technology &amp; Digital Transformation
+Định hướng cốt lõi
+Business Challenge → Solution → Technology → Industry Expertise → Client Success → Conversion
+Phiên bản Final • 20/08/2026
+
+
+1. Định vị kiến trúc website
+Sitemap final được thiết kế để đưa MeU Solutions từ mô hình website giới thiệu dịch vụ sang mô hình website bán giải pháp công nghệ, phù hợp với định vị Technology &amp; Digital Transformation Partner.
+Nguyên tắc thiết kế
+Không tổ chức website quanh câu hỏi “MeU có những dịch vụ gì?”, mà quanh câu hỏi “Khách hàng đang có bài toán gì, MeU giải quyết bằng giải pháp và năng lực nào, đã có bằng chứng triển khai ra sao?”.
+1.1. 7 lĩnh vực hoạt động được chuẩn hóa
+Hoạt động hiện tại
+Naming đề xuất trên website
+Tư vấn phần mềm
+Technology Consulting
+Phát triển hệ thống
+Software Engineering
+Kiểm định phần mềm
+Quality Engineering
+Cung cấp sản phẩm
+Products &amp; Platforms
+Cung cấp nhân sự
+IT Talent Solutions
+Giải pháp AI toàn diện
+AI &amp; Intelligent Automation
+Đào tạo
+Technology Training
+Hai capability bổ sung để hoàn thiện vòng đời công nghệ: System Integration và Maintenance &amp; Managed Services.
+2. Header chính – bản chốt
+2.1. Tiếng Việt
+GIẢI PHÁP  |  THEO NGÀNH  |  SẢN PHẨM &amp; NỀN TẢNG  |  CASE STUDIES  |  INSIGHTS  |  VỀ MEU
+CTA: TRAO ĐỔI VỚI CHUYÊN GIA     •     Utility: Tìm kiếm | VI / EN
+2.2. Tiếng Anh
+WHAT WE DO  |  INDUSTRIES  |  PRODUCTS &amp; PLATFORMS  |  CLIENT SUCCESS  |  INSIGHTS  |  ABOUT MEU
+CTA: TALK TO AN EXPERT     •     Utility: Search | VI / EN
+Không cần “Trang chủ” trên Header desktop vì logo đóng vai trò điều hướng về Home. Đào tạo và Talent không lên cấp 1; chúng nằm trong What We Do.
+3. Master Sitemap – cấu trúc final
+MEU SOLUTIONS
+│
+├── 01. WHAT WE DO
+│   ├── Business Solutions
+│   ├── Technology Capabilities
+│   └── Talent &amp; Enablement
+│
+├── 02. INDUSTRIES
+│
+├── 03. PRODUCTS &amp; PLATFORMS
+│
+├── 04. CLIENT SUCCESS
+│
+├── 05. INSIGHTS
+│
+├── 06. ABOUT MEU
+│
+├── 07. TRUST CENTER
+│
+└── UTILITY
+    ├── Search
+    ├── VI / EN
+    ├── Contact
+    └── Talk to an Expert
+4. WHAT WE DO / GIẢI PHÁP
+Đây là nhóm menu quan trọng nhất. MeU trình bày đồng thời bài toán kinh doanh, năng lực công nghệ và khả năng bổ sung nguồn lực/đào tạo.
+WHAT WE DO
+│
+├── A. BUSINESS SOLUTIONS
+│   ├── Digital Transformation
+│   ├── Business Process Optimization
+│   ├── Enterprise Management
+│   ├── Customer Experience
+│   ├── Digital Commerce
+│   ├── AI &amp; Intelligent Automation
+│   └── Custom Software Solutions
+│
+├── B. TECHNOLOGY CAPABILITIES
+│   ├── Technology Consulting
+│   ├── Software Engineering
+│   ├── AI Engineering
+│   ├── Quality Engineering
+│   ├── System Integration
+│   ├── Cloud &amp; DevOps
+│   ├── Product &amp; UI/UX Design
+│   └── Maintenance &amp; Managed Services
+│
+└── C. TALENT &amp; ENABLEMENT
+    ├── IT Talent Solutions
+    └── Technology Training
+4.1. Business Solutions
+Nhóm giải pháp
+Nội dung chính
+Digital Transformation
+Assessment, Digital Roadmap, Process Digitalization, Workflow, Modernization, Integration, Data &amp; Dashboard
+Business Process Optimization
+Workflow Automation, Approval, Document Management, BPM, Operational Dashboard, Intelligent Automation
+Enterprise Management
+ERP, CRM, HRM, Sales, Inventory, Membership, Reporting &amp; Analytics
+Customer Experience
+Customer Portal, Booking, CRM, Membership, Loyalty, Notification, Customer Service, Omnichannel
+Digital Commerce
+E-commerce, Zalo Mini App, Social Commerce, Loyalty, Affiliate, CRM, Payment Integration, Omnichannel
+AI &amp; Intelligent Automation
+AI Assistant, Workflow AI, Smart Vision, Document Processing, Analytics, Recommendation, Predictive AI
+Custom Software Solutions
+Enterprise Software, Web, Mobile, Portal, Internal Systems, API, Modernization
+4.2. Technology Capabilities
+Technology Consulting – tư vấn chiến lược, kiến trúc, roadmap và lựa chọn công nghệ.
+Software Engineering – Web, Mobile, Enterprise Software, API, Zalo Mini App.
+AI Engineering – xây dựng, tích hợp và vận hành các thành phần AI.
+Quality Engineering – Manual, Automation, API, Performance, Mobile, Regression, Security Testing.
+System Integration – API, middleware, hệ thống hiện hữu và hệ sinh thái đối tác.
+Cloud &amp; DevOps – CI/CD, deployment, cloud architecture, monitoring.
+Product &amp; UI/UX Design – discovery, UX flow, UI, design system.
+Maintenance &amp; Managed Services – bảo trì, tối ưu, hỗ trợ vận hành và nâng cấp.
+
+
+4.3. Talent &amp; Enablement
+Nhóm
+Cấu trúc đề xuất
+IT Talent Solutions
+Staff Augmentation; Dedicated Team; Project-based Team; Software Engineer; QA; BA; UI/UX; DevOps; AI Engineer
+Technology Training
+Corporate Training; Project-based Training; Software Engineering; QA &amp; Testing; AI; DevOps; BA; University Partnership
+5. INDUSTRIES / GIẢI PHÁP THEO NGÀNH
+INDUSTRIES
+├── Healthcare
+├── Logistics &amp; Supply Chain
+├── Retail &amp; Commerce
+├── Pharmaceutical &amp; Life Sciences
+├── Education &amp; Training
+└── Associations &amp; Organizations
+Nguyên tắc publish Industry page
+Chỉ tạo landing page ngành khi MeU có đủ domain knowledge, giải pháp rõ ràng và/hoặc case study thực tế. Không mở ngành chỉ để làm sitemap trông lớn.
+5.1. Cấu trúc chuẩn một Industry Landing Page
+Industry Overview &amp; Challenges
+Solution Ecosystem
+Technology Capabilities
+Solution Architecture
+Client Success / Case Studies
+Related Insights
+Talk to an Expert
+6. PRODUCTS &amp; PLATFORMS
+PRODUCTS &amp; PLATFORMS
+├── All Products
+├── Enterprise Platforms
+├── AI Platforms
+├── Commerce Platforms
+└── Industry Platforms
+Product ≠ Custom Project
+Chỉ đưa vào Products &amp; Platforms khi sản phẩm có core ổn định, feature set rõ, có thể triển khai cho nhiều khách hàng, có roadmap/version và có khả năng demo/triển khai lặp lại.
+6.1. Cấu trúc chuẩn Product Page
+Overview
+Business Benefits
+Key Features
+Integrations
+Industries
+Security
+Deployment / Documentation
+Case Studies
+Request Demo
+7. CLIENT SUCCESS / CASE STUDIES
+CLIENT SUCCESS
+├── Featured Case Studies
+├── All Case Studies
+├── By Industry
+├── By Solution
+└── By Technology
+7.1. Cấu trúc chuẩn Case Study
+CLIENT
+  ↓
+CHALLENGE
+  ↓
+BUSINESS OBJECTIVES
+  ↓
+MEU SOLUTION
+  ↓
+SOLUTION ARCHITECTURE
+  ↓
+TECHNOLOGY
+  ↓
+IMPLEMENTATION
+  ↓
+BUSINESS IMPACT
+  ↓
+KEY METRICS
+Ưu tiên thể hiện kết quả định lượng: thời gian xử lý, mức giảm thao tác thủ công, số người dùng, số hệ thống tích hợp, tốc độ triển khai, hiệu quả vận hành...
+8. INSIGHTS
+INSIGHTS
+├── AI &amp; Automation
+├── Digital Transformation
+├── Enterprise Technology
+├── Software Engineering
+├── Industry Insights
+├── Reports &amp; Whitepapers
+└── News &amp; Events
+Insights không chỉ là blog SEO. Mục tiêu là thought leadership và nuôi dưỡng lead theo hành trình: Search → Insight → Solution → Case Study → Consultation.
+9. ABOUT MEU
+ABOUT MEU
+├── About Us
+├── Our Story
+├── Vision &amp; Mission
+├── Leadership
+├── Partners &amp; Clients
+├── Locations
+├── Careers
+└── Contact
+Không đặt Technology, QA, AI hay Technical Capability trong About. Những nội dung đó thuộc What We Do.
+10. TRUST CENTER
+TRUST CENTER
+├── Security
+├── Privacy
+├── Data Protection
+└── Responsible AI
+Secure SDLC
+Access Management
+Code Review &amp; Security Testing
+Data Protection
+Backup &amp; Recovery
+Incident Response
+Không công bố các chứng nhận như ISO/SOC 2 nếu MeU chưa có chứng nhận thực tế.
+
+
+11. FOOTER – cấu trúc final
+Cột
+Nội dung
+WHAT WE DO
+Technology Consulting; Software Engineering; AI &amp; Automation; Quality Engineering; System Integration; Talent Solutions; Technology Training
+INDUSTRIES
+Healthcare; Logistics; Retail; Life Sciences; Education; Associations
+PRODUCTS
+Products &amp; Platforms; AI Platforms; Enterprise Platforms; Commerce Platforms
+RESOURCES
+Case Studies; Insights; Reports; News &amp; Events
+COMPANY
+About MeU; Leadership; Clients &amp; Partners; Careers; Locations; Contact
+TRUST &amp; LEGAL
+Security; Privacy Policy; Cookie Policy; Terms of Use; Data Protection
+12. HOMEPAGE – logic tương ứng
+01  HERO
+    Your Business Challenge. Our Technology Solution.
+02  BUSINESS CHALLENGES
+    Bạn muốn giải quyết điều gì?
+03  BUSINESS SOLUTIONS
+    MeU có thể giải quyết như thế nào?
+04  AI &amp; INTELLIGENT AUTOMATION
+05  INDUSTRIES
+    Kinh nghiệm theo ngành
+06  PRODUCTS &amp; PLATFORMS
+07  CLIENT SUCCESS
+    Challenge → Solution → Impact
+08  TECHNOLOGY CAPABILITIES
+    Consult → Build → Integrate → Test → Operate
+09  WHY MEU
+    Numbers / Clients / Projects / Expertise
+10  INSIGHTS
+11  CTA
+    Let's build what's next.
+
+
+13. URL architecture đề xuất
+/vi/...
+/en/...
+
+/solutions/...
+/industries/...
+/products/...
+/case-studies/...
+/insights/...
+/about/...
+/trust/...
+
+/sitemap.xml
+/sitemaps/pages.xml
+/sitemaps/solutions.xml
+/sitemaps/industries.xml
+/sitemaps/products.xml
+/sitemaps/case-studies.xml
+/sitemaps/insights.xml
+/sitemaps/careers.xml
+Mỗi landing page chiến lược có URL độc lập, canonical rõ ràng.
+Website đa ngôn ngữ dùng cấu trúc /vi/ và /en/.
+Giữ URL cũ quan trọng và cấu hình 301 khi tái cấu trúc.
+Không index URL tìm kiếm nội bộ, bản nháp và tham số không cần thiết.
+14. Bản chốt để triển khai
+MASTER NAVIGATION
+WHAT WE DO  |  INDUSTRIES  |  PRODUCTS &amp; PLATFORMS  |  CLIENT SUCCESS  |  INSIGHTS  |  ABOUT MEU  →  TALK TO AN EXPERT
+Kiến trúc cấp cao nên được “freeze” tại phiên bản này. Các bước tiếp theo không nên tiếp tục thêm menu cấp 1, mà chuyển sang thiết kế Mega Menu, landing page template, URL mapping, content matrix và SEO/internal linking.
+14.1. Logic xuyên suốt website
+Business Challenge → Solution → Technology → Industry Expertise → Client Success → Conversion
+Đây là logic cốt lõi để MeU được nhìn nhận như một Technology &amp; Digital Transformation Partner thay vì một danh mục dịch vụ phần mềm.
+MEU SOLUTIONS
+Technology • Solutions • Transformation

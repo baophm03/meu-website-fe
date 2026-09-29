@@ -1,0 +1,303 @@
+﻿
+Timeline 8 Tuần— MeU Solutions Website
+Bắt đầu: 08/09/2026
+Go Live: 10/11/2026
+Tổng: 8 tuần (40 ngày)
+Dev: 1 senior full-stack
+Hệ thống hiện có (Tái sử dụng)
+Hạng mục
+Chi tiết
+Tái sử dụng thế nào
+Tech stack
+Next.js App Router + Express + Sequelize + PostgreSQL
+Giữ nguyên
+Auth + RBAC
+JWT, roles, permissions, session management
+Giữ nguyên cho admin CMS
+Admin layout
+Sidebar + header + permission filtering
+Giữ nguyên, thêm menu items
+Media management
+Upload, File model, image handling
+Giữ nguyên
+Post/Category/Tag
+Model, API, admin CRUD, dynamic slug routing
+Adapt thành Insights
+Site Information
+Branches, socials, contact info
+Adapt cho contact MeU
+Newsletter subscription
+Model, API, form, admin
+Giữ nguyên
+Contact model
+Contact form submissions
+Adapt cho Talk to an Expert lead
+Advertisement/Banner
+Banner model, API, admin
+Tái sử dụng cho hero banner
+Search
+Search page + API
+Giữ nguyên
+Swagger
+API docs auto-generate
+Giữ nguyên
+CORS + Security
+Rate limiting, CORS config
+Cập nhật domain MeU
+
+Cần xây mới
+Hạng mục
+Chi tiết
+7 models mới
+Solution, Industry, Product, CaseStudy, Career, Leadership, Partner
+7 API domains mới
+CRUD + listing + filter cho 7 models trên
+8 Admin modules mới
+Solutions, Industries, Products, CaseStudies, Careers, Leadership, Partners, Leads
+Branding
+Đổi toàn bộ UI từ VCCI → MeU Solutions (màu, logo, typography)
+Mega Menu
+3 cấp, 6 menu chính (hiện tại chỉ 2 cấp)
+Header
+Redesign + CTA "Trao đổi với chuyên gia"
+Footer
+Redesign 6 cột (hiện tại 3 cột VCCI)
+Homepage
+11 sections hoàn toàn mới
+17 Solution pages
+1 flexible template, data-driven
+6 Industry pages
+1 template chuẩn
+Product pages
+Template + listing (All/Enterprise/AI/Commerce/Industry)
+Case Study
+Listing + detail (structured 9-step layout)
+About pages
+7 sub-pages (static content)
+Trust Center
+4 sub-pages (static content)
+Contact page
+Page + "Talk to an Expert" form
+Careers
+Listing + detail
+Insights hub
+Adapt Post/Category → 7 categories mới
+SEO sitemaps
+7 XML files + robots.txt + 301 redirects
+
+Tuần 1 — 08/09 → 12/09: Backend + Frontend Shell
+Ngày
+Đã có sẵn
+Xây mới
+08/09
+Express + Sequelize + PostgreSQL sẵn sàng
+Schema: 7 bảng mới (Solution, Industry, Product, CaseStudy, Career, Leadership, Partner) + migration SQL
+09/09
+Provider pattern + auto-gen sẵn
+7 models + 7 providers + Solution API (CRUD + listing + filter)
+10/09
+Controller pattern + auto-routes sẵn
+Industry + Product API + CaseStudy + Career API
+11/09
+Next.js App Router + TailwindCSS + shadcn/ui sẵn
+Đổi branding VCCI → MeU (màu, logo, typography, assets) + Mega Menu 3 cấp
+12/09
+Layout component pattern sẵn
+Header redesign + CTA + Footer 6 cột + Route groups + skeleton pages
+
+
+
+
+
+
+Deliverable: API sẵn sàng + Frontend shell
+Tuần 2 — 15/09 → 19/09: Homepage + Solution Pages
+Ngày
+Đã có sẵn
+Xây mới
+15/09
+Banner component, image handling
+Homepage: Hero + Business Challenges + Business Solutions
+16/09
+Reusable section pattern
+Homepage: AI &amp; Automation + Industries + Products + Client Success + Tech Capabilities
+17/09
+Dynamic page routing sẵn
+Homepage: Why MeU + Insights preview + CTA + Solution template (data-driven)
+18/09
+API client (orval) sẵn
+7 Business Solutions pages + 8 Technology Capabilities pages (từ API, 1 template)
+19/09
+Admin CRUD pattern sẵn (base-config, news)
+2 Talent pages + listing /solutions + Admin: Solutions management (CRUD)
+
+Deliverable: Homepage 11 sections + 17 Solution pages + Admin Solutions
+Tuần 3 — 22/09 → 26/09: Industry + Product + Case Study + Admin
+Ngày
+Đã có sẵn
+Xây mới
+22/09
+Dynamic slug routing + template pattern
+Industry template + 6 Industry pages
+23/09
+Category listing pattern
+Product template + listing /products (All/Enterprise/AI/Commerce/Industry)
+24/09
+Post detail pattern
+Case Study listing (filter by Industry/Solution/Technology) + detail (structured 9-step)
+25/09
+Admin sidebar + permission filtering
+Admin: Industries + Products + CaseStudies + Careers + Leadership + Partners + Leads
+26/09
+Seed script pattern
+Seed data: solutions + industries + products + case studies
+
+Deliverable: 6 Industry + Product + Case Study + Admin CMS hoàn chỉnh
+Tuần 4 — 29/09 → 03/10: About + Trust + Contact + Careers + Insights + SEO
+Ngày
+Đã có sẵn
+Xây mới
+29/09
+Layout + page pattern
+About pages: About Us, Our Story, Vision &amp; Mission, Leadership, Partners &amp; Clients, Locations
+30/09
+Contact model + form pattern
+Trust Center (4 pages) + Contact page + "Talk to an Expert" form (adapt Contact model)
+01/10
+Post/Category/Tag model + API + admin
+Careers: listing + detail + Insights hub: adapt Post/Category → 7 categories mới
+02/10
+Seed script
+Seed data: careers + leadership + partners + about + Final data review
+03/10
+Sitemap page sẵn (nhưng là HTML)
+SEO: 7 XML sitemaps + robots.txt + 301 redirects + Performance: ISR/caching, image optimization
+
+
+
+
+
+Deliverable: Tất cả pages hoàn chỉnh + SEO + Performance
+Tuần 5 — 06/10 → 10/10: Test Round 1 — Functional + Cross-browser + Responsive
+Ngày
+Task
+06/10
+Test toàn bộ pages: Home, 17 Solutions, 6 Industries — check content, layout, CTA, links
+07/10
+Test Product pages + Case Study (listing + filter + detail) — check structured content
+08/10
+Cross-browser test: Chrome, Firefox, Safari, Edge — log bugs
+09/10
+Responsive test: mobile (375px), tablet (768px), desktop (1440px) — log bugs
+10/10
+Fix bugs Round 1: layout, styling, responsive issues
+
+Deliverable: Functional bugs phát hiện và fix
+Tuần 6 — 13/10 → 17/10: Test Round 2 — Admin CMS + API + Forms + Performance
+Ngày
+Task
+13/10
+Test Admin CMS: CRUD tất cả 8 modules mới + 4 modules cũ (news, tags, media, ads)
+14/10
+Test API: 7 endpoints mới — edge cases, pagination, filter, error handling
+15/10
+Test forms: Contact, Talk to an Expert, Newsletter — validation, submit, error states
+16/10
+Performance test: Lighthouse, Core Web Vitals, page load, API response time
+17/10
+Fix bugs Round 2: API errors, form validation, admin issues, performance
+
+Deliverable: Admin + API + Forms + Performance ổn định
+Tuần 7 — 20/10 → 24/10: Test Round 3 — Content + SEO + Edge Cases + Fix
+Ngày
+Task
+20/10
+Content review: đi qua từng page — check text, image, CTA, empty states
+21/10
+SEO audit: meta tags, canonical, sitemaps, robots.txt, structured data, OG tags
+22/10
+Edge cases: 404 pages, empty data, long content, special characters, broken images
+23/10
+Fix bugs Round 3: content, SEO, edge cases
+24/10
+Final regression test: đi qua toàn bộ flows sau khi fix
+
+Deliverable: Content + SEO + Edge cases hoàn chỉnh
+Tuần 8 — 27/10 → 31/10: Final Polish + Deploy + Go Live
+Ngày
+Task
+27/10
+Buffer: fix bugs phát sinh + content cuối cùng từ client
+28/10
+Dead code removal + final cleanup + code review
+29/10
+Deploy backend production (server, DB, SSL, monitoring)
+30/10
+Deploy frontend production (CI/CD, domain) + Smoke test toàn bộ
+31/10
+GO LIVE 🚀
+
+
+
+
+
+Deliverable: Website live production
+Tổng nhanh
+Tuần
+Focus
+Tái sử dụng
+Xây mới
+1
+Backend APIs + Frontend shell
+Express, Sequelize, Next.js, Tailwind, shadcn
+7 models + 7 APIs + Branding + Mega Menu + Header + Footer
+2
+Homepage + 17 Solution pages
+Banner, API client, admin CRUD pattern
+11 homepage sections + Solution template + Admin Solutions
+3
+Industry + Product + Case Study + Admin
+Dynamic routing, admin sidebar, seed pattern
+6 Industry + Product + Case Study + 7 Admin modules
+4
+About + Trust + Contact + Careers + Insights + SEO
+Post/Category, Contact model, sitemap
+About + Trust + Contact + Careers + Insights adapt + XML sitemaps
+5
+Test R1: Functional + Browser + Responsive
+—
+—
+6
+Test R2: Admin + API + Forms + Performance
+—
+—
+7
+Test R3: Content + SEO + Edge cases + Fix
+—
+—
+8
+Polish + Deploy + Go Live
+—
+—
+
+Tỷ lệ tổng thể
+Pha
+Tuần
+%
+Build (code + seed)
+1-4
+50%
+Test + Fix (3 rounds)
+5-7
+37.5%
+Deploy + Go Live
+8
+12.5%
+
+Tái sử dụng
+Xây mới
+~12 components/systems
+~30 pages + 7 APIs + 8 admin modules
+Tiết kiệm ~30% thời gian
+—
+

@@ -24,7 +24,6 @@ export interface MockPost {
   excerptEn: string;
   image: string;
   publishedAt: string;
-  readingMinutes: number;
   sections: MockPostSection[];
 }
 
@@ -41,7 +40,6 @@ export const mockPosts: MockPost[] = [
       "AI creates value when placed at real bottlenecks — processing data, suggesting decisions and automating repetitive work — while people stay in control of critical steps.",
     image: "/images/insights/insight-1.jpg",
     publishedAt: "2025-08-12",
-    readingMinutes: 6,
     sections: [
       {
         heading: "Bắt đầu từ điểm nghẽn, không bắt đầu từ công nghệ",
@@ -78,7 +76,6 @@ export const mockPosts: MockPost[] = [
       "Transformation succeeds when broken into small, measurable phases — from digitising core processes to connecting data and scaling the platform.",
     image: "/images/insights/insight-3.jpg",
     publishedAt: "2025-07-28",
-    readingMinutes: 7,
     sections: [
       {
         heading: "Giai đoạn một: số hóa quy trình lõi",
@@ -115,7 +112,6 @@ export const mockPosts: MockPost[] = [
       "Zalo Mini App and similar platforms let businesses deliver commerce, loyalty and customer care on the phone — no app install required.",
     image: "/images/insights/insight-2.jpg",
     publishedAt: "2025-07-10",
-    readingMinutes: 5,
     sections: [
       {
         heading: "Tại sao Mini App phù hợp với thị trường Việt Nam",
@@ -147,12 +143,11 @@ export const mockPosts: MockPost[] = [
     title: "Hệ sinh thái MeOS: một nền tảng, nhiều sản phẩm kết nối",
     titleEn: "The MeOS ecosystem: one platform, many connected products",
     excerpt:
-      "MeOS 365, MeOS Ecommerce, MeOS MiniApp và MeOS Omni được thiết kế để chia sẻ dữ liệu và quy trình — triển khai từng phần, mở rộng khi cần.",
+      "MeOS Ecommerce, MeOS MiniApp, MeOS Omni và MeOS HiCare được thiết kế để chia sẻ dữ liệu và quy trình — triển khai từng phần, mở rộng khi cần.",
     excerptEn:
-      "MeOS 365, MeOS Ecommerce, MeOS MiniApp and MeOS Omni are designed to share data and workflows — deploy incrementally, expand when needed.",
+      "MeOS Ecommerce, MeOS MiniApp, MeOS Omni and MeOS HiCare are designed to share data and workflows — deploy incrementally, expand when needed.",
     image: "/images/insights/insight-4.jpg",
     publishedAt: "2025-06-20",
-    readingMinutes: 5,
     sections: [
       {
         heading: "Triết lý một nền tảng",
@@ -189,7 +184,6 @@ export const mockPosts: MockPost[] = [
       "When people, finance, inventory and customers live on one system, reporting stops being an end-of-month manual exercise.",
     image: "/images/insights/insight-5.jpg",
     publishedAt: "2025-06-05",
-    readingMinutes: 6,
     sections: [
       {
         heading: "Vấn đề của dữ liệu phân tán",
@@ -226,7 +220,6 @@ export const mockPosts: MockPost[] = [
       "Registrations from the website, social channels and consultants need to flow into one system — instead of being manually consolidated at the end of the day.",
     image: "/images/insights/insight-6.jpg",
     publishedAt: "2025-05-22",
-    readingMinutes: 5,
     sections: [
       {
         heading: "Một điểm tiếp nhận duy nhất",
@@ -263,7 +256,6 @@ export const mockPosts: MockPost[] = [
       "When the management system connects directly to carriers, order status updates itself — staff stop checking each shipment by hand.",
     image: "/images/industries/logistics.jpg",
     publishedAt: "2025-05-08",
-    readingMinutes: 6,
     sections: [
       {
         heading: "Một luồng dữ liệu thống nhất",
@@ -300,7 +292,6 @@ export const mockPosts: MockPost[] = [
       "An event management app digitises the whole program — speakers, documents, check-in — cutting processing time from hours to minutes.",
     image: "/images/industries/healthcare.jpg",
     publishedAt: "2025-04-15",
-    readingMinutes: 5,
     sections: [
       {
         heading: "Bài toán của sự kiện chuyên môn",

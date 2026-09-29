@@ -4,7 +4,6 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { ScrollReveal } from "@/components/shared/scroll-reveal";
-import { displayHeading, label } from "@/app/[locale]/(main)/_components/section-primitives";
 import { MeosFeatureTabs } from "./_components/meos-feature-tabs";
 import { MeosFaq } from "./_components/meos-faq";
 
@@ -29,7 +28,7 @@ export default function Page() {
     return (
         <div>
             {/* 01 — Hero */}
-            <section className="relative overflow-hidden text-white" style={{ backgroundColor: NAVY }}>
+            <section className="relative -mt-[68px] overflow-hidden pt-[68px] text-white" style={{ backgroundColor: NAVY }}>
                 <div
                     aria-hidden="true"
                     className="pointer-events-none absolute inset-0"
@@ -133,7 +132,10 @@ export default function Page() {
                                     <h3 className="mt-3 text-[17px] font-semibold text-foreground">{t(`experience.step${i}Title`)}</h3>
                                     <p className="mt-2.5 text-[14px] leading-[1.7] text-muted-foreground">{t(`experience.step${i}Desc`)}</p>
                                     {i < steps.length ? (
-                                        <ArrowDown aria-hidden="true" className="absolute -bottom-[26px] left-1/2 hidden h-5 w-5 -translate-x-1/2 text-muted-foreground/50 md:block" />
+                                        <>
+                                            <ArrowRight aria-hidden="true" className="absolute -right-[18px] top-1/2 hidden h-4 w-4 -translate-y-1/2 text-muted-foreground/50 md:block" />
+                                            <ArrowDown aria-hidden="true" className="absolute -bottom-[18px] left-1/2 h-4 w-4 -translate-x-1/2 text-muted-foreground/50 md:hidden" />
+                                        </>
                                     ) : null}
                                 </div>
                             ))}
@@ -218,3 +220,7 @@ export default function Page() {
         </div>
     );
 }
+
+const displayHeading = "font-medium tracking-[-0.045em] text-balance";
+
+const label = "text-[10px] font-bold uppercase tracking-[0.16em] sm:text-[11px]";

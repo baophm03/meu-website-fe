@@ -9,7 +9,7 @@ export function MeosDiscovery({
   items,
   accent = "#1768D6",
 }: {
-  items: { need: string; product: string; desc: string; href: string }[];
+  items: { need: string; product: string; desc: string; href: string; ctaLabel?: string }[];
   accent?: string;
 }) {
   const [active, setActive] = useState(0);
@@ -83,7 +83,7 @@ export function MeosDiscovery({
             className="h-px w-8 transition-all group-hover:w-12"
             style={{ backgroundColor: accent }}
           />
-          {current.product}
+          {current.ctaLabel ?? current.product}
           <ArrowRight aria-hidden="true" className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
         </Link>
       </div>

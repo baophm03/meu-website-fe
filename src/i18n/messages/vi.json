@@ -9,7 +9,7 @@
     "trustCenter": "Trust Center"
   },
   "actions": {
-    "talkToExpert": "Nói chuyện với chuyên gia",
+    "talkToExpert": "Liên hệ ngay với MeU",
     "search": "Tìm kiếm",
     "searchPlaceholder": "Tìm giải pháp, ngành nghề, case study, insights…",
     "switchLanguage": "Đổi ngôn ngữ, hiện tại {locale}",
@@ -17,7 +17,7 @@
     "closeMenu": "Đóng menu",
     "collapse": "Thu gọn",
     "expand": "Mở rộng",
-    "serviceCardAriaLabel": "{title} — trao đổi với chuyên gia",
+    "serviceCardAriaLabel": "{title} — liên hệ ngay với MeU",
     "mainNavigation": "Điều hướng chính",
     "mobileNavigation": "Điều hướng di động"
   },
@@ -31,8 +31,6 @@
   },
   "footer": {
     "tagline": "Công nghệ · Giải pháp · Chuyển đổi. Chúng tôi thiết kế, xây dựng và vận hành các hệ thống đưa doanh nghiệp bạn tiến lên.",
-    "address": "TP. Hồ Chí Minh, Việt Nam",
-    "contactTeam": "Liên hệ đội ngũ",
     "rights": "© {year} MeU Solutions. Bảo lưu mọi quyền.",
     "privacy": "Riêng tư",
     "security": "Bảo mật",
@@ -67,7 +65,6 @@
     "industriesWeWorkInBlurb": "Chỉ các ngành có chuyên môn và minh chứng triển khai rõ ràng.",
     "meosUniverse": "Vũ trụ MeOS",
     "meosUniverseBlurb": "Một hệ sinh thái — đa dạng giải pháp — toàn diện năng lực. Nền tảng sản phẩm có lộ trình rõ ràng và demo trực tiếp.",
-    "meos365": "MeOS 365",
     "meosEcommerce": "MeOS Ecommerce",
     "meosMiniApp": "MeOS MiniApp",
     "meosOmni": "MeOS Omni",
@@ -127,7 +124,7 @@
           "title1": "Biến dữ liệu thô thành",
           "title2": "sản phẩm AI thực tế.",
           "description": "Từ tích hợp LLM đến pipeline ML production — chúng tôi thiết kế, xây dựng và vận hành AI tạo ra giá trị.",
-          "primaryCta": "Trao đổi với chuyên gia",
+          "primaryCta": "Liên hệ ngay với MeU",
           "secondaryCta": "Năng lực AI"
         },
         "s4": {
@@ -179,7 +176,7 @@
     "businessSolutions": {
       "eyebrow": "Giải pháp doanh nghiệp",
       "heading": "Thay đổi cách vận hành. Không chỉ phần mềm.",
-      "summary": "Chúng tôi kết nối thiết kế kinh doanh với kỹ thuật, để mọi giải pháp có mục đích rõ ràng và đường vào công việc hằng ngày.",
+      "summary": "Ứng dụng công nghệ vào kinh doanh, để mọi thử thách trở nên dễ dàng hơn với công việc hàng ngày.",
       "allSolutions": "Tất cả giải pháp",
       "sol1": "Chuyển đổi số toàn diện",
       "sol1Desc": "Lộ trình, nền tảng và áp dụng — chuyển đổi số theo từng bước, đo được bằng kết quả kinh doanh.",
@@ -220,7 +217,7 @@
     "industries": {
       "eyebrow": "Ngành nghề",
       "heading": "Vận hành cả thế giới.",
-      "summary": "Chúng tôi chỉ triển khai trong những ngành mà mình đã có chuyên môn thực tế và minh chứng bàn giao rõ ràng.",
+      "summary": "Chúng tôi giải quyết vấn đề khi đã có chuyên môn thực tế và minh chứng bàn giao rõ ràng.",
       "allIndustries": "Tất cả ngành",
       "ind1Title": "Y tế",
       "ind1Desc": "Số hoá hành trình bệnh nhân từ đặt lịch, tiếp nhận đến hồ sơ và chăm sóc sau khám — kết nối phòng khám, bệnh viện và đội ngũ y tế trên một nền tảng thống nhất, đúng chuẩn bảo mật dữ liệu sức khoẻ.",
@@ -258,9 +255,7 @@
       "d5Desc": "Kỹ sư giàu kinh nghiệm tại Việt Nam với mức chi phí tối ưu cho thị trường toàn cầu.",
       "stat1Label": "Năm thành lập",
       "stat2Label": "Năm kinh nghiệm",
-      "stat3Label": "Nhân sự tài năng",
-      "footerNote": "Logo khách hàng và chỉ số bàn giao xác thực được công bố tại đây sau phê duyệt.",
-      "proofNotPromises": "Minh chứng, không lời hứa."
+      "stat3Label": "Nhân sự tài năng"
     },
     "insights": {
       "eyebrow": "Insights",
@@ -290,7 +285,7 @@
       "eyebrow": "Cùng xây điều tiếp theo",
       "heading1": "Mang đến thách thức.",
       "heading2": "Chúng tôi mang đến hướng đi.",
-      "description": "Bắt đầu một cuộc trò chuyện tập trung với đối tác công nghệ cấp cao của MeU. Bạn rời đi với góc nhìn về vấn đề, các lựa chọn và bước tiếp theo thực tế.",
+      "description": "Kết nối cùng chuyên gia công nghệ cấp cao tại MeU để nhìn thấu vấn đề, chọn đúng giải pháp và chốt bước đi tiếp theo.",
       "secondaryButton": "Xem cách chúng tôi đã làm"
     },
     "metadata": {

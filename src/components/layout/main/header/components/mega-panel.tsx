@@ -36,7 +36,7 @@ export function MegaPanel({ item, onClose }: { item: NavItem; onClose: () => voi
         </div>
 
         {item.featured ? (
-          <div className="flex flex-col justify-between rounded-2xl bg-surface-dark p-6 lg:col-span-4">
+          <div className="flex flex-col justify-between rounded-2xl border border-white/10 bg-black/30 p-6 backdrop-blur-xl backdrop-saturate-150 lg:col-span-4">
             <div>
               <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-primary-light">{item.featured.eyebrow}</span>
               <p className="mt-3 text-[19px] font-semibold leading-snug text-white">{item.featured.title}</p>
