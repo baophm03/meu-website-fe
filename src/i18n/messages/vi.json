@@ -291,6 +291,38 @@
       "description": "Kết nối cùng chuyên gia công nghệ cấp cao tại MeU để nhìn thấu vấn đề, chọn đúng giải pháp và chốt bước đi tiếp theo.",
       "secondaryButton": "Xem cách chúng tôi đã làm"
     },
+    "feedback": {
+      "eyebrow": "Lời khách hàng",
+      "heading": "Khách hàng nói gì về MeU.",
+      "summary": "Những chia sẻ về trải nghiệm hợp tác, cách làm việc và giá trị mà các dự án mang lại.",
+      "ratingLabel": "Đánh giá năm sao",
+      "previous": "Phản hồi trước",
+      "next": "Phản hồi tiếp theo",
+      "feedback1Quote": "Đội ngũ bắt đầu bằng việc tìm hiểu quy trình của chúng tôi trước khi đề xuất giải pháp. Nhờ vậy, các quyết định kỹ thuật luôn gắn với mục tiêu vận hành.",
+      "feedback1Name": "Nguyễn Minh Anh",
+      "feedback1Role": "Giám đốc vận hành · Doanh nghiệp bán lẻ",
+      "feedback2Quote": "Cách làm việc minh bạch giúp các bên nắm rõ tiến độ và ưu tiên. Chúng tôi có thể trao đổi vấn đề sớm và cùng thống nhất hướng xử lý.",
+      "feedback2Name": "Trần Quốc Bảo",
+      "feedback2Role": "Giám đốc công nghệ · Doanh nghiệp dịch vụ",
+      "feedback3Quote": "Đội ngũ phối hợp chặt chẽ từ giai đoạn khám phá đến bàn giao. Sản phẩm được xây dựng theo nhu cầu thực tế và có kế hoạch tiếp tục cải tiến.",
+      "feedback3Name": "Lê Thu Hà",
+      "feedback3Role": "Quản lý chương trình · Tổ chức giáo dục",
+      "feedback4Quote": "Chúng tôi đánh giá cao việc đội ngũ chủ động chia sẻ tiến độ và rủi ro. Điều đó giúp kế hoạch triển khai rõ ràng và dễ phối hợp hơn.",
+      "feedback4Name": "Phạm Đức Long",
+      "feedback4Role": "Trưởng bộ phận sản phẩm · Công ty công nghệ",
+      "feedback5Quote": "Giải pháp được xây dựng sát với nhu cầu thực tế của đội ngũ. Việc bàn giao và hướng dẫn sử dụng cũng được chuẩn bị kỹ lưỡng.",
+      "feedback5Name": "Võ Ngọc Lan",
+      "feedback5Role": "Giám đốc điều hành · Doanh nghiệp dịch vụ"
+    },
+    "estimator": {
+      "eyebrow": "Ước tính dự án",
+      "heading1": "Khởi tạo dự án",
+      "heading2": "& nhận báo giá sơ bộ.",
+      "description": "Chọn các hạng mục yêu cầu để đội ngũ Principal Architect của chúng tôi chuẩn bị giải pháp kỹ thuật và dự toán ngân sách trong vòng 24 giờ làm việc.",
+      "promise1": "Ký kết Thỏa thuận Bảo mật Thông tin (NDA) trước khi trao đổi",
+      "promise2": "Bàn giao toàn bộ 100% bản quyền mã nguồn và tài sản trí tuệ",
+      "promise3": "Cam kết bảo hành kỹ thuật 6 tháng sau bàn giao"
+    },
     "metadata": {
       "title": "MeU Solutions — Đối tác Công nghệ & Chuyển đổi Số",
       "description": "MeU Solutions đồng hành cùng các tổ chức tham vọng để thiết kế, xây dựng và vận hành các hệ thống thúc đẩy doanh nghiệp tiến lên: chuyển đổi số, kỹ thuật phần mềm, AI ứng dụng và nhân sự IT."

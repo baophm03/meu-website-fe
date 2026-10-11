@@ -376,6 +376,7 @@
         "heading": "All posts.",
         "summary": "The latest news, insights and reports from MeU.",
         "readMore": "Read more",
+        "empty": "There are no articles at the moment. Please check back later.",
         "viewAll": "View all",
         "latest": "Latest"
       }

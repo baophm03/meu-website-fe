@@ -35,7 +35,16 @@ export default async function PagePostsSection({ slug,
 		getLocale(),
 		getTranslations("pages.insights.posts"),
 	]);
-	if (posts.length === 0) return null;
+	if (posts.length === 0) {
+		return (
+			<Section variant={dark ? "dark" : "light"} className={cn("py-12 sm:py-16 lg:py-20", dark && "bg-transparent")}>
+				<NewsSectionHead tone={tone} eyebrow={t(eyebrowKey)} title={t("heading")} />
+				<p className="rounded-2xl border border-border bg-card px-6 py-12 text-center text-muted-foreground">
+					{t("empty")}
+				</p>
+			</Section>
+		);
+	}
 
 	const isVi = locale === "vi";
 	const title = isVi ? pageConfig?.name : pageConfig?.name_en || pageConfig?.name;
@@ -121,20 +130,20 @@ const displayHeading = "font-medium tracking-[-0.045em] text-balance";
 const label = "text-[10px] font-bold uppercase tracking-[0.16em] sm:text-[11px]";
 
 function Section({ id,
-  variant = "white",
-  className,
-  children,
-  labelledBy }: {
-    id?: string;
-    variant?: "white" | "surface" | "dark" | "light";
-    className?: string;
-    children: ReactNode;
-    labelledBy?: string;
-  }) { // All variants render transparent dark — the shared ambient backdrop
-  // on the (main) layout carries the visual field across every page.
-  return (
-    <section id={id} aria-labelledby={labelledBy} data-variant={variant} className={cn("scroll-mt-20 py-16 sm:py-24 lg:py-[128px]", variant === "light" ? "text-foreground" : "text-white", className)}>
-      <Reveal className={shell}>{children}</Reveal>
-    </section>
-  );
+	variant = "white",
+	className,
+	children,
+	labelledBy }: {
+		id?: string;
+		variant?: "white" | "surface" | "dark" | "light";
+		className?: string;
+		children: ReactNode;
+		labelledBy?: string;
+	}) { // All variants render transparent dark — the shared ambient backdrop
+	// on the (main) layout carries the visual field across every page.
+	return (
+		<section id={id} aria-labelledby={labelledBy} data-variant={variant} className={cn("scroll-mt-20 py-16 sm:py-24 lg:py-[128px]", variant === "light" ? "text-foreground" : "text-white", className)}>
+			<Reveal className={shell}>{children}</Reveal>
+		</section>
+	);
 }

@@ -10,13 +10,11 @@ export default function SolutionsPage({ slug }: { slug: string[] }) {
       <PagePostsSection slug={slug} tone="light" linkSuffix="?type=solutions" />
 
       <CtaEditorial
-        eyebrow={t("cta.eyebrow")}
         heading1={t("cta.heading1")}
         heading2={t("cta.heading2")}
         description={t("cta.description")}
         primaryHref="/contact?type=consultation"
         primaryLabel={tActions("talkToExpert")}
-        hideEyebrowRail
       />
     </>
   );

@@ -6,7 +6,7 @@ import { ScrollReveal } from "@/components/shared/scroll-reveal";
 import { useTranslations } from "next-intl";
 
 const shell = "container";
-const displayHeading = "font-medium tracking-[-0.045em] text-balance";
+const displayHeading = "font-light tracking-[-0.035em] text-balance";
 
 const CHALLENGE_IMAGES = [
   "/images/solutions/website-ops.jpg",
@@ -17,7 +17,8 @@ const CHALLENGE_IMAGES = [
   "/images/solutions/digital-transformation.jpg",
 ] as const;
 
-export function Challenges() { const t = useTranslations("home.challenges");
+export function Challenges() {
+  const t = useTranslations("home.challenges");
   const challenges = [
     ["01", t("c1Title"), t("c1Desc")],
     ["02", t("c2Title"), t("c2Desc")],
@@ -32,7 +33,7 @@ export function Challenges() { const t = useTranslations("home.challenges");
       <div className={cn(shell, "grid gap-12 lg:grid-cols-[2fr_3fr] lg:gap-16")}>
         {/* 40% — sticky intro panel */}
         <ScrollReveal y={36} className="lg:sticky lg:top-28 lg:self-start">
-          <h2 id="challenges-title" className={cn(displayHeading, "text-[44px] leading-[0.98] sm:text-[58px] lg:text-[72px]")}>
+          <h2 id="challenges-title" className={cn(displayHeading, "font-barlow text-[44px] font-bold leading-[0.98] sm:text-[58px] lg:text-[72px] [&_span]:font-bold")}>
             {t("heading")}
           </h2>
           <p className="mt-7 max-w-[380px] text-[15px] leading-[1.7] text-white/55 sm:text-[16px]">{t("summary")}</p>
@@ -50,7 +51,8 @@ export function Challenges() { const t = useTranslations("home.challenges");
         {/* 60% — hover-reveal cards: title always visible, description slides open */}
         <ScrollReveal itemSelector="[data-challenge]" y={36} stagger={0.1}>
           <div className="grid gap-6 sm:grid-cols-2">
-            {challenges.map(([index, title, copy], i) => { return (
+            {challenges.map(([index, title, copy], i) => {
+              return (
                 <article
                   key={index}
                   data-challenge
@@ -66,7 +68,7 @@ export function Challenges() { const t = useTranslations("home.challenges");
 
                   {/* sliding window: title visible, description expands on hover */}
                   <div className="relative p-6 sm:p-7">
-                    <h3 className={cn(displayHeading, "text-[19px] leading-[1.25] text-white sm:text-[21px]")}>
+                    <h3 className={cn(displayHeading, "font-barlow text-[19px] font-bold leading-[1.25] text-white sm:text-[21px]")}>
                       {title}
                     </h3>
                     <div className="grid grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out sm:grid-rows-[0fr] sm:group-hover:grid-rows-[1fr]">
@@ -76,9 +78,11 @@ export function Challenges() { const t = useTranslations("home.challenges");
                     </div>
                   </div>
                 </article>
-              ); })}
+              );
+            })}
           </div>
         </ScrollReveal>
       </div>
     </section>
-  ); }
+  );
+}

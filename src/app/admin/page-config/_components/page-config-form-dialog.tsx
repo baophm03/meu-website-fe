@@ -107,7 +107,7 @@ export function PageConfigFormDialog({
 							</SelectTrigger>
 							<SelectContent className={selectContentClassName}>
 								<SelectItem value="designed" className={selectItemClassName}>
-									Đã thiết kế
+									Thiết kế sẵn
 								</SelectItem>
 								<SelectItem value="content" className={selectItemClassName}>
 									Nội dung
@@ -115,7 +115,7 @@ export function PageConfigFormDialog({
 							</SelectContent>
 						</Select>
 						<p className="mt-1 text-xs text-gray-500">
-							&ldquo;Đã thiết kế&rdquo;: render UI tĩnh có sẵn. &ldquo;Nội dung&rdquo;: hiển thị các bài viết gắn với trang.
+							&ldquo;Thiết kế sẵn&rdquo;: render UI tĩnh có sẵn. &ldquo;Nội dung&rdquo;: hiển thị các bài viết gắn với trang.
 						</p>
 					</div>
 

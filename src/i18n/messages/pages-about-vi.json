@@ -2,44 +2,83 @@
   "pages": {
     "about": {
       "hero": {
-        "eyebrow": "Về MeU",
-        "heading1": "Tư duy cấp cao.",
-        "heading2": "Bàn giao thực tế.",
-        "summary": "Chúng tôi là đối tác công nghệ và chuyển đổi số cho các tổ chức tham vọng. Thiết kế, xây dựng và vận hành các hệ thống đưa doanh nghiệp tiến lên.",
-        "primaryButton": "Liên hệ ngay với MeU",
-        "secondaryButton": "Khám phá giải pháp"
+        "eyebrow": "Giới thiệu",
+        "heading1": "MeU Solutions",
+        "heading2": "Công nghệ cho nhu cầu thực tế.",
+        "summary": "Đơn vị phát triển phần mềm và giải pháp công nghệ cho doanh nghiệp — từ tư vấn, phát triển hệ thống đến kiểm thử, triển khai và vận hành.",
+        "stat1Value": "2016",
+        "stat1Label": "Thành lập",
+        "stat2Value": "100+",
+        "stat2Label": "Đối tác & khách hàng",
+        "stat3Value": "2",
+        "stat3Label": "Văn phòng tại TP.HCM"
       },
-      "story": {
-        "eyebrow": "Câu chuyện",
-        "heading": "Xây quanh kết quả, không tính năng.",
-        "summary": "MeU được thành lập trên một nguyên tắc đơn giản: công nghệ phục vụ kinh doanh, không phải ngược lại.",
-        "body": "Chúng tôi bắt đầu từ những kỹ sư và tư vấn viên thất vọng với khoảng cách giữa chiến lược và thực thi. Quá nhiều sáng kiến chuyển đổi tạo ra slide thay vì hệ thống. Quá nhiều dự án phần mềm mất kết nối với kết quả vận hành. MeU được tạo ra để lấp khoảng cách đó."
+      "intro": {
+        "eyebrow": "Chúng tôi là ai",
+        "heading": "Xây dựng hệ thống phù hợp với nhu cầu thực tế của từng tổ chức.",
+        "body1": "MeU Solutions là đơn vị phát triển phần mềm và cung cấp giải pháp công nghệ cho doanh nghiệp, tập trung vào việc xây dựng những hệ thống phù hợp với nhu cầu thực tế của từng tổ chức. Từ tư vấn, phân tích yêu cầu, phát triển hệ thống đến kiểm thử, triển khai và hỗ trợ vận hành, MeU đồng hành cùng doanh nghiệp trong từng bước của quá trình chuyển đổi số.",
+        "body2": "Với đội ngũ có kinh nghiệm trong phát triển phần mềm và khả năng ứng dụng các công nghệ như AI, Cloud Computing và Big Data, MeU Solutions hướng đến việc tạo ra những sản phẩm công nghệ có tính thực tiễn, giúp doanh nghiệp tối ưu quy trình, nâng cao hiệu quả vận hành và mở ra những cơ hội phát triển mới.",
+        "techLabel": "Công nghệ trọng tâm",
+        "ai": "AI — Trí tuệ nhân tạo",
+        "cloud": "Cloud Computing — Điện toán đám mây",
+        "bigdata": "Big Data — Dữ liệu lớn"
       },
-      "values": {
-        "eyebrow": "Giá trị",
-        "heading": "Ba cam kết.",
-        "summary": "Định hình cách mọi dự án vận hành.",
-        "item1Title": "Kinh doanh trước tính năng",
-        "item1Desc": "Xác định kết quả vận hành trước khi cam kết giải pháp kỹ thuật.",
-        "item2Title": "Một đội ngũ kết nối",
-        "item2Desc": "Chiến lược, trải nghiệm, kỹ thuật và chất lượng hướng tới cùng kết quả.",
-        "item3Title": "Xây để duy trì hữu ích",
-        "item3Desc": "Lên kế hoạch cho áp dụng, sở hữu và cải tiến sau lần ra mắt đầu."
+      "vision": {
+        "eyebrow": "Tầm nhìn & Sứ mệnh",
+        "heading": "Định hướng dẫn lối mọi dự án.",
+        "visionLabel": "Tầm nhìn",
+        "visionBody": "Vận dụng công nghệ tạo ra cộng đồng tinh hoa.",
+        "missionLabel": "Sứ mệnh",
+        "missionBody": "Biến giấc mơ về giải pháp kỹ thuật số của bạn thành hiện thực.",
+        "valuesLabel": "Giá trị cốt lõi",
+        "value1": "Tâm mở – Cầu – Trọng",
+        "value2": "Cam kết đến xuất sắc",
+        "value3": "Trí tuệ mang lại tự do",
+        "value4": "Tận tụy và chăm sóc đối tác"
+      },
+      "contact": {
+        "eyebrow": "Thông tin liên hệ",
+        "heading": "Kết nối với MeU Solutions.",
+        "office1Label": "Văn phòng đại diện",
+        "office1Body": "Tầng 17 Vincom Center, 72 Lê Thánh Tôn, phường Sài Gòn, Thành phố Hồ Chí Minh, Việt Nam",
+        "office2Label": "Văn phòng phát triển",
+        "office2Body": "03 Sông Thao, phường Tân Sơn Hòa, Thành phố Hồ Chí Minh, Việt Nam",
+        "phoneLabel": "Điện thoại",
+        "emailLabel": "Email",
+        "webLabel": "Website"
+      },
+      "partners": {
+        "eyebrow": "Đối tác & Khách hàng",
+        "heading": "Hơn 100 đối tác, đa dạng lĩnh vực, cùng phát triển bằng công nghệ.",
+        "body1": "MeU Solutions đã đồng hành và hợp tác với hơn 100 doanh nghiệp, tổ chức và đối tác từ quy mô nhỏ đến lớn, hoạt động trong nhiều lĩnh vực khác nhau như thương mại, bán lẻ, F&B, logistics, giáo dục, y tế, dược phẩm, hiệp hội – tổ chức và các ngành dịch vụ.",
+        "body2": "Mỗi đối tác mang đến một bài toán và yêu cầu riêng. Qua đó, MeU không ngừng tích lũy kinh nghiệm, phát triển các giải pháp linh hoạt và xây dựng hệ thống phù hợp với từng mô hình hoạt động.",
+        "closing": "Hơn 100 đối tác không chỉ là con số, mà là hành trình hợp tác, kết nối và cùng tạo ra những giá trị công nghệ thiết thực."
+      },
+      "join": {
+        "eyebrow": "Tuyển dụng",
+        "heading": "Đồng đội là một phần quan trọng trong hành trình phát triển của MeU Solutions.",
+        "body": "MeU đề cao năng lực chuyên môn, tinh thần sáng tạo và thái độ trong công việc. Chúng tôi tìm kiếm những cộng sự có tinh thần học hỏi, chủ động và mong muốn cùng xây dựng những giải pháp công nghệ có giá trị thực tế.",
+        "quote": "“Chúng tôi tuyển cộng sự tài năng và chúng tôi dừng hợp tác vì thái độ.”",
+        "ctaButton": "Xem tất cả vị trí tuyển dụng",
+        "openRolesLabel": "Vị trí đang mở"
       },
       "leadership": {
-        "eyebrow": "Ban lãnh đạo",
-        "heading": "Người đã làm việc thực tế.",
-        "summary": "Đội ngũ lãnh đạo đã xây dựng và vận hành hệ thống trên y tế, logistics, bán lẻ, tài chính và giáo dục.",
-        "note": "Profile lãnh đạo chi tiết được công bố sau phê duyệt."
-      },
-      "locations": {
-        "eyebrow": "Văn phòng",
-        "heading": "Nơi chúng tôi làm việc.",
-        "summary": "Trụ sở tại TP. Hồ Chí Minh, Việt Nam. Phân phối toàn cầu.",
-        "item1Title": "TP. Hồ Chí Minh",
-        "item1Desc": "Trụ sở và trung tâm kỹ thuật.",
-        "item2Title": "Phân phối toàn cầu",
-        "item2Desc": "Đội remote và hybrid phục vụ khách hàng châu Á, châu Âu và Bắc Mỹ."
+        "eyebrow": "Đội ngũ lãnh đạo",
+        "heading": "Người đặt nền móng và dẫn dắt MeU.",
+        "ceoName": "Ông Trần Thanh Tuyền",
+        "ceoInitials": "TT",
+        "ceoRole": "Founder & CEO",
+        "bioLabel": "Giới thiệu",
+        "bio1": "Vượt qua nhiều thử thách trong ngành công nghệ, ông Trần Thanh Tuyền đã nuôi dưỡng niềm đam mê mãnh liệt với lĩnh vực kiểm thử phần mềm và giải pháp công nghệ. Với tinh thần không ngừng học hỏi, đổi mới và khát vọng mang đến những dịch vụ phát triển phần mềm chất lượng cao, năm 2016, ông quyết định thành lập MeU Solutions.",
+        "bio2": "Dưới sự dẫn dắt của ông cùng đội ngũ chuyên gia tận tâm, MeU Solutions nhanh chóng phát triển, trở thành một trong những đơn vị tiên phong cung cấp dịch vụ phát triển, kiểm thử phần mềm và tư vấn công nghệ tại Việt Nam.",
+        "bio3": "Niềm đam mê và tầm nhìn chiến lược của ông chính là nguồn cảm hứng to lớn, khẳng định rằng với sự kiên trì và không ngừng nỗ lực, bất kỳ ai cũng có thể tạo nên giá trị và thành công trong lĩnh vực công nghệ.",
+        "historyLabel": "Lịch sử công tác",
+        "history1": "Kỹ sư phần mềm, Công ty TNHH CSC Việt Nam",
+        "history2": "Quản lý cao cấp / Kỹ sư phần mềm cao cấp, Công ty TNHH KMS Technology, Việt Nam",
+        "history3": "Thạc sĩ Kỹ thuật, Đại học Bách Khoa TP.HCM (2009)",
+        "history4": "PMP (PMI, 2013) · PSM I (Scrum.org, 2014) · ISTQB (2011)",
+        "history5": "Chuyên gia tư vấn khởi nghiệp, Phân hiệu Trường Đại học FPT TP.HCM",
+        "history6": "Giảng viên Đại học Quốc tế Sài Gòn (SIU), Đại học Công nghệ (HUTECH)"
       },
       "cta": {
         "eyebrow": "Cùng xây điều tiếp theo",

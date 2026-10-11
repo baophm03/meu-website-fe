@@ -159,7 +159,6 @@ export default function IndustryDetailPage({ post,
       ) : null}
 
       <CtaSplitMedia
-        eyebrow={t("ctaEyebrow")}
         heading1={t("ctaHeading1")}
         heading2={t("ctaHeading2")}
         description={t("ctaDesc")}

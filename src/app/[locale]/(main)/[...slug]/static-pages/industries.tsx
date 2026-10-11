@@ -8,8 +8,7 @@ import { ScrollReveal } from "@/components/shared/scroll-reveal";
 import { SpotlightCard } from "@/components/shared/spotlight-card";
 import { CtaSplitMedia } from "@/app/[locale]/(main)/_components/cta/cta-split-media";
 import PagePostsSection from "./_components/page-posts-section";
-import { Reveal } from "@/components/shared/reveal";
-import type { ReactNode } from "react";
+import { Section, SectionHead, displayHeading } from "./_components/page-sections";
 
 const ICONS: Record<string, LucideIcon> = {
   healthcare: HeartPulse,
@@ -35,7 +34,7 @@ export default function IndustriesPage({ slug }: { slug: string[] }) {
   return (
     <>
       <Section variant="light">
-        <SectionHead title={t("heading")} summary={t("summary")} />
+        <SectionHead eyebrow="" title={t("heading")} summary={t("summary")} />
         <ScrollReveal itemSelector="[data-industry-card]" y={36} stagger={0.12}>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {industries.map(([titleKey, descKey, href, icon, image]) => {
@@ -73,7 +72,6 @@ export default function IndustriesPage({ slug }: { slug: string[] }) {
       </Section>
       <PagePostsSection slug={slug} tone="light" linkSuffix="?type=industries" />
       <CtaSplitMedia
-        eyebrow={t("ctaEyebrow")}
         heading1={t("ctaHeading1")}
         heading2={t("ctaHeading2")}
         description={t("ctaDesc")}
@@ -83,48 +81,5 @@ export default function IndustriesPage({ slug }: { slug: string[] }) {
         secondaryLabel={t("ctaSecondary")}
       />
     </>
-  );
-}
-
-const shell = "container";
-const displayHeading = "font-medium tracking-[-0.045em] text-balance";
-
-function Section({ id,
-  variant = "white",
-  className,
-  children,
-  labelledBy }: {
-    id?: string;
-    variant?: "white" | "surface" | "dark" | "light";
-    className?: string;
-    children: ReactNode;
-    labelledBy?: string;
-  }) { // All variants render transparent dark — the shared ambient backdrop
-  // on the (main) layout carries the visual field across every page.
-  return (
-    <section id={id} aria-labelledby={labelledBy} data-variant={variant} className={cn("scroll-mt-20 py-16 sm:py-24 lg:py-[128px]", variant === "light" ? "text-foreground" : "text-white", className)}>
-      <Reveal className={shell}>{children}</Reveal>
-    </section>
-  );
-}
-
-function SectionHead({ id,
-  title,
-  summary,
-  tone = "light",
-  action }: {
-    id?: string;
-    title: ReactNode;
-    summary?: string;
-    tone?: "light" | "dark";
-    action?: ReactNode;
-  }) {
-  const dark = tone === "dark";
-  return (
-    <div className="mb-12 max-w-[760px] sm:mb-16 lg:mb-20">
-      <h2 id={id} className={cn(displayHeading, "text-[34px] leading-[1.04] sm:text-[46px] lg:text-[62px]", dark ? "text-white" : "text-foreground")}>{title}</h2>
-      {summary ? <p className={cn("mt-6 max-w-md text-[15px] leading-[1.7]", dark ? "text-white/60" : "text-muted-foreground")}>{summary}</p> : null}
-      {action ? <div className="mt-8">{action}</div> : null}
-    </div>
   );
 }

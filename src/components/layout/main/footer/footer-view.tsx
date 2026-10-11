@@ -78,13 +78,13 @@ export function FooterView({
       divider: "border-white/10",
       heading: "text-white",
       tagline: "text-slate-400",
-      contactBorder: "border-white/15 text-slate-400 hover:border-[#FBAE0C] hover:text-[#FBAE0C]",
-      link: "text-slate-400 hover:text-[#FBAE0C]",
+      contactBorder: "border-white/15 text-slate-400 hover:border-primary hover:text-primary",
+      link: "text-slate-400 hover:text-primary",
       image: "opacity-80 hover:opacity-100",
       bottomText: "text-slate-500",
       separator: "text-slate-600",
-      poweredBy: "text-primary-light hover:text-[#FBAE0C]",
-      bottomLink: "hover:text-[#FBAE0C]",
+      poweredBy: "text-primary-light hover:text-primary",
+      bottomLink: "hover:text-primary",
     }
     : {
       section: "bg-[#F5F5F7] text-foreground",

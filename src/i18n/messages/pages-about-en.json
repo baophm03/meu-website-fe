@@ -2,44 +2,83 @@
   "pages": {
     "about": {
       "hero": {
-        "eyebrow": "About MeU",
-        "heading1": "Senior thinking.",
-        "heading2": "Practical delivery.",
-        "summary": "We are a technology and digital transformation partner for ambitious organizations. We design, build and operate the systems that move businesses forward.",
-        "primaryButton": "Contact MeU",
-        "secondaryButton": "Explore solutions"
+        "eyebrow": "About us",
+        "heading1": "MeU Solutions",
+        "heading2": "Technology for real-world needs.",
+        "summary": "A software development and technology solutions company — from consulting and system development to testing, deployment and operations.",
+        "stat1Value": "2016",
+        "stat1Label": "Founded",
+        "stat2Value": "100+",
+        "stat2Label": "Partners & clients",
+        "stat3Value": "2",
+        "stat3Label": "Offices in Ho Chi Minh City"
       },
-      "story": {
-        "eyebrow": "Our story",
-        "heading": "Built around outcomes, not features.",
-        "summary": "MeU was founded on a simple principle: technology should serve the business, not the other way around.",
-        "body": "We started as a team of engineers and consultants who were frustrated by the gap between strategy and execution. Too many transformation initiatives produced slides instead of working systems. Too many software projects lost the connection to the operational result they were supposed to deliver. We built MeU to close that gap — to connect business design with engineering, so every solution has a clear purpose and a practical route into daily work."
+      "intro": {
+        "eyebrow": "Who we are",
+        "heading": "Building systems that fit each organization's real needs.",
+        "body1": "MeU Solutions is a software development and technology solutions company focused on building systems that fit the practical needs of each organization. From consulting, requirement analysis and system development to testing, deployment and operations support, MeU walks alongside businesses through every step of their digital transformation.",
+        "body2": "With a team experienced in software development and applied technologies such as AI, Cloud Computing and Big Data, MeU Solutions aims to create practical technology products that streamline processes, improve operational efficiency and open up new opportunities for growth.",
+        "techLabel": "Core technologies",
+        "ai": "AI — Artificial Intelligence",
+        "cloud": "Cloud Computing",
+        "bigdata": "Big Data"
       },
-      "values": {
-        "eyebrow": "What we value",
-        "heading": "Three commitments.",
-        "summary": "These shape how every engagement runs.",
-        "item1Title": "Business before features",
-        "item1Desc": "We define the operational result before committing to a technical answer.",
-        "item2Title": "One connected team",
-        "item2Desc": "Strategy, experience, engineering and quality work toward the same outcome.",
-        "item3Title": "Built to stay useful",
-        "item3Desc": "We plan for adoption, ownership and improvement beyond the first launch."
+      "vision": {
+        "eyebrow": "Vision & Mission",
+        "heading": "The direction behind every project.",
+        "visionLabel": "Vision",
+        "visionBody": "Applying technology to build a community of excellence.",
+        "missionLabel": "Mission",
+        "missionBody": "Turning your dream of digital solutions into reality.",
+        "valuesLabel": "Core values",
+        "value1": "Openness – Curiosity – Respect",
+        "value2": "Committed to excellence",
+        "value3": "Intelligence brings freedom",
+        "value4": "Dedication and partner care"
+      },
+      "contact": {
+        "eyebrow": "Contact information",
+        "heading": "Get in touch with MeU Solutions.",
+        "office1Label": "Representative office",
+        "office1Body": "17F Vincom Center, 72 Le Thanh Ton, Sai Gon Ward, Ho Chi Minh City, Vietnam",
+        "office2Label": "Development office",
+        "office2Body": "03 Song Thao, Tan Son Hoa Ward, Ho Chi Minh City, Vietnam",
+        "phoneLabel": "Phone",
+        "emailLabel": "Email",
+        "webLabel": "Website"
+      },
+      "partners": {
+        "eyebrow": "Partners & Clients",
+        "heading": "100+ partners across industries, growing together through technology.",
+        "body1": "MeU Solutions has partnered with more than 100 businesses, organizations and partners of all sizes, operating across many fields such as commerce, retail, F&B, logistics, education, healthcare, pharmaceuticals, associations and service industries.",
+        "body2": "Every partner brings a unique challenge and set of requirements. Through each collaboration, MeU keeps accumulating experience, developing flexible solutions and building systems that fit each operating model.",
+        "closing": "100+ partners is not just a number — it is a journey of collaboration, connection and practical technology value created together."
+      },
+      "join": {
+        "eyebrow": "Careers",
+        "heading": "Teammates are a vital part of MeU Solutions' journey.",
+        "body": "MeU values professional expertise, creative thinking and attitude at work. We are looking for teammates with a learning mindset, initiative and the desire to build technology solutions with real-world value together.",
+        "quote": "“We hire talented teammates — and we end partnerships over attitude.”",
+        "ctaButton": "View all open positions",
+        "openRolesLabel": "Open roles"
       },
       "leadership": {
         "eyebrow": "Leadership",
-        "heading": "People who have done the work.",
-        "summary": "Our leadership team has built and operated systems across healthcare, logistics, retail, finance and education.",
-        "note": "Detailed leadership bios are published after profile approval."
-      },
-      "locations": {
-        "eyebrow": "Locations",
-        "heading": "Where we work.",
-        "summary": "Headquartered in Ho Chi Minh City, Vietnam. Global delivery.",
-        "item1Title": "Ho Chi Minh City",
-        "item1Desc": "Headquarters and engineering hub.",
-        "item2Title": "Global delivery",
-        "item2Desc": "Remote and hybrid teams serving clients across Asia, Europe and North America."
+        "heading": "The people who founded and lead MeU.",
+        "ceoName": "Mr. Tran Thanh Tuyen",
+        "ceoInitials": "TT",
+        "ceoRole": "Founder & CEO",
+        "bioLabel": "About",
+        "bio1": "Having overcome many challenges in the technology industry, Mr. Tran Thanh Tuyen nurtured an intense passion for software testing and technology solutions. With a spirit of continuous learning, innovation and the ambition to deliver high-quality software development services, he founded MeU Solutions in 2016.",
+        "bio2": "Under his leadership together with a dedicated team of experts, MeU Solutions grew rapidly to become one of the pioneering companies in software development, software testing and technology consulting in Vietnam.",
+        "bio3": "His passion and strategic vision are a great source of inspiration — proof that with persistence and continuous effort, anyone can create value and success in the technology field.",
+        "historyLabel": "Career history",
+        "history1": "Software Engineer, CSC Vietnam Co., Ltd.",
+        "history2": "Senior Manager / Senior Software Engineer, KMS Technology Co., Ltd., Vietnam",
+        "history3": "M.Sc. in Engineering, Ho Chi Minh City University of Technology (2009)",
+        "history4": "PMP (PMI, 2013) · PSM I (Scrum.org, 2014) · ISTQB (2011)",
+        "history5": "Startup advisory expert, FPT University HCMC branch",
+        "history6": "Lecturer at Saigon International University (SIU), HUTECH University"
       },
       "cta": {
         "eyebrow": "Let's build what's next",

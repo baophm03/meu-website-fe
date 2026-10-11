@@ -10,7 +10,7 @@ export default function Page({ slug }: { slug: string[] }) {
     <>
       {slug ? <PagePostsSection slug={slug} tone="light" linkSuffix="?type=solutions" /> : null}
 
-      <CtaEditorial eyebrow={t("cta.eyebrow")} heading1={t("cta.heading1")} heading2={t("cta.heading2")} description={t("cta.description")} primaryHref="/contact?type=consultation" primaryLabel={tActions("talkToExpert")} secondaryHref="/solutions" secondaryLabel={t("cta.secondaryButton")} />
+      <CtaEditorial heading1={t("cta.heading1")} heading2={t("cta.heading2")} description={t("cta.description")} primaryHref="/contact?type=consultation" primaryLabel={tActions("talkToExpert")} secondaryHref="/solutions" secondaryLabel={t("cta.secondaryButton")} />
     </>
   );
 }
