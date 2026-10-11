@@ -101,7 +101,7 @@ export function PageConfigTable({
 										</Badge>
 									) : (
 										<Badge variant="outline" className="border-[#063e8e]/20 text-[#063e8e]">
-											Đã thiết kế
+											Thiết kế sẵn
 										</Badge>
 									)}
 								</TableCell>

@@ -29,21 +29,21 @@ export default async function CareersJobs() {
   return (
     <div>
       {[...groups.entries()].map(([dept, deptJobs]) => (
-        <div key={dept} className="py-8 first:mt-0 sm:py-10">
+        <div key={dept} className="mb-8 rounded-2xl border border-primary/10 bg-[#f4f7ff] px-5 py-8 shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-all duration-300 last:mb-0 hover:border-primary/20 hover:shadow-[0_14px_36px_rgba(49,92,255,0.08)] sm:mb-10 sm:px-8 sm:py-10">
           <div className="flex items-center gap-4">
             <h3 className={cn(displayHeading, "text-[22px] leading-tight sm:text-[26px]")}>{dept}</h3>
             <span className={cn(label, "rounded-full border border-border bg-muted px-3 py-1 text-primary")}>
               {deptJobs.length} {t("positions")}
             </span>
           </div>
-          <ul className="mt-6 space-y-3">
+          <ul className="mt-6 space-y-5">
             {deptJobs.map((job) => {
               const deadline = fmtDate(job.apply_deadline);
               return (
                 <li key={job.id}>
                   <Link
                     href={`/${job.slug}?type=jobs`}
-                    className="group grid items-center gap-3 rounded-2xl border border-border bg-white px-5 py-5 transition duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-[0_16px_40px_rgb(6,62,142,0.10)] sm:grid-cols-[1fr_auto] sm:gap-6 sm:px-7"
+                    className="group grid items-center gap-3 rounded-2xl border border-primary/10 bg-white/90 px-5 py-5 transition duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-white sm:grid-cols-[1fr_auto] sm:gap-6 sm:px-7"
                   >
                     <div className="min-w-0">
                       <h4 className="text-[17px] font-medium leading-snug transition-colors group-hover:text-primary sm:text-[19px]">

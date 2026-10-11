@@ -12,9 +12,9 @@ export interface HeroBannerSlide {
 const FALLBACK_SLIDES: HeroBannerSlide[] = [
   {
     id: "fallback",
-    title: null,
-    description: null,
-    image: null,
+    title: "MeU — Đối tác công nghệ cho tăng trưởng",
+    description: "Tư vấn, phát triển phần mềm và ứng dụng AI để biến mục tiêu kinh doanh thành kết quả thực tế.",
+    image: "/images/hero/hero-1.jpg",
   },
 ];
 
@@ -43,7 +43,7 @@ export async function fetchHeroBanners(locale: string): Promise<HeroBannerSlide[
         (locale === "en"
           ? row.description_en?.trim() || row.description?.trim()
           : row.description?.trim()) || null,
-      image: row.image?.path ? resolveCmsFileUrl(row.image.path) : null,
+      image: row.image?.path ? resolveCmsFileUrl(row.image.path) : "/images/hero/hero-1.jpg",
     }));
 
     return slides.length > 0 ? slides : FALLBACK_SLIDES;

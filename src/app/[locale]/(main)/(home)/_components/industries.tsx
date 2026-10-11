@@ -9,17 +9,20 @@ import { SpotlightCard } from "@/components/shared/spotlight-card";
 import { useTranslations } from "next-intl";
 
 const shell = "container";
-const displayHeading = "font-medium tracking-[-0.045em] text-balance";
+const displayHeading = "font-barlow font-bold tracking-[-0.035em] text-balance";
 const label = "text-[10px] font-bold uppercase tracking-[0.16em] sm:text-[11px]";
 
-const ICONS: Record<string, LucideIcon> = { healthcare: HeartPulse,
+const ICONS: Record<string, LucideIcon> = {
+  healthcare: HeartPulse,
   logistics: Truck,
   retail: ShoppingBag,
   pharma: Pill,
   education: GraduationCap,
-  associations: Users };
+  associations: Users
+};
 
-function ArrowLink({ href, children, tone = "light", className }: { href: string; children: ReactNode; tone?: "light" | "dark"; className?: string }) { return (
+function ArrowLink({ href, children, tone = "light", className }: { href: string; children: ReactNode; tone?: "light" | "dark"; className?: string }) {
+  return (
     <Link
       href={href}
       className={cn(
@@ -31,9 +34,11 @@ function ArrowLink({ href, children, tone = "light", className }: { href: string
       {children}
       <ArrowRight aria-hidden="true" className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1 motion-reduce:transform-none" />
     </Link>
-  ); }
+  );
+}
 
-export function Industries() { const t = useTranslations("home.industries");
+export function Industries() {
+  const t = useTranslations("home.industries");
   const items = [
     { title: t("ind1Title"), href: "/industries/healthcare", desc: t("ind1Desc"), icon: "healthcare", image: "/images/industries/healthcare.jpg" },
     { title: t("ind2Title"), href: "/industries/logistics-supply-chain", desc: t("ind2Desc"), icon: "logistics", image: "/images/industries/logistics.jpg" },
@@ -60,7 +65,8 @@ export function Industries() { const t = useTranslations("home.industries");
 
         <ScrollReveal itemSelector="[data-industry-card]" y={36} stagger={0.12}>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {items.map((item) => { const Icon = ICONS[item.icon];
+            {items.map((item) => {
+              const Icon = ICONS[item.icon];
               return (
                 <SpotlightCard key={item.title} data-industry-card>
                   <Link
@@ -89,9 +95,11 @@ export function Industries() { const t = useTranslations("home.industries");
                     </div>
                   </Link>
                 </SpotlightCard>
-              ); })}
+              );
+            })}
           </div>
         </ScrollReveal>
       </div>
     </section>
-  ); }
+  );
+}

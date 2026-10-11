@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
-import { ArrowDown,
+import {
+  ArrowDown,
   ArrowRight,
   Bot,
   Database,
@@ -7,34 +8,41 @@ import { ArrowDown,
   BrainCircuit,
   UserCheck,
   Workflow,
-  Zap } from "lucide-react";
+  Zap
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/shared/reveal";
 import { ScrollReveal } from "@/components/shared/scroll-reveal";
 import { useTranslations } from "next-intl";
 
 const shell = "container";
-const displayHeading = "font-medium tracking-[-0.045em] text-balance";
+const displayHeading = "font-barlow font-bold tracking-[-0.035em] text-balance";
 const label = "text-[10px] font-bold uppercase tracking-[0.16em] sm:text-[11px]";
 
 function Section({ id,
   className,
   children,
-  labelledBy }: { id?: string;
-  className?: string;
-  children: ReactNode;
-  labelledBy?: string; }) { return (
+  labelledBy }: {
+    id?: string;
+    className?: string;
+    children: ReactNode;
+    labelledBy?: string;
+  }) {
+  return (
     <section id={id} aria-labelledby={labelledBy} className={cn("relative scroll-mt-20 overflow-hidden py-16 text-white sm:py-20 lg:py-24", className)}>
       <Reveal className={shell}>{children}</Reveal>
     </section>
-  ); }
+  );
+}
 
-function SectionHead({ title, summary }: { title: ReactNode; summary?: string }) { return (
+function SectionHead({ title, summary }: { title: ReactNode; summary?: string }) {
+  return (
     <div className="mb-12 flex flex-col gap-6 sm:mb-14 lg:mb-16 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
       <h2 className={cn(displayHeading, "max-w-[680px] text-[30px] leading-[1.08] text-white sm:text-[38px] lg:text-[44px]")}>{title}</h2>
       {summary ? <p className="max-w-md shrink-0 text-[14px] leading-[1.7] text-white/55 sm:text-[15px]">{summary}</p> : null}
     </div>
-  ); }
+  );
+}
 
 const STEP_ICONS = [FolderInput, BrainCircuit, UserCheck, Zap] as const;
 const LAYER_ICONS = [Database, Bot, Workflow] as const;
@@ -43,17 +51,21 @@ const LAYER_ICONS = [Database, Bot, Workflow] as const;
 const STEP_HOVERS = [
   { // Đầu vào — violet
     card: "hover:-translate-y-1 hover:border-violet-400/50 hover:bg-violet-400/[0.07] hover:shadow-[0_0_50px_-16px_rgba(167,139,250,0.45)]",
-    icon: "group-hover:border-violet-400/40 group-hover:bg-violet-400/15 group-hover:text-violet-300" },
+    icon: "group-hover:border-violet-400/40 group-hover:bg-violet-400/15 group-hover:text-violet-300"
+  },
   null,
   { // Kiểm soát con người — amber
     card: "hover:-translate-y-1 hover:border-amber-400/50 hover:bg-amber-400/[0.07] hover:shadow-[0_0_50px_-16px_rgba(251,191,36,0.4)]",
-    icon: "group-hover:border-amber-400/40 group-hover:bg-amber-400/15 group-hover:text-amber-300" },
+    icon: "group-hover:border-amber-400/40 group-hover:bg-amber-400/15 group-hover:text-amber-300"
+  },
   { // Kết quả — emerald
     card: "hover:-translate-y-1 hover:border-emerald-400/50 hover:bg-emerald-400/[0.07] hover:shadow-[0_0_50px_-16px_rgba(52,211,153,0.4)]",
-    icon: "group-hover:border-emerald-400/40 group-hover:bg-emerald-400/15 group-hover:text-emerald-300" },
+    icon: "group-hover:border-emerald-400/40 group-hover:bg-emerald-400/15 group-hover:text-emerald-300"
+  },
 ] as const;
 
-export function AiWorkflow() { const t = useTranslations("home.aiWorkflow");
+export function AiWorkflow() {
+  const t = useTranslations("home.aiWorkflow");
   const workflow = [
     [t("step1Top"), t("step1Mid"), t("step1Bottom")],
     [t("step2Top"), t("step2Mid"), t("step2Bottom")],
@@ -79,7 +91,8 @@ export function AiWorkflow() { const t = useTranslations("home.aiWorkflow");
       {/* Pipeline diagram: input → AI processing → human control → outcome */}
       <ScrollReveal itemSelector="[data-step]" y={32} stagger={0.14}>
         <div className="relative grid gap-0 lg:grid-cols-[1fr_44px_1fr_44px_1fr_44px_1fr] lg:items-stretch">
-          {workflow.map(([step, title, detail], index) => { const StepIcon = STEP_ICONS[index];
+          {workflow.map(([step, title, detail], index) => {
+            const StepIcon = STEP_ICONS[index];
             const isCore = index === 1;
             const hover = STEP_HOVERS[index];
             return (
@@ -143,7 +156,8 @@ export function AiWorkflow() { const t = useTranslations("home.aiWorkflow");
                   </div>
                 ) : null}
               </div>
-            ); })}
+            );
+          })}
         </div>
       </ScrollReveal>
 
@@ -153,7 +167,8 @@ export function AiWorkflow() { const t = useTranslations("home.aiWorkflow");
       </ScrollReveal>
       <ScrollReveal itemSelector="[data-layer]" y={28} stagger={0.12}>
         <div className="mt-7 grid gap-5 sm:grid-cols-3">
-          {layers.map(([layerTitle, layerDesc], index) => { const LayerIcon = LAYER_ICONS[index];
+          {layers.map(([layerTitle, layerDesc], index) => {
+            const LayerIcon = LAYER_ICONS[index];
             return (
               <div
                 key={layerTitle}
@@ -166,8 +181,10 @@ export function AiWorkflow() { const t = useTranslations("home.aiWorkflow");
                 <strong className="text-[16px] font-medium leading-[1.3] text-white sm:text-[17px]">{layerTitle}</strong>
                 <p className="text-[13px] leading-[1.65] text-white/55 sm:text-[14px]">{layerDesc}</p>
               </div>
-            ); })}
+            );
+          })}
         </div>
       </ScrollReveal>
     </Section>
-  ); }
+  );
+}

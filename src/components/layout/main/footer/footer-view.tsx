@@ -78,13 +78,13 @@ export function FooterView({
       divider: "border-white/10",
       heading: "text-white",
       tagline: "text-slate-400",
-      contactBorder: "border-white/15 text-slate-400 hover:border-[#FBAE0C] hover:text-[#FBAE0C]",
-      link: "text-slate-400 hover:text-[#FBAE0C]",
+      contactBorder: "border-white/15 text-slate-400 hover:border-primary hover:text-primary",
+      link: "text-slate-400 hover:text-primary",
       image: "opacity-80 hover:opacity-100",
       bottomText: "text-slate-500",
       separator: "text-slate-600",
-      poweredBy: "text-primary-light hover:text-[#FBAE0C]",
-      bottomLink: "hover:text-[#FBAE0C]",
+      poweredBy: "text-primary-light hover:text-primary",
+      bottomLink: "hover:text-primary",
     }
     : {
       section: "bg-[#F5F5F7] text-foreground",
@@ -102,13 +102,6 @@ export function FooterView({
 
   return (
     <footer className={cn("relative overflow-hidden", theme.section)}>
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-        {isHome ? (
-          <span className="absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(102,140,255,0.4),transparent)]" />
-        ) : (
-          <span className="absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(37,99,235,0.4),transparent)]" />
-        )}
-      </div>
       <div className="container relative w-full py-14 lg:pt-20 lg:pb-10">
         <div className={cn("grid gap-x-8 gap-y-10 border-b pb-12 sm:grid-cols-2 lg:grid-cols-4", theme.divider)}>
           {columns.map((column) => (
@@ -118,10 +111,8 @@ export function FooterView({
                   {column.title}
                 </h2>
               ) : null}
-              <ul className="mt-4 space-y-2.5">
+              <ul className={cn(`${column.title ? "mt-4" : ""}  space-y-2.5`)}>
                 {column.rows.map((row) => {
-                  // 1 element = full width, 2 = 50/50, 3 = thirds, 4+ wraps
-                  // at thirds per cell.
                   const cellBasis = `${100 / Math.min(Math.max(row.items.length, 1), 3)}%`;
                   return (
                     <li key={row.key}>
@@ -139,7 +130,7 @@ export function FooterView({
                               />
                             );
                             return (
-                              <div key={el.key} className="min-w-0 pr-3" style={{ flex: `0 0 ${cellBasis}` }}>
+                              <div key={el.key} className="min-w-0" style={{ flex: "0 0 100%" }}>
                                 {el.href ? (
                                   <ElementLink href={el.href} isExternal={el.isExternal} className="inline-block">
                                     {img}

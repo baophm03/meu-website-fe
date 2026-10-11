@@ -8,7 +8,7 @@ export function Providers({ children }: LayoutProps) {
     <QueryProvider>
       <ProgressBarProvider>
         {children}
-        <Toaster richColors position="top-right" />
+        <Toaster richColors position="bottom-right" />
       </ProgressBarProvider>
     </QueryProvider>
   )

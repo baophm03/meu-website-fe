@@ -15,6 +15,7 @@ import {
 } from "@/utils/public-posts";
 import { fetchPublicJobBySlug } from "@/utils/public-jobs";
 import PostDetailPage from "./templates/post-detail";
+import PostDetailFullPage from "./templates/post-detail-full";
 import JobDetailPage from "./templates/job-detail";
 import CaseStudyDetailPage from "./templates/case-study-detail";
 import SolutionDetailPage from "./templates/solution-detail";
@@ -144,7 +145,7 @@ const contentPageOf = async (slug: string[], locale: string) => {
   if (pageConfig?.type !== "content" || posts.length === 0) return notFound();
 
   if (total === 1) {
-    return <PostDetailPage post={apiPostToMockPost(posts[0])} related={[]} locale={locale} />;
+    return <PostDetailFullPage post={apiPostToMockPost(posts[0])} locale={locale} />;
   }
   return <PagePostsSection slug={slug} tone="light" linkSuffix="?type=posts" />;
 };

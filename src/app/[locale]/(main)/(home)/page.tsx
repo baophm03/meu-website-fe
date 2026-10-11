@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Hero } from "./_components/hero";
 import { fetchHeroBanners } from "./_components/hero-banners";
@@ -10,7 +10,7 @@ import { Industries } from "./_components/industries";
 import { ClientSuccess } from "./_components/client-success";
 import { WhyMeu } from "./_components/why-meu";
 import { Insights } from "./_components/insights";
-import { CtaCinematic } from "@/app/[locale]/(main)/_components/cta/cta-cinematic";
+import { Feedback } from "./_components/feedback";
 
 type Props = { params: Promise<{ locale: string }>; };
 
@@ -27,8 +27,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations("home.finalCta");
-  const tActions = await getTranslations("actions");
   const heroSlides = await fetchHeroBanners(locale);
   return (
     <div className="relative bg-surface-dark text-white">
@@ -53,16 +51,7 @@ export default async function HomePage({ params }: Props) {
         <ClientSuccess />
         <WhyMeu />
         <Insights />
-        <CtaCinematic
-          eyebrow={t("eyebrow")}
-          heading1={t("heading1")}
-          heading2={t("heading2")}
-          description={t("description")}
-          primaryHref="/contact?type=consultation"
-          primaryLabel={tActions("talkToExpert")}
-          secondaryHref="/case-studies"
-          secondaryLabel={t("secondaryButton")}
-        />
+        <Feedback />
       </div>
     </div>
   );

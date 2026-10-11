@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Jost:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap');
 @import 'tailwindcss';
 
 @plugin "tailwindcss-animate";
@@ -5,8 +6,11 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
+  --font-jost: 'Jost', sans-serif;
+  --font-barlow: 'Barlow', sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
   --font-reddit-sans: RedditSans, sans-serif;
-  --default-font-family: 'Roboto', 'Helvetica Neue', Arial, system-ui, -apple-system, 'Segoe UI', 'Noto Sans', sans-serif;
+  --default-font-family: 'Noto Sans', 'Jost', sans-serif;
   --radius-lg: hsl(var(--radius));
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
