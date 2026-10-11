@@ -97,7 +97,7 @@ function CapabilitiesSection({ t }: { t: ReturnType<typeof useTranslations> }) {
     <Section variant="light" className="bg-transparent">
       <SectionHead tone="light" eyebrow={t("capabilitiesEyebrow")} title={t("capabilitiesTitle")} summary={t("capabilitiesSummary")} />
       <ScrollReveal itemSelector="[data-capability]" y={24} stagger={0.06}>
-        <div className="grid gap-x-14 border-t border-border lg:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
           {CAPABILITIES.map((prefix, i) => (
             <div key={prefix} data-capability className="group grid grid-cols-[40px_1fr] gap-4 rounded-2xl border border-border bg-white p-6 shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-[0_18px_40px_rgba(15,23,42,0.1)]">
               <span className={cn(label, "pt-1 text-primary")}>{`0${i + 1}`}</span>
