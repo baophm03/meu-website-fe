@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "./_providers";
 import React from "react";
-import links from "@links/index";
+import { links } from "@/config/links";
 
 export const metadata: Metadata = {
   icons: { icon: '/favicon.ico', shortcut: '/favicon.ico' },

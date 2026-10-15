@@ -1,6 +1,6 @@
 import 'dotenv/config'
 import { defineConfig } from "orval";
-import links from "./src/links/index";
+import { links } from "./src/config/links";
 
 const orvalConfig = defineConfig({
   // meu-website API

@@ -1,6 +1,6 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { footerColumns } from "./nav-data";
-import links from "@/links";
+import { links } from "@/config/links";
 import { getApiV10Footer } from "@/api/endpoints/footer";
 import type { Footer } from "@/api/models/footer";
 import type { FooterColumn } from "@/api/models/footerColumn";

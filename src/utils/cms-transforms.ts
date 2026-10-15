@@ -1,7 +1,7 @@
 "use client";
 
 import { toCmsSlug } from "@/utils/cms-slug";
-import links from "@/links";
+import { links } from "@/config/links";
 import type { PostCreate } from "@/api/models/postCreate";
 import type {
   CmsHeaderConfigItem,
