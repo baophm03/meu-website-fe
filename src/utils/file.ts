@@ -1,4 +1,4 @@
-import links from "@/links";
+import { links } from "@/config/links";
 import type { File as CmsFileItem } from "@/api/models/file";
 import type { AdminMediaItem } from "@/utils/admin-news";
 

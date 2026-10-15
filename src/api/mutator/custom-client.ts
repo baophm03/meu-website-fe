@@ -1,5 +1,5 @@
 import Axios, { AxiosError, AxiosHeaders, AxiosRequestConfig, InternalAxiosRequestConfig } from "axios";
-import links from "@/links";
+import { links } from "@/config/links";
 import useAuthStore from "@/store/useAuthStore";
 import useProfileStore from "@/store/useProfileStore";
 
