@@ -5,7 +5,7 @@ import useAuthStore, {
   type AuthenticatedAdminSession,
 } from "@/store/useAuthStore";
 import useProfileStore from "@/store/useProfileStore";
-import links from "@/links";
+import { links } from "@/config/links";
 
 const AUTH_BASE_URL = `${links.apiEndpoint}/api/v1.0/auth`;
 const SESSION_EXPIRED_MESSAGE = "Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.";
