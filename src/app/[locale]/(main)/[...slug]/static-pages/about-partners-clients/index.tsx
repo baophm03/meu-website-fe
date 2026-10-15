@@ -6,10 +6,10 @@ import { cn } from "@/lib/utils";
 
 import ClientsWall from "./_components/clients-wall";
 
-import { Reveal } from "@/components/shared/reveal";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "lucide-react";
 import type { ReactNode } from "react";
+import { Section, displayHeading, label } from "../_components/page-sections";
 
 
 export default function Page() {
@@ -126,33 +126,8 @@ export default function Page() {
 
 }
 
-const shell = "container";
-
-const displayHeading = "font-medium tracking-[-0.045em] text-balance";
-
-const label = "text-[10px] font-bold uppercase tracking-[0.16em] sm:text-[11px]";
-
 const buttonBase =
   "group inline-flex min-h-[52px] items-center justify-between gap-8 px-6 text-[12px] font-bold uppercase tracking-[0.08em] transition duration-200 focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-primary-light motion-reduce:transition-none";
-
-function Section({ id,
-  variant = "white",
-  className,
-  children,
-  labelledBy }: {
-    id?: string;
-    variant?: "white" | "surface" | "dark" | "light";
-    className?: string;
-    children: ReactNode;
-    labelledBy?: string;
-  }) { // All variants render transparent dark — the shared ambient backdrop
-  // on the (main) layout carries the visual field across every page.
-  return (
-    <section id={id} aria-labelledby={labelledBy} data-variant={variant} className={cn("scroll-mt-20 py-16 sm:py-24 lg:py-[128px]", variant === "light" ? "text-foreground" : "text-white", className)}>
-      <Reveal className={shell}>{children}</Reveal>
-    </section>
-  );
-}
 
 function PrimaryButton({ href, children, className }: { href: string; children: ReactNode; className?: string }) {
   return (

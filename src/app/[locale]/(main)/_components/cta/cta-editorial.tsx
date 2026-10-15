@@ -1,29 +1,20 @@
-import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ScrollReveal } from "@/components/shared/scroll-reveal";
 import { Link } from "@/i18n/navigation";
 import type { ReactNode } from "react";
 
-/** Editorial band: eyebrow rail + oversized heading left, accent-quoted copy + actions right (IBM/Accenture). */
-export function CtaEditorial({ eyebrow, heading1, heading2, description, hideEyebrowRail = false, ...actions }: CtaProps) {
+/** Editorial band: oversized heading left, accent-quoted copy + actions right (IBM/Accenture). */
+export function CtaEditorial({ heading1, heading2, description, ...actions }: CtaProps) {
   return (
-    <section aria-labelledby="cta-title" className="border-y border-white/10 bg-surface-dark text-white">
-      <ScrollReveal className={shell} y={44}>
-        {/* Top rail — eyebrow + rule + oversized arrow */}
-        {hideEyebrowRail ? null : (
-          <div className="flex items-center gap-6 border-b border-white/10 py-7 sm:py-9">
-            <span className={cn(label, "flex items-center gap-3 text-[#00f0ff]")}>
-              <i aria-hidden="true" className="h-px w-8 shrink-0 bg-[#00f0ff]/70" />
-              {eyebrow}
-            </span>
-            <i aria-hidden="true" className="h-px flex-1 bg-white/10" />
-            <ArrowUpRight aria-hidden="true" className="h-8 w-8 shrink-0 text-primary sm:h-10 sm:w-10" strokeWidth={1.5} />
-          </div>
-        )}
-
-        {/* Body — display heading left, quoted copy + actions right */}
-        <div className="grid gap-12 py-16 sm:py-20 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] lg:gap-20 lg:py-[110px]">
-          <h2 id="cta-title" className={cn(displayHeading, "text-[42px] leading-[0.95] sm:text-[60px] lg:text-[84px]")}>
+    <section aria-labelledby="cta-title" className="relative overflow-hidden border-y border-white/10 bg-surface-dark text-white">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_55%_70%_at_88%_10%,rgba(6,62,142,0.35),transparent_70%)]"
+      />
+      <ScrollReveal className={cn(shell, "relative")} y={44}>
+        <div className="grid items-end gap-10 py-16 sm:py-20 lg:grid-cols-[minmax(0,1.55fr)_minmax(0,1fr)] lg:gap-20 lg:py-[104px]">
+          <h2 id="cta-title" className={cn(displayHeading, "text-[38px] leading-[0.98] sm:text-[54px] lg:text-[76px]")}>
             {heading1}
             {heading2 ? (
               <>
@@ -32,7 +23,7 @@ export function CtaEditorial({ eyebrow, heading1, heading2, description, hideEye
               </>
             ) : null}
           </h2>
-          <div className="flex flex-col justify-end gap-10 lg:pb-3">
+          <div className="flex flex-col gap-8 lg:pb-2">
             <p className="border-l-2 border-primary pl-6 text-[15px] leading-[1.75] text-white/60 sm:text-[16px]">
               {description}
             </p>
@@ -48,10 +39,7 @@ const shell = "container";
 
 const displayHeading = "font-medium tracking-[-0.045em] text-balance";
 
-const label = "text-[10px] font-bold uppercase tracking-[0.16em] sm:text-[11px]";
-
 type CtaProps = {
-  eyebrow: string;
   heading1: string;
   heading2?: string;
   description: string;
@@ -59,8 +47,6 @@ type CtaProps = {
   primaryLabel: string;
   secondaryHref?: string;
   secondaryLabel?: string;
-  image?: string;
-  hideEyebrowRail?: boolean;
 };
 
 function Soft({ children }: { children: ReactNode }) { return <span className="text-white/45">{children}</span>; }

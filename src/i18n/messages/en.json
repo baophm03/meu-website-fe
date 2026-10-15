@@ -291,6 +291,38 @@
       "description": "Start a focused conversation with a senior MeU technology partner. You leave with a point of view on the problem, the options and a realistic next step.",
       "secondaryButton": "See how we've done it"
     },
+    "feedback": {
+      "eyebrow": "Client feedback",
+      "heading": "What clients say about MeU.",
+      "summary": "A closer look at the partnerships, ways of working and outcomes behind our projects.",
+      "ratingLabel": "Five-star rating",
+      "previous": "Previous feedback",
+      "next": "Next feedback",
+      "feedback1Quote": "The team started by understanding our processes before proposing a solution. That kept technical decisions connected to our operational goals.",
+      "feedback1Name": "Minh Anh Nguyen",
+      "feedback1Role": "Operations Director · Retail business",
+      "feedback2Quote": "Their transparent approach kept everyone aligned on progress and priorities. We could raise issues early and agree on a clear way forward.",
+      "feedback2Name": "Quoc Bao Tran",
+      "feedback2Role": "Chief Technology Officer · Services company",
+      "feedback3Quote": "The team worked closely with us from discovery through handover. The product addressed real needs and came with a plan for continued improvement.",
+      "feedback3Name": "Thu Ha Le",
+      "feedback3Role": "Programme Manager · Education organization",
+      "feedback4Quote": "We valued how proactively the team communicated progress and risks. It made the delivery plan clearer and easier for everyone to work around.",
+      "feedback4Name": "Duc Long Pham",
+      "feedback4Role": "Head of Product · Technology company",
+      "feedback5Quote": "The solution was shaped around our team's real needs. The handover and user guidance were also prepared with care.",
+      "feedback5Name": "Ngoc Lan Vo",
+      "feedback5Role": "Managing Director · Services business"
+    },
+    "estimator": {
+      "eyebrow": "Project estimator",
+      "heading1": "Start your project",
+      "heading2": "& get a preliminary estimate.",
+      "description": "Tell us what you need and our Principal Architect team will prepare a technical approach and budget estimate within 24 business hours.",
+      "promise1": "Mutual NDA signed before any detailed discussion",
+      "promise2": "100% source-code ownership and IP handed over",
+      "promise3": "6-month technical warranty after delivery"
+    },
     "metadata": {
       "title": "MeU Solutions — Technology & Digital Transformation Partner",
       "description": "MeU Solutions partners with ambitious organizations to design, build and operate the systems that move their business forward: transformation, software engineering, applied AI and IT talent."

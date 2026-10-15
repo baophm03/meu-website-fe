@@ -159,7 +159,6 @@ export default function SolutionDetailPage({ post,
       ) : null}
 
       <CtaEditorial
-        eyebrow={t("ctaEyebrow")}
         heading1={t("ctaHeading1")}
         heading2={t("ctaHeading2")}
         description={t("ctaDesc")}

@@ -5,7 +5,7 @@ import { MetricCounter } from "@/components/shared/metric-counter";
 import { useTranslations } from "next-intl";
 
 const shell = "container";
-const displayHeading = "font-medium tracking-[-0.045em] text-balance";
+const displayHeading = "font-barlow font-bold tracking-[-0.035em] text-balance";
 const label = "text-[10px] font-bold uppercase tracking-[0.16em] sm:text-[11px]";
 
 function Section({ id,
@@ -19,11 +19,11 @@ function Section({ id,
     children: ReactNode;
     labelledBy?: string;
   }) {
-    const variants = {
-      white: "bg-transparent text-white",
-      surface: "bg-white/5 text-white",
-      dark: "text-white"
-    } as const;
+  const variants = {
+    white: "bg-transparent text-white",
+    surface: "bg-white/5 text-white",
+    dark: "text-white"
+  } as const;
   return (
     <section id={id} aria-labelledby={labelledBy} className={cn("scroll-mt-20 py-16 sm:py-24 lg:py-[128px]", variants[variant], className)}>
       <Reveal className={shell}>{children}</Reveal>
@@ -42,7 +42,7 @@ function SectionHead({ id,
     tone?: "light" | "dark";
     action?: ReactNode;
   }) {
-    const dark = tone === "dark";
+  const dark = tone === "dark";
   return (
     <div className="mb-12 sm:mb-16">
       <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-12">

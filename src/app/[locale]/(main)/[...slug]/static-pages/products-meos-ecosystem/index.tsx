@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { ScrollReveal } from "@/components/shared/scroll-reveal";
 import { MeosDiscovery } from "./_components/meos-discovery";
+import { displayHeading, label } from "../_components/page-sections";
 
 const NAVY = "#0D2346";
 const BLUE = "#1768D6";
@@ -361,6 +362,3 @@ export default function Page() {
   );
 }
 
-const displayHeading = "font-medium tracking-[-0.045em] text-balance";
-
-const label = "text-[10px] font-bold uppercase tracking-[0.16em] sm:text-[11px]";

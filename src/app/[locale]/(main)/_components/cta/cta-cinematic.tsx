@@ -1,25 +1,19 @@
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { ScrollReveal } from "@/components/shared/scroll-reveal";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "lucide-react";
 import type { ReactNode } from "react";
 
-/** Full-bleed photo backdrop, centered (original design). */
-export function CtaCinematic({ eyebrow, heading1, heading2, description, image = DEFAULT_IMAGE, ...actions }: CtaProps) {
+/** Centered statement on a deep glow backdrop (original design, photo-free). */
+export function CtaCinematic({ heading1, heading2, description, ...actions }: CtaProps) {
   return (
-    <section aria-labelledby="cta-title" className="relative overflow-hidden bg-surface-dark py-24 text-white lg:py-[150px]">
-      <Image
-        src={image}
-        alt=""
-        fill
-        sizes="100vw"
-        className="pointer-events-none object-cover"
+    <section aria-labelledby="cta-title" className="relative overflow-hidden border-y border-white/10 bg-surface-dark py-24 text-white lg:py-[140px]">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_62%_70%_at_50%_108%,rgba(6,62,142,0.45),transparent_72%)]"
       />
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-black/70" />
       <ScrollReveal className={cn(shell, "relative text-center")} y={44}>
-        <Eyebrow centered>{eyebrow}</Eyebrow>
-        <h2 id="cta-title" className={cn(displayHeading, "mx-auto mt-9 max-w-[1040px] text-[40px] leading-[0.98] sm:text-[58px] lg:text-[72px]")}>
+        <h2 id="cta-title" className={cn(displayHeading, "mx-auto max-w-[1040px] text-[40px] leading-[0.98] sm:text-[58px] lg:text-[72px]")}>
           {heading1}
           {heading2 ? (
             <>
@@ -41,12 +35,7 @@ const shell = "container";
 
 const displayHeading = "font-medium tracking-[-0.045em] text-balance";
 
-const label = "text-[10px] font-bold uppercase tracking-[0.16em] sm:text-[11px]";
-
-const DEFAULT_IMAGE = "/images/cta-bg.jpg";
-
 type CtaProps = {
-  eyebrow: string;
   heading1: string;
   heading2?: string;
   description: string;
@@ -54,20 +43,9 @@ type CtaProps = {
   primaryLabel: string;
   secondaryHref?: string;
   secondaryLabel?: string;
-  image?: string;
 };
 
 function Soft({ children }: { children: ReactNode }) { return <span className="text-white/45">{children}</span>; }
-
-function Eyebrow({ children, centered = false }: { children: ReactNode; centered?: boolean }) {
-  return (
-    <span className={cn(label, "inline-flex items-center gap-3 text-[#00f0ff]")}>
-      <i aria-hidden="true" className="h-px w-8 bg-[#00f0ff]/70" />
-      {children}
-      {centered ? <i aria-hidden="true" className="h-px w-8 bg-[#00f0ff]/70" /> : null}
-    </span>
-  );
-}
 
 const buttonBase =
   "group inline-flex min-h-[52px] items-center justify-between gap-8 px-6 text-[12px] font-bold uppercase tracking-[0.08em] transition duration-200 focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-primary-light motion-reduce:transition-none";

@@ -8,10 +8,11 @@ import { SpotlightCard } from "@/components/shared/spotlight-card";
 import { useTranslations } from "next-intl";
 
 const shell = "container";
-const displayHeading = "font-medium tracking-[-0.045em] text-balance";
+const displayHeading = "font-barlow font-bold tracking-[-0.035em] text-balance";
 const label = "text-[10px] font-bold uppercase tracking-[0.16em] sm:text-[11px]";
 
-function ArrowLink({ href, children, tone = "light", className }: { href: string; children: ReactNode; tone?: "light" | "dark"; className?: string }) { return (
+function ArrowLink({ href, children, tone = "light", className }: { href: string; children: ReactNode; tone?: "light" | "dark"; className?: string }) {
+  return (
     <Link
       href={href}
       className={cn(
@@ -23,13 +24,15 @@ function ArrowLink({ href, children, tone = "light", className }: { href: string
       {children}
       <ArrowRight aria-hidden="true" className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1 motion-reduce:transform-none" />
     </Link>
-  ); }
+  );
+}
 
 /** Solution card shell: glass surface, gradient edge, glowing accent line on hover. */
 const primaryCard =
   "relative h-full overflow-hidden border border-white/10 border-white/12 bg-white/[0.03] backdrop-blur-sm transition-colors duration-300 hover:border-white/25 before:absolute before:inset-x-0 before:top-0 before:z-10 before:h-px before:bg-[linear-gradient(90deg,transparent,rgba(0,240,255,0.7),transparent)] before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100";
 
-export function BusinessSolutions() { const t = useTranslations("home.businessSolutions");
+export function BusinessSolutions() {
+  const t = useTranslations("home.businessSolutions");
   const solutions = [
     { title: t("sol1"), desc: t("sol1Desc"), href: "/solutions/digital-transformation", image: "/images/solutions/digital-transformation.jpg" },
     { title: t("sol2"), desc: t("sol2Desc"), href: "/solutions/enterprise-management", image: "/images/solutions/enterprise-management.jpg" },
@@ -91,4 +94,5 @@ export function BusinessSolutions() { const t = useTranslations("home.businessSo
         </ScrollReveal>
       </div>
     </section>
-  ); }
+  );
+}

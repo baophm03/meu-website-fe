@@ -14,7 +14,7 @@ import type { HeroBannerSlide } from "./hero-banners";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
-const displayHeading = "font-medium tracking-[-0.045em] text-balance";
+const displayHeading = "font-barlow font-bold tracking-[-0.035em] text-balance";
 const label = "text-[10px] font-bold uppercase tracking-[0.16em] sm:text-[11px]";
 
 /** Items fade/slide in each time their slide becomes active. */
@@ -110,6 +110,7 @@ export function Hero({ slides }: HeroProps) {
                   <h1
                     className={cn(
                       displayHeading,
+                      "font-barlow font-bold [&_span]:font-bold",
                       revealItem,
                       "mt-6 text-[42px] font-semibold uppercase leading-[1.02] sm:text-[56px] lg:text-[64px] xl:text-[72px]",
                     )}

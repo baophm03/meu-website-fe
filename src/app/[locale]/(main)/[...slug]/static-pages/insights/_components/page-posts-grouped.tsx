@@ -24,7 +24,7 @@ export default async function PagePostsGrouped({ slug,
 		childPaths: string[];
 		tone?: "light" | "dark";
 	}) {
-		const dark = tone === "dark";
+	const dark = tone === "dark";
 	const [locale, t] = await Promise.all([getLocale(), getTranslations("pages.insights.posts")]);
 	const isVi = locale === "vi";
 	const parent = slug[0] ?? "";
@@ -43,7 +43,16 @@ export default async function PagePostsGrouped({ slug,
 		)
 	).filter((g): g is { pageConfig: PageConfig; posts: PublicPost[] } => g !== null);
 
-	if (groups.length === 0) return null;
+	if (groups.length === 0) {
+		return (
+			<Section variant={dark ? "dark" : "light"} className={cn("py-12 sm:py-16 lg:py-20", dark && "bg-transparent")}>
+				<NewsSectionHead tone={tone} eyebrow={t("eyebrow")} title={t("heading")} />
+				<p className="rounded-2xl border border-border bg-card px-6 py-12 text-center text-muted-foreground">
+					{t("empty")}
+				</p>
+			</Section>
+		);
+	}
 
 	return (
 		<>
