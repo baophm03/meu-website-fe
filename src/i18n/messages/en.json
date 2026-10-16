@@ -360,4 +360,31 @@
     "forgotError": "Could not submit request. Please try again.",
     "forgotEmailRequired": "Please enter your admin email."
   }
+  ,"admin": {
+    "sidebar": {
+      "subtitle": "Website administration",
+      "systemSection": "System administration",
+      "dashboard": "Dashboard",
+      "headerConfig": "Header management",
+      "footer": "Footer management",
+      "pageConfig": "Page management",
+      "posts": "Post management",
+      "partners": "Partner management",
+      "jobs": "Recruitment management",
+      "leaders": "Leader management",
+      "newsletter": "Newsletter subscribers",
+      "contactRequests": "Contact management",
+      "website": "Website settings",
+      "tags": "Search tags",
+      "media": "Media (images / videos)",
+      "roles": "Role management",
+      "users": "User management",
+      "passwordResetRequests": "Password reset requests"
+    },
+    "header": {
+      "changePassword": "Change password",
+      "logout": "Sign out",
+      "logoutSuccess": "Signed out of the admin area"
+    }
+  }
 }

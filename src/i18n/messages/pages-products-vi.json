@@ -19,24 +19,6 @@
         "summary": "Mỗi nhóm chia sẻ kiến trúc chung và lớp tích hợp, nên bạn có thể bắt đầu với một module và mở rộng mà không cần xây lại nền tảng.",
         "exploreLabel": "Khám phá nền tảng"
       },
-      "cat1": {
-        "label": "Doanh nghiệp",
-        "title": "Nền tảng vận hành doanh nghiệp",
-        "desc": "Workflow, CRM, phân tích và thành viên trên một lớp dữ liệu chung — được điều chỉnh theo từng mô hình vận hành.",
-        "href": "/products/enterprise"
-      },
-      "cat2": {
-        "label": "AI",
-        "title": "Nền tảng AI",
-        "desc": "Tài liệu thông minh, copilot vận hành và tự động hóa quyết định với kiểm soát của người được tích hợp sẵn.",
-        "href": "/products/ai"
-      },
-      "cat3": {
-        "label": "Thương mại",
-        "title": "Nền tảng thương mại",
-        "desc": "Bán hàng đa kênh, POS, tồn kho và hoàn tất đơn hàng kết nối đầu cuối.",
-        "href": "/products/commerce"
-      },
       "cat4": {
         "label": "Ngành",
         "title": "Nền tảng theo ngành",

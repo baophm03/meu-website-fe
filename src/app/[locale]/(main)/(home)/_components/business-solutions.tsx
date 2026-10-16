@@ -37,7 +37,7 @@ export function BusinessSolutions() {
     { title: t("sol1"), desc: t("sol1Desc"), href: "/solutions/digital-transformation", image: "/images/solutions/digital-transformation.jpg" },
     { title: t("sol2"), desc: t("sol2Desc"), href: "/solutions/enterprise-management", image: "/images/solutions/enterprise-management.jpg" },
     { title: t("sol3"), desc: t("sol3Desc"), href: "/solutions/custom-software-solutions", image: "/images/solutions/custom-software.jpg" },
-    { title: t("sol4"), desc: t("sol4Desc"), href: "/solutions/meos-ecosystem", image: "/images/solutions/meos-ecosystem.jpg" },
+    { title: t("sol4"), desc: t("sol4Desc"), href: "/products/meos-ecosystem", image: "/images/solutions/meos-ecosystem.jpg" },
     { title: t("sol5"), desc: t("sol5Desc"), href: "/solutions/website-operations", image: "/images/solutions/website-ops.jpg" },
   ];
 

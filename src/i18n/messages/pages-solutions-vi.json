@@ -1057,7 +1057,7 @@
       "businessSolutionsCategory": {
         "hero": {
           "eyebrow": "Giải pháp doanh nghiệp",
-          "heading": "7 giải pháp, một đội kết nối.",
+          "heading": "6 giải pháp, một đội kết nối.",
           "summary": "Ba vùng thực hành kết nối cho kết quả kinh doanh.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả giải pháp"
@@ -1088,10 +1088,6 @@
               "href": "/solutions/digital-commerce"
             },
             {
-              "title": "AI & Tự động hoá thông minh",
-              "href": "/solutions/ai-intelligent-automation"
-            },
-            {
               "title": "Phần mềm tuỳ chỉnh",
               "href": "/solutions/custom-software-solutions"
             }
@@ -1109,7 +1105,7 @@
       "techCapabilitiesCategory": {
         "hero": {
           "eyebrow": "Năng lực công nghệ",
-          "heading": "8 giải pháp, một đội kết nối.",
+          "heading": "7 giải pháp, một đội kết nối.",
           "summary": "Cách công việc được thiết kế, xây, tích hợp và vận hành.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả giải pháp"
@@ -1122,10 +1118,6 @@
             {
               "title": "Tư vấn công nghệ",
               "href": "/solutions/technology-consulting"
-            },
-            {
-              "title": "Kỹ thuật phần mềm",
-              "href": "/solutions/software-engineering"
             },
             {
               "title": "Kỹ thuật AI",
