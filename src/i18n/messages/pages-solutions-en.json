@@ -1057,7 +1057,7 @@
       "businessSolutionsCategory": {
         "hero": {
           "eyebrow": "Business Solutions",
-          "heading": "7 solutions, one connected team.",
+          "heading": "6 solutions, one connected team.",
           "summary": "Three connected practice areas for business outcomes.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "All solutions"
@@ -1088,10 +1088,6 @@
               "href": "/solutions/digital-commerce"
             },
             {
-              "title": "AI & Intelligent Automation",
-              "href": "/solutions/ai-intelligent-automation"
-            },
-            {
               "title": "Custom Software Solutions",
               "href": "/solutions/custom-software-solutions"
             }
@@ -1109,7 +1105,7 @@
       "techCapabilitiesCategory": {
         "hero": {
           "eyebrow": "Technology Capabilities",
-          "heading": "8 solutions, one connected team.",
+          "heading": "7 solutions, one connected team.",
           "summary": "How the work gets designed, built, integrated and operated.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "All solutions"
@@ -1122,10 +1118,6 @@
             {
               "title": "Technology Consulting",
               "href": "/solutions/technology-consulting"
-            },
-            {
-              "title": "Software Engineering",
-              "href": "/solutions/software-engineering"
             },
             {
               "title": "AI Engineering",

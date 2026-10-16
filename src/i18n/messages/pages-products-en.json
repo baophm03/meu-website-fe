@@ -19,24 +19,6 @@
         "summary": "Each family shares a common architecture and integration layer, so you can start with one module and expand without re-platforming.",
         "exploreLabel": "Explore platform"
       },
-      "cat1": {
-        "label": "Enterprise",
-        "title": "Enterprise operations platform",
-        "desc": "Workflow, CRM, analytics and membership on one shared data layer — shaped to each operating model.",
-        "href": "/products/enterprise"
-      },
-      "cat2": {
-        "label": "AI",
-        "title": "AI platforms",
-        "desc": "Document intelligence, operational copilots and decision automation with human control built in.",
-        "href": "/products/ai"
-      },
-      "cat3": {
-        "label": "Commerce",
-        "title": "Commerce platforms",
-        "desc": "Omnichannel selling, POS, inventory and fulfillment connected end to end.",
-        "href": "/products/commerce"
-      },
       "cat4": {
         "label": "Industry",
         "title": "Industry-specific platforms",

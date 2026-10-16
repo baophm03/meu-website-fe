@@ -1,5 +1,7 @@
 "use client";
 
+import { Link } from "@/i18n/navigation";
+
 export function NoPermissionMessage({
   message = "Tài khoản của bạn hiện không có quyền hạn để truy cập trang này. Vui lòng liên hệ bộ phận kỹ thuật để được hỗ trợ.",
   showContactButton = true,
@@ -37,12 +39,12 @@ export function NoPermissionMessage({
           >
             Quay lại
           </button>
-          <a
+          <Link
             href="/admin"
             className="rounded-xl bg-[#063e8e] px-6 py-3 font-medium text-white transition-colors hover:bg-[#063e8e]/90"
           >
             Về trang chính
-          </a>
+          </Link>
         </div>
       )}
     </div>

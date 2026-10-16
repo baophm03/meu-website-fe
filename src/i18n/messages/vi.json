@@ -360,4 +360,31 @@
     "forgotError": "Không thể gửi yêu cầu. Vui lòng thử lại.",
     "forgotEmailRequired": "Vui lòng nhập email quản trị."
   }
+  ,"admin": {
+    "sidebar": {
+      "subtitle": "Trang quản trị website",
+      "systemSection": "Quản trị hệ thống",
+      "dashboard": "Dashboard",
+      "headerConfig": "Quản lý header",
+      "footer": "Quản lý footer",
+      "pageConfig": "Quản lý trang",
+      "posts": "Quản lý bài viết",
+      "partners": "Quản lý đối tác",
+      "jobs": "Quản lý tuyển dụng",
+      "leaders": "Quản lý lãnh đạo",
+      "newsletter": "Quản lý Email đăng ký",
+      "contactRequests": "Quản lý liên hệ",
+      "website": "Quản lý website",
+      "tags": "Quản lý tag tìm kiếm",
+      "media": "Quản lý ảnh / video",
+      "roles": "Quản lý vai trò",
+      "users": "Quản lý người dùng",
+      "passwordResetRequests": "Yêu cầu reset MK"
+    },
+    "header": {
+      "changePassword": "Đổi mật khẩu",
+      "logout": "Đăng xuất",
+      "logoutSuccess": "Đã đăng xuất khỏi trang quản trị"
+    }
+  }
 }

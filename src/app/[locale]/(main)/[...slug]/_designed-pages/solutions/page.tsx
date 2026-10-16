@@ -1,0 +1,21 @@
+import { useTranslations } from "next-intl";
+import { CtaEditorial } from "@/components/shared/cta/cta-editorial";
+import PagePostsSection from "../_components/page-posts-section";
+
+export default function SolutionsPage({ slug }: { slug: string[] }) {
+  const t = useTranslations("pages.solutions");
+  const tActions = useTranslations("actions");
+  return (
+    <>
+      <PagePostsSection slug={slug} tone="light" linkSuffix="?type=solutions" />
+
+      <CtaEditorial
+        heading1={t("cta.heading1")}
+        heading2={t("cta.heading2")}
+        description={t("cta.description")}
+        primaryHref="/contact?type=consultation"
+        primaryLabel={tActions("talkToExpert")}
+      />
+    </>
+  );
+}

@@ -2,6 +2,7 @@ import Axios, { AxiosError, AxiosHeaders, AxiosRequestConfig, InternalAxiosReque
 import { links } from "@/config/links";
 import useAuthStore from "@/store/useAuthStore";
 import useProfileStore from "@/store/useProfileStore";
+import { isAdminPathname } from "@/utils/admin-path";
 
 interface RetriableAxiosRequestConfig extends InternalAxiosRequestConfig {
   _retry?: boolean;
@@ -16,7 +17,7 @@ const shouldSkipAuthHandling = (url?: string | null) => {
 
 const shouldHandleAdminAuth = () => {
   if (typeof window === "undefined") return false;
-  return window.location.pathname.startsWith("/admin");
+  return isAdminPathname(window.location.pathname);
 };
 
 const instance = Axios.create({
@@ -95,11 +96,10 @@ instance.interceptors.response.use(
         if (typeof window !== "undefined") {
           const currentPath = `${window.location.pathname}${window.location.search}`;
           const redirect =
-            currentPath.startsWith("/admin") &&
-              currentPath !== "/admin/login"
+            isAdminPathname(currentPath)
               ? `?redirect=${encodeURIComponent(currentPath)}`
               : "";
-          window.location.replace(`/admin/login${redirect}`);
+          window.location.replace(`/login${redirect}`);
         }
         return Promise.reject(error);
       }

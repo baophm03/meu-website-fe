@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import { ensureValidAdminAccessToken, redirectToLogin } from "@/utils/admin-auth";
 import useAuthStore from "@/store/useAuthStore";
 import useProfileStore from "@/store/useProfileStore";
