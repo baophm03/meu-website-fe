@@ -2,11 +2,14 @@ import { getTranslations } from "next-intl/server";
 import { MetricCounter } from "@/components/shared/metric-counter";
 import { getApiV10ContactInfo } from "@/api/endpoints/contact-info";
 import type { ContactInfo } from "@/api/models/contactInfo";
+import { getApiV10Leader } from "@/api/endpoints/leader";
+import type { Leader } from "@/api/models/leader";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { ArrowRight, BrainCircuit, Cloud, Database, Globe, Mail, MapPin, Phone } from "lucide-react";
 import { fetchPublicJobs } from "@/utils/public-jobs";
+import { resolveCmsFileUrl } from "@/utils/file";
 import { CtaCinematic } from "@/components/shared/cta/cta-cinematic";
 import ClientsWall from "../partners-clients/_components/clients-wall";
 import { PageHero, Section, SectionHead, displayHeading, label } from "../_components/page-sections";
@@ -37,6 +40,37 @@ async function fetchContactInfos(): Promise<ContactInfo[]> {
   }
 }
 
+async function fetchLeaders(): Promise<Leader[]> {
+  try {
+    const res = await getApiV10Leader({
+      page: 1,
+      pageSize: 50,
+      sortField: "display_order",
+      sortOrder: "asc",
+      filters: "is_active==true",
+    });
+    const data = res?.responseData as { rows?: Leader[] } | undefined;
+    return Array.isArray(data?.rows) ? data.rows : [];
+  } catch {
+    return [];
+  }
+}
+
+const getInitials = (name: string): string =>
+  name
+    .trim()
+    .split(/\s+/)
+    .slice(0, 2)
+    .map((part) => part.charAt(0).toUpperCase())
+    .join("") || "?";
+
+const stripHtml = (html: string): string =>
+  html
+    .replace(/<[^>]*>/g, " ")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
 const CONTACT_ICONS: Record<string, typeof Mail> = {
   email: Mail,
   phone: Phone,
@@ -46,7 +80,7 @@ const CONTACT_ICONS: Record<string, typeof Mail> = {
 
 export default async function AboutPage() {
   const t = await getTranslations("pages.about");
-  const [jobsResponse, contactInfos] = await Promise.all([fetchPublicJobs(), fetchContactInfos()]);
+  const [jobsResponse, contactInfos, leaders] = await Promise.all([fetchPublicJobs(), fetchContactInfos(), fetchLeaders()]);
   const jobs = jobsResponse.jobs.slice(0, 3);
 
   return (
@@ -292,6 +326,32 @@ export default async function AboutPage() {
             </div>
           </div>
         </div>
+        {leaders.length > 0 ? (
+          <div className="mt-16 border-t border-border pt-12">
+            <p className={cn(label, "text-primary")}>{t("leadership.teamEyebrow")}</p>
+            <h3 className={cn(displayHeading, "mt-3 text-[22px] leading-[1.2] sm:text-[26px]")}>{t("leadership.teamHeading")}</h3>
+            <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {leaders.map((leader) => {
+                const avatarUrl = leader.avatar?.path ? resolveCmsFileUrl(leader.avatar.path) : null;
+                const bio = leader.bio ? stripHtml(leader.bio) : null;
+                return (
+                  <li key={leader.id} className="group flex h-full flex-col items-center rounded-2xl border border-border bg-white p-6 text-center shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-[0_18px_40px_rgba(15,23,42,0.1)]">
+                    <span className="relative h-28 w-28 overflow-hidden rounded-full border-4 border-primary/10 bg-primary/5">
+                      {avatarUrl ? (
+                        <Image src={avatarUrl} alt={leader.name} fill sizes="112px" className="object-cover transition duration-500 ease-out group-hover:scale-110" />
+                      ) : (
+                        <span className="flex h-full w-full items-center justify-center font-barlow text-[26px] font-semibold text-primary">{getInitials(leader.name)}</span>
+                      )}
+                    </span>
+                    <h4 className={cn(displayHeading, "mt-5 text-[18px] leading-[1.25]")}>{leader.name}</h4>
+                    {leader.position ? <p className={cn(label, "mt-2 text-primary")}>{leader.position}</p> : null}
+                    {bio ? <p className="mt-3 line-clamp-3 text-[13px] leading-[1.7] text-muted-foreground">{bio}</p> : null}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        ) : null}
       </Section>
 
       <CtaCinematic heading1={t("cta.heading1")} heading2={t("cta.heading2")} description={t("cta.description")} primaryHref="/contact?type=consultation" primaryLabel={t("cta.primaryButton")} secondaryHref="/case-studies" secondaryLabel={t("cta.secondaryButton")} />

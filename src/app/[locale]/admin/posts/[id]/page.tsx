@@ -537,7 +537,7 @@ export default function AdminNewsDetailPage() {
                   </div>
                 </div>
 
-                <div className="rounded-xl border border-[#063e8e]/15 bg-[#063e8e]/[0.02] px-4 py-3">
+                {/* <div className="rounded-xl border border-[#063e8e]/15 bg-[#063e8e]/[0.02] px-4 py-3">
                   <div className="flex items-center justify-between gap-3">
                     <div>
                       <p className="text-sm font-medium text-gray-700">Tin nổi bật</p>
@@ -550,7 +550,7 @@ export default function AdminNewsDetailPage() {
                       onCheckedChange={(checked) => handleField("is_featured", checked)}
                     />
                   </div>
-                </div>
+                </div> */}
 
               </div>
             </div>
