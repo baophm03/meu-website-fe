@@ -1,6 +1,5 @@
 ﻿"use client";
 
-import * as React from "react";
 import {
   ChevronDown,
   ChevronRight,
@@ -202,11 +201,6 @@ export function HeaderConfigTable({
                           kind: "edit" as const,
                           label: "Chỉnh sửa danh mục",
                           onClick: () => onEdit(item),
-                        },
-                        {
-                          kind: "manage" as const,
-                          label: "Quản lý bài viết",
-                          href: `/admin/header-config/${item.id}`,
                         },
                         ...(canCreateChild
                           ? [
