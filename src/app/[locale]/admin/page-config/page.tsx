@@ -10,6 +10,7 @@ import {
 	usePostApiV10PageConfig,
 	usePutApiV10PageConfigId,
 } from "@/api/endpoints/page-config";
+import { getApiErrorMessage } from "@/utils/api-error";
 
 import { PageConfigDeleteDialog } from "./_components/page-config-delete-dialog";
 import { PageConfigFormDialog } from "./_components/page-config-form-dialog";
@@ -132,7 +133,7 @@ export default function AdminPageConfigPage() {
 			setFormOpen(false);
 			setFormValues(EMPTY_FORM);
 		} catch (error) {
-			toast.error(error instanceof Error ? error.message : "Không thể lưu trang");
+			toast.error(getApiErrorMessage(error, "Không thể lưu trang"));
 		} finally {
 			setIsSubmitting(false);
 		}
@@ -149,7 +150,7 @@ export default function AdminPageConfigPage() {
 			setDeleteTarget(null);
 			await reload();
 		} catch (error) {
-			toast.error(error instanceof Error ? error.message : "Không thể xóa trang");
+			toast.error(getApiErrorMessage(error, "Không thể xóa trang"));
 		} finally {
 			setIsSubmitting(false);
 		}

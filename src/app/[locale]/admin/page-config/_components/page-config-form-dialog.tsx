@@ -53,7 +53,7 @@ export function PageConfigFormDialog({
 
 	return (
 		<Dialog open={open} onOpenChange={onOpenChange}>
-			<DialogContent className="rounded-3xl border-[#063e8e]/15 bg-white text-gray-700 shadow-xl">
+			<DialogContent className="rounded-3xl border-[#063e8e]/15 bg-white text-gray-700 shadow-xl sm:max-w-3xl">
 				<DialogHeader>
 					<DialogTitle className="text-[#063e8e]">
 						{formValues.id ? "Chỉnh sửa trang" : "Thêm trang"}
@@ -63,100 +63,111 @@ export function PageConfigFormDialog({
 					</DialogDescription>
 				</DialogHeader>
 
-				<div className="space-y-4 py-2">
-					<div>
-						<Label className="mb-1.5 block text-gray-700">
-							Tên trang (VI) <span className="text-red-600">*</span>
-						</Label>
-						<Input
-							value={formValues.name}
-							onChange={(event) => setField("name", event.target.value)}
-							placeholder="VD: Giải pháp / Chuyển đổi số"
-							className={fieldClassName}
-						/>
-					</div>
-
-					<div>
-						<Label className="mb-1.5 block text-gray-700">Tên trang (EN)</Label>
-						<Input
-							value={formValues.name_en}
-							onChange={(event) => setField("name_en", event.target.value)}
-							placeholder="Solutions / Digital Transformation"
-							className={fieldClassName}
-						/>
-					</div>
-
-					<div>
-						<Label className="mb-1.5 block text-gray-700">Đường dẫn</Label>
-						<Input
-							value={formValues.path}
-										onChange={(event) => setField("path", event.target.value)}
-										disabled={isEditing}
-										readOnly={isEditing}
-							placeholder="/digital-transformation"
-										className={
-											isEditing
-												? `${fieldClassName} font-mono cursor-not-allowed bg-gray-50 text-gray-500`
-												: `${fieldClassName} font-mono`
-										}
-						/>
-					</div>
-
-					<div>
-						<Label className="mb-1.5 block text-gray-700">Loại trang</Label>
-						<Select
-							value={formValues.type}
-							onValueChange={(value) => setField("type", value as PageConfigFormValues["type"])}
-						>
-							<SelectTrigger className={selectTriggerClassName}>
-								<SelectValue />
-							</SelectTrigger>
-							<SelectContent className={selectContentClassName}>
-								<SelectItem value="designed" className={selectItemClassName}>
-									Thiết kế sẵn
-								</SelectItem>
-								<SelectItem value="content" className={selectItemClassName}>
-									Nội dung
-								</SelectItem>
-							</SelectContent>
-						</Select>
-						<p className="mt-1 text-xs text-gray-500">
-							&ldquo;Thiết kế sẵn&rdquo;: render UI tĩnh có sẵn. &ldquo;Nội dung&rdquo;: hiển thị các bài viết gắn với trang.
-						</p>
-					</div>
-
-					<div>
-						<Label className="mb-1.5 block text-gray-700">Mô tả (VI)</Label>
-						<Textarea
-							value={formValues.description}
-							onChange={(event) => setField("description", event.target.value)}
-							placeholder="Mô tả ngắn về trang"
-							rows={2}
-							className={fieldClassName}
-						/>
-					</div>
-
-					<div>
-						<Label className="mb-1.5 block text-gray-700">Mô tả (EN)</Label>
-						<Textarea
-							value={formValues.description_en}
-							onChange={(event) => setField("description_en", event.target.value)}
-							placeholder="Short description in English"
-							rows={2}
-							className={fieldClassName}
-						/>
-					</div>
-
-					<div className="flex items-center justify-between rounded-2xl border border-[#063e8e]/10 bg-[#f8fbff] px-4 py-3">
+				<div className="grid gap-6 py-2 md:grid-cols-2">
+					{/* Cột 1: thông tin nhận diện trang */}
+					<div className="space-y-4">
 						<div>
-							<Label className="block text-gray-700">Đang hoạt động</Label>
-							<p className="text-xs text-gray-500">Tắt để ẩn trang khỏi website</p>
+							<Label className="mb-1.5 block text-gray-700">
+								Tên trang (VI) <span className="text-red-600">*</span>
+							</Label>
+							<Input
+								value={formValues.name}
+								onChange={(event) => setField("name", event.target.value)}
+								placeholder="VD: Giải pháp / Chuyển đổi số"
+								className={fieldClassName}
+							/>
 						</div>
-						<Switch
-							checked={formValues.is_active}
-							onCheckedChange={(checked) => setField("is_active", checked)}
-						/>
+
+						<div>
+							<Label className="mb-1.5 block text-gray-700">Tên trang (EN)</Label>
+							<Input
+								value={formValues.name_en}
+								onChange={(event) => setField("name_en", event.target.value)}
+								placeholder="Solutions / Digital Transformation"
+								className={fieldClassName}
+							/>
+						</div>
+
+						<div>
+							<Label className="mb-1.5 block text-gray-700">
+								Đường dẫn <span className="text-red-600">*</span>
+							</Label>
+							<Input
+								value={formValues.path}
+								onChange={(event) => setField("path", event.target.value)}
+								disabled={isEditing}
+								readOnly={isEditing}
+								placeholder="/digital-transformation"
+								className={
+									isEditing
+										? `${fieldClassName} font-mono cursor-not-allowed bg-gray-50 text-gray-500`
+										: `${fieldClassName} font-mono`
+								}
+							/>
+							<p className="mt-1 text-xs text-gray-500">
+								Mỗi đường dẫn chỉ dùng cho một trang. Hệ thống lưu segment cuối của URL.
+							</p>
+						</div>
+
+						<div>
+							<Label className="mb-1.5 block text-gray-700">Loại trang</Label>
+							<Select
+								value={formValues.type}
+								onValueChange={(value) => setField("type", value as PageConfigFormValues["type"])}
+							>
+								<SelectTrigger className={selectTriggerClassName}>
+									<SelectValue />
+								</SelectTrigger>
+								<SelectContent className={selectContentClassName}>
+									<SelectItem value="designed" className={selectItemClassName}>
+										Thiết kế sẵn
+									</SelectItem>
+									<SelectItem value="content" className={selectItemClassName}>
+										Nội dung
+									</SelectItem>
+								</SelectContent>
+							</Select>
+							<p className="mt-1 text-xs text-gray-500">
+								&ldquo;Thiết kế sẵn&rdquo;: render UI tĩnh có sẵn. &ldquo;Nội dung&rdquo;: hiển thị các bài viết gắn với trang.
+							</p>
+						</div>
 					</div>
+
+					{/* Cột 2: mô tả */}
+					<div className="space-y-4">
+						<div>
+							<Label className="mb-1.5 block text-gray-700">Mô tả (VI)</Label>
+							<Textarea
+								value={formValues.description}
+								onChange={(event) => setField("description", event.target.value)}
+								placeholder="Mô tả ngắn về trang"
+								rows={4}
+								className={fieldClassName}
+							/>
+						</div>
+
+						<div>
+							<Label className="mb-1.5 block text-gray-700">Mô tả (EN)</Label>
+							<Textarea
+								value={formValues.description_en}
+								onChange={(event) => setField("description_en", event.target.value)}
+								placeholder="Short description in English"
+								rows={4}
+								className={fieldClassName}
+							/>
+						</div>
+					</div>
+				</div>
+
+				<div className="flex items-center justify-between rounded-2xl border border-[#063e8e]/10 bg-[#f8fbff] px-4 py-3">
+					<div>
+						<Label className="block text-gray-700">Đang hoạt động</Label>
+						<p className="text-xs text-gray-500">Tắt để ẩn trang khỏi website</p>
+					</div>
+					<Switch
+						checked={formValues.is_active}
+						onCheckedChange={(checked) => setField("is_active", checked)}
+					/>
 				</div>
 
 				<DialogFooter>
@@ -182,3 +193,4 @@ export function PageConfigFormDialog({
 		</Dialog>
 	);
 }
+
