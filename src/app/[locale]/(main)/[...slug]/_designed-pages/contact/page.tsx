@@ -63,7 +63,7 @@ export default async function ContactPage() {
           {contactInfos.length > 0 ? (
             <aside className="h-fit rounded-2xl border border-border bg-white p-6 shadow-[0_1px_2px_rgba(15,23,42,0.04)] sm:sticky sm:top-24 sm:p-8">
               <h2 className={cn(displayHeading, "text-[20px] leading-[1.2] sm:text-[22px]")}>{t("offices.heading")}</h2>
-              <ul className="mt-5 max-h-[min(60vh,560px)] space-y-2 overflow-y-auto overscroll-contain pr-2">
+              <ul className="mt-5 space-y-2">
                 {contactInfos.map((info) => {
                   const Icon = QUICK_CONTACT_ICONS[info.key] ?? AtSign;
                   const colors = QUICK_CONTACT_COLORS[info.key] ?? { icon: "text-primary", badge: "bg-primary/10" };
