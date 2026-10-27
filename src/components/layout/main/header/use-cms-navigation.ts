@@ -8,9 +8,13 @@ import {
   type CmsHeaderConfigItem,
   type CmsPagedResult,
 } from "@/utils/cms-transforms";
-import { navigation, type MegaColumn, type MegaLink, type NavItem } from "./nav-data";
+import { headerConfigs } from "@/mockdata/header";
+import { type MegaColumn, type MegaLink, type NavItem } from "./nav-data";
 
 type CmsHeaderConfigTreeNode = ReturnType<typeof buildHeaderConfigTree>[number];
+
+/** Snapshot bảng header_configs — fallback khi API lỗi/rỗng. */
+const mockHeaderNodes = buildHeaderConfigTree(headerConfigs);
 
 function labelOf(node: CmsHeaderConfigTreeNode, locale: string) {
   const nameEn = node.name_en?.trim();
@@ -88,9 +92,6 @@ export function useCmsNavigation(): NavItem[] {
   }, []);
 
   return useMemo(() => {
-    if (nodes && nodes.length > 0) {
-      return toNavItems(nodes, locale);
-    }
-    return navigation;
+    return toNavItems(nodes && nodes.length > 0 ? nodes : mockHeaderNodes, locale);
   }, [nodes, locale]);
 }

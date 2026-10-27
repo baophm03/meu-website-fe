@@ -115,7 +115,7 @@ export function AdminImagePicker({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="flex max-h-[88vh] max-w-5xl flex-col overflow-hidden rounded-3xl border-[#063e8e]/15 bg-white p-0">
+      <DialogContent className="flex max-h-[88vh] max-w-5xl flex-col overflow-hidden rounded-3xl border-[#063e8e]/15 gap-0 bg-white p-0">
         <DialogHeader className="shrink-0 border-b border-[#063e8e]/10 px-6 py-5">
           <div className="flex items-start justify-between gap-4">
             <div>
@@ -239,18 +239,6 @@ export function AdminImagePicker({
             <Pagination page={page} pageCount={totalPages} onChangePage={setPage} />
           </div>
         ) : null}
-
-        <div className="flex shrink-0 justify-end border-t border-[#063e8e]/10 px-6 py-4">
-          <Button
-            type="button"
-            variant="outline"
-            onClick={() => onOpenChange(false)}
-            className="border-[#063e8e]/15 text-gray-700 hover:bg-[#063e8e]/[0.04]"
-          >
-            <X className="mr-2 h-4 w-4" />
-            Đóng
-          </Button>
-        </div>
       </DialogContent>
     </Dialog>
   );

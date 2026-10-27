@@ -6,6 +6,7 @@ import useAuthStore, {
 } from "@/store/useAuthStore";
 import useProfileStore from "@/store/useProfileStore";
 import { links } from "@/config/links";
+import { isAdminPathname } from "@/utils/admin-path";
 
 const AUTH_BASE_URL = `${links.apiEndpoint}/api/v1.0/auth`;
 const SESSION_EXPIRED_MESSAGE = "Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.";
@@ -142,14 +143,15 @@ async function requestAuth<T>(
 export const redirectToLogin = () => {
   if (typeof window === "undefined") return;
 
-  const currentPath = `${window.location.pathname}${window.location.search}`;
+  const pathname = window.location.pathname;
+  const currentPath = `${pathname}${window.location.search}`;
   // Không redirect về các trang auth sau khi login lại
   const isAuthPage =
-    currentPath.startsWith("/login") ||
-    currentPath.startsWith("/forgot-password") ||
-    currentPath.startsWith("/admin/change-password");
+    pathname.startsWith("/login") ||
+    pathname.startsWith("/forgot-password") ||
+    (isAdminPathname(pathname) && pathname.endsWith("/change-password"));
   const redirect =
-    currentPath.startsWith("/admin") && !isAuthPage
+    isAdminPathname(pathname) && !isAuthPage
       ? `?redirect=${encodeURIComponent(currentPath)}`
       : "";
 

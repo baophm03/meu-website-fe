@@ -202,7 +202,7 @@ export const STATIC_PAGE_SLUGS: Record<string, StaticPageMeta> = {
     descriptionVi: "Phần mềm doanh nghiệp dạng module — workflow, CRM, analytics và membership trên một lớp dữ liệu dùng chung.",
     descriptionEn: "Modular business software — workflow, CRM, analytics and membership on one shared data layer.",
   },
-  "meos-ecosystem": {
+  "meos": {
     titleVi: "MeOS - Hệ sinh thái giải pháp công nghệ",
     titleEn: "MeOS - Technology Solution Ecosystem",
     descriptionVi: "Khám phá hệ sinh thái công nghệ MeOS do MeU Solutions phát triển, với các giải pháp thương mại điện tử, Mini App, bán hàng đa kênh và y tế.",

@@ -3,14 +3,14 @@
     "trust": {
       "hero": {
         "eyebrow": "Trust Center",
-        "title": "How we protect your data, your privacy and your AI deployments.",
+        "title": "How we protect your data, your privacy and your AI deployments",
         "summary": "Trust is built into how we design, build and operate every system. This is the framework behind that commitment — security, privacy, data protection and responsible AI, under one accountable team.",
         "primaryButton": "Contact MeU",
         "secondaryButton": "Read the security overview"
       },
       "overview": {
         "eyebrow": "Security overview",
-        "heading": "Security is engineered in, not bolted on.",
+        "heading": "Security is engineered in, not bolted on",
         "summary": "Every engagement starts from a shared security baseline and adapts to the sensitivity of the work. We design controls into the architecture, the delivery process and the operating model — not as a final checklist.",
         "item1Title": "Secure by design",
         "item1Desc": "Threat modelling, least-privilege access and encrypted data flows are part of the architecture from day one.",
@@ -23,7 +23,7 @@
       },
       "compliance": {
         "eyebrow": "Compliance & standards",
-        "heading": "Standards we work to, stated only where verified.",
+        "heading": "Standards we work to, stated only where verified",
         "summary": "We publish certification and compliance status only after it has been formally verified. Where a standard is in progress, we say so.",
         "item1Title": "ISO 27001 aligned",
         "item1Desc": "Our information security management system follows the ISO 27001 control framework.",
@@ -36,7 +36,7 @@
       },
       "explore": {
         "eyebrow": "Explore the Trust Center",
-        "heading": "Four areas. One accountable team.",
+        "heading": "Four areas. One accountable team",
         "summary": "Each area has its own framework, controls and point of contact. Start with the one closest to your question.",
         "link1": "Security",
         "link1Desc": "Architecture, environments and operations.",
@@ -49,8 +49,8 @@
       },
       "cta": {
         "eyebrow": "Have a trust question?",
-        "heading1": "Ask us directly.",
-        "heading2": "We answer in writing.",
+        "heading1": "Ask us directly",
+        "heading2": "We answer in writing",
         "description": "Security, privacy, data protection or responsible AI — send the question and a senior MeU partner responds with a documented answer, not a sales reply.",
         "primaryButton": "Contact the trust team",
         "secondaryButton": "Contact MeU"
@@ -58,14 +58,14 @@
       "security": {
         "hero": {
           "eyebrow": "Trust Center · Security",
-          "title": "Security engineered into architecture, delivery and operations.",
+          "title": "Security engineered into architecture, delivery and operations",
           "summary": "The controls, environments and practices that keep the systems we build and operate protected — from first commit to daily operation.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "Read the privacy principles"
         },
         "architecture": {
           "eyebrow": "Architecture",
-          "heading": "Secure by design, from the first diagram.",
+          "heading": "Secure by design, from the first diagram",
           "summary": "Security decisions made early cost less and hold better. We model threats, apply least privilege and encrypt data in motion and at rest before a single service is built.",
           "item1Title": "Threat modelling",
           "item1Desc": "Each system is modelled against realistic threats before implementation, with mitigations tracked as delivery work.",
@@ -78,7 +78,7 @@
         },
         "environments": {
           "eyebrow": "Environments",
-          "heading": "Separated environments. Controlled promotion.",
+          "heading": "Separated environments. Controlled promotion",
           "summary": "Development, staging and production stay isolated. Nothing reaches production without a reviewed, traceable promotion.",
           "item1Title": "Environment isolation",
           "item1Desc": "Dev, staging and production run on separate infrastructure with no shared credentials.",
@@ -91,7 +91,7 @@
         },
         "operations": {
           "eyebrow": "Operations",
-          "heading": "Accountable monitoring and incident response.",
+          "heading": "Accountable monitoring and incident response",
           "summary": "Security does not end at launch. We monitor, review access and respond to incidents against a defined, owned process.",
           "item1Title": "Continuous monitoring",
           "item1Desc": "Logging, alerting and anomaly detection run against the systems we operate, with escalation to a named owner.",
@@ -104,8 +104,8 @@
         },
         "cta": {
           "eyebrow": "Need the detail?",
-          "heading1": "Request the security pack.",
-          "heading2": "Under NDA, in writing.",
+          "heading1": "Request the security pack",
+          "heading2": "Under NDA, in writing",
           "description": "Share your security questionnaire or request our control documentation. A senior MeU security partner responds with the detail you need to run your review.",
           "primaryButton": "Contact the trust team",
           "secondaryButton": "Read the privacy principles"
@@ -114,14 +114,14 @@
       "privacy": {
         "hero": {
           "eyebrow": "Trust Center · Privacy",
-          "title": "Privacy treated as a design constraint, not a disclosure.",
+          "title": "Privacy treated as a design constraint, not a disclosure",
           "summary": "How we collect, use, limit and protect personal data across the systems we build and operate — with the transparency to verify it.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "Read the data protection framework"
         },
         "principles": {
           "eyebrow": "Privacy principles",
-          "heading": "Four principles that shape every data flow.",
+          "heading": "Four principles that shape every data flow",
           "summary": "These principles are applied before data is collected, not retrofitted after a problem. They govern how we design systems and how we operate them.",
           "principle1Title": "Data minimisation",
           "principle1Desc": "Collect only what the engagement requires. Retain only as long as the purpose exists.",
@@ -134,7 +134,7 @@
         },
         "rights": {
           "eyebrow": "Data subject rights",
-          "heading": "Rights you can exercise, with a clear route.",
+          "heading": "Rights you can exercise, with a clear route",
           "summary": "Where the systems we operate process personal data, the individuals behind it have defined rights — and a documented way to exercise them.",
           "right1Title": "Access",
           "right1Desc": "Individuals can request a copy of the personal data a system holds about them.",
@@ -147,8 +147,8 @@
         },
         "cta": {
           "eyebrow": "Have a privacy question?",
-          "heading1": "Send it to the trust team.",
-          "heading2": "We answer in writing.",
+          "heading1": "Send it to the trust team",
+          "heading2": "We answer in writing",
           "description": "Privacy questions go to a senior MeU partner, not a queue. You get a documented answer and, where relevant, the controls behind it.",
           "primaryButton": "Contact the trust team",
           "secondaryButton": "Read the data protection framework"
@@ -157,14 +157,14 @@
       "dataProtection": {
         "hero": {
           "eyebrow": "Trust Center · Data Protection",
-          "title": "Data handled, stored and retained under a defined framework.",
+          "title": "Data handled, stored and retained under a defined framework",
           "summary": "How client and personal data is classified, transferred, stored and retired across the systems we build and operate — agreed per engagement and enforced in practice.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "Read the responsible AI framework"
         },
         "framework": {
           "eyebrow": "Handling framework",
-          "heading": "Classified, transferred, stored — by agreement.",
+          "heading": "Classified, transferred, stored — by agreement",
           "summary": "Every engagement starts with a data handling agreement. The classification, transfer and storage controls follow from there.",
           "item1Title": "Data classification",
           "item1Desc": "Data is classified by sensitivity at the start of an engagement, and controls scale to the classification.",
@@ -177,7 +177,7 @@
         },
         "retention": {
           "eyebrow": "Retention & deletion",
-          "heading": "Retained with purpose. Deleted on schedule.",
+          "heading": "Retained with purpose. Deleted on schedule",
           "summary": "Data is kept only as long as the agreed purpose requires. When retention ends, deletion is executed and verified — not deferred.",
           "item1Title": "Retention by purpose",
           "item1Desc": "Retention periods are set by the purpose of processing, agreed upfront and recorded per data category.",
@@ -190,8 +190,8 @@
         },
         "cta": {
           "eyebrow": "Need the data pack?",
-          "heading1": "Request the documentation.",
-          "heading2": "Under NDA, in writing.",
+          "heading1": "Request the documentation",
+          "heading2": "Under NDA, in writing",
           "description": "Share your data protection questionnaire or request our handling documentation. A senior MeU partner responds with the detail your review requires.",
           "primaryButton": "Contact the trust team",
           "secondaryButton": "Read the responsible AI framework"
@@ -200,14 +200,14 @@
       "responsibleAi": {
         "hero": {
           "eyebrow": "Trust Center · Responsible AI",
-          "title": "AI you can audit, with humans in control of what matters.",
+          "title": "AI you can audit, with humans in control of what matters",
           "summary": "The governance model behind every AI system we build: defined decisions, human control, full traceability and reversibility — designed in from the first workflow.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "Read the security overview"
         },
         "principles": {
           "eyebrow": "Governance principles",
-          "heading": "Four principles that govern every AI output.",
+          "heading": "Four principles that govern every AI output",
           "summary": "These principles are enforced in the system, not promised in a slide. They shape how models are built, how outputs are used and how exceptions are handled.",
           "principle1Title": "Human in the loop",
           "principle1Desc": "Critical decisions require human approval before they take effect — no silent automation.",
@@ -220,7 +220,7 @@
         },
         "lifecycle": {
           "eyebrow": "Model lifecycle",
-          "heading": "Governed from assessment to operation.",
+          "heading": "Governed from assessment to operation",
           "summary": "Responsible AI is a lifecycle, not a launch. Each phase has its own controls, owners and review gates.",
           "item1Title": "Use case assessment",
           "item1Desc": "Every AI use case is assessed for risk, data sensitivity and human-control requirements before build.",
@@ -233,8 +233,8 @@
         },
         "cta": {
           "eyebrow": "Assessing an AI use case?",
-          "heading1": "Bring it to the trust team.",
-          "heading2": "We'll pressure-test the governance.",
+          "heading1": "Bring it to the trust team",
+          "heading2": "We'll pressure-test the governance",
           "description": "Share the use case and the decision it automates. A senior MeU AI partner reviews the governance fit and responds with a documented point of view.",
           "primaryButton": "Contact the trust team",
           "secondaryButton": "Read the security overview"
@@ -243,14 +243,14 @@
       "cookiePolicy": {
         "hero": {
           "eyebrow": "Trust Center · Cookie Policy",
-          "title": "How we use cookies, stated plainly.",
+          "title": "How we use cookies, stated plainly",
           "summary": "Cookies are used only where they serve a clear purpose on this site — to keep the site working, to remember your preferences and to understand how content is used. No advertising or profiling cookies are set.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "Read the privacy principles"
         },
         "categories": {
           "eyebrow": "Cookie categories",
-          "heading": "Four categories. Only the ones the site needs.",
+          "heading": "Four categories. Only the ones the site needs",
           "summary": "Each category has a defined purpose. We do not add cookies that fall outside these categories, and we do not sell data collected through them.",
           "item1Title": "Strictly necessary",
           "item1Desc": "Cookies required for the site to function — session continuity, security and load balancing. These cannot be disabled without breaking core features.",
@@ -263,7 +263,7 @@
         },
         "control": {
           "eyebrow": "Managing cookies",
-          "heading": "You stay in control of what stays.",
+          "heading": "You stay in control of what stays",
           "summary": "You can review, adjust or remove cookies at any time through your browser or the controls described below. Disabling some cookies will affect how parts of the site behave.",
           "item1Title": "Browser settings",
           "item1Desc": "Every mainstream browser lets you view, block or delete cookies per site. We document the links to the relevant settings for the browsers we support.",
@@ -274,8 +274,8 @@
         },
         "cta": {
           "eyebrow": "Have a cookie question?",
-          "heading1": "Send it to the trust team.",
-          "heading2": "We answer in writing.",
+          "heading1": "Send it to the trust team",
+          "heading2": "We answer in writing",
           "description": "If you need clarity on a specific cookie or want the detail behind a category, a senior MeU partner responds with a documented answer.",
           "primaryButton": "Contact the trust team",
           "secondaryButton": "Read the privacy principles"
@@ -284,14 +284,14 @@
       "termsOfUse": {
         "hero": {
           "eyebrow": "Trust Center · Terms of Use",
-          "title": "The terms that govern use of this site, in plain language.",
+          "title": "The terms that govern use of this site, in plain language",
           "summary": "These terms set out how this site may be used and what each party is responsible for. They are written to be read, not to obscure — if a clause is unclear, we will clarify it on request.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "Read the privacy principles"
         },
         "terms": {
           "eyebrow": "Core terms",
-          "heading": "Four terms that shape use of the site.",
+          "heading": "Four terms that shape use of the site",
           "summary": "By accessing this site you accept these terms. If you do not agree with any part, you should not continue to use the site.",
           "item1Title": "Acceptance of terms",
           "item1Desc": "Accessing or browsing this site constitutes acceptance of these terms. If you do not agree, you should discontinue use of the site and any services referenced on it.",
@@ -304,7 +304,7 @@
         },
         "responsibilities": {
           "eyebrow": "Responsibilities & changes",
-          "heading": "What each side is responsible for, and how terms evolve.",
+          "heading": "What each side is responsible for, and how terms evolve",
           "summary": "These points keep expectations clear on both sides and explain how updates to the terms are handled over time.",
           "item1Title": "Your responsibilities",
           "item1Desc": "You agree not to misuse the site — including attempting to gain unauthorised access, introducing malicious code or disrupting normal operation. Activity is logged for security.",
@@ -315,8 +315,8 @@
         },
         "cta": {
           "eyebrow": "Need clarification on a term?",
-          "heading1": "Ask the trust team.",
-          "heading2": "We answer in writing.",
+          "heading1": "Ask the trust team",
+          "heading2": "We answer in writing",
           "description": "If a clause is unclear or you need it interpreted against a specific use case, a senior MeU partner responds with a documented clarification.",
           "primaryButton": "Contact the trust team",
           "secondaryButton": "Read the privacy principles"

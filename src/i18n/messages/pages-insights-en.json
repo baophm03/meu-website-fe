@@ -4,14 +4,14 @@
       "hero": {
         "eyebrow": "Insights",
         "heading1": "Ideas for leaders",
-        "heading2": "building what's next.",
+        "heading2": "building what's next",
         "summary": "Practical perspective for leaders making technology decisions — field notes, frameworks and reports from the work we do with clients every day.",
         "primaryButton": "Contact MeU",
         "secondaryButton": "Browse by category"
       },
       "featured": {
         "eyebrow": "Featured",
-        "heading": "What we are thinking about right now.",
+        "heading": "What we are thinking about right now",
         "summary": "Three pieces that reflect the conversations we are having with leadership teams this quarter.",
         "card1Meta": "Field note · 8 min",
         "card1Title": "Where enterprise AI creates value before it creates noise",
@@ -26,7 +26,7 @@
       },
       "categories": {
         "eyebrow": "Browse by category",
-        "heading": "Find the perspective you need.",
+        "heading": "Find the perspective you need",
         "summary": "Six categories covering the technology decisions leaders return to most often.",
         "cat1Title": "AI & Automation",
         "cat1Desc": "Where intelligence fits inside the workflow — and where it doesn't yet.",
@@ -43,8 +43,8 @@
       },
       "cta": {
         "eyebrow": "Let's build what's next",
-        "heading1": "Bring us the challenge.",
-        "heading2": "We'll bring a way forward.",
+        "heading1": "Bring us the challenge",
+        "heading2": "We'll bring a way forward",
         "description": "Start a focused conversation with a senior MeU technology partner. You leave with a point of view on the problem, the options and a realistic next step.",
         "primaryButton": "Contact MeU",
         "secondaryButton": "See how we've done it"
@@ -53,14 +53,14 @@
         "hero": {
           "eyebrow": "Insights · AI & Automation",
           "heading1": "Intelligence inside",
-          "heading2": "the workflow.",
+          "heading2": "the workflow",
           "summary": "Where AI creates real value before it creates noise — field notes and frameworks for leaders selecting workflows that are ready for intelligent automation.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "Assess an AI use case"
         },
         "featured": {
           "eyebrow": "Featured",
-          "heading": "What's working in AI right now.",
+          "heading": "What's working in AI right now",
           "summary": "The use cases where we see AI move from demo to daily operation, with humans staying in control of critical decisions.",
           "card1Meta": "Field note · 8 min",
           "card1Title": "Where enterprise AI creates value before it creates noise",
@@ -75,7 +75,7 @@
         },
         "topics": {
           "eyebrow": "Topics we cover",
-          "heading": "From use case to governed production.",
+          "heading": "From use case to governed production",
           "summary": "The decisions that separate AI pilots from AI that stays in the operation.",
           "item1Title": "Use case selection",
           "item1Desc": "How to score workflows for AI readiness before committing engineering effort.",
@@ -89,7 +89,7 @@
         "cta": {
           "eyebrow": "Assess an AI use case",
           "heading1": "Find the workflow",
-          "heading2": "worth automating first.",
+          "heading2": "worth automating first",
           "description": "Bring us a candidate use case. We will score it for readiness and outline what a governed production deployment would look like.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "View AI platforms"
@@ -99,14 +99,14 @@
         "hero": {
           "eyebrow": "Insights · Digital Transformation",
           "heading1": "From ambition to",
-          "heading2": "measurable change.",
+          "heading2": "measurable change",
           "summary": "How leadership teams turn strategic ambition into sequenced roadmaps, modern platforms and operating change that sticks.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "Explore solutions"
         },
         "featured": {
           "eyebrow": "Featured",
-          "heading": "Transformation that lands in daily work.",
+          "heading": "Transformation that lands in daily work",
           "summary": "Perspective on keeping strategy, delivery and adoption connected — so change shows up in the operation, not just the slide deck.",
           "card1Meta": "Guide · 11 min",
           "card1Title": "From transformation roadmap to working software",
@@ -121,7 +121,7 @@
         },
         "topics": {
           "eyebrow": "Topics we cover",
-          "heading": "The decisions that keep transformation on track.",
+          "heading": "The decisions that keep transformation on track",
           "summary": "Where transformation programs stall — and the practices that keep them moving.",
           "item1Title": "Roadmap sequencing",
           "item1Desc": "Ordering initiatives so each one unlocks the next without freezing the business.",
@@ -134,8 +134,8 @@
         },
         "cta": {
           "eyebrow": "Start with the outcome",
-          "heading1": "Define the result.",
-          "heading2": "Then the roadmap.",
+          "heading1": "Define the result",
+          "heading2": "Then the roadmap",
           "description": "Bring us the strategic ambition. We will help you sequence it into a roadmap with measurable operating change.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "Explore solutions"
@@ -145,14 +145,14 @@
         "hero": {
           "eyebrow": "Insights · Enterprise Technology",
           "heading1": "The systems that hold",
-          "heading2": "the operation together.",
+          "heading2": "the operation together",
           "summary": "Architecture, integration and the engineering decisions that determine how quickly a company can change.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "Explore capabilities"
         },
         "featured": {
           "eyebrow": "Featured",
-          "heading": "Architecture decisions that age well.",
+          "heading": "Architecture decisions that age well",
           "summary": "Why integration and data layer decisions made today determine flexibility tomorrow.",
           "card1Meta": "Perspective · 6 min",
           "card1Title": "The hidden cost of stitching business systems together",
@@ -167,7 +167,7 @@
         },
         "topics": {
           "eyebrow": "Topics we cover",
-          "heading": "Engineering the backbone of the business.",
+          "heading": "Engineering the backbone of the business",
           "summary": "The technical decisions that compound — for better or worse — over years.",
           "item1Title": "System integration",
           "item1Desc": "APIs, events and batch reconciliation that keep systems in sync.",
@@ -181,7 +181,7 @@
         "cta": {
           "eyebrow": "Architecture review",
           "heading1": "Stress-test",
-          "heading2": "your architecture.",
+          "heading2": "your architecture",
           "description": "Bring us your current architecture and the change you need to absorb. We will identify where it will bend — and where it will break.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "Explore capabilities"
@@ -191,14 +191,14 @@
         "hero": {
           "eyebrow": "Insights · Software Engineering",
           "heading1": "Resilient software,",
-          "heading2": "built around real work.",
+          "heading2": "built around real work",
           "summary": "How we design, build and operate software that stays useful — from product and UI/UX design to quality engineering and managed services.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "Explore capabilities"
         },
         "featured": {
           "eyebrow": "Featured",
-          "heading": "Engineering practices that hold up in production.",
+          "heading": "Engineering practices that hold up in production",
           "summary": "What we have learned building software for operations that cannot afford downtime.",
           "card1Meta": "Guide · 10 min",
           "card1Title": "Designing software for shift-based, high-interruption use",
@@ -213,7 +213,7 @@
         },
         "topics": {
           "eyebrow": "Topics we cover",
-          "heading": "From first commit to daily operation.",
+          "heading": "From first commit to daily operation",
           "summary": "The practices that keep software useful long after the first launch.",
           "item1Title": "Product & UI/UX design",
           "item1Desc": "Shaping products that are useful, usable and operational by design.",
@@ -227,7 +227,7 @@
         "cta": {
           "eyebrow": "Build with us",
           "heading1": "Bring the product",
-          "heading2": "you need to ship.",
+          "heading2": "you need to ship",
           "description": "Tell us what you need to build. We will bring the design, engineering and quality practices to ship it — and operate it after.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "Explore capabilities"
@@ -237,14 +237,14 @@
         "hero": {
           "eyebrow": "Insights · Industry",
           "heading1": "Domain depth you",
-          "heading2": "can build on.",
+          "heading2": "can build on",
           "summary": "Industry-specific perspective from delivery experience — healthcare, logistics, retail, life sciences, education and associations.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "Explore industries"
         },
         "featured": {
           "eyebrow": "Featured",
-          "heading": "What we see in the field.",
+          "heading": "What we see in the field",
           "summary": "Patterns and bottlenecks from the industries where we have validated domain knowledge and delivery evidence.",
           "card1Meta": "Industry · 7 min",
           "card1Title": "What a digital front door really requires in a provider network",
@@ -259,7 +259,7 @@
         },
         "topics": {
           "eyebrow": "Industries we cover",
-          "heading": "Only sectors with delivery evidence.",
+          "heading": "Only sectors with delivery evidence",
           "summary": "We publish industry perspective only where we have real domain knowledge and proven delivery.",
           "item1Title": "Healthcare",
           "item1Desc": "Patient access, scheduling and clinical operations.",
@@ -273,7 +273,7 @@
         "cta": {
           "eyebrow": "Your industry",
           "heading1": "Built around",
-          "heading2": "your world.",
+          "heading2": "your world",
           "description": "Bring us the operational bottleneck in your industry. We will share what we have seen and outline a practical path forward.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "Explore industries"
@@ -283,14 +283,14 @@
         "hero": {
           "eyebrow": "Insights · Reports",
           "heading1": "Reports & whitepapers",
-          "heading2": "for technology leaders.",
+          "heading2": "for technology leaders",
           "summary": "Structured research and readiness frameworks — the artifacts we use with clients to align leadership before committing to delivery.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "Browse all insights"
         },
         "featured": {
           "eyebrow": "Featured",
-          "heading": "Frameworks you can run.",
+          "heading": "Frameworks you can run",
           "summary": "Reports designed to be used in a leadership meeting, not filed in a shared drive.",
           "card1Meta": "Report · 24 pages",
           "card1Title": "Operational readiness checklist for platform projects",
@@ -305,7 +305,7 @@
         },
         "topics": {
           "eyebrow": "What you get",
-          "heading": "Reports built to be used.",
+          "heading": "Reports built to be used",
           "summary": "Each report is structured around a decision leadership needs to make.",
           "item1Title": "Readiness checklists",
           "item1Desc": "Structured questions that surface gaps before delivery starts.",
@@ -319,7 +319,7 @@
         "cta": {
           "eyebrow": "Get the report",
           "heading1": "Bring the framework",
-          "heading2": "to your next review.",
+          "heading2": "to your next review",
           "description": "Request a walkthrough of any report with a senior MeU specialist, tailored to your operation.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "Browse all insights"
@@ -329,14 +329,14 @@
         "hero": {
           "eyebrow": "Insights · News & Events",
           "heading1": "What's happening",
-          "heading2": "at MeU.",
+          "heading2": "at MeU",
           "summary": "Company news, partnerships, events and announcements — the operational updates leaders ask us about.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "See client success"
         },
         "featured": {
           "eyebrow": "Latest",
-          "heading": "Recent announcements.",
+          "heading": "Recent announcements",
           "summary": "The news we can share publicly, published as it is confirmed.",
           "card1Meta": "Announcement · 3 min",
           "card1Title": "MeU expands healthcare delivery to a second provider network",
@@ -351,7 +351,7 @@
         },
         "topics": {
           "eyebrow": "Follow",
-          "heading": "Stay current with MeU.",
+          "heading": "Stay current with MeU",
           "summary": "The categories of news we publish as they are confirmed.",
           "item1Title": "Company news",
           "item1Desc": "Milestones, leadership updates and operational announcements.",
@@ -365,7 +365,7 @@
         "cta": {
           "eyebrow": "Meet with us",
           "heading1": "See us",
-          "heading2": "at the next event.",
+          "heading2": "at the next event",
           "description": "Want to meet at an upcoming event or arrange a briefing? Reach out and we will find a time.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "See client success"
@@ -373,7 +373,7 @@
       },
       "posts": {
         "eyebrow": "Posts",
-        "heading": "All posts.",
+        "heading": "All posts",
         "summary": "The latest news, insights and reports from MeU.",
         "readMore": "Read more",
         "empty": "There are no articles at the moment. Please check back later.",
@@ -383,15 +383,15 @@
     },
     "postDetail": {
       "relatedEyebrow": "Keep reading",
-      "relatedTitle": "Related articles.",
+      "relatedTitle": "Related articles",
       "readArticle": "Read article",
       "ctaEyebrow": "Ready to move?",
-      "ctaHeading1": "Bring us the challenge.",
-      "ctaHeading2": "We will bring a way forward.",
+      "ctaHeading1": "Bring us the challenge",
+      "ctaHeading2": "We will bring a way forward",
       "ctaDesc": "Start a focused conversation with a senior MeU technology partner.",
       "ctaPrimary": "Contact MeU",
       "ctaSecondary": "Explore insights",
-      "sidebarCtaTitle": "The MeU team is ready to discuss your challenge.",
+      "sidebarCtaTitle": "The MeU team is ready to discuss your challenge",
       "sidebarCtaButton": "Book a consultation"
     },
     "jobDetail": {
@@ -399,7 +399,7 @@
       "applyNow": "Apply now",
       "applyHint": "Send your CV with portfolio/GitHub — the hiring team replies within 3-5 business days.",
       "apply": "Apply",
-      "otherRoles": "Other open roles.",
+      "otherRoles": "Other open roles",
       "allRoles": "View all roles"
     }
   }

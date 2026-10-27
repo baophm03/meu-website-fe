@@ -3,14 +3,14 @@
     "trust": {
       "hero": {
         "eyebrow": "Trust Center",
-        "title": "Cách chúng tôi bảo vệ dữ liệu, quyền riêng tư và triển khai AI của bạn.",
+        "title": "Cách chúng tôi bảo vệ dữ liệu, quyền riêng tư và triển khai AI của bạn",
         "summary": "Niềm tin được xây vào cách chúng tôi thiết kế, xây và vận hành mọi hệ thống. Đây là framework đằng sau cam kết đó — bảo mật, quyền riêng tư, bảo vệ dữ liệu và AI có trách nhiệm, dưới một đội ngũ chịu trách nhiệm.",
         "primaryButton": "Liên hệ ngay với MeU",
         "secondaryButton": "Đọc tổng quan bảo mật"
       },
       "overview": {
         "eyebrow": "Tổng quan bảo mật",
-        "heading": "Bảo mật được thiết kế vào, không phải gắn thêm sau.",
+        "heading": "Bảo mật được thiết kế vào, không phải gắn thêm sau",
         "summary": "Mọi dự án bắt đầu từ một baseline bảo mật chung và điều chỉnh theo độ nhạy cảm của công việc. Chúng tôi thiết kế kiểm soát vào kiến trúc, quy trình bàn giao và mô hình vận hành — không phải như một checklist cuối cùng.",
         "item1Title": "Bảo mật theo thiết kế",
         "item1Desc": "Mô hình hóa mối đe dọa, truy cập tối thiểu quyền và luồng dữ liệu mã hóa là một phần của kiến trúc từ ngày đầu.",
@@ -23,7 +23,7 @@
       },
       "compliance": {
         "eyebrow": "Tuân thủ & tiêu chuẩn",
-        "heading": "Tiêu chuẩn chúng tôi tuân theo, chỉ nêu nơi đã kiểm chứng.",
+        "heading": "Tiêu chuẩn chúng tôi tuân theo, chỉ nêu nơi đã kiểm chứng",
         "summary": "Chúng tôi chỉ xuất bản trạng thái chứng nhận và tuân thủ sau khi đã được kiểm chứng chính thức. Khi một tiêu chuẩn đang trong tiến trình, chúng tôi nói rõ.",
         "item1Title": "Phù hợp ISO 27001",
         "item1Desc": "Hệ thống quản lý bảo mật thông tin của chúng tôi tuân theo framework kiểm soát ISO 27001.",
@@ -36,7 +36,7 @@
       },
       "explore": {
         "eyebrow": "Khám phá Trust Center",
-        "heading": "Bốn lĩnh vực. Một đội ngũ chịu trách nhiệm.",
+        "heading": "Bốn lĩnh vực. Một đội ngũ chịu trách nhiệm",
         "summary": "Mỗi lĩnh vực có framework, kiểm soát và điểm liên hệ riêng. Bắt đầu với lĩnh vực gần câu hỏi của bạn nhất.",
         "link1": "Bảo mật",
         "link1Desc": "Kiến trúc, môi trường và vận hành.",
@@ -49,8 +49,8 @@
       },
       "cta": {
         "eyebrow": "Có câu hỏi về trust?",
-        "heading1": "Hỏi trực tiếp chúng tôi.",
-        "heading2": "Chúng tôi trả lời bằng văn bản.",
+        "heading1": "Hỏi trực tiếp chúng tôi",
+        "heading2": "Chúng tôi trả lời bằng văn bản",
         "description": "Bảo mật, quyền riêng tư, bảo vệ dữ liệu hoặc AI có trách nhiệm — gửi câu hỏi và một đối tác cấp cao của MeU sẽ phản hồi với câu trả lời có tài liệu, không phải phản hồi sales.",
         "primaryButton": "Liên hệ đội trust",
         "secondaryButton": "Liên hệ ngay với MeU"
@@ -58,14 +58,14 @@
       "security": {
         "hero": {
           "eyebrow": "Trust Center · Bảo mật",
-          "title": "Bảo mật được thiết kế vào kiến trúc, bàn giao và vận hành.",
+          "title": "Bảo mật được thiết kế vào kiến trúc, bàn giao và vận hành",
           "summary": "Các kiểm soát, môi trường và thực tiễn giữ hệ thống chúng tôi xây và vận hành được bảo vệ — từ commit đầu tiên đến vận hành hàng ngày.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Đọc nguyên tắc quyền riêng tư"
         },
         "architecture": {
           "eyebrow": "Kiến trúc",
-          "heading": "Bảo mật theo thiết kế, từ sơ đồ đầu tiên.",
+          "heading": "Bảo mật theo thiết kế, từ sơ đồ đầu tiên",
           "summary": "Quyết định bảo mật đưa ra sớm tốn ít hơn và giữ tốt hơn. Chúng tôi mô hình hóa mối đe dọa, áp dụng tối thiểu quyền và mã hóa dữ liệu khi truyền và khi nghỉ trước khi một service nào được xây.",
           "item1Title": "Mô hình hóa mối đe dọa",
           "item1Desc": "Mỗi hệ thống được mô hình hóa với mối đe dọa thực tế trước khi triển khai, với biện pháp giảm thiểu được theo dõi như công việc bàn giao.",
@@ -78,7 +78,7 @@
         },
         "environments": {
           "eyebrow": "Môi trường",
-          "heading": "Môi trường tách biệt. Promotion được kiểm soát.",
+          "heading": "Môi trường tách biệt. Promotion được kiểm soát",
           "summary": "Development, staging và production giữ tách biệt. Không gì tiếp xúc production mà không qua một promotion đã review, có truy vết.",
           "item1Title": "Tách biệt môi trường",
           "item1Desc": "Dev, staging và production chạy trên hạ tầng riêng biệt, không chia sẻ credential.",
@@ -91,7 +91,7 @@
         },
         "operations": {
           "eyebrow": "Vận hành",
-          "heading": "Giám sát và phản ứng sự cố có trách nhiệm.",
+          "heading": "Giám sát và phản ứng sự cố có trách nhiệm",
           "summary": "Bảo mật không kết thúc khi ra mắt. Chúng tôi giám sát, review truy cập và phản ứng sự cố theo một quy trình đã định nghĩa, có chủ sở hữu.",
           "item1Title": "Giám sát liên tục",
           "item1Desc": "Logging, alerting và phát hiện bất thường chạy trên các hệ thống chúng tôi vận hành, với leo thang đến một chủ sở hữu có tên.",
@@ -104,8 +104,8 @@
         },
         "cta": {
           "eyebrow": "Cần chi tiết?",
-          "heading1": "Yêu cầu security pack.",
-          "heading2": "Dưới NDA, bằng văn bản.",
+          "heading1": "Yêu cầu security pack",
+          "heading2": "Dưới NDA, bằng văn bản",
           "description": "Chia sẻ bảng câu hỏi bảo mật hoặc yêu cầu tài liệu kiểm soát của chúng tôi. Một đối tác bảo mật cấp cao của MeU phản hồi với chi tiết bạn cần để chạy review.",
           "primaryButton": "Liên hệ đội trust",
           "secondaryButton": "Đọc nguyên tắc quyền riêng tư"
@@ -114,14 +114,14 @@
       "privacy": {
         "hero": {
           "eyebrow": "Trust Center · Quyền riêng tư",
-          "title": "Quyền riêng tư được coi là ràng buộc thiết kế, không phải tuyên bố.",
+          "title": "Quyền riêng tư được coi là ràng buộc thiết kế, không phải tuyên bố",
           "summary": "Cách chúng tôi thu thập, sử dụng, giới hạn và bảo vệ dữ liệu cá nhân trên các hệ thống chúng tôi xây và vận hành — với tính minh bạch để kiểm chứng.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Đọc framework bảo vệ dữ liệu"
         },
         "principles": {
           "eyebrow": "Nguyên tắc quyền riêng tư",
-          "heading": "Bốn nguyên tắc định hình mọi luồng dữ liệu.",
+          "heading": "Bốn nguyên tắc định hình mọi luồng dữ liệu",
           "summary": "Các nguyên tắc này được áp dụng trước khi dữ liệu được thu thập, không phải gắn thêm sau khi có vấn đề. Chúng chi phối cách chúng tôi thiết kế và vận hành hệ thống.",
           "principle1Title": "Tối thiểu hóa dữ liệu",
           "principle1Desc": "Chỉ thu thập những gì dự án yêu cầu. Chỉ lưu giữ khi mục đích còn tồn tại.",
@@ -134,7 +134,7 @@
         },
         "rights": {
           "eyebrow": "Quyền của chủ thể dữ liệu",
-          "heading": "Quyền bạn có thể thực thi, với một lộ trình rõ ràng.",
+          "heading": "Quyền bạn có thể thực thi, với một lộ trình rõ ràng",
           "summary": "Khi các hệ thống chúng tôi vận hành xử lý dữ liệu cá nhân, cá nhân đằng sau có quyền được định nghĩa — và một cách tài liệu hóa để thực thi.",
           "right1Title": "Truy cập",
           "right1Desc": "Cá nhân có thể yêu cầu một bản sao dữ liệu cá nhân mà hệ thống lưu giữ về họ.",
@@ -147,8 +147,8 @@
         },
         "cta": {
           "eyebrow": "Có câu hỏi về quyền riêng tư?",
-          "heading1": "Gửi đến đội trust.",
-          "heading2": "Chúng tôi trả lời bằng văn bản.",
+          "heading1": "Gửi đến đội trust",
+          "heading2": "Chúng tôi trả lời bằng văn bản",
           "description": "Câu hỏi quyền riêng tư đến một đối tác cấp cao của MeU, không phải hàng đợi. Bạn nhận câu trả lời có tài liệu và, khi liên quan, các kiểm soát đằng sau.",
           "primaryButton": "Liên hệ đội trust",
           "secondaryButton": "Đọc framework bảo vệ dữ liệu"
@@ -157,14 +157,14 @@
       "dataProtection": {
         "hero": {
           "eyebrow": "Trust Center · Bảo vệ dữ liệu",
-          "title": "Dữ liệu được xử lý, lưu trữ và lưu giữ dưới một framework đã định nghĩa.",
+          "title": "Dữ liệu được xử lý, lưu trữ và lưu giữ dưới một framework đã định nghĩa",
           "summary": "Cách dữ liệu khách hàng và cá nhân được phân loại, chuyển, lưu trữ và nghỉ hưu trên các hệ thống chúng tôi xây và vận hành — thỏa thuận theo dự án và thực thi trong thực tế.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Đọc framework AI có trách nhiệm"
         },
         "framework": {
           "eyebrow": "Framework xử lý",
-          "heading": "Phân loại, chuyển, lưu trữ — theo thỏa thuận.",
+          "heading": "Phân loại, chuyển, lưu trữ — theo thỏa thuận",
           "summary": "Mọi dự án bắt đầu với một thỏa thuận xử lý dữ liệu. Kiểm soát phân loại, chuyển và lưu trữ theo đó.",
           "item1Title": "Phân loại dữ liệu",
           "item1Desc": "Dữ liệu được phân loại theo độ nhạy cảm khi bắt đầu dự án, và kiểm soát mở rộng theo phân loại.",
@@ -177,7 +177,7 @@
         },
         "retention": {
           "eyebrow": "Retention & xóa",
-          "heading": "Lưu giữ có mục đích. Xóa theo lịch.",
+          "heading": "Lưu giữ có mục đích. Xóa theo lịch",
           "summary": "Dữ liệu chỉ được giữ khi mục đích đã thỏa thuận yêu cầu. Khi retention kết thúc, xóa được thực thi và kiểm chứng — không trì hoãn.",
           "item1Title": "Retention theo mục đích",
           "item1Desc": "Thời gian retention được đặt theo mục đích xử lý, thỏa thuận trước và ghi lại theo danh mục dữ liệu.",
@@ -190,8 +190,8 @@
         },
         "cta": {
           "eyebrow": "Cần data pack?",
-          "heading1": "Yêu cầu tài liệu.",
-          "heading2": "Dưới NDA, bằng văn bản.",
+          "heading1": "Yêu cầu tài liệu",
+          "heading2": "Dưới NDA, bằng văn bản",
           "description": "Chia sẻ bảng câu hỏi bảo vệ dữ liệu hoặc yêu cầu tài liệu xử lý của chúng tôi. Một đối tác cấp cao của MeU phản hồi với chi tiết review của bạn yêu cầu.",
           "primaryButton": "Liên hệ đội trust",
           "secondaryButton": "Đọc framework AI có trách nhiệm"
@@ -200,14 +200,14 @@
       "responsibleAi": {
         "hero": {
           "eyebrow": "Trust Center · AI có trách nhiệm",
-          "title": "AI bạn có thể audit, với con người kiểm soát điều quan trọng.",
+          "title": "AI bạn có thể audit, với con người kiểm soát điều quan trọng",
           "summary": "Mô hình governance đằng sau mọi hệ thống AI chúng tôi xây: quyết định được định nghĩa, kiểm soát của con người, truy vết đầy đủ và khả năng đảo ngược — thiết kế vào từ workflow đầu tiên.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Đọc tổng quan bảo mật"
         },
         "principles": {
           "eyebrow": "Nguyên tắc governance",
-          "heading": "Bốn nguyên tắc chi phối mọi output AI.",
+          "heading": "Bốn nguyên tắc chi phối mọi output AI",
           "summary": "Các nguyên tắc này được thực thi trong hệ thống, không hứa trên slide. Chúng định hình cách mô hình được xây, cách output được sử dụng và cách ngoại lệ được xử lý.",
           "principle1Title": "Con người trong vòng lặp",
           "principle1Desc": "Quyết định quan trọng cần phê duyệt của người trước khi có hiệu lực — không tự động âm thầm.",
@@ -220,7 +220,7 @@
         },
         "lifecycle": {
           "eyebrow": "Vòng đời mô hình",
-          "heading": "Được quản trị từ đánh giá đến vận hành.",
+          "heading": "Được quản trị từ đánh giá đến vận hành",
           "summary": "AI có trách nhiệm là một vòng đời, không phải một lần ra mắt. Mỗi pha có kiểm soát, chủ sở hữu và gate review riêng.",
           "item1Title": "Đánh giá use case",
           "item1Desc": "Mọi use case AI được đánh giá rủi ro, độ nhạy cảm dữ liệu và yêu cầu kiểm soát của con người trước khi xây.",
@@ -233,8 +233,8 @@
         },
         "cta": {
           "eyebrow": "Đang đánh giá một use case AI?",
-          "heading1": "Mang đến đội trust.",
-          "heading2": "Chúng tôi sẽ kiểm tra governance.",
+          "heading1": "Mang đến đội trust",
+          "heading2": "Chúng tôi sẽ kiểm tra governance",
           "description": "Chia sẻ use case và quyết định nó tự động hóa. Một đối tác AI cấp cao của MeU review sự phù hợp governance và phản hồi với một góc nhìn có tài liệu.",
           "primaryButton": "Liên hệ đội trust",
           "secondaryButton": "Đọc tổng quan bảo mật"
@@ -243,14 +243,14 @@
       "cookiePolicy": {
         "hero": {
           "eyebrow": "Trust Center · Chính sách Cookie",
-          "title": "Cách chúng tôi dùng cookie, nói rõ ràng.",
+          "title": "Cách chúng tôi dùng cookie, nói rõ ràng",
           "summary": "Cookie chỉ được dùng khi phục vụ mục đích rõ ràng trên site — giữ site hoạt động, ghi nhớ tuỳ chọn và hiểu cách nội dung được sử dụng. Không có cookie quảng cáo hoặc profiling.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Đọc nguyên tắc riêng tư"
         },
         "categories": {
           "eyebrow": "Danh mục cookie",
-          "heading": "Bốn danh mục. Chỉ những gì site cần.",
+          "heading": "Bốn danh mục. Chỉ những gì site cần",
           "summary": "Mỗi danh mục có mục đích rõ ràng. Chúng tôi không thêm cookie ngoài các danh mục này và không bán dữ liệu thu thập qua chúng.",
           "item1Title": "Bắt buộc",
           "item1Desc": "Cookie cần thiết để site hoạt động — phiên, bảo mật và cân bằng tải. Không thể tắt mà không làm hỏng tính năng lõi.",
@@ -263,7 +263,7 @@
         },
         "control": {
           "eyebrow": "Quản lý cookie",
-          "heading": "Bạn kiểm soát những gì giữ lại.",
+          "heading": "Bạn kiểm soát những gì giữ lại",
           "summary": "Bạn có thể xem, điều chỉnh hoặc xoá cookie bất cứ lúc nào qua trình duyệt hoặc các điều khiển dưới đây. Tắt một số cookie sẽ ảnh hưởng cách phần của site hoạt động.",
           "item1Title": "Cài đặt trình duyệt",
           "item1Desc": "Mọi trình duyệt phổ biến cho phép xem, chặn hoặc xoá cookie theo site. Chúng tôi tài liệu hoá link cài đặt cho các trình duyệt được hỗ trợ.",
@@ -274,8 +274,8 @@
         },
         "cta": {
           "eyebrow": "Có câu hỏi về cookie?",
-          "heading1": "Gửi đến đội trust.",
-          "heading2": "Chúng tôi trả lời bằng văn bản.",
+          "heading1": "Gửi đến đội trust",
+          "heading2": "Chúng tôi trả lời bằng văn bản",
           "description": "Nếu cần làm rõ một cookie cụ thể hoặc chi tiết sau một danh mục, một đối tác cấp cao của MeU phản hồi với câu trả lời có tài liệu.",
           "primaryButton": "Liên hệ đội trust",
           "secondaryButton": "Đọc nguyên tắc riêng tư"
@@ -284,14 +284,14 @@
       "termsOfUse": {
         "hero": {
           "eyebrow": "Trust Center · Điều khoản sử dụng",
-          "title": "Điều khoản chi phối việc dùng site này, bằng ngôn ngữ rõ ràng.",
+          "title": "Điều khoản chi phối việc dùng site này, bằng ngôn ngữ rõ ràng",
           "summary": "Điều khoản này quy định cách site có thể được sử dụng và trách nhiệm của mỗi bên. Được viết để đọc, không để che giấu — nếu một điều khoản chưa rõ, chúng tôi sẽ làm rõ theo yêu cầu.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Đọc nguyên tắc riêng tư"
         },
         "terms": {
           "eyebrow": "Điều khoản cốt lõi",
-          "heading": "Bốn điều khoản định hình việc dùng site.",
+          "heading": "Bốn điều khoản định hình việc dùng site",
           "summary": "Truy cập site này đồng nghĩa với việc chấp nhận các điều khoản. Nếu bạn không đồng ý với bất kỳ phần nào, bạn không nên tiếp tục sử dụng site.",
           "item1Title": "Chấp nhận điều khoản",
           "item1Desc": "Truy cập hoặc duyệt site này đồng nghĩa với chấp nhận các điều khoản. Nếu không đồng ý, bạn nên ngừng sử dụng site và các dịch vụ được tham chiếu.",
@@ -304,7 +304,7 @@
         },
         "responsibilities": {
           "eyebrow": "Trách nhiệm & thay đổi",
-          "heading": "Mỗi bên chịu trách nhiệm về gì, và điều khoản tiến hoá ra sao.",
+          "heading": "Mỗi bên chịu trách nhiệm về gì, và điều khoản tiến hoá ra sao",
           "summary": "Các điểm này giữ kỳ vọng rõ ràng ở cả hai bên và giải thích cách cập nhật điều khoản được xử lý theo thời gian.",
           "item1Title": "Trách nhiệm của bạn",
           "item1Desc": "Bạn đồng ý không lạm dụng site — bao gồm cố ý truy cập không xác thực, đưa mã độc hoặc gián đoạn vận hành. Hoạt động được log cho bảo mật.",
@@ -315,8 +315,8 @@
         },
         "cta": {
           "eyebrow": "Cần làm rõ một điều khoản?",
-          "heading1": "Hỏi đội trust.",
-          "heading2": "Chúng tôi trả lời bằng văn bản.",
+          "heading1": "Hỏi đội trust",
+          "heading2": "Chúng tôi trả lời bằng văn bản",
           "description": "Nếu một điều khoản chưa rõ hoặc cần diễn giải theo use case cụ thể, một đối tác cấp cao của MeU phản hồi với làm rõ có tài liệu.",
           "primaryButton": "Liên hệ đội trust",
           "secondaryButton": "Đọc nguyên tắc riêng tư"

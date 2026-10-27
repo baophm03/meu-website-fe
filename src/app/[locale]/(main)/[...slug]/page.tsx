@@ -14,88 +14,14 @@ import {
   pagePathCandidatesOf,
 } from "@/utils/public-posts";
 import { fetchPublicJobBySlug } from "@/utils/public-jobs";
-import PostDetailPage from "./templates/post-detail";
-import PostDetailFullPage from "./templates/post-detail-full";
-import JobDetailPage from "./templates/job-detail";
-import CaseStudyDetailPage from "./templates/case-study-detail";
-import SolutionDetailPage from "./templates/solution-detail";
-import IndustryDetailPage from "./templates/industry-detail";
-import PagePostsSection from "./static-pages/_components/page-posts-section";
-import AboutPage from "./static-pages/about";
-import CaseStudiesPage from "./static-pages/case-studies";
-import ContactPage from "./static-pages/contact";
-import IndustriesPage from "./static-pages/industries";
-import InsightsPage from "./static-pages/insights";
-import ProductsPage from "./static-pages/products";
-import SolutionsPage from "./static-pages/solutions";
-import TrustPage from "./static-pages/trust";
-// about
-import AboutCareersPage from "./static-pages/about-careers";
-import AboutLeadershipPage from "./static-pages/about-leadership";
-import AboutLocationsPage from "./static-pages/about-locations";
-import AboutPartnersClientsPage from "./static-pages/about-partners-clients";
-import AboutStoryPage from "./static-pages/about-story";
-import AboutVisionMissionPage from "./static-pages/about-vision-mission";
-// case-studies
-import CaseStudiesFeaturedPage from "./static-pages/case-studies-featured";
-import CaseStudiesIndustryPage from "./static-pages/case-studies-industry";
-import CaseStudiesSolutionPage from "./static-pages/case-studies-solution";
-import CaseStudiesTechnologyPage from "./static-pages/case-studies-technology";
-// industries
-import IndustriesAssociationsOrganizationsPage from "./static-pages/industries-associations-organizations";
-import IndustriesEducationTrainingPage from "./static-pages/industries-education-training";
-import IndustriesHealthcarePage from "./static-pages/industries-healthcare";
-import IndustriesLogisticsSupplyChainPage from "./static-pages/industries-logistics-supply-chain";
-import IndustriesPharmaceuticalLifeSciencesPage from "./static-pages/industries-pharmaceutical-life-sciences";
-import IndustriesRetailCommercePage from "./static-pages/industries-retail-commerce";
-// insights
-import InsightsAiAutomationPage from "./static-pages/insights-ai-automation";
-import InsightsDigitalTransformationPage from "./static-pages/insights-digital-transformation";
-import InsightsEnterpriseTechPage from "./static-pages/insights-enterprise-tech";
-import InsightsIndustryPage from "./static-pages/insights-industry";
-import InsightsNewsPage from "./static-pages/insights-news";
-import InsightsReportsPage from "./static-pages/insights-reports";
-import InsightsSoftwareEngineeringPage from "./static-pages/insights-software-engineering";
-// products
-import ProductsAiPage from "./static-pages/products-ai";
-import ProductsCommercePage from "./static-pages/products-commerce";
-import ProductsEnterprisePage from "./static-pages/products-enterprise";
-import ProductsIndustryPage from "./static-pages/products-industry";
-import ProductsMeosEcosystemPage from "./static-pages/products-meos-ecosystem";
-import ProductsMeosEcommercePage from "./static-pages/products-meos-ecommerce";
-import ProductsMeosHicarePage from "./static-pages/products-meos-hicare";
-import ProductsMeosMiniappPage from "./static-pages/products-meos-miniapp";
-import ProductsMeosOmniPage from "./static-pages/products-meos-omni";
-// solutions
-import SolutionsAiConsultingPage from "./static-pages/solutions-ai-consulting";
-import SolutionsAiEngineeringPage from "./static-pages/solutions-ai-engineering";
-import SolutionsAiIntelligentAutomationPage from "./static-pages/solutions-ai-intelligent-automation";
-import SolutionsBusinessProcessOptimizationPage from "./static-pages/solutions-business-process-optimization";
-import SolutionsBusinessSolutionsPage from "./static-pages/solutions-business-solutions";
-import SolutionsCloudDevopsPage from "./static-pages/solutions-cloud-devops";
-import SolutionsCustomSoftwareSolutionsPage from "./static-pages/solutions-custom-software-solutions";
-import SolutionsCustomerExperiencePage from "./static-pages/solutions-customer-experience";
-import SolutionsDigitalCommercePage from "./static-pages/solutions-digital-commerce";
-import SolutionsDigitalTransformationPage from "./static-pages/solutions-digital-transformation";
-import SolutionsEnterpriseManagementPage from "./static-pages/solutions-enterprise-management";
-import SolutionsItTalentSolutionsPage from "./static-pages/solutions-it-talent-solutions";
-import SolutionsMaintenanceManagedServicesPage from "./static-pages/solutions-maintenance-managed-services";
-import SolutionsProductUiUxDesignPage from "./static-pages/solutions-product-ui-ux-design";
-import SolutionsQualityEngineeringPage from "./static-pages/solutions-quality-engineering";
-import SolutionsSoftwareEngineeringPage from "./static-pages/solutions-software-engineering";
-import SolutionsSystemIntegrationPage from "./static-pages/solutions-system-integration";
-import SolutionsTalentEnablementPage from "./static-pages/solutions-talent-enablement";
-import SolutionsTechnologyCapabilitiesPage from "./static-pages/solutions-technology-capabilities";
-import SolutionsTechnologyConsultingPage from "./static-pages/solutions-technology-consulting";
-import SolutionsTechnologyTrainingPage from "./static-pages/solutions-technology-training";
-import SolutionsWebsiteOperationsPage from "./static-pages/solutions-website-operations";
-// trust
-import TrustCookiePolicyPage from "./static-pages/trust-cookie-policy";
-import TrustDataProtectionPage from "./static-pages/trust-data-protection";
-import TrustPrivacyPage from "./static-pages/trust-privacy";
-import TrustResponsibleAiPage from "./static-pages/trust-responsible-ai";
-import TrustSecurityPage from "./static-pages/trust-security";
-import TrustTermsOfUsePage from "./static-pages/trust-terms-of-use";
+import PostDetailPage from "./_templates/post-detail";
+import PostDetailFullPage from "./_templates/post-detail-full";
+import JobDetailPage from "./_templates/job-detail";
+import CaseStudyDetailPage from "./_templates/case-study-detail";
+import SolutionDetailPage from "./_templates/solution-detail";
+import IndustryDetailPage from "./_templates/industry-detail";
+import PagePostsSection from "./_designed-pages/_components/page-posts-section";
+import { DESIGNED_PAGE_COMPONENTS } from "./_designed-pages/registry";
 
 type Props = {
   params: Promise<{ locale: string; slug: string[] }>;
@@ -112,14 +38,8 @@ const contentTypeOf = (
 const endingSlugOf = (slug: string[] | undefined) =>
   slug && slug.length > 0 ? String(slug[slug.length - 1] ?? "") : "";
 
-const pathKeyOf = (slug: string[] | undefined) =>
-  slug && slug.length > 1 ? slug[slug.length - 2] + "/" + slug[slug.length - 1] : "";
+const pathKeyOf = (slug: string[]) => slug.join("-");
 
-/**
- * Resolve the page_config for the current path; when it is a "content" page,
- * return metadata derived from its posts (single post = the post itself,
- * multiple posts = the page name/description).
- */
 const contentPageMetadataOf = async (
   slug: string[],
   isVi: boolean,
@@ -139,7 +59,6 @@ const contentPageMetadataOf = async (
   return title ? { title, description } : null;
 };
 
-/** Render a "content" page: 1 post = full article, 2+ posts = posts listing. */
 const contentPageOf = async (slug: string[], locale: string) => {
   const { pageConfig, posts, total } = await fetchPostsPageBySlugPath(slug, 1, 13);
   if (pageConfig?.type !== "content" || posts.length === 0) return notFound();
@@ -157,7 +76,6 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   const endingSlug = endingSlugOf(slug);
   const isVi = locale === "vi";
 
-  // Content-type pages take their metadata from the attached posts
   const contentMeta = await contentPageMetadataOf(slug, isVi);
   if (contentMeta) return contentMeta;
 
@@ -207,161 +125,16 @@ export default async function Page({ params, searchParams }: Props) {
   const endingSlug = endingSlugOf(slug);
   if (!endingSlug) return notFound();
 
-  // 0. CMS page type — "content" pages render their posts instead of the
-  // pre-designed static UI
   const pageConfig = await fetchPageConfigByPath(pagePathCandidatesOf(slug));
   if (pageConfig?.type === "content") {
     return contentPageOf(slug, locale);
   }
 
-  // 1. Colliding leaf slugs — parent/leaf keeps each branch's URL correct
-  switch (pathKeyOf(slug)) {
-    case "case-studies/industry":
-      return <CaseStudiesIndustryPage slug={slug} />;
-    case "insights/digital-transformation":
-      return <InsightsDigitalTransformationPage slug={slug} />;
-    case "insights/industry":
-      return <InsightsIndustryPage slug={slug} />;
-    case "insights/software-engineering":
-      return <InsightsSoftwareEngineeringPage slug={slug} />;
-    case "products/industry":
-      return <ProductsIndustryPage />;
-    case "solutions/digital-transformation":
-      return <SolutionsDigitalTransformationPage slug={slug} />;
-    case "solutions/software-engineering":
-      return <SolutionsSoftwareEngineeringPage slug={slug} />;
-  }
-
-  // 2. Static pages — last segment decides, prefix is ignored
-  switch (endingSlug) {
-    case "industry":
-      return <InsightsIndustryPage slug={slug} />;
-    case "digital-transformation":
-      return <SolutionsDigitalTransformationPage slug={slug} />;
-    case "software-engineering":
-      return <SolutionsSoftwareEngineeringPage slug={slug} />;
-    case "about":
-      return <AboutPage />;
-    case "case-studies":
-      return <CaseStudiesPage slug={slug} />;
-    case "contact":
-      return <ContactPage />;
-    case "industries":
-      return <IndustriesPage slug={slug} />;
-    case "insights":
-      return <InsightsPage slug={slug} />;
-    case "products":
-      return <ProductsPage />;
-    case "solutions":
-      return <SolutionsPage slug={slug} />;
-    case "trust":
-      return <TrustPage />;
-    case "careers":
-      return <AboutCareersPage />;
-    case "leadership":
-      return <AboutLeadershipPage />;
-    case "locations":
-      return <AboutLocationsPage />;
-    case "partners-clients":
-      return <AboutPartnersClientsPage />;
-    case "story":
-      return <AboutStoryPage />;
-    case "vision-mission":
-      return <AboutVisionMissionPage />;
-    case "featured":
-      return <CaseStudiesFeaturedPage slug={slug} />;
-    case "solution":
-      return <CaseStudiesSolutionPage slug={slug} />;
-    case "technology":
-      return <CaseStudiesTechnologyPage slug={slug} />;
-    case "associations-organizations":
-      return <IndustriesAssociationsOrganizationsPage slug={slug} />;
-    case "education-training":
-      return <IndustriesEducationTrainingPage slug={slug} />;
-    case "healthcare":
-      return <IndustriesHealthcarePage slug={slug} />;
-    case "logistics-supply-chain":
-      return <IndustriesLogisticsSupplyChainPage slug={slug} />;
-    case "pharmaceutical-life-sciences":
-      return <IndustriesPharmaceuticalLifeSciencesPage slug={slug} />;
-    case "retail-commerce":
-      return <IndustriesRetailCommercePage slug={slug} />;
-    case "ai-automation":
-      return <InsightsAiAutomationPage slug={slug} />;
-    case "enterprise-tech":
-      return <InsightsEnterpriseTechPage slug={slug} />;
-    case "news":
-      return <InsightsNewsPage slug={slug} />;
-    case "reports":
-      return <InsightsReportsPage slug={slug} />;
-    case "ai":
-      return <ProductsAiPage />;
-    case "commerce":
-      return <ProductsCommercePage />;
-    case "enterprise":
-      return <ProductsEnterprisePage />;
-    case "meos-ecosystem":
-      return <ProductsMeosEcosystemPage />;
-    case "meos-ecommerce":
-      return <ProductsMeosEcommercePage />;
-    case "meos-miniapp":
-      return <ProductsMeosMiniappPage />;
-    case "meos-omni":
-      return <ProductsMeosOmniPage />;
-    case "meos-hicare":
-      return <ProductsMeosHicarePage />;
-    case "ai-consulting":
-      return <SolutionsAiConsultingPage slug={slug} />;
-    case "ai-engineering":
-      return <SolutionsAiEngineeringPage slug={slug} />;
-    case "ai-intelligent-automation":
-      return <SolutionsAiIntelligentAutomationPage slug={slug} />;
-    case "business-process-optimization":
-      return <SolutionsBusinessProcessOptimizationPage slug={slug} />;
-    case "business-solutions":
-      return <SolutionsBusinessSolutionsPage slug={slug} />;
-    case "cloud-devops":
-      return <SolutionsCloudDevopsPage slug={slug} />;
-    case "custom-software-solutions":
-      return <SolutionsCustomSoftwareSolutionsPage slug={slug} />;
-    case "customer-experience":
-      return <SolutionsCustomerExperiencePage slug={slug} />;
-    case "digital-commerce":
-      return <SolutionsDigitalCommercePage slug={slug} />;
-    case "enterprise-management":
-      return <SolutionsEnterpriseManagementPage slug={slug} />;
-    case "it-talent-solutions":
-      return <SolutionsItTalentSolutionsPage slug={slug} />;
-    case "maintenance-managed-services":
-      return <SolutionsMaintenanceManagedServicesPage slug={slug} />;
-    case "product-ui-ux-design":
-      return <SolutionsProductUiUxDesignPage slug={slug} />;
-    case "quality-engineering":
-      return <SolutionsQualityEngineeringPage slug={slug} />;
-    case "system-integration":
-      return <SolutionsSystemIntegrationPage slug={slug} />;
-    case "talent-enablement":
-      return <SolutionsTalentEnablementPage slug={slug} />;
-    case "technology-capabilities":
-      return <SolutionsTechnologyCapabilitiesPage slug={slug} />;
-    case "technology-consulting":
-      return <SolutionsTechnologyConsultingPage slug={slug} />;
-    case "technology-training":
-      return <SolutionsTechnologyTrainingPage slug={slug} />;
-    case "website-operations":
-      return <SolutionsWebsiteOperationsPage slug={slug} />;
-    case "cookie-policy":
-      return <TrustCookiePolicyPage />;
-    case "data-protection":
-      return <TrustDataProtectionPage />;
-    case "privacy":
-      return <TrustPrivacyPage />;
-    case "responsible-ai":
-      return <TrustResponsibleAiPage />;
-    case "security":
-      return <TrustSecurityPage />;
-    case "terms-of-use":
-      return <TrustTermsOfUsePage />;
+  const DesignedPage =
+    DESIGNED_PAGE_COMPONENTS[endingSlug] ??
+    DESIGNED_PAGE_COMPONENTS[pathKeyOf(slug)];
+  if (DesignedPage) {
+    return <DesignedPage slug={slug} />;
   }
 
   if (contentTypeOf(sp) === "jobs") {

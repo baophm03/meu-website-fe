@@ -8,7 +8,6 @@ import { BusinessSolutions } from "./_components/business-solutions";
 import { AiWorkflow } from "./_components/ai-workflow";
 import { Industries } from "./_components/industries";
 import { ClientSuccess } from "./_components/client-success";
-import { WhyMeu } from "./_components/why-meu";
 import { Insights } from "./_components/insights";
 import { Feedback } from "./_components/feedback";
 
@@ -49,9 +48,10 @@ export default async function HomePage({ params }: Props) {
         <AiWorkflow />
         <Industries />
         <ClientSuccess />
-        <WhyMeu />
-        <Insights />
-        <Feedback />
+        <div className="bg-[linear-gradient(180deg,transparent_0%,#070c26_45%,#070c26_100%)]">
+          <Insights />
+          <Feedback />
+        </div>
       </div>
     </div>
   );

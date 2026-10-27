@@ -3,8 +3,8 @@
     "products": {
       "hero": {
         "eyebrow": "Products & platforms",
-        "heading1": "Focused products.",
-        "heading2": "Operational by design.",
+        "heading1": "Focused products",
+        "heading2": "Operational by design",
         "summary": "Platforms with standard core IP, a repeatable deployment model and a demo you can run. Everything else is delivered as a tailored solution.",
         "primaryButton": "Request a demo",
         "secondaryButton": "Contact MeU",
@@ -15,27 +15,9 @@
       },
       "categories": {
         "eyebrow": "Portfolio",
-        "heading": "Four platform families. One operating model.",
+        "heading": "Four platform families. One operating model",
         "summary": "Each family shares a common architecture and integration layer, so you can start with one module and expand without re-platforming.",
         "exploreLabel": "Explore platform"
-      },
-      "cat1": {
-        "label": "Enterprise",
-        "title": "Enterprise operations platform",
-        "desc": "Workflow, CRM, analytics and membership on one shared data layer — shaped to each operating model.",
-        "href": "/products/enterprise"
-      },
-      "cat2": {
-        "label": "AI",
-        "title": "AI platforms",
-        "desc": "Document intelligence, operational copilots and decision automation with human control built in.",
-        "href": "/products/ai"
-      },
-      "cat3": {
-        "label": "Commerce",
-        "title": "Commerce platforms",
-        "desc": "Omnichannel selling, POS, inventory and fulfillment connected end to end.",
-        "href": "/products/commerce"
       },
       "cat4": {
         "label": "Industry",
@@ -45,7 +27,7 @@
       },
       "approach": {
         "eyebrow": "How products ship",
-        "heading": "Standard core. Configured to fit.",
+        "heading": "Standard core. Configured to fit",
         "summary": "Every product starts from a proven core, then gets configured to your operating model — not rebuilt from scratch.",
         "step1Label": "01",
         "step1Title": "Standard core",
@@ -62,8 +44,8 @@
       },
       "cta": {
         "eyebrow": "See it in action",
-        "heading1": "Run the demo.",
-        "heading2": "Then decide.",
+        "heading1": "Run the demo",
+        "heading2": "Then decide",
         "description": "Book a focused walkthrough with a senior MeU product specialist. You see the platform against your use case, not a generic pitch.",
         "primaryButton": "Request a demo",
         "secondaryButton": "Explore solutions"
@@ -72,14 +54,14 @@
         "hero": {
           "eyebrow": "Products · Enterprise",
           "heading1": "Enterprise operations",
-          "heading2": "on one platform.",
+          "heading2": "on one platform",
           "summary": "Modular business software shaped to each operating model — from workflow and CRM to analytics and membership — on a shared data layer.",
           "primaryButton": "Request a demo",
           "secondaryButton": "Contact MeU"
         },
         "modules": {
           "eyebrow": "Modules",
-          "heading": "Four modules. One source of truth.",
+          "heading": "Four modules. One source of truth",
           "summary": "Start with the module that solves your most pressing gap. Add the rest when you are ready — they share the same data and the same rules.",
           "exploreLabel": "Explore module"
         },
@@ -117,7 +99,7 @@
         },
         "architecture": {
           "eyebrow": "Architecture",
-          "heading": "Shared data. Modular delivery.",
+          "heading": "Shared data. Modular delivery",
           "summary": "Every module reads and writes to one governed data layer, so reports reconcile and workflows stay consistent across the operation.",
           "layer1Title": "Modules",
           "layer1Desc": "Workflow · CRM · Analytics · Membership",
@@ -130,8 +112,8 @@
         },
         "cta": {
           "eyebrow": "See the platform",
-          "heading1": "Start with one module.",
-          "heading2": "Expand when ready.",
+          "heading1": "Start with one module",
+          "heading2": "Expand when ready",
           "description": "Book a demo focused on the module that matters most to your operation right now.",
           "primaryButton": "Request a demo",
           "secondaryButton": "View all products"
@@ -141,14 +123,14 @@
         "hero": {
           "eyebrow": "Products · AI",
           "heading1": "AI platforms with",
-          "heading2": "human control built in.",
+          "heading2": "human control built in",
           "summary": "Document intelligence, operational copilots and decision automation — each with context, controls and human judgment designed into the system.",
           "primaryButton": "Request a demo",
           "secondaryButton": "Contact MeU"
         },
         "platforms": {
           "eyebrow": "Platforms",
-          "heading": "Three AI platforms. One governance model.",
+          "heading": "Three AI platforms. One governance model",
           "summary": "Each platform targets a defined business decision. Every output is traceable, reviewable and connected to your systems.",
           "exploreLabel": "Explore platform"
         },
@@ -178,7 +160,7 @@
         },
         "governance": {
           "eyebrow": "Governance",
-          "heading": "Every output is traceable.",
+          "heading": "Every output is traceable",
           "summary": "We design AI systems so that humans stay in control of critical decisions, and every automated action has a clear, reviewable trail.",
           "principle1Title": "Human in the loop",
           "principle1Desc": "Critical decisions require human approval before they take effect.",
@@ -192,7 +174,7 @@
         "cta": {
           "eyebrow": "See it work",
           "heading1": "AI that fits",
-          "heading2": "your workflow.",
+          "heading2": "your workflow",
           "description": "Book a demo focused on a defined AI use case in your operation. You see the platform against your documents and decisions.",
           "primaryButton": "Request a demo",
           "secondaryButton": "View all products"
@@ -202,14 +184,14 @@
         "hero": {
           "eyebrow": "Products · Commerce",
           "heading1": "Commerce platforms",
-          "heading2": "that scale with you.",
+          "heading2": "that scale with you",
           "summary": "Omnichannel selling, POS, inventory and fulfillment connected end to end — so every channel sees the same stock, price and order.",
           "primaryButton": "Request a demo",
           "secondaryButton": "Contact MeU"
         },
         "platforms": {
           "eyebrow": "Platforms",
-          "heading": "Four commerce modules. One inventory truth.",
+          "heading": "Four commerce modules. One inventory truth",
           "summary": "Start with the channel or operation that needs the most work. The rest connect to the same inventory and order data.",
           "exploreLabel": "Explore module"
         },
@@ -247,7 +229,7 @@
         },
         "integration": {
           "eyebrow": "Integration",
-          "heading": "One inventory. Every channel.",
+          "heading": "One inventory. Every channel",
           "summary": "Every module reads and writes to one inventory and order layer, so stock, price and order status stay consistent across web, store and marketplace.",
           "layer1Title": "Channels",
           "layer1Desc": "Web · POS · marketplace · B2B",
@@ -260,8 +242,8 @@
         },
         "cta": {
           "eyebrow": "See the platform",
-          "heading1": "Connect every channel.",
-          "heading2": "Start with one.",
+          "heading1": "Connect every channel",
+          "heading2": "Start with one",
           "description": "Book a demo focused on the commerce module that matters most to your operation right now.",
           "primaryButton": "Request a demo",
           "secondaryButton": "View all products"
@@ -271,14 +253,14 @@
         "hero": {
           "eyebrow": "Products · Industry",
           "heading1": "Industry-specific platforms",
-          "heading2": "with real domain depth.",
+          "heading2": "with real domain depth",
           "summary": "Pre-built domain modules for healthcare, logistics and education — shaped by delivery experience, not generic templates.",
           "primaryButton": "Request a demo",
           "secondaryButton": "Contact MeU"
         },
         "platforms": {
           "eyebrow": "Platforms",
-          "heading": "Three industry platforms. Built from delivery.",
+          "heading": "Three industry platforms. Built from delivery",
           "summary": "Each platform packages the workflows, data models and integrations we have built and proven in the field.",
           "exploreLabel": "Explore platform"
         },
@@ -308,7 +290,7 @@
         },
         "delivery": {
           "eyebrow": "Delivery model",
-          "heading": "Pre-built, then configured.",
+          "heading": "Pre-built, then configured",
           "summary": "Each industry platform ships with domain workflows and data models already built. We configure them to your operation, then integrate and deploy.",
           "step1Label": "01",
           "step1Title": "Domain core",
@@ -325,8 +307,8 @@
         },
         "cta": {
           "eyebrow": "See your industry",
-          "heading1": "Built for your world.",
-          "heading2": "Ready to configure.",
+          "heading1": "Built for your world",
+          "heading2": "Ready to configure",
           "description": "Book a demo focused on your industry. You see the domain workflows against your operating reality.",
           "primaryButton": "Request a demo",
           "secondaryButton": "View all products"
@@ -334,8 +316,8 @@
       },
       "meos": {
         "hero": {
-          "eyebrow": "MeOS — One Ecosystem. Infinite Possibilities.",
-          "heading": "One ecosystem. Unlimited possibilities.",
+          "eyebrow": "MeOS — One Ecosystem. Infinite Possibilities",
+          "heading": "One ecosystem. Unlimited possibilities",
           "summary": "A technology solution ecosystem developed by MeU Solutions, designed to help businesses manage, operate and grow in the digital era.",
           "primaryButton": "Explore the ecosystem",
           "secondaryButton": "Talk to us"
@@ -349,7 +331,7 @@
         },
         "values": {
           "eyebrow": "Core value",
-          "heading": "The right technology for each need. One unified direction.",
+          "heading": "The right technology for each need. One unified direction",
           "summary": "Every business has its own needs and challenges. MeOS builds a diverse solution portfolio so businesses can approach technology through real problems, at every stage of growth.",
           "item1Title": "The right fit",
           "item1Desc": "Choose products by need and business model.",
@@ -379,7 +361,7 @@
         },
         "architecture": {
           "eyebrow": "Ecosystem architecture",
-          "heading": "Many solutions. One technology ecosystem.",
+          "heading": "Many solutions. One technology ecosystem",
           "summary": "MeOS solutions are built to serve specific problems while sharing a common direction for technology and connectivity.",
           "summary2": "Businesses can start with the solution that fits their current needs and discover more products as their operations, sales or services expand.",
           "cta": "Learn about the MeOS platform"
@@ -417,7 +399,7 @@
         },
         "cta": {
           "heading1": "Start your digital transformation",
-          "heading2": "with MeOS.",
+          "heading2": "with MeOS",
           "description": "Share your business needs. MeOS will help you find the right technology solution.",
           "primaryButton": "Get a consultation",
           "secondaryButton": "Explore MeOS products",
@@ -427,14 +409,14 @@
       "meosEcommerce": {
         "hero": {
           "label": "MeOS Ecommerce | E-commerce Solution",
-          "heading": "Simplify operations. Accelerate revenue.",
+          "heading": "Simplify operations. Accelerate revenue",
           "summary": "MeOS Ecommerce is the e-commerce solution that helps businesses build an online sales channel, organise commerce operations and develop a convenient shopping experience.",
           "primaryButton": "Book a demo",
           "secondaryButton": "Explore features"
         },
         "value": {
           "eyebrow": "Solution value",
-          "heading": "Simpler online business with MeOS Ecommerce.",
+          "heading": "Simpler online business with MeOS Ecommerce",
           "summary": "Three common online retail problems and how MeOS Ecommerce approaches each one.",
           "item1Problem": "No dedicated sales channel",
           "item1Value": "Build an e-commerce website aligned with your brand.",
@@ -445,7 +427,7 @@
         },
         "features": {
           "eyebrow": "Key features",
-          "heading": "The tools e-commerce operations need.",
+          "heading": "The tools e-commerce operations need",
           "summary": "Explore the main function groups that help businesses build the shopping experience and organise online sales.",
           "tab1Title": "Sales website",
           "tab1Desc": "Build an online shopping space with interfaces for both desktop and mobile.",
@@ -470,7 +452,7 @@
         },
         "experience": {
           "eyebrow": "Product experience",
-          "heading": "Explore MeOS Ecommerce through real experience.",
+          "heading": "Explore MeOS Ecommerce through real experience",
           "summary": "See how customers discover products and place orders, and how businesses receive and process orders, through illustrative interfaces or a live demo.",
           "step1Title": "Discover products",
           "step1Desc": "Customers browse the catalogue, search and choose products on the storefront.",
@@ -481,7 +463,7 @@
           "primaryButton": "Book a demo"
         },
         "ecosystem": {
-          "heading": "One solution inside the MeOS ecosystem.",
+          "heading": "One solution inside the MeOS ecosystem",
           "summary": "MeOS Ecommerce is part of the MeOS technology solution ecosystem. Discover more products for multichannel sales management and mobile experiences.",
           "link1Title": "MeOS Omni",
           "link1Desc": "Multichannel sales management",
@@ -509,14 +491,14 @@
       "meosMiniapp": {
         "hero": {
           "label": "MeOS Mini App | Service experiences on Mini App",
-          "heading": "Connect customers. Convenient growth.",
+          "heading": "Connect customers. Convenient growth",
           "summary": "MeOS Mini App builds service experiences and customer engagement on Mini App platforms — sales, loyalty, vouchers and affiliate in one direct touchpoint.",
           "primaryButton": "Book a demo",
           "secondaryButton": "Explore features"
         },
         "value": {
           "eyebrow": "Solution value",
-          "heading": "Meet customers on the platforms they use every day.",
+          "heading": "Meet customers on the platforms they use every day",
           "summary": "Three common customer-reach problems and how MeOS Mini App approaches each one.",
           "item1Problem": "Hard-to-reach services",
           "item1Value": "Mini App removes the installation barrier — customers use it right on familiar platforms.",
@@ -527,7 +509,7 @@
         },
         "features": {
           "eyebrow": "Key features",
-          "heading": "The tools a Mini App channel needs.",
+          "heading": "The tools a Mini App channel needs",
           "summary": "Explore the main function groups that help businesses build service experiences on Mini App.",
           "tab1Title": "Shopping on Mini App",
           "tab1Desc": "Catalogue, ordering and payment right inside the Mini App without installing an app.",
@@ -552,7 +534,7 @@
         },
         "experience": {
           "eyebrow": "Product experience",
-          "heading": "Explore MeOS Mini App through real experience.",
+          "heading": "Explore MeOS Mini App through real experience",
           "summary": "See how customers reach your services and how businesses run the Mini App channel through illustrative interfaces or a live demo.",
           "step1Title": "Open the touchpoint",
           "step1Desc": "Bring products and services onto the Mini App so customers can reach them fastest.",
@@ -563,7 +545,7 @@
           "primaryButton": "Book a demo"
         },
         "ecosystem": {
-          "heading": "One solution inside the MeOS ecosystem.",
+          "heading": "One solution inside the MeOS ecosystem",
           "summary": "MeOS Mini App is part of the MeOS technology solution ecosystem. Discover more products for online sales and multichannel retail.",
           "link1Title": "MeOS Ecommerce",
           "link1Desc": "The online sales channel for your business",
@@ -591,14 +573,14 @@
       "meosOmni": {
         "hero": {
           "label": "MeOS Omni | Multichannel Sales Management",
-          "heading": "One place to manage. Every sales channel.",
+          "heading": "One place to manage. Every sales channel",
           "summary": "MeOS Omni is designed to centrally manage sales activities across channels: stores, websites, marketplaces and social channels.",
           "primaryButton": "Book a demo",
           "secondaryButton": "Explore features"
         },
         "value": {
           "eyebrow": "Solution value",
-          "heading": "Multichannel selling without the operational burden.",
+          "heading": "Multichannel selling without the operational burden",
           "summary": "Three common multichannel operations problems and how MeOS Omni approaches each one.",
           "item1Problem": "One system per channel",
           "item1Value": "Manage sales across channels centrally from one place.",
@@ -609,7 +591,7 @@
         },
         "features": {
           "eyebrow": "Key features",
-          "heading": "The tools multichannel sales management needs.",
+          "heading": "The tools multichannel sales management needs",
           "summary": "Explore the main function groups that help businesses organise sales across channels.",
           "tab1Title": "Sales channel management",
           "tab1Desc": "Organise and track channels: stores, websites, marketplaces and social channels.",
@@ -634,7 +616,7 @@
         },
         "experience": {
           "eyebrow": "Product experience",
-          "heading": "Explore MeOS Omni through real experience.",
+          "heading": "Explore MeOS Omni through real experience",
           "summary": "See how businesses organise multichannel sales through illustrative interfaces or a live demo.",
           "step1Title": "Connect channels",
           "step1Desc": "Set up your existing sales channels in the system.",
@@ -645,7 +627,7 @@
           "primaryButton": "Book a demo"
         },
         "ecosystem": {
-          "heading": "One solution inside the MeOS ecosystem.",
+          "heading": "One solution inside the MeOS ecosystem",
           "summary": "MeOS Omni is part of the MeOS technology solution ecosystem. Discover more products for online sales and mobile experiences.",
           "link1Title": "MeOS Ecommerce",
           "link1Desc": "The online sales channel for your business",
@@ -673,14 +655,14 @@
       "meosHicare": {
         "hero": {
           "label": "MeOS HiCare | Smart Healthcare Management",
-          "heading": "Technology that cares for everyone's health.",
+          "heading": "Technology that cares for everyone's health",
           "summary": "MeOS HiCare is a technology solution for digitising healthcare workflows and service experiences, helping clinics organise operations and care for patients more effectively.",
           "primaryButton": "Book a demo",
           "secondaryButton": "Explore features"
         },
         "value": {
           "eyebrow": "Solution value",
-          "heading": "Digitised healthcare services, more thoughtful patient care.",
+          "heading": "Digitised healthcare services, more thoughtful patient care",
           "summary": "Three common healthcare operations problems and how MeOS HiCare approaches each one.",
           "item1Problem": "Manual booking and check-in",
           "item1Value": "Digital appointment booking and check-in reduce waiting for patients.",
@@ -691,7 +673,7 @@
         },
         "features": {
           "eyebrow": "Key features",
-          "heading": "The tools healthcare facilities need.",
+          "heading": "The tools healthcare facilities need",
           "summary": "Explore the main function groups that help healthcare facilities organise operations and patient care.",
           "tab1Title": "Appointment booking",
           "tab1Desc": "Patients book appointments online while the facility manages schedules and visits.",
@@ -716,7 +698,7 @@
         },
         "experience": {
           "eyebrow": "Product experience",
-          "heading": "Explore MeOS HiCare through real experience.",
+          "heading": "Explore MeOS HiCare through real experience",
           "summary": "See how patients book and track their health records, and how facilities run their services, through illustrative interfaces or a live demo.",
           "step1Title": "Book an appointment",
           "step1Desc": "Patients choose the specialty, doctor and time slot that fit.",
@@ -727,7 +709,7 @@
           "primaryButton": "Book a demo"
         },
         "ecosystem": {
-          "heading": "One solution inside the MeOS ecosystem.",
+          "heading": "One solution inside the MeOS ecosystem",
           "summary": "MeOS HiCare is part of the MeOS technology solution ecosystem. Discover more products for mobile experiences and multichannel retail.",
           "link1Title": "MeOS Mini App",
           "link1Desc": "Business on Mini App",

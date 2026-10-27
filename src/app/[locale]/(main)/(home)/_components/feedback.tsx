@@ -78,22 +78,31 @@ export function Feedback() {
             </div>
           </div>
         </div>
+      </Reveal>
+
+      <Reveal className="w-full">
 
         <Swiper
           modules={[A11y, Keyboard]}
           onSwiper={(swiper) => { swiperRef.current = swiper; }}
-          slidesPerView={1.08}
+          loop
+          centeredSlides
+          slidesPerView={1.15}
           spaceBetween={14}
           keyboard={{ enabled: true, onlyInViewport: true }}
           a11y={{ enabled: true }}
           breakpoints={{
-            640: { slidesPerView: 1.7, spaceBetween: 18 },
-            1024: { slidesPerView: 2.55, spaceBetween: 20 },
+            640: { slidesPerView: 2.4, spaceBetween: 18 },
+            1024: { slidesPerView: 3, spaceBetween: 20 },
           }}
-          className="w-full max-w-full !overflow-hidden"
+          className="feedback-swiper w-full max-w-full !overflow-hidden"
         >
-          {FEEDBACK_ITEMS.map((item, index) => (
-            <SwiperSlide key={item} className="!h-auto min-w-0">
+          {[...FEEDBACK_ITEMS, ...FEEDBACK_ITEMS].map((item, index) => (
+            <SwiperSlide
+              key={`${item}-${index}`}
+              className="!h-auto min-w-0"
+              onClick={() => { swiperRef.current?.slideToLoop(index % FEEDBACK_ITEMS.length); }}
+            >
               <article className="group relative flex h-full min-h-[340px] min-w-0 flex-col rounded-2xl border border-white/10 bg-white/[0.035] p-6 backdrop-blur-sm transition duration-300 hover:border-primary-light/35 hover:bg-white/[0.055] sm:min-h-[370px] sm:p-8">
                 <div className="flex items-center justify-between">
                   <Quote aria-hidden="true" className="h-6 w-6 text-primary-light/80" />
@@ -113,7 +122,7 @@ export function Feedback() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="mt-5 flex justify-end sm:hidden">
+        <div className="container mt-5 flex justify-end sm:hidden">
           <div className="flex shrink-0 gap-2">
             <button
               type="button"
