@@ -4,9 +4,12 @@ import { useMemo, useState } from "react";
 import {
   ChevronLeft,
   ChevronRight,
+  EyeOff,
   Plus,
   Star,
   Tag,
+  Trash2,
+  X,
 } from "lucide-react";
 import { useRouter } from "@/i18n/navigation";
 import { toast } from "sonner";
@@ -16,6 +19,7 @@ import { AdminStatsGrid } from "@/components/admin/admin-stats-grid";
 import { AdminTableLayout } from "@/components/admin/admin-table-layout";
 import { SafeImage } from "@/components/shared/safe-image";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Select,
   SelectContent,
@@ -33,10 +37,11 @@ import {
 } from "@/components/ui/table";
 import { useQueryClient } from "@tanstack/react-query";
 import {
+  deleteApiV10PostId,
   getGetApiV10PostQueryKey,
-  useDeleteApiV10PostId,
   useGetApiV10Post,
   usePutApiV10PostId,
+  putApiV10PostId,
 } from "@/api/endpoints/post";
 import {
   type CmsPagedResult,
@@ -61,8 +66,10 @@ export default function AdminNewsPage() {
   const queryClient = useQueryClient();
   const [search, setSearch] = useState("");
   const [statusFilter, setStatusFilter] = useState("all");
-  const [deleteTarget, setDeleteTarget] = useState<AdminNewsItem | null>(null);
+  const [deleteTargets, setDeleteTargets] = useState<AdminNewsItem[]>([]);
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isBulkHiding, setIsBulkHiding] = useState(false);
   const [togglingVisibilityId, setTogglingVisibilityId] = useState<string | null>(null);
   const [page, setPage] = useState(1);
   const [pageSize] = useState(10);
@@ -121,7 +128,6 @@ export default function AdminNewsPage() {
     filters: featuredStatsFilters || undefined,
   });
   const updatePost = usePutApiV10PostId();
-  const deletePost = useDeleteApiV10PostId();
 
   const result = (listData?.responseData ?? {}) as unknown as CmsPagedResult<CmsRawPostItem>;
   const items = useMemo(
@@ -130,6 +136,14 @@ export default function AdminNewsPage() {
   );
   const total = result.count ?? 0;
   const ready = !isFetching;
+  const selectedItems = useMemo(
+    () => items.filter((item) => selectedIds.has(item.id)),
+    [items, selectedIds],
+  );
+  const selectedCount = selectedItems.length;
+  const allPageSelected =
+    items.length > 0 && items.every((item) => selectedIds.has(item.id));
+  const somePageSelected = items.some((item) => selectedIds.has(item.id));
   const publishedTotal =
     ((visibleStatsData?.responseData ?? {}) as unknown as CmsPagedResult<CmsRawPostItem>).count ?? 0;
   const featuredTotal =
@@ -137,6 +151,37 @@ export default function AdminNewsPage() {
 
   const reload = () =>
     queryClient.invalidateQueries({ queryKey: getGetApiV10PostQueryKey() });
+
+  const clearSelection = () => setSelectedIds(new Set<string>());
+
+  const handleSelectAll = (checked: boolean) => {
+    if (!checked) {
+      const pageIds = new Set(items.map((item) => item.id));
+      setSelectedIds(
+        (current) =>
+          new Set(Array.from(current).filter((id) => !pageIds.has(id))),
+      );
+      return;
+    }
+
+    setSelectedIds((current) => {
+      const next = new Set(current);
+      items.forEach((item) => next.add(item.id));
+      return next;
+    });
+  };
+
+  const handleToggleSelect = (id: string, checked: boolean) => {
+    setSelectedIds((current) => {
+      const next = new Set(current);
+      if (checked) {
+        next.add(id);
+      } else {
+        next.delete(id);
+      }
+      return next;
+    });
+  };
 
   const stats = useMemo(() => {
     return [
@@ -159,21 +204,90 @@ export default function AdminNewsPage() {
   }, [featuredTotal, publishedTotal, total]);
 
   const handleDelete = async () => {
-    if (!deleteTarget || isDeleting) return;
+    if (deleteTargets.length === 0 || isDeleting) return;
 
     setIsDeleting(true);
+    const targetIds = deleteTargets.map((item) => item.id);
 
     try {
-      await deletePost.mutateAsync({ id: deleteTarget.id });
-      toast.success("Đã xóa bài viết");
-      setDeleteTarget(null);
-      await reload();
-    } catch (error) {
-      toast.error(
-        error instanceof Error ? error.message : "Không thể xóa bài viết",
+      const results = await Promise.allSettled(
+        targetIds.map((id) => deleteApiV10PostId(id)),
       );
+      const succeededIds = new Set(
+        targetIds.filter((_, index) => results[index]?.status === "fulfilled"),
+      );
+      const failedCount = targetIds.length - succeededIds.size;
+
+      setSelectedIds(
+        (current) =>
+          new Set(Array.from(current).filter((id) => !succeededIds.has(id))),
+      );
+      setDeleteTargets([]);
+
+      if (succeededIds.size > 0) {
+        toast.success(
+          succeededIds.size === 1
+            ? "Đã xóa bài viết"
+            : `Đã xóa ${succeededIds.size} bài viết`,
+        );
+      }
+      if (failedCount > 0) {
+        toast.warning(
+          `${failedCount} bài viết chưa thể xóa. Vui lòng thử lại.`,
+        );
+      }
+
+      await reload();
+    } catch {
+      toast.error("Không thể xóa bài viết");
     } finally {
       setIsDeleting(false);
+    }
+  };
+
+  const handleBulkHide = async () => {
+    if (selectedItems.length === 0 || isBulkHiding) return;
+
+    setIsBulkHiding(true);
+    const targetIds = selectedItems.map((item) => item.id);
+
+    try {
+      const results = await Promise.allSettled(
+        targetIds.map((id) =>
+          putApiV10PostId(id, {
+            is_hidden: true,
+            is_active: false,
+          }),
+        ),
+      );
+      const succeededIds = new Set(
+        targetIds.filter((_, index) => results[index]?.status === "fulfilled"),
+      );
+      const failedCount = targetIds.length - succeededIds.size;
+
+      setSelectedIds(
+        (current) =>
+          new Set(Array.from(current).filter((id) => !succeededIds.has(id))),
+      );
+
+      if (succeededIds.size > 0) {
+        toast.success(
+          succeededIds.size === 1
+            ? "Đã ẩn bài viết"
+            : `Đã ẩn ${succeededIds.size} bài viết`,
+        );
+      }
+      if (failedCount > 0) {
+        toast.warning(
+          `${failedCount} bài viết chưa thể ẩn. Vui lòng thử lại.`,
+        );
+      }
+
+      await reload();
+    } catch {
+      toast.error("Không thể ẩn bài viết");
+    } finally {
+      setIsBulkHiding(false);
     }
   };
 
@@ -206,6 +320,7 @@ export default function AdminNewsPage() {
 
   const handlePageChange = (newPage: number) => {
     if (newPage >= 1 && newPage <= totalPages) {
+      clearSelection();
       setPage(newPage);
     }
   };
@@ -220,6 +335,7 @@ export default function AdminNewsPage() {
         actionLabel="Thêm bài viết"
         actionIcon={<Plus className="mr-2 h-4 w-4" />}
         onSearchChange={(value) => {
+          clearSelection();
           setSearch(value);
           setPage(1);
         }}
@@ -231,6 +347,7 @@ export default function AdminNewsPage() {
             <Select
               value={statusFilter}
               onValueChange={(value) => {
+                clearSelection();
                 setStatusFilter(value);
                 setPage(1);
               }}
@@ -253,29 +370,104 @@ export default function AdminNewsPage() {
           </div>
         }
       >
+        {selectedCount > 0 ? (
+          <div className="flex flex-wrap items-center gap-3 border-b border-[#063e8e]/10 bg-[#063e8e]/[0.04] px-4 py-3">
+            <p className="mr-auto text-sm text-gray-700">
+              Đã chọn <strong className="text-[#063e8e]">{selectedCount}</strong>{" "}
+              bài viết
+            </p>
+            <Button
+              type="button"
+              size="sm"
+              variant="outline"
+              disabled={isBulkHiding}
+              onClick={() => void handleBulkHide()}
+              className="border-amber-200 bg-white text-amber-700 hover:bg-amber-50 hover:text-amber-800"
+            >
+              <EyeOff className="mr-2 h-4 w-4" />
+              {isBulkHiding ? "Đang ẩn..." : "Ẩn bài viết"}
+            </Button>
+            <Button
+              type="button"
+              size="sm"
+              variant="outline"
+              disabled={isDeleting}
+              onClick={() => setDeleteTargets(selectedItems)}
+              className="border-red-200 bg-white text-red-600 hover:bg-red-50 hover:text-red-700"
+            >
+              <Trash2 className="mr-2 h-4 w-4" />
+              Xóa bài viết
+            </Button>
+            <Button
+              type="button"
+              size="icon"
+              variant="ghost"
+              onClick={clearSelection}
+              title="Bỏ chọn tất cả"
+              aria-label="Bỏ chọn tất cả"
+              className="h-8 w-8 text-gray-500 hover:bg-white hover:text-gray-700"
+            >
+              <X className="h-4 w-4" />
+            </Button>
+          </div>
+        ) : null}
+
         <div className="scrollbar overflow-x-auto">
-          <Table className="min-w-[1120px] table-fixed">
+          <Table className="min-w-[1220px] table-fixed">
             <TableHeader>
-              <TableRow className="border-0 bg-[#063e8e] hover:bg-[#063e8e]">
-                <TableHead className="w-[260px] py-4 text-center text-white">
+              <TableRow className="group border-0 bg-[#063e8e] hover:bg-[#063e8e]">
+                <TableHead className="w-[72px] py-4 text-center text-white">
+                  <div className="relative mx-auto flex h-6 w-6 items-center justify-center">
+                    <span
+                      className={
+                        allPageSelected || somePageSelected
+                          ? "text-xs font-semibold uppercase tracking-[0.12em] text-white opacity-0"
+                          : "text-xs font-semibold uppercase tracking-[0.12em] text-white transition-opacity group-hover:opacity-0 group-focus-within:opacity-0"
+                      }
+                    >
+                      STT
+                    </span>
+                    <Checkbox
+                      checked={
+                        allPageSelected
+                          ? true
+                          : somePageSelected
+                            ? "indeterminate"
+                            : false
+                      }
+                      onCheckedChange={(checked) =>
+                        handleSelectAll(checked === true)
+                      }
+                      disabled={!ready || items.length === 0}
+                      aria-label="Chọn tất cả bài viết trên trang"
+                      title="Chọn tất cả bài viết trên trang"
+                      className={
+                        allPageSelected || somePageSelected
+                          ? "absolute inset-0 m-auto border-white bg-white text-[#063e8e]"
+                          : "absolute inset-0 m-auto border-white/60 bg-white/10 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100 data-[state=checked]:border-white data-[state=checked]:bg-white data-[state=checked]:text-[#063e8e] data-[state=indeterminate]:border-white data-[state=indeterminate]:bg-white data-[state=indeterminate]:text-[#063e8e]"
+                      }
+                    />
+                  </div>
+                </TableHead>
+                <TableHead className="w-[240px] py-4 text-center text-white">
                   Tiêu đề
                 </TableHead>
-                <TableHead className="w-[140px] py-4 text-center text-white">
+                <TableHead className="w-[130px] py-4 text-center text-white">
                   Hình ảnh đại diện
                 </TableHead>
-                <TableHead className="w-[220px] py-4 text-center text-white">
+                <TableHead className="w-[200px] py-4 text-center text-white">
                   Trang hiển thị
                 </TableHead>
-                <TableHead className="w-[170px] py-4 text-center text-white">
+                <TableHead className="w-[160px] py-4 text-center text-white">
                   Ngày xuất bản / Hết hạn
                 </TableHead>
-                <TableHead className="w-[150px] py-4 text-center text-white">
+                <TableHead className="w-[140px] py-4 text-center text-white">
                   Người tạo
                 </TableHead>
-                <TableHead className="w-[150px] py-4 text-center text-white">
+                <TableHead className="w-[140px] py-4 text-center text-white">
                   Cập nhật bởi
                 </TableHead>
-                <TableHead className="w-[130px] py-4 text-center text-white">
+                <TableHead className="w-[120px] py-4 text-center text-white">
                   Thao tác
                 </TableHead>
               </TableRow>
@@ -286,7 +478,7 @@ export default function AdminNewsPage() {
                 <AdminNewsTableLoading />
               ) : items.length === 0 ? (
                 <TableRow>
-                  <TableCell colSpan={7} className="py-12 text-center text-sm text-gray-700">
+                  <TableCell colSpan={8} className="py-12 text-center text-sm text-gray-700">
                     Không có bài viết nào phù hợp.
                   </TableCell>
                 </TableRow>
@@ -296,8 +488,40 @@ export default function AdminNewsPage() {
                   return (
                     <TableRow
                       key={item.id}
-                      className={index % 2 === 0 ? "bg-white" : "bg-[#063e8e]/[0.03]"}
+                      className={
+                        selectedIds.has(item.id)
+                          ? "group bg-[#063e8e]/[0.07] hover:bg-[#063e8e]/[0.09]"
+                          : index % 2 === 0
+                            ? "group bg-white"
+                            : "group bg-[#063e8e]/[0.03]"
+                      }
                     >
+                      <TableCell className="text-center">
+                        <div className="relative mx-auto flex h-6 w-6 items-center justify-center leading-none">
+                          <span
+                            className={
+                              selectedIds.has(item.id)
+                                ? "flex h-6 w-6 items-center justify-center text-sm font-semibold leading-none text-[#063e8e] opacity-0"
+                                : "flex h-6 w-6 items-center justify-center text-sm font-semibold leading-none text-gray-700 transition-opacity group-hover:opacity-0 group-focus-within:opacity-0"
+                            }
+                          >
+                            {(page - 1) * pageSize + index + 1}
+                          </span>
+                          <Checkbox
+                            checked={selectedIds.has(item.id)}
+                            onCheckedChange={(checked) =>
+                              handleToggleSelect(item.id, checked === true)
+                            }
+                            aria-label={`Chọn bài viết ${item.title}`}
+                            title={`Chọn bài viết ${item.title}`}
+                            className={
+                              selectedIds.has(item.id)
+                                ? "absolute inset-0 m-auto border-[#063e8e] bg-[#063e8e]"
+                                : "absolute inset-0 m-auto border-[#063e8e]/30 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100"
+                            }
+                          />
+                        </div>
+                      </TableCell>
                       <TableCell className="py-4">
                         <div className="space-y-2">
                           <p className="line-clamp-2 text-sm font-semibold text-black">
@@ -394,7 +618,7 @@ export default function AdminNewsPage() {
                             {
                               kind: "delete",
                               label: "Xóa bài viết",
-                              onClick: () => setDeleteTarget(item),
+                              onClick: () => setDeleteTargets([item]),
                             },
                           ]}
                         />
@@ -467,17 +691,21 @@ export default function AdminNewsPage() {
       </AdminTableLayout>
 
       <AdminDeleteDialog
-        open={!!deleteTarget}
+        open={deleteTargets.length > 0}
         title="Xóa bài viết"
         description={
-          deleteTarget ? (
+          deleteTargets.length === 1 ? (
             <>
-              Bài viết <strong>{deleteTarget.title}</strong> sẽ bị xóa khỏi dữ liệu quản trị.
+              Bài viết <strong>{deleteTargets[0].title}</strong> sẽ bị xóa khỏi dữ liệu quản trị.
+            </>
+          ) : deleteTargets.length > 1 ? (
+            <>
+              <strong>{deleteTargets.length} bài viết</strong> đã chọn sẽ bị xóa khỏi dữ liệu quản trị.
             </>
           ) : null
         }
         onOpenChange={(open) => {
-          if (!open) setDeleteTarget(null);
+          if (!open) setDeleteTargets([]);
         }}
         onConfirm={() => void handleDelete()}
       />

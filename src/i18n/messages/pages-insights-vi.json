@@ -4,14 +4,14 @@
       "hero": {
         "eyebrow": "Insights",
         "heading1": "Ý tưởng cho các nhà lãnh đạo",
-        "heading2": "kiến tạo tương lai.",
+        "heading2": "kiến tạo tương lai",
         "summary": "Góc nhìn thực tế cho nhà lãnh đạo ra quyết định công nghệ — ghi chép thực địa, framework và báo cáo từ công việc chúng tôi làm với khách hàng mỗi ngày.",
         "primaryButton": "Liên hệ ngay với MeU",
         "secondaryButton": "Duyệt theo danh mục"
       },
       "featured": {
         "eyebrow": "Nổi bật",
-        "heading": "Điều chúng tôi đang suy nghĩ lúc này.",
+        "heading": "Điều chúng tôi đang suy nghĩ lúc này",
         "summary": "Ba bài viết phản ánh các cuộc trò chuyện chúng tôi đang có với đội ngũ lãnh đạo trong quý này.",
         "card1Meta": "Ghi chép thực địa · 8 phút",
         "card1Title": "Nơi AI doanh nghiệp tạo giá trị trước khi tạo ra tiếng ồn",
@@ -26,7 +26,7 @@
       },
       "categories": {
         "eyebrow": "Duyệt theo danh mục",
-        "heading": "Tìm góc nhìn bạn cần.",
+        "heading": "Tìm góc nhìn bạn cần",
         "summary": "Sáu danh mục bao phủ các quyết định công nghệ mà nhà lãnh đạo quay lại nhiều nhất.",
         "cat1Title": "AI & Tự động hóa",
         "cat1Desc": "Nơi trí tuệ phù hợp trong workflow — và nơi chưa phù hợp.",
@@ -43,8 +43,8 @@
       },
       "cta": {
         "eyebrow": "Cùng kiến tạo tương lai",
-        "heading1": "Mang đến cho chúng tôi thách thức.",
-        "heading2": "Chúng tôi mang đến hướng đi.",
+        "heading1": "Mang đến cho chúng tôi thách thức",
+        "heading2": "Chúng tôi mang đến hướng đi",
         "description": "Bắt đầu một cuộc trò chuyện tập trung với đối tác công nghệ cấp cao của MeU. Bạn rời đi với một góc nhìn về vấn đề, các lựa chọn và bước tiếp theo thực tế.",
         "primaryButton": "Liên hệ ngay với MeU",
         "secondaryButton": "Xem cách chúng tôi đã làm"
@@ -53,14 +53,14 @@
         "hero": {
           "eyebrow": "Insights · AI & Tự động hóa",
           "heading1": "Trí tuệ bên trong",
-          "heading2": "workflow.",
+          "heading2": "workflow",
           "summary": "Nơi AI tạo giá trị thực trước khi tạo tiếng ồn — ghi chép thực địa và framework cho nhà lãnh đạo chọn workflow đã sẵn sàng cho tự động hóa thông minh.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Đánh giá một use case AI"
         },
         "featured": {
           "eyebrow": "Nổi bật",
-          "heading": "Điều đang hoạt động với AI lúc này.",
+          "heading": "Điều đang hoạt động với AI lúc này",
           "summary": "Các use case nơi chúng tôi thấy AI đi từ demo đến vận hành hàng ngày, với con người giữ kiểm soát các quyết định quan trọng.",
           "card1Meta": "Ghi chép thực địa · 8 phút",
           "card1Title": "Nơi AI doanh nghiệp tạo giá trị trước khi tạo ra tiếng ồn",
@@ -75,7 +75,7 @@
         },
         "topics": {
           "eyebrow": "Chủ đề chúng tôi đề cập",
-          "heading": "Từ use case đến production được quản trị.",
+          "heading": "Từ use case đến production được quản trị",
           "summary": "Những quyết định phân biệt AI thử nghiệm với AI tồn tại trong vận hành.",
           "item1Title": "Chọn use case",
           "item1Desc": "Cách chấm điểm workflow cho mức độ sẵn sàng AI trước khi cam kết nguồn lực kỹ thuật.",
@@ -89,7 +89,7 @@
         "cta": {
           "eyebrow": "Đánh giá một use case AI",
           "heading1": "Tìm workflow",
-          "heading2": "đáng tự động hóa trước tiên.",
+          "heading2": "đáng tự động hóa trước tiên",
           "description": "Mang đến cho chúng tôi một use case ứng viên. Chúng tôi sẽ chấm điểm mức sẵn sàng và phác thảo một triển khai production được quản trị sẽ trông như thế nào.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Xem nền tảng AI"
@@ -99,14 +99,14 @@
         "hero": {
           "eyebrow": "Insights · Chuyển đổi số",
           "heading1": "Từ tham vọng đến",
-          "heading2": "thay đổi đo lường được.",
+          "heading2": "thay đổi đo lường được",
           "summary": "Cách đội ngũ lãnh đạo biến tham vọng chiến lược thành lộ trình tuần tự, nền tảng hiện đại và thay đổi vận hành bền vững.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Xem tất cả giải pháp"
         },
         "featured": {
           "eyebrow": "Nổi bật",
-          "heading": "Chuyển đổi đi vào công việc hàng ngày.",
+          "heading": "Chuyển đổi đi vào công việc hàng ngày",
           "summary": "Góc nhìn về việc giữ chiến lược, bàn giao và tiếp nhận kết nối — để thay đổi thể hiện trong vận hành, không chỉ trong slide.",
           "card1Meta": "Hướng dẫn · 11 phút",
           "card1Title": "Từ lộ trình chuyển đổi đến phần mềm hoạt động",
@@ -121,7 +121,7 @@
         },
         "topics": {
           "eyebrow": "Chủ đề chúng tôi đề cập",
-          "heading": "Những quyết định giữ chuyển đổi đúng tiến độ.",
+          "heading": "Những quyết định giữ chuyển đổi đúng tiến độ",
           "summary": "Nơi các chương trình chuyển đổi đình trệ — và các thực tiễn giữ chúng tiến lên.",
           "item1Title": "Tuần tự hóa lộ trình",
           "item1Desc": "Sắp xếp sáng kiến để mỗi cái mở khóa cho cái tiếp theo mà không đóng băng doanh nghiệp.",
@@ -134,8 +134,8 @@
         },
         "cta": {
           "eyebrow": "Bắt đầu từ kết quả",
-          "heading1": "Định nghĩa kết quả.",
-          "heading2": "Rồi mới đến lộ trình.",
+          "heading1": "Định nghĩa kết quả",
+          "heading2": "Rồi mới đến lộ trình",
           "description": "Mang đến cho chúng tôi tham vọng chiến lược. Chúng tôi sẽ giúp tuần tự hóa thành lộ trình với thay đổi vận hành đo lường được.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Xem tất cả giải pháp"
@@ -145,14 +145,14 @@
         "hero": {
           "eyebrow": "Insights · Công nghệ doanh nghiệp",
           "heading1": "Các hệ thống giữ",
-          "heading2": "vận hành liền mạch.",
+          "heading2": "vận hành liền mạch",
           "summary": "Kiến trúc, tích hợp và các quyết định kỹ thuật quyết định tốc độ thay đổi của một công ty.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Khám phá năng lực"
         },
         "featured": {
           "eyebrow": "Nổi bật",
-          "heading": "Quyết định kiến trúc bền vững theo thời gian.",
+          "heading": "Quyết định kiến trúc bền vững theo thời gian",
           "summary": "Tại sao quyết định tích hợp và lớp dữ liệu hôm nay quyết định sự linh hoạt ngày mai.",
           "card1Meta": "Góc nhìn · 6 phút",
           "card1Title": "Chi phí ẩn của việc ghép nối các hệ thống doanh nghiệp",
@@ -167,7 +167,7 @@
         },
         "topics": {
           "eyebrow": "Chủ đề chúng tôi đề cập",
-          "heading": "Kỹ thuật xương sống của doanh nghiệp.",
+          "heading": "Kỹ thuật xương sống của doanh nghiệp",
           "summary": "Những quyết định kỹ thuật cộng dồn — tốt hoặc xấu — qua nhiều năm.",
           "item1Title": "Tích hợp hệ thống",
           "item1Desc": "API, sự kiện và đối chiếu hàng loạt giữ hệ thống đồng bộ.",
@@ -181,7 +181,7 @@
         "cta": {
           "eyebrow": "Review kiến trúc",
           "heading1": "Kiểm tra sức chịu",
-          "heading2": "kiến trúc của bạn.",
+          "heading2": "kiến trúc của bạn",
           "description": "Mang đến cho chúng tôi kiến trúc hiện tại và thay đổi bạn cần hấp thụ. Chúng tôi sẽ xác định nơi nó sẽ cong — và nơi nó sẽ gãy.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Khám phá năng lực"
@@ -191,14 +191,14 @@
         "hero": {
           "eyebrow": "Insights · Kỹ thuật phần mềm",
           "heading1": "Phần mềm bền vững,",
-          "heading2": "xây quanh công việc thực tế.",
+          "heading2": "xây quanh công việc thực tế",
           "summary": "Cách chúng tôi thiết kế, xây và vận hành phần mềm giữ được tính hữu dụng — từ thiết kế sản phẩm và UI/UX đến kỹ thuật chất lượng và dịch vụ quản lý.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Khám phá năng lực"
         },
         "featured": {
           "eyebrow": "Nổi bật",
-          "heading": "Thực tiễn kỹ thuật đứng vững trong production.",
+          "heading": "Thực tiễn kỹ thuật đứng vững trong production",
           "summary": "Những gì chúng tôi học được khi xây phần mềm cho vận hành không thể chịu đựng downtime.",
           "card1Meta": "Hướng dẫn · 10 phút",
           "card1Title": "Thiết kế phần mềm cho sử dụng theo ca, gián đoạn cao",
@@ -213,7 +213,7 @@
         },
         "topics": {
           "eyebrow": "Chủ đề chúng tôi đề cập",
-          "heading": "Từ commit đầu tiên đến vận hành hàng ngày.",
+          "heading": "Từ commit đầu tiên đến vận hành hàng ngày",
           "summary": "Các thực tiễn giữ phần mềm hữu dụng lâu sau lần ra mắt đầu tiên.",
           "item1Title": "Thiết kế sản phẩm & UI/UX",
           "item1Desc": "Định hình sản phẩm hữu dụng, dễ dùng và vận hành theo thiết kế.",
@@ -227,7 +227,7 @@
         "cta": {
           "eyebrow": "Xây cùng chúng tôi",
           "heading1": "Mang đến sản phẩm",
-          "heading2": "bạn cần bàn giao.",
+          "heading2": "bạn cần bàn giao",
           "description": "Hãy cho chúng tôi biết bạn cần xây gì. Chúng tôi mang đến thiết kế, kỹ thuật và thực tiễn chất lượng để bàn giao — và vận hành sau đó.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Khám phá năng lực"
@@ -237,14 +237,14 @@
         "hero": {
           "eyebrow": "Insights · Ngành",
           "heading1": "Chiều sâu chuyên ngành",
-          "heading2": "bạn có thể xây trên.",
+          "heading2": "bạn có thể xây trên",
           "summary": "Góc nhìn theo ngành từ kinh nghiệm bàn giao — y tế, logistics, bán lẻ, khoa học sự sống, giáo dục và hiệp hội.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Khám phá ngành"
         },
         "featured": {
           "eyebrow": "Nổi bật",
-          "heading": "Những gì chúng tôi thấy trong thực địa.",
+          "heading": "Những gì chúng tôi thấy trong thực địa",
           "summary": "Các mô hình và điểm nghẽn từ những ngành nơi chúng tôi có kiến thức chuyên môn đã kiểm chứng và kinh nghiệm bàn giao.",
           "card1Meta": "Ngành · 7 phút",
           "card1Title": "Một cổng tiếp cận số thực sự yêu cầu gì trong mạng lưới nhà cung cấp",
@@ -259,7 +259,7 @@
         },
         "topics": {
           "eyebrow": "Ngành chúng tôi đề cập",
-          "heading": "Chỉ những lĩnh vực có kinh nghiệm bàn giao.",
+          "heading": "Chỉ những lĩnh vực có kinh nghiệm bàn giao",
           "summary": "Chúng tôi chỉ xuất bản góc nhìn ngành nơi có kiến thức chuyên môn thực và bàn giao đã kiểm chứng.",
           "item1Title": "Y tế",
           "item1Desc": "Tiếp cận bệnh nhân, lập lịch và vận hành lâm sàng.",
@@ -273,7 +273,7 @@
         "cta": {
           "eyebrow": "Ngành của bạn",
           "heading1": "Xây quanh",
-          "heading2": "thế giới của bạn.",
+          "heading2": "thế giới của bạn",
           "description": "Mang đến cho chúng tôi điểm nghẽn vận hành trong ngành của bạn. Chúng tôi sẽ chia sẻ những gì đã thấy và phác thảo một hướng đi thực tế.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Khám phá ngành"
@@ -283,14 +283,14 @@
         "hero": {
           "eyebrow": "Insights · Báo cáo",
           "heading1": "Báo cáo & whitepaper",
-          "heading2": "cho nhà lãnh đạo công nghệ.",
+          "heading2": "cho nhà lãnh đạo công nghệ",
           "summary": "Nghiên cứu có cấu trúc và framework sẵn sàng — những artifact chúng tôi dùng với khách hàng để đồng bộ lãnh đạo trước khi cam kết bàn giao.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Duyệt tất cả insights"
         },
         "featured": {
           "eyebrow": "Nổi bật",
-          "heading": "Framework bạn có thể chạy.",
+          "heading": "Framework bạn có thể chạy",
           "summary": "Báo cáo được thiết kế để dùng trong cuộc họp lãnh đạo, không phải cất vào ổ đĩa chung.",
           "card1Meta": "Báo cáo · 24 trang",
           "card1Title": "Checklist sẵn sàng vận hành cho dự án nền tảng",
@@ -305,7 +305,7 @@
         },
         "topics": {
           "eyebrow": "Những gì bạn nhận được",
-          "heading": "Báo cáo được xây để sử dụng.",
+          "heading": "Báo cáo được xây để sử dụng",
           "summary": "Mỗi báo cáo được cấu trúc quanh một quyết định mà lãnh đạo cần đưa ra.",
           "item1Title": "Checklist sẵn sàng",
           "item1Desc": "Câu hỏi có cấu trúc phát hiện khoảng trống trước khi bàn giao bắt đầu.",
@@ -319,7 +319,7 @@
         "cta": {
           "eyebrow": "Nhận báo cáo",
           "heading1": "Mang framework",
-          "heading2": "đến cuộc review tiếp theo.",
+          "heading2": "đến cuộc review tiếp theo",
           "description": "Yêu cầu một buổi trình bày bất kỳ báo cáo nào với chuyên gia cấp cao của MeU, tùy chỉnh theo vận hành của bạn.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Duyệt tất cả insights"
@@ -329,14 +329,14 @@
         "hero": {
           "eyebrow": "Insights · Tin tức & Sự kiện",
           "heading1": "Điều đang diễn ra",
-          "heading2": "tại MeU.",
+          "heading2": "tại MeU",
           "summary": "Tin tức công ty, đối tác, sự kiện và thông báo — những cập nhật vận hành mà nhà lãnh đạo hỏi chúng tôi.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Xem thành công khách hàng"
         },
         "featured": {
           "eyebrow": "Mới nhất",
-          "heading": "Thông báo gần đây.",
+          "heading": "Thông báo gần đây",
           "summary": "Tin tức chúng tôi có thể chia sẻ công khai, xuất bản khi được xác nhận.",
           "card1Meta": "Thông báo · 3 phút",
           "card1Title": "MeU mở rộng bàn giao y tế đến mạng lưới nhà cung cấp thứ hai",
@@ -351,7 +351,7 @@
         },
         "topics": {
           "eyebrow": "Theo dõi",
-          "heading": "Cập nhật với MeU.",
+          "heading": "Cập nhật với MeU",
           "summary": "Các danh mục tin tức chúng tôi xuất bản khi được xác nhận.",
           "item1Title": "Tin tức công ty",
           "item1Desc": "Cột mốc, cập nhật lãnh đạo và thông báo vận hành.",
@@ -365,7 +365,7 @@
         "cta": {
           "eyebrow": "Gặp chúng tôi",
           "heading1": "Gặp chúng tôi",
-          "heading2": "tại sự kiện tiếp theo.",
+          "heading2": "tại sự kiện tiếp theo",
           "description": "Muốn gặp tại sự kiện sắp tới hoặc sắp xếp một buổi briefing? Hãy liên hệ và chúng tôi sẽ tìm thời gian.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Xem thành công khách hàng"
@@ -373,7 +373,7 @@
       },
       "posts": {
         "eyebrow": "Bài viết",
-        "heading": "Tất cả bài viết.",
+        "heading": "Tất cả bài viết",
         "summary": "Tin tức, insight và báo cáo mới nhất từ MeU.",
         "readMore": "Đọc thêm",
         "empty": "Hiện chưa có bài viết. Vui lòng quay lại sau.",
@@ -383,15 +383,15 @@
     },
     "postDetail": {
       "relatedEyebrow": "Đọc tiếp",
-      "relatedTitle": "Bài viết liên quan.",
+      "relatedTitle": "Bài viết liên quan",
       "readArticle": "Đọc bài viết",
       "ctaEyebrow": "Sẵn sàng bắt đầu?",
-      "ctaHeading1": "Mang đến thách thức.",
-      "ctaHeading2": "Chúng tôi mang đến hướng đi.",
+      "ctaHeading1": "Mang đến thách thức",
+      "ctaHeading2": "Chúng tôi mang đến hướng đi",
       "ctaDesc": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
       "ctaPrimary": "Liên hệ ngay với MeU",
       "ctaSecondary": "Khám phá insights",
-      "sidebarCtaTitle": "Đội ngũ MeU sẵn sàng trao đổi về bài toán của bạn.",
+      "sidebarCtaTitle": "Đội ngũ MeU sẵn sàng trao đổi về bài toán của bạn",
       "sidebarCtaButton": "Đặt lịch tư vấn"
     },
     "jobDetail": {
@@ -399,7 +399,7 @@
       "applyNow": "Ứng tuyển ngay",
       "applyHint": "Gửi CV kèm portfolio/GitHub — đội tuyển dụng sẽ phản hồi trong 3-5 ngày làm việc.",
       "apply": "Ứng tuyển",
-      "otherRoles": "Vị trí đang mở khác.",
+      "otherRoles": "Vị trí đang mở khác",
       "allRoles": "Xem tất cả vị trí"
     }
   }

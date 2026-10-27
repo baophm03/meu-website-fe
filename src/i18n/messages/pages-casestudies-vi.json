@@ -4,7 +4,7 @@
       "hero": {
         "eyebrow": "Khách hàng",
         "heading1": "Tiến bộ thấy được",
-        "heading2": "trong công việc.",
+        "heading2": "trong công việc",
         "summary": "Tên khách hàng hiển thị khi có đồng ý bằng văn bản; dự án NDA được công bố ẩn danh. Mọi case study theo cùng cấu trúc: thách thức, giải pháp, kết quả.",
         "primaryButton": "Liên hệ ngay với MeU",
         "secondaryButton": "Xem tất cả"
@@ -36,8 +36,8 @@
       },
       "cta": {
         "eyebrow": "Có thách thức?",
-        "heading1": "Mang đến cho chúng tôi.",
-        "heading2": "Chúng tôi vẽ đường đi.",
+        "heading1": "Mang đến cho chúng tôi",
+        "heading2": "Chúng tôi vẽ đường đi",
         "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
         "primaryButton": "Liên hệ ngay với MeU",
         "secondaryButton": "Khám phá giải pháp"
@@ -69,8 +69,8 @@
         },
         "cta": {
           "eyebrow": "Cần chi tiết hơn?",
-          "heading1": "Xin case đầy đủ.",
-          "heading2": "Chia sẻ theo NDA.",
+          "heading1": "Xin case đầy đủ",
+          "heading2": "Chia sẻ theo NDA",
           "description": "Case study đầy đủ với tên khách hàng có sẵn theo NDA.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả case study"
@@ -103,8 +103,8 @@
         },
         "cta": {
           "eyebrow": "Không thấy ngành của bạn?",
-          "heading1": "Hỏi trực tiếp.",
-          "heading2": "Có thể có case NDA.",
+          "heading1": "Hỏi trực tiếp",
+          "heading2": "Có thể có case NDA",
           "description": "Một số dự án không công khai. Hỏi đội ngũ để lấy ví dụ liên quan.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả case study"
@@ -137,8 +137,8 @@
         },
         "cta": {
           "eyebrow": "Cần case theo giải pháp cụ thể?",
-          "heading1": "Cho chúng tôi biết vấn đề.",
-          "heading2": "Chúng tôi tìm case phù hợp.",
+          "heading1": "Cho chúng tôi biết vấn đề",
+          "heading2": "Chúng tôi tìm case phù hợp",
           "description": "Có thể có case study chưa công khai phù hợp tình huống của bạn.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả case study"
@@ -171,8 +171,8 @@
         },
         "cta": {
           "eyebrow": "Tìm stack cụ thể?",
-          "heading1": "Hỏi đội ngũ.",
-          "heading2": "Chúng tôi chia sẻ nếu có.",
+          "heading1": "Hỏi đội ngũ",
+          "heading2": "Chúng tôi chia sẻ nếu có",
           "description": "Case study theo công nghệ có sẵn theo yêu cầu.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả case study"
@@ -183,17 +183,17 @@
         "groupLabel": "Nhóm",
         "readingLabel": "Thời lượng",
         "relatedEyebrow": "Đọc tiếp",
-        "relatedTitle": "Case study liên quan.",
+        "relatedTitle": "Case study liên quan",
         "readCaseStudy": "Xem case study",
         "ctaEyebrow": "Sẵn sàng bắt đầu?",
-        "ctaHeading1": "Mang đến thách thức.",
-        "ctaHeading2": "Chúng tôi mang đến hướng đi.",
+        "ctaHeading1": "Mang đến thách thức",
+        "ctaHeading2": "Chúng tôi mang đến hướng đi",
         "ctaDesc": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
         "ctaPrimary": "Liên hệ ngay với MeU",
         "ctaSecondary": "Xem tất cả case study",
         "overviewLabel": "Tổng quan",
         "sidebarCtaEyebrow": "Cần giải pháp tương tự?",
-        "sidebarCtaTitle": "Đội ngũ MeU sẵn sàng trao đổi về bài toán của bạn.",
+        "sidebarCtaTitle": "Đội ngũ MeU sẵn sàng trao đổi về bài toán của bạn",
         "sidebarCtaButton": "Đặt lịch tư vấn",
         "midCtaEyebrow": "Bài toán của bạn"
       }

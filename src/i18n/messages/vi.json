@@ -108,8 +108,8 @@
       "slides": {
         "s1": {
           "eyebrow": "MeU — Studio gia công phần mềm",
-          "title1": "Thách thức của bạn.",
-          "title2": "Giải pháp từ chúng tôi.",
+          "title1": "Thách thức của bạn",
+          "title2": "Giải pháp từ chúng tôi",
           "description": "Chiến lược, phần mềm và AI xây quanh kết quả kinh doanh thực tế.",
           "primaryCta": "Bắt đầu dự án",
           "secondaryCta": "Khám phá giải pháp"
@@ -117,7 +117,7 @@
         "s2": {
           "eyebrow": "Đội ngũ chuyên trách",
           "title1": "Tăng tốc cùng",
-          "title2": "đội kỹ sư riêng.",
+          "title2": "đội kỹ sư riêng",
           "description": "Đội ngũ senior tư duy sản phẩm, hoà nhập quy trình của bạn và bắt đầu bàn giao ngay từ tuần đầu.",
           "primaryCta": "Xây đội ngũ",
           "secondaryCta": "Cách chúng tôi làm việc"
@@ -125,7 +125,7 @@
         "s3": {
           "eyebrow": "AI & Dữ liệu",
           "title1": "Biến dữ liệu thô thành",
-          "title2": "sản phẩm AI thực tế.",
+          "title2": "sản phẩm AI thực tế",
           "description": "Từ tích hợp LLM đến pipeline ML production — chúng tôi thiết kế, xây dựng và vận hành AI tạo ra giá trị.",
           "primaryCta": "Liên hệ ngay với MeU",
           "secondaryCta": "Năng lực AI"
@@ -133,15 +133,15 @@
         "s4": {
           "eyebrow": "Nền tảng số",
           "title1": "Nền tảng web & mobile",
-          "title2": "được xây để bền vững.",
+          "title2": "được xây để bền vững",
           "description": "Kỹ thuật dẫn dắt bởi thiết kế — cho sản phẩm khách hàng, công cụ nội bộ và mọi thứ ở giữa.",
           "primaryCta": "Bắt đầu dự án",
           "secondaryCta": "Xem case studies"
         },
         "s5": {
           "eyebrow": "Đối tác lâu dài",
-          "title1": "Một đối tác chịu trách nhiệm.",
-          "title2": "Bàn giao trọn vẹn.",
+          "title1": "Một đối tác chịu trách nhiệm",
+          "title2": "Bàn giao trọn vẹn",
           "description": "Từ khám phá đến ra mắt và xa hơn — một đội duy nhất sở hữu toàn bộ vòng đời sản phẩm.",
           "primaryCta": "Gặp đội ngũ",
           "secondaryCta": "Khám phá giải pháp"
@@ -178,7 +178,7 @@
     },
     "businessSolutions": {
       "eyebrow": "Giải pháp doanh nghiệp",
-      "heading": "Thay đổi cách vận hành. Không chỉ phần mềm.",
+      "heading": "Thay đổi cách vận hành. Không chỉ phần mềm",
       "summary": "Ứng dụng công nghệ vào kinh doanh, để mọi thử thách trở nên dễ dàng hơn với công việc hàng ngày.",
       "allSolutions": "Tất cả giải pháp",
       "sol1": "Chuyển đổi số toàn diện",
@@ -219,7 +219,7 @@
     },
     "industries": {
       "eyebrow": "Ngành nghề",
-      "heading": "Vận hành cả thế giới.",
+      "heading": "Vận hành cả thế giới",
       "summary": "Chúng tôi giải quyết vấn đề khi đã có chuyên môn thực tế và minh chứng bàn giao rõ ràng.",
       "allIndustries": "Tất cả ngành",
       "ind1Title": "Y tế",
@@ -237,14 +237,14 @@
     },
     "clientSuccess": {
       "eyebrow": "Khách hàng",
-      "heading": "Được các thương hiệu hàng đầu tin chọn.",
+      "heading": "Được các thương hiệu hàng đầu tin chọn",
       "summary": "100+ doanh nghiệp trong và ngoài nước đã tin chọn MeU cho chuyển đổi số, phần mềm tuỳ chỉnh và vận hành nền tảng.",
       "allCaseStudies": "Tất cả case studies",
       "morePartners": "Đối tác khác"
     },
     "whyMeu": {
       "eyebrow": "Vì sao MeU",
-      "heading": "Tư duy cấp cao. Bàn giao thực tế.",
+      "heading": "Tư duy cấp cao. Bàn giao thực tế",
       "summary": "Với sự tin tưởng của hơn 100 khách hàng là các doanh nghiệp lâu năm trong nhiều lĩnh vực hoạt động, MeU Solutions là sự đảm bảo thành công cho dự án của bạn.",
       "d1Title": "Kinh doanh trước tính năng",
       "d1Desc": "Chúng tôi xác định kết quả vận hành trước khi cam kết một giải pháp kỹ thuật.",
@@ -262,8 +262,11 @@
     },
     "insights": {
       "eyebrow": "Insights",
-      "heading": "Bài viết mới nhất.",
+      "heading": "Bài viết mới nhất",
       "insightsHub": "Trung tâm insights",
+      "caseStudiesTitle": "Case studies",
+      "insightsTitle": "Insights",
+      "newsTitle": "Tin tức & Sự kiện",
       "card1Meta": "Field note · 8 phút",
       "card1Title": "Nơi AI doanh nghiệp tạo giá trị trước khi tạo ồn",
       "card1Desc": "Khung thực tế để chọn quy trình sẵn sàng cho tự động hoá thông minh.",
@@ -282,18 +285,22 @@
       "card6Meta": "Field note · 5 phút",
       "card6Title": "Website doanh nghiệp là kênh vận hành, không chỉ marketing",
       "card6Desc": "Tư duy lại website như hạ tầng bán hàng và dịch vụ — đo bằng kết quả, không bằng lượt xem.",
-      "readInsight": "Đọc insight"
+      "readInsight": "Đọc insight",
+      "readCaseStudy": "Xem case study",
+      "readNews": "Đọc tin tức",
+      "viewAllNews": "Xem tất cả tin tức & sự kiện",
+      "empty": "Chưa có bài viết trong chủ đề này."
     },
     "finalCta": {
       "eyebrow": "Cùng xây điều tiếp theo",
-      "heading1": "Mang đến thách thức.",
-      "heading2": "Chúng tôi mang đến hướng đi.",
+      "heading1": "Mang đến thách thức",
+      "heading2": "Chúng tôi mang đến hướng đi",
       "description": "Kết nối cùng chuyên gia công nghệ cấp cao tại MeU để nhìn thấu vấn đề, chọn đúng giải pháp và chốt bước đi tiếp theo.",
       "secondaryButton": "Xem cách chúng tôi đã làm"
     },
     "feedback": {
       "eyebrow": "Lời khách hàng",
-      "heading": "Khách hàng nói gì về MeU.",
+      "heading": "Khách hàng nói gì về MeU",
       "summary": "Những chia sẻ về trải nghiệm hợp tác, cách làm việc và giá trị mà các dự án mang lại.",
       "ratingLabel": "Đánh giá năm sao",
       "previous": "Phản hồi trước",
@@ -317,7 +324,7 @@
     "estimator": {
       "eyebrow": "Ước tính dự án",
       "heading1": "Khởi tạo dự án",
-      "heading2": "& nhận báo giá sơ bộ.",
+      "heading2": "& nhận báo giá sơ bộ",
       "description": "Chọn các hạng mục yêu cầu để đội ngũ Principal Architect của chúng tôi chuẩn bị giải pháp kỹ thuật và dự toán ngân sách trong vòng 24 giờ làm việc.",
       "promise1": "Ký kết Thỏa thuận Bảo mật Thông tin (NDA) trước khi trao đổi",
       "promise2": "Bàn giao toàn bộ 100% bản quyền mã nguồn và tài sản trí tuệ",

@@ -108,8 +108,8 @@
       "slides": {
         "s1": {
           "eyebrow": "MeU — Software Outsourcing Studio",
-          "title1": "Your business challenge.",
-          "title2": "Our technology solution.",
+          "title1": "Your business challenge",
+          "title2": "Our technology solution",
           "description": "Strategy, software and AI built around real business outcomes.",
           "primaryCta": "Start a project",
           "secondaryCta": "Explore solutions"
@@ -117,7 +117,7 @@
         "s2": {
           "eyebrow": "Dedicated Teams",
           "title1": "Scale faster with",
-          "title2": "dedicated engineers.",
+          "title2": "dedicated engineers",
           "description": "Senior, product-minded teams that plug into your workflow and start shipping from week one.",
           "primaryCta": "Build your team",
           "secondaryCta": "How we work"
@@ -125,7 +125,7 @@
         "s3": {
           "eyebrow": "AI & Data",
           "title1": "Turn raw data into",
-          "title2": "working AI products.",
+          "title2": "working AI products",
           "description": "From LLM integration to production ML pipelines — we design, build and operate AI that earns its keep.",
           "primaryCta": "Contact MeU",
           "secondaryCta": "AI capabilities"
@@ -133,15 +133,15 @@
         "s4": {
           "eyebrow": "Digital Platforms",
           "title1": "Web & mobile platforms",
-          "title2": "built to last.",
+          "title2": "built to last",
           "description": "Design-led engineering for customer-facing products, internal tools and everything in between.",
           "primaryCta": "Start a project",
           "secondaryCta": "View case studies"
         },
         "s5": {
           "eyebrow": "Long-term Partnership",
-          "title1": "One accountable partner.",
-          "title2": "End-to-end delivery.",
+          "title1": "One accountable partner",
+          "title2": "End-to-end delivery",
           "description": "Discovery to launch and beyond — a single team owns your entire product lifecycle.",
           "primaryCta": "Meet the team",
           "secondaryCta": "Explore solutions"
@@ -178,7 +178,7 @@
     },
     "businessSolutions": {
       "eyebrow": "Business solutions",
-      "heading": "Change the operation. Not just the software.",
+      "heading": "Change the operation. Not just the software",
       "summary": "We connect business design with engineering, so every solution has a clear purpose and a practical route into daily work.",
       "allSolutions": "All solutions",
       "sol1": "Comprehensive digital transformation",
@@ -219,7 +219,7 @@
     },
     "industries": {
       "eyebrow": "Industries",
-      "heading": "Operating the whole world.",
+      "heading": "Operating the whole world",
       "summary": "We only deliver in industries where we have proven, hands-on expertise and a clear track record of handover.",
       "allIndustries": "All industries",
       "ind1Title": "Healthcare",
@@ -237,14 +237,14 @@
     },
     "clientSuccess": {
       "eyebrow": "Client success",
-      "heading": "Trusted by leading brands.",
+      "heading": "Trusted by leading brands",
       "summary": "100+ organisations in Vietnam and abroad have chosen MeU for digital transformation, custom software and platform operations.",
       "allCaseStudies": "All case studies",
       "morePartners": "More partners"
     },
     "whyMeu": {
       "eyebrow": "Why MeU",
-      "heading": "Senior thinking. Practical delivery.",
+      "heading": "Senior thinking. Practical delivery",
       "summary": "Trusted by 100+ long-established enterprises across industries, MeU Solutions is the guarantee of success for your project.",
       "d1Title": "Business before features",
       "d1Desc": "We define the operational result before committing to a technical answer.",
@@ -262,8 +262,11 @@
     },
     "insights": {
       "eyebrow": "Insights",
-      "heading": "Latest insights.",
+      "heading": "Latest articles",
       "insightsHub": "Insights hub",
+      "caseStudiesTitle": "Case studies",
+      "insightsTitle": "Insights",
+      "newsTitle": "News & events",
       "card1Meta": "Field note · 8 min",
       "card1Title": "Where enterprise AI creates value before it creates noise",
       "card1Desc": "A practical framework for selecting workflows that are ready for intelligent automation.",
@@ -282,18 +285,22 @@
       "card6Meta": "Field note · 5 min",
       "card6Title": "Your website is an operating channel, not just marketing",
       "card6Desc": "Reframing the corporate site as sales and service infrastructure — measured by outcomes, not pageviews.",
-      "readInsight": "Read insight"
+      "readInsight": "Read insight",
+      "readCaseStudy": "View case study",
+      "readNews": "Read news",
+      "viewAllNews": "View all news & events",
+      "empty": "No articles in this topic yet."
     },
     "finalCta": {
       "eyebrow": "Let's build what's next",
-      "heading1": "Bring us the challenge.",
-      "heading2": "We'll bring a way forward.",
+      "heading1": "Bring us the challenge",
+      "heading2": "We'll bring a way forward",
       "description": "Start a focused conversation with a senior MeU technology partner. You leave with a point of view on the problem, the options and a realistic next step.",
       "secondaryButton": "See how we've done it"
     },
     "feedback": {
       "eyebrow": "Client feedback",
-      "heading": "What clients say about MeU.",
+      "heading": "What clients say about MeU",
       "summary": "A closer look at the partnerships, ways of working and outcomes behind our projects.",
       "ratingLabel": "Five-star rating",
       "previous": "Previous feedback",
@@ -317,7 +324,7 @@
     "estimator": {
       "eyebrow": "Project estimator",
       "heading1": "Start your project",
-      "heading2": "& get a preliminary estimate.",
+      "heading2": "& get a preliminary estimate",
       "description": "Tell us what you need and our Principal Architect team will prepare a technical approach and budget estimate within 24 business hours.",
       "promise1": "Mutual NDA signed before any detailed discussion",
       "promise2": "100% source-code ownership and IP handed over",

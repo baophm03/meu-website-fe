@@ -4,9 +4,10 @@ import {
   type FormEvent,
   useEffect,
   useMemo,
+  useRef,
   useState,
 } from "react";
-import { ArrowLeft, Save, Upload, X } from "lucide-react";
+import { ArrowLeft, Eye, Save, Upload, X } from "lucide-react";
 import { useParams } from "next/navigation";
 import { Link, useRouter } from "@/i18n/navigation";
 import { toast } from "sonner";
@@ -17,6 +18,16 @@ import { AdminRichTextEditor } from "@/components/shared/rich-text-editor";
 import { SafeImage } from "@/components/shared/safe-image";
 import { Can } from "@casl/react";
 import { Button } from "@/components/ui/button";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -56,6 +67,15 @@ import {
   slugifyAdminNews,
 } from "@/utils/admin-news";
 import {
+  clearAdminPostDraft,
+  cloneAdminPostDraftForm,
+  hasAdminPostDraftContent,
+  type AdminPostDraft,
+  readAdminPostDraft,
+  writeAdminPostDraft,
+} from "@/utils/admin-post-draft";
+import useProfileStore from "@/store/useProfileStore";
+import {
   fieldClassName,
   readOnlyFieldClassName,
   SEARCH_TAG_VISIBLE_LIMIT,
@@ -63,6 +83,7 @@ import {
 import { PageConfigMultiPicker } from "./_components/page-config-multi-picker";
 import { FormSection } from "./_components/form-section";
 import { NewsFormLoadingState } from "./_components/news-form-loading-state";
+import { PostPreviewDialog } from "./_components/post-preview-dialog";
 import {
   isUuid,
   toImageRef,
@@ -74,12 +95,21 @@ export default function AdminNewsDetailPage() {
 
   const router = useRouter();
   const queryClient = useQueryClient();
+  const userId = useProfileStore((state) => state.appUser?.id ?? null);
+  const profileHydrated = useProfileStore((state) => state._hasHydrated);
   const isCreate = !newsId || newsId === "new";
   const backPath = "/admin/posts";
   const [form, setForm] = useState<AdminNewsFormValues | null>(null);
   const [pickerOpen, setPickerOpen] = useState(false);
+  const [previewOpen, setPreviewOpen] = useState(false);
   const [tagSearch, setTagSearch] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [draftToRestore, setDraftToRestore] = useState<AdminPostDraft | null>(null);
+  const [draftChecked, setDraftChecked] = useState(false);
+  const [draftSavedAt, setDraftSavedAt] = useState<string | null>(null);
+  const draftReadyRef = useRef(false);
+  const draftSavedRef = useRef(false);
+  const draftSaveTimeoutRef = useRef<number | null>(null);
 
   const { data: tagsData, isFetching: tagsFetching } = useGetApiV10Tag({
     page: 1,
@@ -119,6 +149,16 @@ export default function AdminNewsDetailPage() {
       ((pageConfigsData?.responseData ?? {}) as unknown as CmsPagedResult<PageConfig>).rows ?? [],
     [pageConfigsData],
   );
+
+  const selectedPageConfigNames = useMemo(() => {
+    const nameMap = new Map(
+      allPageConfigs.map((item) => [item.id, item.name] as const),
+    );
+
+    return (form?.page_config_ids ?? [])
+      .map((id) => nameMap.get(id))
+      .filter((name): name is string => Boolean(name));
+  }, [allPageConfigs, form?.page_config_ids]);
 
   const rawPost = (postData?.responseData ?? null) as CmsRawPostItem | null;
   const postTagIds = useMemo(() => {
@@ -167,6 +207,75 @@ export default function AdminNewsDetailPage() {
       toast.error("Không thể tải bài viết");
     }
   }, [postError]);
+
+  useEffect(() => {
+    if (
+      !isCreate ||
+      !profileHydrated ||
+      !userId ||
+      isLoadingInitialData ||
+      draftChecked
+    ) {
+      return;
+    }
+
+    const draft = readAdminPostDraft(userId);
+    draftReadyRef.current = true;
+    setDraftChecked(true);
+
+    if (draft && hasAdminPostDraftContent(draft.form)) {
+      setDraftSavedAt(draft.savedAt);
+      setDraftToRestore(draft);
+    }
+  }, [draftChecked, isCreate, isLoadingInitialData, profileHydrated, userId]);
+
+  useEffect(() => {
+    if (!isCreate || !form || !draftReadyRef.current || draftToRestore) return;
+
+    const timeout = window.setTimeout(() => {
+      draftSaveTimeoutRef.current = null;
+      if (hasAdminPostDraftContent(form)) {
+        const savedAt = writeAdminPostDraft(form, userId);
+        if (savedAt) {
+          draftSavedRef.current = true;
+          setDraftSavedAt(savedAt);
+        }
+        return;
+      }
+
+      if (draftSavedRef.current) {
+        clearAdminPostDraft(userId);
+        draftSavedRef.current = false;
+        setDraftSavedAt(null);
+      }
+    }, 800);
+    draftSaveTimeoutRef.current = timeout;
+
+    return () => {
+      window.clearTimeout(timeout);
+      if (draftSaveTimeoutRef.current === timeout) {
+        draftSaveTimeoutRef.current = null;
+      }
+    };
+  }, [draftToRestore, form, isCreate, userId]);
+
+  const handleRestoreDraft = () => {
+    if (!draftToRestore) return;
+
+    setForm(cloneAdminPostDraftForm(draftToRestore.form));
+    draftSavedRef.current = true;
+    setDraftSavedAt(draftToRestore.savedAt);
+    setDraftToRestore(null);
+    toast.success("Đã khôi phục bản nháp");
+  };
+
+  const handleDiscardDraft = () => {
+    clearAdminPostDraft(userId);
+    draftSavedRef.current = false;
+    setDraftSavedAt(null);
+    setDraftToRestore(null);
+    toast.info("Đã xóa bản nháp");
+  };
 
   const syncPostTags = async (postId: string, tagIds: string[]) => {
     const response = await queryClient.fetchQuery(
@@ -333,6 +442,16 @@ export default function AdminNewsDetailPage() {
         queryClient.invalidateQueries({ queryKey: getGetApiV10PostQueryKey() }),
         queryClient.invalidateQueries({ queryKey: getGetApiV10PostIdQueryKey(newsId) }),
       ]);
+
+      if (isCreate) {
+        if (draftSaveTimeoutRef.current !== null) {
+          window.clearTimeout(draftSaveTimeoutRef.current);
+          draftSaveTimeoutRef.current = null;
+        }
+        clearAdminPostDraft(userId);
+        draftSavedRef.current = false;
+        setDraftSavedAt(null);
+      }
 
       toast.success(isCreate ? "Đã tạo bài viết" : "Đã cập nhật bài viết");
       router.push(backPath);
@@ -635,6 +754,22 @@ export default function AdminNewsDetailPage() {
         </FormSection>
 
         <div className="flex flex-wrap items-center justify-end gap-3">
+          {isCreate ? (
+            <p className="mr-auto text-sm text-gray-500">
+              {draftSavedAt
+                ? `Đã tự động lưu nháp lúc ${formatDateTime(draftSavedAt)}`
+                : "Nội dung bài viết được tự động lưu nháp"}
+            </p>
+          ) : null}
+          <Button
+            type="button"
+            variant="outline"
+            onClick={() => setPreviewOpen(true)}
+            className="border-[#063e8e]/15 bg-white text-[#063e8e] hover:bg-[#063e8e]/10"
+          >
+            <Eye className="mr-2 h-4 w-4" />
+            Xem trước
+          </Button>
           <Button
             type="button"
             variant="outline"
@@ -664,6 +799,44 @@ export default function AdminNewsDetailPage() {
         onOpenChange={setPickerOpen}
         onSelect={handleThumbnailSelect}
       />
+
+      <PostPreviewDialog
+        open={previewOpen}
+        onOpenChange={setPreviewOpen}
+        form={form}
+        pageConfigNames={selectedPageConfigNames}
+      />
+
+      <AlertDialog open={Boolean(draftToRestore)}>
+        <AlertDialogContent className="border-[#063e8e]/15 bg-white">
+          <AlertDialogHeader>
+            <AlertDialogTitle className="text-black">
+              Khôi phục bài viết nháp?
+            </AlertDialogTitle>
+            <AlertDialogDescription className="text-gray-700">
+              Bạn có muốn khôi phục lại bài viết đã lưu nháp lúc{" "}
+              <span className="font-semibold text-[#063e8e]">
+                {draftToRestore ? formatDateTime(draftToRestore.savedAt) : ""}
+              </span>{" "}
+              không?
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel
+              onClick={handleDiscardDraft}
+              className="border-[#063e8e]/15 bg-white text-gray-700 hover:bg-[#063e8e]/10 hover:text-[#063e8e]"
+            >
+              Không
+            </AlertDialogCancel>
+            <AlertDialogAction
+              onClick={handleRestoreDraft}
+              className="bg-[#063e8e] text-white hover:bg-[#063e8e]/90"
+            >
+              Có
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
 
       {!isCreate && newsId && (
         <Can I="READ" a="POSTS">
