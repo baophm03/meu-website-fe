@@ -3,8 +3,8 @@
     "solutions": {
       "hero": {
         "eyebrow": "Chúng tôi làm gì",
-        "heading1": "Giải pháp doanh nghiệp.",
-        "heading2": "Công nghệ đưa chúng đi.",
+        "heading1": "Giải pháp doanh nghiệp",
+        "heading2": "Công nghệ đưa chúng đi",
         "summary": "Chúng tôi đồng hành cùng các tổ chức tham vọng qua ba lĩnh vực thực hành kết nối — từ thiết kế kinh doanh đến kỹ thuật đến nhân sự — để mọi giải pháp có mục đích rõ ràng và đường vào công việc hằng ngày.",
         "primaryButton": "Liên hệ ngay với MeU",
         "secondaryButton": "Khám phá năng lực"
@@ -12,8 +12,8 @@
       "businessSolutions": {
         "index": "A",
         "eyebrow": "Giải pháp doanh nghiệp",
-        "heading1": "Thay đổi vận hành.",
-        "heading2": "Không chỉ phần mềm.",
+        "heading1": "Thay đổi vận hành",
+        "heading2": "Không chỉ phần mềm",
         "copy": "Ứng dụng công nghệ vào kinh doanh, để mọi thử thách trở nên dễ dàng hơn với công việc hàng ngày.",
         "categoryLetter": "A",
         "categoryTitle": "Giải pháp doanh nghiệp",
@@ -36,8 +36,8 @@
       "techCapabilities": {
         "index": "B",
         "eyebrow": "Năng lực công nghệ",
-        "heading1": "Thiết kế để hoạt động.",
-        "heading2": "Xây để duy trì hữu ích.",
+        "heading1": "Thiết kế để hoạt động",
+        "heading2": "Xây để duy trì hữu ích",
         "copy": "Độ sâu kỹ thuật để thiết kế, xây, tích hợp, kiểm thử và vận hành — kết nối đầu cuối dưới một đội chịu trách nhiệm.",
         "categoryLetter": "B",
         "categoryTitle": "Năng lực công nghệ",
@@ -62,8 +62,8 @@
       "talentEnablement": {
         "index": "C",
         "eyebrow": "Nhân sự & Đào tạo",
-        "heading1": "Những người khiến nó di chuyển.",
-        "heading2": "Và giữ nó di chuyển.",
+        "heading1": "Những người khiến nó di chuyển",
+        "heading2": "Và giữ nó di chuyển",
         "copy": "Mở rộng năng lực bàn giao với đội ngũ dạn dày, và trang bị nhân sự của bạn để sở hữu những gì chúng tôi cùng xây.",
         "categoryLetter": "C",
         "categoryTitle": "Nhân sự & Đào tạo",
@@ -74,9 +74,9 @@
         "item2Desc": "Trang bị đội ngũ với kỹ năng và tự tin để sở hữu những gì chúng tôi cùng xây."
       },
       "cta": {
-        "eyebrow": "Cùng xây điều tiếp theo.",
-        "heading1": "Mang đến thách thức.",
-        "heading2": "Chúng tôi mang đến hướng đi.",
+        "eyebrow": "Cùng xây điều tiếp theo",
+        "heading1": "Mang đến thách thức",
+        "heading2": "Chúng tôi mang đến hướng đi",
         "description": "Bắt đầu cuộc trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
         "primaryButton": "Liên hệ ngay với MeU"
       },
@@ -89,7 +89,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Phạm vi chuyển đổi",
-          "heading": "Chuyển đổi số từ bên trong ra bên ngoài.",
+          "heading": "Chuyển đổi số từ bên trong ra bên ngoài",
           "summary": "Mỗi điểm chạm trong doanh nghiệp đều có thể trở thành một phần của hệ thống số.",
           "item1Title": "Số hóa vận hành nội bộ",
           "item1Desc": "Thay thế Excel, giấy tờ và quy trình thủ công bằng hệ thống quản lý, CRM, ERP và workflow.",
@@ -102,7 +102,7 @@
         },
         "approach": {
           "eyebrow": "Cách tiếp cận",
-          "heading": "Bắt đầu từ bài toán, phát triển theo nhu cầu.",
+          "heading": "Bắt đầu từ bài toán, phát triển theo nhu cầu",
           "summary": "Không áp dụng một mô hình công nghệ cho mọi doanh nghiệp.",
           "step1Label": "Phân tích",
           "step1Desc": "Xác định quy trình đang vận hành, điểm nghẽn và những công việc còn xử lý thủ công.",
@@ -115,7 +115,7 @@
         },
         "outcomes": {
           "eyebrow": "Giá trị nhận được",
-          "heading": "Một hệ thống số, nhiều hoạt động được kết nối.",
+          "heading": "Một hệ thống số, nhiều hoạt động được kết nối",
           "summary": "Chuyển đổi số tạo giá trị khi công nghệ trở thành một phần của hoạt động kinh doanh.",
           "outcome1Title": "Vận hành tập trung",
           "outcome1Desc": "Quy trình, dữ liệu và công việc được quản lý trên những hệ thống phù hợp.",
@@ -128,8 +128,8 @@
         },
         "cta": {
           "eyebrow": "Sẵn sàng bắt đầu?",
-          "heading1": "Mang đến thách thức.",
-          "heading2": "Chúng tôi mang đến hướng đi.",
+          "heading1": "Mang đến thách thức",
+          "heading2": "Chúng tôi mang đến hướng đi",
           "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
           "secondaryButton": "Tất cả giải pháp"
         }
@@ -144,7 +144,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Chúng tôi làm gì",
-          "heading": "Phạm vi dự án.",
+          "heading": "Phạm vi dự án",
           "summary": "Các hoạt động tạo nên giải pháp này.",
           "item1Title": "Lập bản đồ quy trình",
           "item1Desc": "Mô tả trạng thái hiện tại và tìm điểm nghẽn.",
@@ -157,7 +157,7 @@
         },
         "approach": {
           "eyebrow": "Cách tiếp cận",
-          "heading": "Cách bàn giao.",
+          "heading": "Cách bàn giao",
           "summary": "Đường đi có cấu trúc từ khám phá đến vận hành.",
           "step1Label": "01",
           "step1Title": "Phân tích",
@@ -174,7 +174,7 @@
         },
         "outcomes": {
           "eyebrow": "Kết quả",
-          "heading": "Bạn nhận được gì.",
+          "heading": "Bạn nhận được gì",
           "summary": "Kết quả định nghĩa một dự án thành công.",
           "outcome1Title": "Ít việc thủ công",
           "outcome1Desc": "Đội tập trung vào quyết định, không nhập liệu.",
@@ -185,8 +185,8 @@
         },
         "cta": {
           "eyebrow": "Sẵn sàng bắt đầu?",
-          "heading1": "Mang đến thách thức.",
-          "heading2": "Chúng tôi mang đến hướng đi.",
+          "heading1": "Mang đến thách thức",
+          "heading2": "Chúng tôi mang đến hướng đi",
           "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả giải pháp"
@@ -201,7 +201,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Phạm vi quản trị",
-          "heading": "Thống nhất vận hành, dữ liệu và quyết định trên một hệ thống.",
+          "heading": "Thống nhất vận hành, dữ liệu và quyết định trên một hệ thống",
           "summary": "Mỗi hoạt động trong doanh nghiệp đều cần được kết nối để tạo thành một quy trình quản trị xuyên suốt.",
           "item1Title": "Quản lý vận hành nội bộ",
           "item1Desc": "Số hóa công việc, quy trình, phê duyệt, nhân sự, tài sản và các hoạt động quản lý hằng ngày.",
@@ -214,7 +214,7 @@
         },
         "approach": {
           "eyebrow": "Cách tiếp cận",
-          "heading": "Bắt đầu từ cách doanh nghiệp đang vận hành.",
+          "heading": "Bắt đầu từ cách doanh nghiệp đang vận hành",
           "summary": "Hệ thống quản trị cần được xây dựng dựa trên quy trình thực tế, thay vì áp đặt một mô hình có sẵn.",
           "step1Label": "Khảo sát",
           "step1Desc": "Xác định cách doanh nghiệp đang vận hành, các bộ phận liên quan, điểm nghẽn và những dữ liệu đang bị phân tán.",
@@ -227,7 +227,7 @@
         },
         "outcomes": {
           "eyebrow": "Giá trị nhận được",
-          "heading": "Một hệ thống quản trị, nhiều hoạt động được đồng bộ.",
+          "heading": "Một hệ thống quản trị, nhiều hoạt động được đồng bộ",
           "summary": "Quản trị hiệu quả không chỉ nằm ở việc có nhiều phần mềm, mà ở khả năng kết nối dữ liệu và vận hành trên một hệ thống thống nhất.",
           "outcome1Title": "Quản lý tập trung",
           "outcome1Desc": "Thông tin, công việc, quy trình và dữ liệu được quản lý rõ ràng theo từng bộ phận và vai trò.",
@@ -240,8 +240,8 @@
         },
         "cta": {
           "eyebrow": "Sẵn sàng bắt đầu?",
-          "heading1": "Mang đến thách thức.",
-          "heading2": "Chúng tôi mang đến hướng đi.",
+          "heading1": "Mang đến thách thức",
+          "heading2": "Chúng tôi mang đến hướng đi",
           "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
           "secondaryButton": "Tất cả giải pháp"
         }
@@ -256,7 +256,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Chúng tôi làm gì",
-          "heading": "Phạm vi dự án.",
+          "heading": "Phạm vi dự án",
           "summary": "Các hoạt động tạo nên giải pháp này.",
           "item1Title": "Lập bản đồ hành trình",
           "item1Desc": "Hiểu trải nghiệm khách hàng đầu cuối.",
@@ -269,7 +269,7 @@
         },
         "approach": {
           "eyebrow": "Cách tiếp cận",
-          "heading": "Cách bàn giao.",
+          "heading": "Cách bàn giao",
           "summary": "Đường đi có cấu trúc từ khám phá đến vận hành.",
           "step1Label": "01",
           "step1Title": "Lắng nghe",
@@ -286,7 +286,7 @@
         },
         "outcomes": {
           "eyebrow": "Kết quả",
-          "heading": "Bạn nhận được gì.",
+          "heading": "Bạn nhận được gì",
           "summary": "Kết quả định nghĩa một dự án thành công.",
           "outcome1Title": "Hài lòng hơn",
           "outcome1Desc": "Khách hàng cảm nhận sự khác biệt ở mọi điểm chạm.",
@@ -297,8 +297,8 @@
         },
         "cta": {
           "eyebrow": "Sẵn sàng bắt đầu?",
-          "heading1": "Mang đến thách thức.",
-          "heading2": "Chúng tôi mang đến hướng đi.",
+          "heading1": "Mang đến thách thức",
+          "heading2": "Chúng tôi mang đến hướng đi",
           "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả giải pháp"
@@ -314,7 +314,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Chúng tôi làm gì",
-          "heading": "Phạm vi dự án.",
+          "heading": "Phạm vi dự án",
           "summary": "Các hoạt động tạo nên giải pháp này.",
           "item1Title": "Kiến trúc đa kênh",
           "item1Desc": "Kết nối thương mại online, tại cửa hàng và mobile.",
@@ -327,7 +327,7 @@
         },
         "approach": {
           "eyebrow": "Cách tiếp cận",
-          "heading": "Cách bàn giao.",
+          "heading": "Cách bàn giao",
           "summary": "Đường đi có cấu trúc từ khám phá đến vận hành.",
           "step1Label": "01",
           "step1Title": "Chiến lược",
@@ -344,7 +344,7 @@
         },
         "outcomes": {
           "eyebrow": "Kết quả",
-          "heading": "Bạn nhận được gì.",
+          "heading": "Bạn nhận được gì",
           "summary": "Kết quả định nghĩa một dự án thành công.",
           "outcome1Title": "Doanh thu nhiều hơn",
           "outcome1Desc": "Khách đa kênh chi tiêu nhiều hơn.",
@@ -355,8 +355,8 @@
         },
         "cta": {
           "eyebrow": "Sẵn sàng bắt đầu?",
-          "heading1": "Mang đến thách thức.",
-          "heading2": "Chúng tôi mang đến hướng đi.",
+          "heading1": "Mang đến thách thức",
+          "heading2": "Chúng tôi mang đến hướng đi",
           "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả giải pháp"
@@ -372,7 +372,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Chúng tôi làm gì",
-          "heading": "Phạm vi dự án.",
+          "heading": "Phạm vi dự án",
           "summary": "Các hoạt động tạo nên giải pháp này.",
           "item1Title": "Xác định use case",
           "item1Desc": "Tìm quy trình sẵn sàng cho tự động hoá thông minh.",
@@ -385,7 +385,7 @@
         },
         "approach": {
           "eyebrow": "Cách tiếp cận",
-          "heading": "Cách bàn giao.",
+          "heading": "Cách bàn giao",
           "summary": "Đường đi có cấu trúc từ khám phá đến vận hành.",
           "step1Label": "01",
           "step1Title": "Xác định",
@@ -402,7 +402,7 @@
         },
         "outcomes": {
           "eyebrow": "Kết quả",
-          "heading": "Bạn nhận được gì.",
+          "heading": "Bạn nhận được gì",
           "summary": "Kết quả định nghĩa một dự án thành công.",
           "outcome1Title": "Quyết định nhanh hơn",
           "outcome1Desc": "AI xử lý quyết định thường quy theo thời gian thực.",
@@ -413,8 +413,8 @@
         },
         "cta": {
           "eyebrow": "Sẵn sàng bắt đầu?",
-          "heading1": "Mang đến thách thức.",
-          "heading2": "Chúng tôi mang đến hướng đi.",
+          "heading1": "Mang đến thách thức",
+          "heading2": "Chúng tôi mang đến hướng đi",
           "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả giải pháp"
@@ -429,7 +429,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Phạm vi giải pháp",
-          "heading": "Phần mềm được xây dựng theo bài toán riêng của doanh nghiệp.",
+          "heading": "Phần mềm được xây dựng theo bài toán riêng của doanh nghiệp",
           "summary": "Mỗi doanh nghiệp có quy trình, dữ liệu và cách vận hành khác nhau, vì vậy phần mềm cần được thiết kế phù hợp với thực tế sử dụng.",
           "item1Title": "Phân tích bài toán doanh nghiệp",
           "item1Desc": "Xác định quy trình, nhu cầu, dữ liệu và những điểm chưa được đáp ứng bởi các phần mềm hiện có.",
@@ -442,7 +442,7 @@
         },
         "approach": {
           "eyebrow": "Cách tiếp cận",
-          "heading": "Từ yêu cầu thực tế đến phần mềm có khả năng vận hành.",
+          "heading": "Từ yêu cầu thực tế đến phần mềm có khả năng vận hành",
           "summary": "Không bắt đầu từ một bộ tính năng có sẵn, mà bắt đầu từ cách doanh nghiệp đang hoạt động và vấn đề cần giải quyết.",
           "step1Label": "Khảo sát",
           "step1Desc": "Tìm hiểu quy trình, người sử dụng, dữ liệu và những yêu cầu đặc thù của doanh nghiệp.",
@@ -455,7 +455,7 @@
         },
         "outcomes": {
           "eyebrow": "Giá trị nhận được",
-          "heading": "Một phần mềm phù hợp với cách doanh nghiệp vận hành.",
+          "heading": "Một phần mềm phù hợp với cách doanh nghiệp vận hành",
           "summary": "Giá trị của phần mềm tùy chỉnh nằm ở khả năng giải quyết đúng bài toán và thích ứng với sự thay đổi của doanh nghiệp.",
           "outcome1Title": "Đúng với quy trình thực tế",
           "outcome1Desc": "Hệ thống được xây dựng theo cách doanh nghiệp đang vận hành thay vì phải thay đổi toàn bộ quy trình để phù hợp với phần mềm.",
@@ -468,8 +468,8 @@
         },
         "cta": {
           "eyebrow": "Sẵn sàng bắt đầu?",
-          "heading1": "Mang đến thách thức.",
-          "heading2": "Chúng tôi mang đến hướng đi.",
+          "heading1": "Mang đến thách thức",
+          "heading2": "Chúng tôi mang đến hướng đi",
           "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
           "secondaryButton": "Tất cả giải pháp"
         }
@@ -484,7 +484,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Chúng tôi làm gì",
-          "heading": "Phạm vi dự án.",
+          "heading": "Phạm vi dự án",
           "summary": "Các hoạt động tạo nên giải pháp này.",
           "item1Title": "Chiến lược & lộ trình",
           "item1Desc": "Xác định chiến lược công nghệ và sắp xếp công việc.",
@@ -497,7 +497,7 @@
         },
         "approach": {
           "eyebrow": "Cách tiếp cận",
-          "heading": "Cách bàn giao.",
+          "heading": "Cách bàn giao",
           "summary": "Đường đi có cấu trúc từ khám phá đến vận hành.",
           "step1Label": "01",
           "step1Title": "Đánh giá",
@@ -514,7 +514,7 @@
         },
         "outcomes": {
           "eyebrow": "Kết quả",
-          "heading": "Bạn nhận được gì.",
+          "heading": "Bạn nhận được gì",
           "summary": "Kết quả định nghĩa một dự án thành công.",
           "outcome1Title": "Định hướng rõ ràng",
           "outcome1Desc": "Ai cũng biết xây gì và tại sao.",
@@ -525,8 +525,8 @@
         },
         "cta": {
           "eyebrow": "Sẵn sàng bắt đầu?",
-          "heading1": "Mang đến thách thức.",
-          "heading2": "Chúng tôi mang đến hướng đi.",
+          "heading1": "Mang đến thách thức",
+          "heading2": "Chúng tôi mang đến hướng đi",
           "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả giải pháp"
@@ -542,7 +542,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Chúng tôi làm gì",
-          "heading": "Phạm vi dự án.",
+          "heading": "Phạm vi dự án",
           "summary": "Các hoạt động tạo nên giải pháp này.",
           "item1Title": "Phát triển full-stack",
           "item1Desc": "Kỹ thuật front-end, back-end và hạ tầng.",
@@ -555,7 +555,7 @@
         },
         "approach": {
           "eyebrow": "Cách tiếp cận",
-          "heading": "Cách bàn giao.",
+          "heading": "Cách bàn giao",
           "summary": "Đường đi có cấu trúc từ khám phá đến vận hành.",
           "step1Label": "01",
           "step1Title": "Thiết kế",
@@ -572,7 +572,7 @@
         },
         "outcomes": {
           "eyebrow": "Kết quả",
-          "heading": "Bạn nhận được gì.",
+          "heading": "Bạn nhận được gì",
           "summary": "Kết quả định nghĩa một dự án thành công.",
           "outcome1Title": "Tin cậy",
           "outcome1Desc": "Phần mềm hoạt động dưới tải thực tế.",
@@ -583,8 +583,8 @@
         },
         "cta": {
           "eyebrow": "Sẵn sàng bắt đầu?",
-          "heading1": "Mang đến thách thức.",
-          "heading2": "Chúng tôi mang đến hướng đi.",
+          "heading1": "Mang đến thách thức",
+          "heading2": "Chúng tôi mang đến hướng đi",
           "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả giải pháp"
@@ -600,7 +600,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Chúng tôi làm gì",
-          "heading": "Phạm vi dự án.",
+          "heading": "Phạm vi dự án",
           "summary": "Các hoạt động tạo nên giải pháp này.",
           "item1Title": "Phát triển mô hình",
           "item1Desc": "Huấn luyện, tinh chỉnh và đánh giá mô hình AI.",
@@ -613,7 +613,7 @@
         },
         "approach": {
           "eyebrow": "Cách tiếp cận",
-          "heading": "Cách bàn giao.",
+          "heading": "Cách bàn giao",
           "summary": "Đường đi có cấu trúc từ khám phá đến vận hành.",
           "step1Label": "01",
           "step1Title": "Định hình",
@@ -630,7 +630,7 @@
         },
         "outcomes": {
           "eyebrow": "Kết quả",
-          "heading": "Bạn nhận được gì.",
+          "heading": "Bạn nhận được gì",
           "summary": "Kết quả định nghĩa một dự án thành công.",
           "outcome1Title": "Sẵn sàng production",
           "outcome1Desc": "Mô hình hoạt động trong ngữ cảnh kinh doanh thực tế.",
@@ -641,8 +641,8 @@
         },
         "cta": {
           "eyebrow": "Sẵn sàng bắt đầu?",
-          "heading1": "Mang đến thách thức.",
-          "heading2": "Chúng tôi mang đến hướng đi.",
+          "heading1": "Mang đến thách thức",
+          "heading2": "Chúng tôi mang đến hướng đi",
           "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả giải pháp"
@@ -658,7 +658,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Chúng tôi làm gì",
-          "heading": "Phạm vi dự án.",
+          "heading": "Phạm vi dự án",
           "summary": "Các hoạt động tạo nên giải pháp này.",
           "item1Title": "Chiến lược kiểm thử",
           "item1Desc": "Xác định kiểm thử gì và kiểm thử thế nào.",
@@ -671,7 +671,7 @@
         },
         "approach": {
           "eyebrow": "Cách tiếp cận",
-          "heading": "Cách bàn giao.",
+          "heading": "Cách bàn giao",
           "summary": "Đường đi có cấu trúc từ khám phá đến vận hành.",
           "step1Label": "01",
           "step1Title": "Lập kế hoạch",
@@ -688,7 +688,7 @@
         },
         "outcomes": {
           "eyebrow": "Kết quả",
-          "heading": "Bạn nhận được gì.",
+          "heading": "Bạn nhận được gì",
           "summary": "Kết quả định nghĩa một dự án thành công.",
           "outcome1Title": "Ít lỗi hơn",
           "outcome1Desc": "Vấn đề được bắt trước khi đến production.",
@@ -699,8 +699,8 @@
         },
         "cta": {
           "eyebrow": "Sẵn sàng bắt đầu?",
-          "heading1": "Mang đến thách thức.",
-          "heading2": "Chúng tôi mang đến hướng đi.",
+          "heading1": "Mang đến thách thức",
+          "heading2": "Chúng tôi mang đến hướng đi",
           "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả giải pháp"
@@ -716,7 +716,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Chúng tôi làm gì",
-          "heading": "Phạm vi dự án.",
+          "heading": "Phạm vi dự án",
           "summary": "Các hoạt động tạo nên giải pháp này.",
           "item1Title": "Tích hợp API",
           "item1Desc": "Kết nối hệ thống qua API thiết kế tốt.",
@@ -729,7 +729,7 @@
         },
         "approach": {
           "eyebrow": "Cách tiếp cận",
-          "heading": "Cách bàn giao.",
+          "heading": "Cách bàn giao",
           "summary": "Đường đi có cấu trúc từ khám phá đến vận hành.",
           "step1Label": "01",
           "step1Title": "Lập bản đồ",
@@ -746,7 +746,7 @@
         },
         "outcomes": {
           "eyebrow": "Kết quả",
-          "heading": "Bạn nhận được gì.",
+          "heading": "Bạn nhận được gì",
           "summary": "Kết quả định nghĩa một dự án thành công.",
           "outcome1Title": "Hệ thống kết nối",
           "outcome1Desc": "Dữ liệu đi đúng nơi, tự động.",
@@ -757,8 +757,8 @@
         },
         "cta": {
           "eyebrow": "Sẵn sàng bắt đầu?",
-          "heading1": "Mang đến thách thức.",
-          "heading2": "Chúng tôi mang đến hướng đi.",
+          "heading1": "Mang đến thách thức",
+          "heading2": "Chúng tôi mang đến hướng đi",
           "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả giải pháp"
@@ -774,7 +774,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Chúng tôi làm gì",
-          "heading": "Phạm vi dự án.",
+          "heading": "Phạm vi dự án",
           "summary": "Các hoạt động tạo nên giải pháp này.",
           "item1Title": "Di chuyển cloud",
           "item1Desc": "Chuyển workload sang nền tảng cloud phù hợp.",
@@ -787,7 +787,7 @@
         },
         "approach": {
           "eyebrow": "Cách tiếp cận",
-          "heading": "Cách bàn giao.",
+          "heading": "Cách bàn giao",
           "summary": "Đường đi có cấu trúc từ khám phá đến vận hành.",
           "step1Label": "01",
           "step1Title": "Đánh giá",
@@ -804,7 +804,7 @@
         },
         "outcomes": {
           "eyebrow": "Kết quả",
-          "heading": "Bạn nhận được gì.",
+          "heading": "Bạn nhận được gì",
           "summary": "Kết quả định nghĩa một dự án thành công.",
           "outcome1Title": "Bàn giao nhanh hơn",
           "outcome1Desc": "Pipeline tự động đưa code an toàn.",
@@ -815,8 +815,8 @@
         },
         "cta": {
           "eyebrow": "Sẵn sàng bắt đầu?",
-          "heading1": "Mang đến thách thức.",
-          "heading2": "Chúng tôi mang đến hướng đi.",
+          "heading1": "Mang đến thách thức",
+          "heading2": "Chúng tôi mang đến hướng đi",
           "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả giải pháp"
@@ -832,7 +832,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Chúng tôi làm gì",
-          "heading": "Phạm vi dự án.",
+          "heading": "Phạm vi dự án",
           "summary": "Các hoạt động tạo nên giải pháp này.",
           "item1Title": "Nghiên cứu người dùng",
           "item1Desc": "Hiểu nhu cầu, hành vi và điểm đau.",
@@ -845,7 +845,7 @@
         },
         "approach": {
           "eyebrow": "Cách tiếp cận",
-          "heading": "Cách bàn giao.",
+          "heading": "Cách bàn giao",
           "summary": "Đường đi có cấu trúc từ khám phá đến vận hành.",
           "step1Label": "01",
           "step1Title": "Nghiên cứu",
@@ -862,7 +862,7 @@
         },
         "outcomes": {
           "eyebrow": "Kết quả",
-          "heading": "Bạn nhận được gì.",
+          "heading": "Bạn nhận được gì",
           "summary": "Kết quả định nghĩa một dự án thành công.",
           "outcome1Title": "Khả dụng tốt hơn",
           "outcome1Desc": "Người dùng hoàn thành tác vụ không ma sát.",
@@ -873,8 +873,8 @@
         },
         "cta": {
           "eyebrow": "Sẵn sàng bắt đầu?",
-          "heading1": "Mang đến thách thức.",
-          "heading2": "Chúng tôi mang đến hướng đi.",
+          "heading1": "Mang đến thách thức",
+          "heading2": "Chúng tôi mang đến hướng đi",
           "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả giải pháp"
@@ -890,7 +890,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Chúng tôi làm gì",
-          "heading": "Phạm vi dự án.",
+          "heading": "Phạm vi dự án",
           "summary": "Các hoạt động tạo nên giải pháp này.",
           "item1Title": "Bảo trì ứng dụng",
           "item1Desc": "Sửa lỗi, cập nhật và cải tiến.",
@@ -903,7 +903,7 @@
         },
         "approach": {
           "eyebrow": "Cách tiếp cận",
-          "heading": "Cách bàn giao.",
+          "heading": "Cách bàn giao",
           "summary": "Đường đi có cấu trúc từ khám phá đến vận hành.",
           "step1Label": "01",
           "step1Title": "Đánh giá",
@@ -920,7 +920,7 @@
         },
         "outcomes": {
           "eyebrow": "Kết quả",
-          "heading": "Bạn nhận được gì.",
+          "heading": "Bạn nhận được gì",
           "summary": "Kết quả định nghĩa một dự án thành công.",
           "outcome1Title": "Hệ thống ổn định",
           "outcome1Desc": "Vấn đề xử lý nhanh, uptime duy trì.",
@@ -931,8 +931,8 @@
         },
         "cta": {
           "eyebrow": "Sẵn sàng bắt đầu?",
-          "heading1": "Mang đến thách thức.",
-          "heading2": "Chúng tôi mang đến hướng đi.",
+          "heading1": "Mang đến thách thức",
+          "heading2": "Chúng tôi mang đến hướng đi",
           "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả giải pháp"
@@ -948,7 +948,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Chúng tôi làm gì",
-          "heading": "Phạm vi dự án.",
+          "heading": "Phạm vi dự án",
           "summary": "Các hoạt động tạo nên giải pháp này.",
           "item1Title": "Tăng cường nhân sự",
           "item1Desc": "Kỹ sư giàu kinh nghiệm tích hợp vào đội bạn.",
@@ -961,7 +961,7 @@
         },
         "approach": {
           "eyebrow": "Cách tiếp cận",
-          "heading": "Cách bàn giao.",
+          "heading": "Cách bàn giao",
           "summary": "Đường đi có cấu trúc từ khám phá đến vận hành.",
           "step1Label": "01",
           "step1Title": "Hiểu",
@@ -978,7 +978,7 @@
         },
         "outcomes": {
           "eyebrow": "Kết quả",
-          "heading": "Bạn nhận được gì.",
+          "heading": "Bạn nhận được gì",
           "summary": "Kết quả định nghĩa một dự án thành công.",
           "outcome1Title": "Kỹ năng đúng",
           "outcome1Desc": "Người giàu kinh nghiệm bàn giao được từ ngày đầu.",
@@ -989,8 +989,8 @@
         },
         "cta": {
           "eyebrow": "Sẵn sàng bắt đầu?",
-          "heading1": "Mang đến thách thức.",
-          "heading2": "Chúng tôi mang đến hướng đi.",
+          "heading1": "Mang đến thách thức",
+          "heading2": "Chúng tôi mang đến hướng đi",
           "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả giải pháp"
@@ -1006,7 +1006,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Chúng tôi làm gì",
-          "heading": "Phạm vi dự án.",
+          "heading": "Phạm vi dự án",
           "summary": "Các hoạt động tạo nên giải pháp này.",
           "item1Title": "Nâng kỹ năng doanh nghiệp",
           "item1Desc": "Đào tạo có trọng tâm cho kỹ sư đang làm việc.",
@@ -1019,7 +1019,7 @@
         },
         "approach": {
           "eyebrow": "Cách tiếp cận",
-          "heading": "Cách bàn giao.",
+          "heading": "Cách bàn giao",
           "summary": "Đường đi có cấu trúc từ khám phá đến vận hành.",
           "step1Label": "01",
           "step1Title": "Đánh giá",
@@ -1036,7 +1036,7 @@
         },
         "outcomes": {
           "eyebrow": "Kết quả",
-          "heading": "Bạn nhận được gì.",
+          "heading": "Bạn nhận được gì",
           "summary": "Kết quả định nghĩa một dự án thành công.",
           "outcome1Title": "Đội có kỹ năng",
           "outcome1Desc": "Người của bạn sở hữu và mở rộng hệ thống.",
@@ -1047,8 +1047,8 @@
         },
         "cta": {
           "eyebrow": "Sẵn sàng bắt đầu?",
-          "heading1": "Mang đến thách thức.",
-          "heading2": "Chúng tôi mang đến hướng đi.",
+          "heading1": "Mang đến thách thức",
+          "heading2": "Chúng tôi mang đến hướng đi",
           "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả giải pháp"
@@ -1057,14 +1057,14 @@
       "businessSolutionsCategory": {
         "hero": {
           "eyebrow": "Giải pháp doanh nghiệp",
-          "heading": "6 giải pháp, một đội kết nối.",
+          "heading": "6 giải pháp, một đội kết nối",
           "summary": "Ba vùng thực hành kết nối cho kết quả kinh doanh.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả giải pháp"
         },
         "grid": {
           "eyebrow": "Giải pháp",
-          "heading": "Khám phá nhóm giải pháp.",
+          "heading": "Khám phá nhóm giải pháp",
           "summary": "Mỗi giải pháp kết nối với các giải pháp khác. Bắt đầu nơi kết quả rõ nhất.",
           "items": [
             {
@@ -1095,8 +1095,8 @@
         },
         "cta": {
           "eyebrow": "Không chắc bắt đầu từ đâu?",
-          "heading1": "Cho chúng tôi biết kết quả.",
-          "heading2": "Chúng tôi vẽ đường đi.",
+          "heading1": "Cho chúng tôi biết kết quả",
+          "heading2": "Chúng tôi vẽ đường đi",
           "description": "Đặt trò chuyện tập trung với chuyên gia cấp cao của MeU.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả giải pháp"
@@ -1105,14 +1105,14 @@
       "techCapabilitiesCategory": {
         "hero": {
           "eyebrow": "Năng lực công nghệ",
-          "heading": "7 giải pháp, một đội kết nối.",
+          "heading": "7 giải pháp, một đội kết nối",
           "summary": "Cách công việc được thiết kế, xây, tích hợp và vận hành.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả giải pháp"
         },
         "grid": {
           "eyebrow": "Giải pháp",
-          "heading": "Khám phá nhóm giải pháp.",
+          "heading": "Khám phá nhóm giải pháp",
           "summary": "Mỗi giải pháp kết nối với các giải pháp khác. Bắt đầu nơi kết quả rõ nhất.",
           "items": [
             {
@@ -1147,8 +1147,8 @@
         },
         "cta": {
           "eyebrow": "Không chắc bắt đầu từ đâu?",
-          "heading1": "Cho chúng tôi biết kết quả.",
-          "heading2": "Chúng tôi vẽ đường đi.",
+          "heading1": "Cho chúng tôi biết kết quả",
+          "heading2": "Chúng tôi vẽ đường đi",
           "description": "Đặt trò chuyện tập trung với chuyên gia cấp cao của MeU.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả giải pháp"
@@ -1157,14 +1157,14 @@
       "talentEnablementCategory": {
         "hero": {
           "eyebrow": "Nhân sự & Đào tạo",
-          "heading": "2 giải pháp, một đội kết nối.",
+          "heading": "2 giải pháp, một đội kết nối",
           "summary": "Tăng năng lực cho đội, hoặc phát triển người bạn đã có.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả giải pháp"
         },
         "grid": {
           "eyebrow": "Giải pháp",
-          "heading": "Khám phá nhóm giải pháp.",
+          "heading": "Khám phá nhóm giải pháp",
           "summary": "Mỗi giải pháp kết nối với các giải pháp khác. Bắt đầu nơi kết quả rõ nhất.",
           "items": [
             {
@@ -1179,8 +1179,8 @@
         },
         "cta": {
           "eyebrow": "Không chắc bắt đầu từ đâu?",
-          "heading1": "Cho chúng tôi biết kết quả.",
-          "heading2": "Chúng tôi vẽ đường đi.",
+          "heading1": "Cho chúng tôi biết kết quả",
+          "heading2": "Chúng tôi vẽ đường đi",
           "description": "Đặt trò chuyện tập trung với chuyên gia cấp cao của MeU.",
           "primaryButton": "Liên hệ ngay với MeU",
           "secondaryButton": "Tất cả giải pháp"
@@ -1195,7 +1195,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Phạm vi quản lý",
-          "heading": "Biến website thành một phần của hoạt động kinh doanh.",
+          "heading": "Biến website thành một phần của hoạt động kinh doanh",
           "summary": "Website không chỉ là nơi giới thiệu doanh nghiệp, mà còn có thể trở thành một nền tảng phục vụ khách hàng, kinh doanh và vận hành.",
           "item1Title": "Quản lý nội dung",
           "item1Desc": "Cập nhật thông tin doanh nghiệp, sản phẩm, dịch vụ, bài viết và các nội dung cần thiết trên website.",
@@ -1208,7 +1208,7 @@
         },
         "approach": {
           "eyebrow": "Cách vận hành",
-          "heading": "Duy trì website ổn định và phát triển theo nhu cầu.",
+          "heading": "Duy trì website ổn định và phát triển theo nhu cầu",
           "summary": "Website cần được quản lý liên tục để đảm bảo nội dung, hệ thống và trải nghiệm người dùng luôn phù hợp với hoạt động doanh nghiệp.",
           "step1Label": "Cập nhật",
           "step1Desc": "Duy trì nội dung, sản phẩm, dịch vụ và các thông tin cần thiết theo hoạt động thực tế.",
@@ -1221,7 +1221,7 @@
         },
         "outcomes": {
           "eyebrow": "Giá trị nhận được",
-          "heading": "Website luôn sẵn sàng phục vụ hoạt động doanh nghiệp.",
+          "heading": "Website luôn sẵn sàng phục vụ hoạt động doanh nghiệp",
           "summary": "Quản lý website hiệu quả giúp doanh nghiệp duy trì một nền tảng số ổn định, cập nhật và có khả năng phát triển theo hoạt động kinh doanh.",
           "outcome1Title": "Nội dung luôn được cập nhật",
           "outcome1Desc": "Thông tin doanh nghiệp, sản phẩm và dịch vụ được duy trì chính xác, phù hợp với hoạt động thực tế.",
@@ -1234,8 +1234,8 @@
         },
         "cta": {
           "eyebrow": "Sẵn sàng bắt đầu?",
-          "heading1": "Mang đến thách thức.",
-          "heading2": "Chúng tôi mang đến hướng đi.",
+          "heading1": "Mang đến thách thức",
+          "heading2": "Chúng tôi mang đến hướng đi",
           "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
           "secondaryButton": "Tất cả giải pháp"
         }
@@ -1249,7 +1249,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Chúng tôi làm gì",
-          "heading": "AI đi vào vận hành, không dừng ở bản demo.",
+          "heading": "AI đi vào vận hành, không dừng ở bản demo",
           "summary": "MeU Solutions tư vấn và triển khai AI dựa trên bài toán cụ thể của doanh nghiệp thay vì áp dụng công nghệ theo trào lưu.",
           "item1Title": "Đánh giá & định hướng AI",
           "item1Desc": "Phân tích quy trình và dữ liệu hiện có để xác định đâu là vị trí AI tạo ra giá trị thực.",
@@ -1262,7 +1262,7 @@
         },
         "approach": {
           "eyebrow": "Cách chúng tôi triển khai",
-          "heading": "Từ bài toán nhỏ đến AI trong vận hành.",
+          "heading": "Từ bài toán nhỏ đến AI trong vận hành",
           "summary": "AI được đưa vào theo lộ trình kiểm chứng — bắt đầu từ những điểm có giá trị rõ ràng nhất.",
           "step1Label": "Đánh giá",
           "step1Desc": "Khảo sát quy trình, dữ liệu và mục tiêu để xác định các bài toán phù hợp với AI.",
@@ -1275,7 +1275,7 @@
         },
         "outcomes": {
           "eyebrow": "Giá trị mang lại",
-          "heading": "AI tạo giá trị đo được, không phải khẩu hiệu.",
+          "heading": "AI tạo giá trị đo được, không phải khẩu hiệu",
           "summary": "Mỗi ứng dụng AI được gắn với một chỉ số vận hành cụ thể để đánh giá hiệu quả thực tế.",
           "outcome1Title": "Giảm thao tác lặp lại",
           "outcome1Desc": "Các tác vụ xử lý thông tin, nhập liệu và tổng hợp được tự động hóa bằng AI.",
@@ -1288,8 +1288,8 @@
         },
         "cta": {
           "eyebrow": "Sẵn sàng bắt đầu?",
-          "heading1": "Mang đến thách thức.",
-          "heading2": "Chúng tôi mang đến hướng đi.",
+          "heading1": "Mang đến thách thức",
+          "heading2": "Chúng tôi mang đến hướng đi",
           "description": "Bắt đầu trò chuyện tập trung với đối tác công nghệ cấp cao của MeU.",
           "secondaryButton": "Tất cả giải pháp"
         }

@@ -4,12 +4,12 @@
       "hero": {
         "eyebrow": "Liên hệ",
         "heading1": "Liên hệ",
-        "heading2": "ngay.",
+        "heading2": "ngay",
         "summary": "Đăng ký tư vấn hoặc liên hệ ngay với chúng tôi để được hỗ trợ nhanh nhất."
       },
       "form": {
         "eyebrow": "Gửi tin nhắn",
-        "heading": "Cho chúng tôi biết thách thức của bạn.",
+        "heading": "Cho chúng tôi biết thách thức của bạn",
         "summary": "Điền form bên dưới — chúng tôi phản hồi trong một ngày làm việc.",
         "nameLabel": "Họ và tên",
         "namePlaceholder": "Tên của bạn",
@@ -29,7 +29,7 @@
       },
       "offices": {
         "eyebrow": "Văn phòng",
-        "heading": "Nơi tìm thấy chúng tôi.",
+        "heading": "Nơi tìm thấy chúng tôi",
         "summary": "Trụ sở tại TP. Hồ Chí Minh, Việt Nam. Phân phối toàn cầu.",
         "item1Title": "TP. Hồ Chí Minh",
         "item1Desc": "Trụ sở và trung tâm kỹ thuật.",

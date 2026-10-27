@@ -4,7 +4,7 @@
       "hero": {
         "eyebrow": "About us",
         "heading1": "MeU Solutions",
-        "heading2": "Technology for real-world needs.",
+        "heading2": "Technology for real-world needs",
         "summary": "A software development and technology solutions company — from consulting and system development to testing, deployment and operations.",
         "stat1Value": "2016",
         "stat1Label": "Founded",
@@ -15,7 +15,7 @@
       },
       "intro": {
         "eyebrow": "Who we are",
-        "heading": "Building systems that fit each organization's real needs.",
+        "heading": "Building systems that fit each organization's real needs",
         "body1": "MeU Solutions is a software development and technology solutions company focused on building systems that fit the practical needs of each organization. From consulting, requirement analysis and system development to testing, deployment and operations support, MeU walks alongside businesses through every step of their digital transformation.",
         "body2": "With a team experienced in software development and applied technologies such as AI, Cloud Computing and Big Data, MeU Solutions aims to create practical technology products that streamline processes, improve operational efficiency and open up new opportunities for growth.",
         "techLabel": "Core technologies",
@@ -25,7 +25,7 @@
       },
       "vision": {
         "eyebrow": "Vision & Mission",
-        "heading": "The direction behind every project.",
+        "heading": "The direction behind every project",
         "visionLabel": "Vision",
         "visionBody": "Applying technology to build a community of excellence.",
         "missionLabel": "Mission",
@@ -38,7 +38,7 @@
       },
       "contact": {
         "eyebrow": "Contact information",
-        "heading": "Get in touch with MeU Solutions.",
+        "heading": "Get in touch with MeU Solutions",
         "office1Label": "Representative office",
         "office1Body": "17F Vincom Center, 72 Le Thanh Ton, Sai Gon Ward, Ho Chi Minh City, Vietnam",
         "office2Label": "Development office",
@@ -49,14 +49,14 @@
       },
       "partners": {
         "eyebrow": "Partners & Clients",
-        "heading": "100+ partners across industries, growing together through technology.",
+        "heading": "100+ partners across industries, growing together through technology",
         "body1": "MeU Solutions has partnered with more than 100 businesses, organizations and partners of all sizes, operating across many fields such as commerce, retail, F&B, logistics, education, healthcare, pharmaceuticals, associations and service industries.",
         "body2": "Every partner brings a unique challenge and set of requirements. Through each collaboration, MeU keeps accumulating experience, developing flexible solutions and building systems that fit each operating model.",
         "closing": "100+ partners is not just a number — it is a journey of collaboration, connection and practical technology value created together."
       },
       "join": {
         "eyebrow": "Careers",
-        "heading": "Teammates are a vital part of MeU Solutions' journey.",
+        "heading": "Teammates are a vital part of MeU Solutions' journey",
         "body": "MeU values professional expertise, creative thinking and attitude at work. We are looking for teammates with a learning mindset, initiative and the desire to build technology solutions with real-world value together.",
         "quote": "“We hire talented teammates — and we end partnerships over attitude.”",
         "ctaButton": "View all open positions",
@@ -64,12 +64,12 @@
       },
       "leadership": {
         "eyebrow": "Leadership",
-        "heading": "The people who founded and lead MeU.",
+        "heading": "The people who founded and lead MeU",
         "ceoName": "Mr. Tran Thanh Tuyen",
         "ceoInitials": "TT",
         "ceoRole": "Founder & CEO",
         "teamEyebrow": "Leadership team",
-        "teamHeading": "More of the people leading MeU.",
+        "teamHeading": "More of the people leading MeU",
         "bioLabel": "About",
         "bio1": "Having overcome many challenges in the technology industry, Mr. Tran Thanh Tuyen nurtured an intense passion for software testing and technology solutions. With a spirit of continuous learning, innovation and the ambition to deliver high-quality software development services, he founded MeU Solutions in 2016.",
         "bio2": "Under his leadership together with a dedicated team of experts, MeU Solutions grew rapidly to become one of the pioneering companies in software development, software testing and technology consulting in Vietnam.",
@@ -84,8 +84,8 @@
       },
       "cta": {
         "eyebrow": "Let's build what's next",
-        "heading1": "Bring us the challenge.",
-        "heading2": "We'll bring a way forward.",
+        "heading1": "Bring us the challenge",
+        "heading2": "We'll bring a way forward",
         "description": "Start a focused conversation with a senior MeU technology partner.",
         "primaryButton": "Contact MeU",
         "secondaryButton": "See how we've done it"
@@ -100,7 +100,7 @@
         },
         "approach": {
           "eyebrow": "How we work",
-          "heading": "One team, one outcome.",
+          "heading": "One team, one outcome",
           "summary": "We do not hand off between strategy, design and engineering. One connected team owns the result.",
           "item1Title": "Understand",
           "item1Desc": "We start with the business outcome, not the technology.",
@@ -113,8 +113,8 @@
         },
         "cta": {
           "eyebrow": "Want to know more?",
-          "heading1": "Talk to us.",
-          "heading2": "No slides, just answers.",
+          "heading1": "Talk to us",
+          "heading2": "No slides, just answers",
           "description": "Start a conversation with our team.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "Explore solutions"
@@ -130,20 +130,20 @@
         },
         "origin": {
           "eyebrow": "The beginning",
-          "heading": "From frustration to focus.",
+          "heading": "From frustration to focus",
           "summary": "We started as engineers and consultants frustrated by the gap between strategy and execution.",
           "body": "Too many transformation initiatives produced slides instead of working systems. Too many software projects lost the connection to the operational result they were supposed to deliver. We built MeU to close that gap."
         },
         "mission": {
           "eyebrow": "What drives us",
-          "heading": "Technology with business intent.",
+          "heading": "Technology with business intent",
           "summary": "We believe technology earns its place when it removes friction, unlocks growth or makes better decisions possible.",
           "body": "Every engagement starts from the outcome you need. We work backward from there to the systems, processes and people that make it real."
         },
         "cta": {
           "eyebrow": "Join us",
           "heading1": "Build what's next",
-          "heading2": "with MeU.",
+          "heading2": "with MeU",
           "description": "Start a conversation with our team.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "About us"
@@ -159,19 +159,19 @@
         },
         "vision": {
           "eyebrow": "Vision",
-          "heading": "A world where technology serves the business.",
+          "heading": "A world where technology serves the business",
           "summary": "We see a future where every organization can design, build and operate the systems it needs.",
           "body": "We see a future where every organization can design, build and operate the systems it needs — without the gap between ambition and execution that wastes time, money and trust."
         },
         "mission": {
           "eyebrow": "Mission",
-          "heading": "Close the gap between strategy and execution.",
+          "heading": "Close the gap between strategy and execution",
           "summary": "We connect business design with engineering so every solution has a clear purpose.",
           "body": "We connect business design with engineering so every solution has a clear purpose and a practical route into daily work. We measure success by adoption, not delivery."
         },
         "values": {
           "eyebrow": "Values",
-          "heading": "How we work.",
+          "heading": "How we work",
           "summary": "These shape how every engagement runs.",
           "item1Title": "Business before features",
           "item1Desc": "Define the operational result before the technical answer.",
@@ -182,8 +182,8 @@
         },
         "cta": {
           "eyebrow": "Share our vision?",
-          "heading1": "Build with us.",
-          "heading2": "Start the conversation.",
+          "heading1": "Build with us",
+          "heading2": "Start the conversation",
           "description": "Talk to our team about what you need to move.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "About us"
@@ -199,14 +199,14 @@
         },
         "team": {
           "eyebrow": "The team",
-          "heading": "Senior practitioners.",
+          "heading": "Senior practitioners",
           "summary": "Our leadership team has built and operated systems across healthcare, logistics, retail, finance and education.",
           "note": "Detailed leadership bios are published after profile approval."
         },
         "cta": {
           "eyebrow": "Want to meet the team?",
-          "heading1": "Talk to us.",
-          "heading2": "Senior people, practical answers.",
+          "heading1": "Talk to us",
+          "heading2": "Senior people, practical answers",
           "description": "Start a conversation with our leadership team.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "About us"
@@ -222,7 +222,7 @@
         },
         "partners": {
           "eyebrow": "Technology partners",
-          "heading": "Platforms we build on.",
+          "heading": "Platforms we build on",
           "summary": "We work with leading technology platforms to deliver solutions that are reliable, supported and scalable.",
           "item1Title": "Cloud platforms",
           "item1Desc": "AWS, Azure and Google Cloud for infrastructure and deployment.",
@@ -233,14 +233,14 @@
         },
         "clients": {
           "eyebrow": "Partners & Clients",
-          "heading": "Trusted by leading brands.",
+          "heading": "Trusted by leading brands",
           "summary": "From banking and aviation to retail — organizations choose MeU for their most critical digital products.",
           "note": ""
         },
         "cta": {
           "eyebrow": "Become a partner",
           "heading1": "Get in touch to become",
-          "heading2": "one of our partners.",
+          "heading2": "one of our partners",
           "description": "From idea to shipped product — the MeU team is ready to work with you.",
           "primaryButton": "Contact us now",
           "secondaryButton": "About us"
@@ -263,7 +263,7 @@
         },
         "delivery": {
           "eyebrow": "Global delivery",
-          "heading": "Remote and hybrid.",
+          "heading": "Remote and hybrid",
           "summary": "We serve clients across Asia, Europe and North America.",
           "item1Title": "Asia-Pacific",
           "item1Desc": "Vietnam, Singapore, Japan, Australia.",
@@ -274,8 +274,8 @@
         },
         "cta": {
           "eyebrow": "Want to visit?",
-          "heading1": "Come see us.",
-          "heading2": "Or we will come to you.",
+          "heading1": "Come see us",
+          "heading2": "Or we will come to you",
           "description": "Contact our team to arrange a meeting.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "About us"
@@ -291,7 +291,7 @@
         },
         "culture": {
           "eyebrow": "Culture",
-          "heading": "How we work.",
+          "heading": "How we work",
           "summary": "Senior thinking, practical delivery, and a commitment to outcomes.",
           "item1Title": "Business before features",
           "item1Desc": "We start with the problem, not the technology.",
@@ -302,20 +302,20 @@
         },
         "roles": {
           "eyebrow": "Open roles",
-          "heading": "Current openings.",
+          "heading": "Current openings",
           "summary": "We are always looking for senior engineers, designers and consultants.",
           "note": "Open roles are published here after hiring approval. Send your CV to careers@meusolutions.com."
         },
         "cta": {
           "eyebrow": "Want to join?",
-          "heading1": "Send us your story.",
-          "heading2": "We will read it.",
+          "heading1": "Send us your story",
+          "heading2": "We will read it",
           "description": "Email careers@meusolutions.com or talk to our team.",
           "primaryButton": "Talk to us",
           "secondaryButton": "About us"
         },
         "openRoles": "Open positions",
-        "openRolesHeading": "Join the team.",
+        "openRolesHeading": "Join the team",
         "openRolesSummary": "Every role currently open — browse by department or open a posting for the full description.",
         "location": "Location",
         "deadline": "Apply by",

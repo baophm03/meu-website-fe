@@ -3,8 +3,8 @@
     "solutions": {
       "hero": {
         "eyebrow": "What we do",
-        "heading1": "Business solutions.",
-        "heading2": "Technology that moves them.",
+        "heading1": "Business solutions",
+        "heading2": "Technology that moves them",
         "summary": "We partner with ambitious organizations across three connected practice areas — from business design to engineering to talent — so every solution has a clear purpose and a practical route into daily work.",
         "primaryButton": "Contact MeU",
         "secondaryButton": "Explore capabilities"
@@ -12,8 +12,8 @@
       "businessSolutions": {
         "index": "A",
         "eyebrow": "Business Solutions",
-        "heading1": "Change the operation.",
-        "heading2": "Not just the software.",
+        "heading1": "Change the operation",
+        "heading2": "Not just the software",
         "copy": "We connect business design with engineering, so every solution has a clear purpose and a practical route into daily work.",
         "categoryLetter": "A",
         "categoryTitle": "Business Solutions",
@@ -36,8 +36,8 @@
       "techCapabilities": {
         "index": "B",
         "eyebrow": "Technology Capabilities",
-        "heading1": "Engineered to work.",
-        "heading2": "Built to stay useful.",
+        "heading1": "Engineered to work",
+        "heading2": "Built to stay useful",
         "copy": "The engineering depth to design, build, integrate, test and operate — connected end to end under one accountable team.",
         "categoryLetter": "B",
         "categoryTitle": "Technology Capabilities",
@@ -62,8 +62,8 @@
       "talentEnablement": {
         "index": "C",
         "eyebrow": "Talent & Enablement",
-        "heading1": "The people who make it move.",
-        "heading2": "And keep it moving.",
+        "heading1": "The people who make it move",
+        "heading2": "And keep it moving",
         "copy": "Extend your delivery capacity with experienced teams, and equip your own people to own what we build together.",
         "categoryLetter": "C",
         "categoryTitle": "Talent & Enablement",
@@ -74,9 +74,9 @@
         "item2Desc": "Equip your teams with the skills and confidence to own what we build together."
       },
       "cta": {
-        "eyebrow": "Let's build what's next.",
-        "heading1": "Bring us the challenge.",
-        "heading2": "We'll bring a way forward.",
+        "eyebrow": "Let's build what's next",
+        "heading1": "Bring us the challenge",
+        "heading2": "We'll bring a way forward",
         "description": "Start a focused conversation with a senior MeU technology partner.",
         "primaryButton": "Contact MeU"
       },
@@ -89,7 +89,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Scope of transformation",
-          "heading": "Digital transformation from the inside out.",
+          "heading": "Digital transformation from the inside out",
           "summary": "Every touchpoint in the enterprise can become part of the digital system.",
           "item1Title": "Digitizing internal operations",
           "item1Desc": "Replace Excel, paperwork and manual processes with management systems, CRM, ERP and workflows.",
@@ -102,7 +102,7 @@
         },
         "approach": {
           "eyebrow": "Our approach",
-          "heading": "Start from the problem, grow with the need.",
+          "heading": "Start from the problem, grow with the need",
           "summary": "We do not apply one technology model to every enterprise.",
           "step1Label": "Analyze",
           "step1Desc": "Identify running processes, bottlenecks and work still handled manually.",
@@ -115,7 +115,7 @@
         },
         "outcomes": {
           "eyebrow": "What you get",
-          "heading": "One digital system, many connected activities.",
+          "heading": "One digital system, many connected activities",
           "summary": "Digital transformation creates value when technology becomes part of how the business runs.",
           "outcome1Title": "Centralized operations",
           "outcome1Desc": "Processes, data and work are managed on systems that fit.",
@@ -128,8 +128,8 @@
         },
         "cta": {
           "eyebrow": "Ready to move?",
-          "heading1": "Bring us the challenge.",
-          "heading2": "We will bring a way forward.",
+          "heading1": "Bring us the challenge",
+          "heading2": "We will bring a way forward",
           "description": "Start a focused conversation with a senior MeU technology partner.",
           "secondaryButton": "All solutions"
         }
@@ -144,7 +144,7 @@
         },
         "whatWeDo": {
           "eyebrow": "What we do",
-          "heading": "What this engagement covers.",
+          "heading": "What this engagement covers",
           "summary": "The scope and activities that make up this solution.",
           "item1Title": "Process mapping",
           "item1Desc": "Document the current state and find the friction.",
@@ -157,7 +157,7 @@
         },
         "approach": {
           "eyebrow": "Our approach",
-          "heading": "How we deliver.",
+          "heading": "How we deliver",
           "summary": "A structured path from discovery to operation.",
           "step1Label": "01",
           "step1Title": "Analyze",
@@ -174,7 +174,7 @@
         },
         "outcomes": {
           "eyebrow": "Outcomes",
-          "heading": "What you get.",
+          "heading": "What you get",
           "summary": "The results that define a successful engagement.",
           "outcome1Title": "Less manual work",
           "outcome1Desc": "Teams focus on decisions, not data entry.",
@@ -185,8 +185,8 @@
         },
         "cta": {
           "eyebrow": "Ready to move?",
-          "heading1": "Bring us the challenge.",
-          "heading2": "We will bring a way forward.",
+          "heading1": "Bring us the challenge",
+          "heading2": "We will bring a way forward",
           "description": "Start a focused conversation with a senior MeU technology partner.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "All solutions"
@@ -201,7 +201,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Scope of management",
-          "heading": "Unified operations, data and decisions on one system.",
+          "heading": "Unified operations, data and decisions on one system",
           "summary": "Every activity in the enterprise needs to be connected into a continuous management process.",
           "item1Title": "Internal operations management",
           "item1Desc": "Digitize work, processes, approvals, HR, assets and day-to-day management activities.",
@@ -214,7 +214,7 @@
         },
         "approach": {
           "eyebrow": "Our approach",
-          "heading": "Start from how your enterprise actually runs.",
+          "heading": "Start from how your enterprise actually runs",
           "summary": "A management system must be built on real processes — not on an imposed, ready-made model.",
           "step1Label": "Discovery",
           "step1Desc": "Identify how the enterprise operates, related departments, bottlenecks and scattered data.",
@@ -227,7 +227,7 @@
         },
         "outcomes": {
           "eyebrow": "What you get",
-          "heading": "One management system, many synchronized activities.",
+          "heading": "One management system, many synchronized activities",
           "summary": "Effective management is not about having more software — it is about connecting data and operations on one unified system.",
           "outcome1Title": "Centralized management",
           "outcome1Desc": "Information, work, processes and data are managed clearly by department and role.",
@@ -240,8 +240,8 @@
         },
         "cta": {
           "eyebrow": "Ready to move?",
-          "heading1": "Bring us the challenge.",
-          "heading2": "We will bring a way forward.",
+          "heading1": "Bring us the challenge",
+          "heading2": "We will bring a way forward",
           "description": "Start a focused conversation with a senior MeU technology partner.",
           "secondaryButton": "All solutions"
         }
@@ -256,7 +256,7 @@
         },
         "whatWeDo": {
           "eyebrow": "What we do",
-          "heading": "What this engagement covers.",
+          "heading": "What this engagement covers",
           "summary": "The scope and activities that make up this solution.",
           "item1Title": "Journey mapping",
           "item1Desc": "Understand the end-to-end customer experience.",
@@ -269,7 +269,7 @@
         },
         "approach": {
           "eyebrow": "Our approach",
-          "heading": "How we deliver.",
+          "heading": "How we deliver",
           "summary": "A structured path from discovery to operation.",
           "step1Label": "01",
           "step1Title": "Listen",
@@ -286,7 +286,7 @@
         },
         "outcomes": {
           "eyebrow": "Outcomes",
-          "heading": "What you get.",
+          "heading": "What you get",
           "summary": "The results that define a successful engagement.",
           "outcome1Title": "Higher satisfaction",
           "outcome1Desc": "Customers feel the difference at every touchpoint.",
@@ -297,8 +297,8 @@
         },
         "cta": {
           "eyebrow": "Ready to move?",
-          "heading1": "Bring us the challenge.",
-          "heading2": "We will bring a way forward.",
+          "heading1": "Bring us the challenge",
+          "heading2": "We will bring a way forward",
           "description": "Start a focused conversation with a senior MeU technology partner.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "All solutions"
@@ -314,7 +314,7 @@
         },
         "whatWeDo": {
           "eyebrow": "What we do",
-          "heading": "What this engagement covers.",
+          "heading": "What this engagement covers",
           "summary": "The scope and activities that make up this solution.",
           "item1Title": "Omnichannel architecture",
           "item1Desc": "Connect online, in-store and mobile commerce.",
@@ -327,7 +327,7 @@
         },
         "approach": {
           "eyebrow": "Our approach",
-          "heading": "How we deliver.",
+          "heading": "How we deliver",
           "summary": "A structured path from discovery to operation.",
           "step1Label": "01",
           "step1Title": "Strategy",
@@ -344,7 +344,7 @@
         },
         "outcomes": {
           "eyebrow": "Outcomes",
-          "heading": "What you get.",
+          "heading": "What you get",
           "summary": "The results that define a successful engagement.",
           "outcome1Title": "More revenue",
           "outcome1Desc": "Omnichannel customers spend more.",
@@ -355,8 +355,8 @@
         },
         "cta": {
           "eyebrow": "Ready to move?",
-          "heading1": "Bring us the challenge.",
-          "heading2": "We will bring a way forward.",
+          "heading1": "Bring us the challenge",
+          "heading2": "We will bring a way forward",
           "description": "Start a focused conversation with a senior MeU technology partner.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "All solutions"
@@ -372,7 +372,7 @@
         },
         "whatWeDo": {
           "eyebrow": "What we do",
-          "heading": "What this engagement covers.",
+          "heading": "What this engagement covers",
           "summary": "The scope and activities that make up this solution.",
           "item1Title": "Use case identification",
           "item1Desc": "Find the workflows ready for intelligent automation.",
@@ -385,7 +385,7 @@
         },
         "approach": {
           "eyebrow": "Our approach",
-          "heading": "How we deliver.",
+          "heading": "How we deliver",
           "summary": "A structured path from discovery to operation.",
           "step1Label": "01",
           "step1Title": "Identify",
@@ -402,7 +402,7 @@
         },
         "outcomes": {
           "eyebrow": "Outcomes",
-          "heading": "What you get.",
+          "heading": "What you get",
           "summary": "The results that define a successful engagement.",
           "outcome1Title": "Faster decisions",
           "outcome1Desc": "AI handles routine decisions in real time.",
@@ -413,8 +413,8 @@
         },
         "cta": {
           "eyebrow": "Ready to move?",
-          "heading1": "Bring us the challenge.",
-          "heading2": "We will bring a way forward.",
+          "heading1": "Bring us the challenge",
+          "heading2": "We will bring a way forward",
           "description": "Start a focused conversation with a senior MeU technology partner.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "All solutions"
@@ -429,7 +429,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Scope of the solution",
-          "heading": "Software built around your own business problem.",
+          "heading": "Software built around your own business problem",
           "summary": "Every enterprise has different processes, data and ways of operating, so software must be designed for real usage.",
           "item1Title": "Business problem analysis",
           "item1Desc": "Identify processes, needs, data and the gaps current software does not cover.",
@@ -442,7 +442,7 @@
         },
         "approach": {
           "eyebrow": "Our approach",
-          "heading": "From real requirements to software that runs.",
+          "heading": "From real requirements to software that runs",
           "summary": "We do not start from a ready-made feature set — we start from how your enterprise operates and the problem to solve.",
           "step1Label": "Discovery",
           "step1Desc": "Learn the processes, users, data and specific requirements of the enterprise.",
@@ -455,7 +455,7 @@
         },
         "outcomes": {
           "eyebrow": "What you get",
-          "heading": "Software that fits how your enterprise operates.",
+          "heading": "Software that fits how your enterprise operates",
           "summary": "The value of custom software is solving the right problem and adapting as the enterprise changes.",
           "outcome1Title": "True to real processes",
           "outcome1Desc": "The system is built around how you operate — not the other way around.",
@@ -468,8 +468,8 @@
         },
         "cta": {
           "eyebrow": "Ready to move?",
-          "heading1": "Bring us the challenge.",
-          "heading2": "We will bring a way forward.",
+          "heading1": "Bring us the challenge",
+          "heading2": "We will bring a way forward",
           "description": "Start a focused conversation with a senior MeU technology partner.",
           "secondaryButton": "All solutions"
         }
@@ -484,7 +484,7 @@
         },
         "whatWeDo": {
           "eyebrow": "What we do",
-          "heading": "What this engagement covers.",
+          "heading": "What this engagement covers",
           "summary": "The scope and activities that make up this solution.",
           "item1Title": "Strategy & roadmap",
           "item1Desc": "Define the technology strategy and sequence the work.",
@@ -497,7 +497,7 @@
         },
         "approach": {
           "eyebrow": "Our approach",
-          "heading": "How we deliver.",
+          "heading": "How we deliver",
           "summary": "A structured path from discovery to operation.",
           "step1Label": "01",
           "step1Title": "Assess",
@@ -514,7 +514,7 @@
         },
         "outcomes": {
           "eyebrow": "Outcomes",
-          "heading": "What you get.",
+          "heading": "What you get",
           "summary": "The results that define a successful engagement.",
           "outcome1Title": "Clear direction",
           "outcome1Desc": "Everyone knows what to build and why.",
@@ -525,8 +525,8 @@
         },
         "cta": {
           "eyebrow": "Ready to move?",
-          "heading1": "Bring us the challenge.",
-          "heading2": "We will bring a way forward.",
+          "heading1": "Bring us the challenge",
+          "heading2": "We will bring a way forward",
           "description": "Start a focused conversation with a senior MeU technology partner.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "All solutions"
@@ -542,7 +542,7 @@
         },
         "whatWeDo": {
           "eyebrow": "What we do",
-          "heading": "What this engagement covers.",
+          "heading": "What this engagement covers",
           "summary": "The scope and activities that make up this solution.",
           "item1Title": "Full-stack development",
           "item1Desc": "Front-end, back-end and infrastructure engineering.",
@@ -555,7 +555,7 @@
         },
         "approach": {
           "eyebrow": "Our approach",
-          "heading": "How we deliver.",
+          "heading": "How we deliver",
           "summary": "A structured path from discovery to operation.",
           "step1Label": "01",
           "step1Title": "Design",
@@ -572,7 +572,7 @@
         },
         "outcomes": {
           "eyebrow": "Outcomes",
-          "heading": "What you get.",
+          "heading": "What you get",
           "summary": "The results that define a successful engagement.",
           "outcome1Title": "Reliable",
           "outcome1Desc": "Software that works under real-world load.",
@@ -583,8 +583,8 @@
         },
         "cta": {
           "eyebrow": "Ready to move?",
-          "heading1": "Bring us the challenge.",
-          "heading2": "We will bring a way forward.",
+          "heading1": "Bring us the challenge",
+          "heading2": "We will bring a way forward",
           "description": "Start a focused conversation with a senior MeU technology partner.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "All solutions"
@@ -600,7 +600,7 @@
         },
         "whatWeDo": {
           "eyebrow": "What we do",
-          "heading": "What this engagement covers.",
+          "heading": "What this engagement covers",
           "summary": "The scope and activities that make up this solution.",
           "item1Title": "Model development",
           "item1Desc": "Train, fine-tune and evaluate AI models.",
@@ -613,7 +613,7 @@
         },
         "approach": {
           "eyebrow": "Our approach",
-          "heading": "How we deliver.",
+          "heading": "How we deliver",
           "summary": "A structured path from discovery to operation.",
           "step1Label": "01",
           "step1Title": "Frame",
@@ -630,7 +630,7 @@
         },
         "outcomes": {
           "eyebrow": "Outcomes",
-          "heading": "What you get.",
+          "heading": "What you get",
           "summary": "The results that define a successful engagement.",
           "outcome1Title": "Production-ready",
           "outcome1Desc": "Models that work in real business contexts.",
@@ -641,8 +641,8 @@
         },
         "cta": {
           "eyebrow": "Ready to move?",
-          "heading1": "Bring us the challenge.",
-          "heading2": "We will bring a way forward.",
+          "heading1": "Bring us the challenge",
+          "heading2": "We will bring a way forward",
           "description": "Start a focused conversation with a senior MeU technology partner.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "All solutions"
@@ -658,7 +658,7 @@
         },
         "whatWeDo": {
           "eyebrow": "What we do",
-          "heading": "What this engagement covers.",
+          "heading": "What this engagement covers",
           "summary": "The scope and activities that make up this solution.",
           "item1Title": "Test strategy",
           "item1Desc": "Define what to test and how to test it.",
@@ -671,7 +671,7 @@
         },
         "approach": {
           "eyebrow": "Our approach",
-          "heading": "How we deliver.",
+          "heading": "How we deliver",
           "summary": "A structured path from discovery to operation.",
           "step1Label": "01",
           "step1Title": "Plan",
@@ -688,7 +688,7 @@
         },
         "outcomes": {
           "eyebrow": "Outcomes",
-          "heading": "What you get.",
+          "heading": "What you get",
           "summary": "The results that define a successful engagement.",
           "outcome1Title": "Fewer defects",
           "outcome1Desc": "Issues caught before they reach production.",
@@ -699,8 +699,8 @@
         },
         "cta": {
           "eyebrow": "Ready to move?",
-          "heading1": "Bring us the challenge.",
-          "heading2": "We will bring a way forward.",
+          "heading1": "Bring us the challenge",
+          "heading2": "We will bring a way forward",
           "description": "Start a focused conversation with a senior MeU technology partner.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "All solutions"
@@ -716,7 +716,7 @@
         },
         "whatWeDo": {
           "eyebrow": "What we do",
-          "heading": "What this engagement covers.",
+          "heading": "What this engagement covers",
           "summary": "The scope and activities that make up this solution.",
           "item1Title": "API integration",
           "item1Desc": "Connect systems through well-designed APIs.",
@@ -729,7 +729,7 @@
         },
         "approach": {
           "eyebrow": "Our approach",
-          "heading": "How we deliver.",
+          "heading": "How we deliver",
           "summary": "A structured path from discovery to operation.",
           "step1Label": "01",
           "step1Title": "Map",
@@ -746,7 +746,7 @@
         },
         "outcomes": {
           "eyebrow": "Outcomes",
-          "heading": "What you get.",
+          "heading": "What you get",
           "summary": "The results that define a successful engagement.",
           "outcome1Title": "Connected systems",
           "outcome1Desc": "Data flows where it needs to, automatically.",
@@ -757,8 +757,8 @@
         },
         "cta": {
           "eyebrow": "Ready to move?",
-          "heading1": "Bring us the challenge.",
-          "heading2": "We will bring a way forward.",
+          "heading1": "Bring us the challenge",
+          "heading2": "We will bring a way forward",
           "description": "Start a focused conversation with a senior MeU technology partner.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "All solutions"
@@ -774,7 +774,7 @@
         },
         "whatWeDo": {
           "eyebrow": "What we do",
-          "heading": "What this engagement covers.",
+          "heading": "What this engagement covers",
           "summary": "The scope and activities that make up this solution.",
           "item1Title": "Cloud migration",
           "item1Desc": "Move workloads to the right cloud platform.",
@@ -787,7 +787,7 @@
         },
         "approach": {
           "eyebrow": "Our approach",
-          "heading": "How we deliver.",
+          "heading": "How we deliver",
           "summary": "A structured path from discovery to operation.",
           "step1Label": "01",
           "step1Title": "Assess",
@@ -804,7 +804,7 @@
         },
         "outcomes": {
           "eyebrow": "Outcomes",
-          "heading": "What you get.",
+          "heading": "What you get",
           "summary": "The results that define a successful engagement.",
           "outcome1Title": "Faster delivery",
           "outcome1Desc": "Automated pipelines ship code safely.",
@@ -815,8 +815,8 @@
         },
         "cta": {
           "eyebrow": "Ready to move?",
-          "heading1": "Bring us the challenge.",
-          "heading2": "We will bring a way forward.",
+          "heading1": "Bring us the challenge",
+          "heading2": "We will bring a way forward",
           "description": "Start a focused conversation with a senior MeU technology partner.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "All solutions"
@@ -832,7 +832,7 @@
         },
         "whatWeDo": {
           "eyebrow": "What we do",
-          "heading": "What this engagement covers.",
+          "heading": "What this engagement covers",
           "summary": "The scope and activities that make up this solution.",
           "item1Title": "User research",
           "item1Desc": "Understand needs, behaviors and pain points.",
@@ -845,7 +845,7 @@
         },
         "approach": {
           "eyebrow": "Our approach",
-          "heading": "How we deliver.",
+          "heading": "How we deliver",
           "summary": "A structured path from discovery to operation.",
           "step1Label": "01",
           "step1Title": "Research",
@@ -862,7 +862,7 @@
         },
         "outcomes": {
           "eyebrow": "Outcomes",
-          "heading": "What you get.",
+          "heading": "What you get",
           "summary": "The results that define a successful engagement.",
           "outcome1Title": "Better usability",
           "outcome1Desc": "Users complete tasks without friction.",
@@ -873,8 +873,8 @@
         },
         "cta": {
           "eyebrow": "Ready to move?",
-          "heading1": "Bring us the challenge.",
-          "heading2": "We will bring a way forward.",
+          "heading1": "Bring us the challenge",
+          "heading2": "We will bring a way forward",
           "description": "Start a focused conversation with a senior MeU technology partner.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "All solutions"
@@ -890,7 +890,7 @@
         },
         "whatWeDo": {
           "eyebrow": "What we do",
-          "heading": "What this engagement covers.",
+          "heading": "What this engagement covers",
           "summary": "The scope and activities that make up this solution.",
           "item1Title": "Application maintenance",
           "item1Desc": "Bug fixes, updates and enhancements.",
@@ -903,7 +903,7 @@
         },
         "approach": {
           "eyebrow": "Our approach",
-          "heading": "How we deliver.",
+          "heading": "How we deliver",
           "summary": "A structured path from discovery to operation.",
           "step1Label": "01",
           "step1Title": "Assess",
@@ -920,7 +920,7 @@
         },
         "outcomes": {
           "eyebrow": "Outcomes",
-          "heading": "What you get.",
+          "heading": "What you get",
           "summary": "The results that define a successful engagement.",
           "outcome1Title": "Stable systems",
           "outcome1Desc": "Issues resolved quickly, uptime maintained.",
@@ -931,8 +931,8 @@
         },
         "cta": {
           "eyebrow": "Ready to move?",
-          "heading1": "Bring us the challenge.",
-          "heading2": "We will bring a way forward.",
+          "heading1": "Bring us the challenge",
+          "heading2": "We will bring a way forward",
           "description": "Start a focused conversation with a senior MeU technology partner.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "All solutions"
@@ -948,7 +948,7 @@
         },
         "whatWeDo": {
           "eyebrow": "What we do",
-          "heading": "What this engagement covers.",
+          "heading": "What this engagement covers",
           "summary": "The scope and activities that make up this solution.",
           "item1Title": "Staff augmentation",
           "item1Desc": "Experienced engineers integrated into your team.",
@@ -961,7 +961,7 @@
         },
         "approach": {
           "eyebrow": "Our approach",
-          "heading": "How we deliver.",
+          "heading": "How we deliver",
           "summary": "A structured path from discovery to operation.",
           "step1Label": "01",
           "step1Title": "Understand",
@@ -978,7 +978,7 @@
         },
         "outcomes": {
           "eyebrow": "Outcomes",
-          "heading": "What you get.",
+          "heading": "What you get",
           "summary": "The results that define a successful engagement.",
           "outcome1Title": "Right skills",
           "outcome1Desc": "Experienced people who can deliver from day one.",
@@ -989,8 +989,8 @@
         },
         "cta": {
           "eyebrow": "Ready to move?",
-          "heading1": "Bring us the challenge.",
-          "heading2": "We will bring a way forward.",
+          "heading1": "Bring us the challenge",
+          "heading2": "We will bring a way forward",
           "description": "Start a focused conversation with a senior MeU technology partner.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "All solutions"
@@ -1006,7 +1006,7 @@
         },
         "whatWeDo": {
           "eyebrow": "What we do",
-          "heading": "What this engagement covers.",
+          "heading": "What this engagement covers",
           "summary": "The scope and activities that make up this solution.",
           "item1Title": "Corporate upskilling",
           "item1Desc": "Targeted training for working engineers.",
@@ -1019,7 +1019,7 @@
         },
         "approach": {
           "eyebrow": "Our approach",
-          "heading": "How we deliver.",
+          "heading": "How we deliver",
           "summary": "A structured path from discovery to operation.",
           "step1Label": "01",
           "step1Title": "Assess",
@@ -1036,7 +1036,7 @@
         },
         "outcomes": {
           "eyebrow": "Outcomes",
-          "heading": "What you get.",
+          "heading": "What you get",
           "summary": "The results that define a successful engagement.",
           "outcome1Title": "Skilled teams",
           "outcome1Desc": "Your people can own and extend the system.",
@@ -1047,8 +1047,8 @@
         },
         "cta": {
           "eyebrow": "Ready to move?",
-          "heading1": "Bring us the challenge.",
-          "heading2": "We will bring a way forward.",
+          "heading1": "Bring us the challenge",
+          "heading2": "We will bring a way forward",
           "description": "Start a focused conversation with a senior MeU technology partner.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "All solutions"
@@ -1057,14 +1057,14 @@
       "businessSolutionsCategory": {
         "hero": {
           "eyebrow": "Business Solutions",
-          "heading": "6 solutions, one connected team.",
+          "heading": "6 solutions, one connected team",
           "summary": "Three connected practice areas for business outcomes.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "All solutions"
         },
         "grid": {
           "eyebrow": "Solutions",
-          "heading": "Explore the practice area.",
+          "heading": "Explore the practice area",
           "summary": "Each solution connects to the others. Start where the outcome is clearest.",
           "items": [
             {
@@ -1095,8 +1095,8 @@
         },
         "cta": {
           "eyebrow": "Not sure where to start?",
-          "heading1": "Tell us the outcome.",
-          "heading2": "We map it to the work.",
+          "heading1": "Tell us the outcome",
+          "heading2": "We map it to the work",
           "description": "Book a focused conversation with a senior MeU specialist.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "All solutions"
@@ -1105,14 +1105,14 @@
       "techCapabilitiesCategory": {
         "hero": {
           "eyebrow": "Technology Capabilities",
-          "heading": "7 solutions, one connected team.",
+          "heading": "7 solutions, one connected team",
           "summary": "How the work gets designed, built, integrated and operated.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "All solutions"
         },
         "grid": {
           "eyebrow": "Solutions",
-          "heading": "Explore the practice area.",
+          "heading": "Explore the practice area",
           "summary": "Each solution connects to the others. Start where the outcome is clearest.",
           "items": [
             {
@@ -1147,8 +1147,8 @@
         },
         "cta": {
           "eyebrow": "Not sure where to start?",
-          "heading1": "Tell us the outcome.",
-          "heading2": "We map it to the work.",
+          "heading1": "Tell us the outcome",
+          "heading2": "We map it to the work",
           "description": "Book a focused conversation with a senior MeU specialist.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "All solutions"
@@ -1157,14 +1157,14 @@
       "talentEnablementCategory": {
         "hero": {
           "eyebrow": "Talent & Enablement",
-          "heading": "2 solutions, one connected team.",
+          "heading": "2 solutions, one connected team",
           "summary": "Add capacity to your teams, or grow the people you already have.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "All solutions"
         },
         "grid": {
           "eyebrow": "Solutions",
-          "heading": "Explore the practice area.",
+          "heading": "Explore the practice area",
           "summary": "Each solution connects to the others. Start where the outcome is clearest.",
           "items": [
             {
@@ -1179,8 +1179,8 @@
         },
         "cta": {
           "eyebrow": "Not sure where to start?",
-          "heading1": "Tell us the outcome.",
-          "heading2": "We map it to the work.",
+          "heading1": "Tell us the outcome",
+          "heading2": "We map it to the work",
           "description": "Book a focused conversation with a senior MeU specialist.",
           "primaryButton": "Contact MeU",
           "secondaryButton": "All solutions"
@@ -1195,7 +1195,7 @@
         },
         "whatWeDo": {
           "eyebrow": "Scope of management",
-          "heading": "Turn your website into part of the business.",
+          "heading": "Turn your website into part of the business",
           "summary": "A website is not only where the enterprise introduces itself — it can become a platform serving customers, sales and operations.",
           "item1Title": "Content management",
           "item1Desc": "Keep company information, products, services, articles and all required content on the website up to date.",
@@ -1208,7 +1208,7 @@
         },
         "approach": {
           "eyebrow": "How we operate",
-          "heading": "Keep the website stable and growing with your needs.",
+          "heading": "Keep the website stable and growing with your needs",
           "summary": "A website must be managed continuously so content, systems and user experience always fit the business.",
           "step1Label": "Update",
           "step1Desc": "Maintain content, products, services and the information your operations require.",
@@ -1221,7 +1221,7 @@
         },
         "outcomes": {
           "eyebrow": "What you get",
-          "heading": "A website always ready to serve the business.",
+          "heading": "A website always ready to serve the business",
           "summary": "Effective website management keeps a digital platform stable, current and able to grow with the business.",
           "outcome1Title": "Always up-to-date content",
           "outcome1Desc": "Company, product and service information stays accurate and aligned with real operations.",
@@ -1234,8 +1234,8 @@
         },
         "cta": {
           "eyebrow": "Ready to move?",
-          "heading1": "Bring us the challenge.",
-          "heading2": "We will bring a way forward.",
+          "heading1": "Bring us the challenge",
+          "heading2": "We will bring a way forward",
           "description": "Start a focused conversation with a senior MeU technology partner.",
           "secondaryButton": "All solutions"
         }
@@ -1249,7 +1249,7 @@
         },
         "whatWeDo": {
           "eyebrow": "What we do",
-          "heading": "AI in operations, not just demos.",
+          "heading": "AI in operations, not just demos",
           "summary": "MeU Solutions consults and implements AI around your specific business problems rather than applying technology by trend.",
           "item1Title": "AI assessment & direction",
           "item1Desc": "Analyze existing processes and data to identify where AI creates real value.",
@@ -1262,7 +1262,7 @@
         },
         "approach": {
           "eyebrow": "How we deliver",
-          "heading": "From small problems to AI in production.",
+          "heading": "From small problems to AI in production",
           "summary": "AI is introduced on a validation roadmap — starting where value is clearest.",
           "step1Label": "Assess",
           "step1Desc": "Survey processes, data and goals to pinpoint problems suited to AI.",
@@ -1275,7 +1275,7 @@
         },
         "outcomes": {
           "eyebrow": "What it delivers",
-          "heading": "AI with measurable value, not slogans.",
+          "heading": "AI with measurable value, not slogans",
           "summary": "Every AI application is tied to a concrete operational metric for real-world evaluation.",
           "outcome1Title": "Less repetitive work",
           "outcome1Desc": "Information processing, data entry and consolidation automated by AI.",
@@ -1288,8 +1288,8 @@
         },
         "cta": {
           "eyebrow": "Ready to get started?",
-          "heading1": "You bring the challenge.",
-          "heading2": "We bring the way forward.",
+          "heading1": "You bring the challenge",
+          "heading2": "We bring the way forward",
           "description": "Start a focused conversation with MeU's senior technology partner.",
           "secondaryButton": "All solutions"
         }

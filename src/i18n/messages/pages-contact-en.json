@@ -4,12 +4,12 @@
       "hero": {
         "eyebrow": "Contact",
         "heading1": "Contact",
-        "heading2": "us now.",
+        "heading2": "us now",
         "summary": "Book a consultation or contact us now for the fastest support."
       },
       "form": {
         "eyebrow": "Send a message",
-        "heading": "Tell us about your challenge.",
+        "heading": "Tell us about your challenge",
         "summary": "Fill in the form below — we respond within one business day.",
         "nameLabel": "Full name",
         "namePlaceholder": "Your name",
@@ -29,7 +29,7 @@
       },
       "offices": {
         "eyebrow": "Offices",
-        "heading": "Where to find us.",
+        "heading": "Where to find us",
         "summary": "Headquartered in Ho Chi Minh City, Vietnam. Global delivery.",
         "item1Title": "Ho Chi Minh City",
         "item1Desc": "Headquarters and engineering hub.",

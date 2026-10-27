@@ -3,8 +3,8 @@
     "products": {
       "hero": {
         "eyebrow": "Sản phẩm & nền tảng",
-        "heading1": "Sản phẩm tập trung.",
-        "heading2": "Vận hành theo thiết kế.",
+        "heading1": "Sản phẩm tập trung",
+        "heading2": "Vận hành theo thiết kế",
         "summary": "Các nền tảng với IP lõi chuẩn, mô hình triển khai lặp lại và demo bạn có thể chạy. Mọi thứ khác được bàn giao dưới dạng giải pháp tùy chỉnh.",
         "primaryButton": "Yêu cầu demo",
         "secondaryButton": "Liên hệ ngay với MeU",
@@ -15,7 +15,7 @@
       },
       "categories": {
         "eyebrow": "Danh mục",
-        "heading": "Bốn nhóm nền tảng. Một mô hình vận hành.",
+        "heading": "Bốn nhóm nền tảng. Một mô hình vận hành",
         "summary": "Mỗi nhóm chia sẻ kiến trúc chung và lớp tích hợp, nên bạn có thể bắt đầu với một module và mở rộng mà không cần xây lại nền tảng.",
         "exploreLabel": "Khám phá nền tảng"
       },
@@ -27,7 +27,7 @@
       },
       "approach": {
         "eyebrow": "Cách sản phẩm được bàn giao",
-        "heading": "Lõi chuẩn. Cấu hình cho phù hợp.",
+        "heading": "Lõi chuẩn. Cấu hình cho phù hợp",
         "summary": "Mỗi sản phẩm bắt đầu từ một lõi đã được kiểm chứng, sau đó được cấu hình theo mô hình vận hành của bạn — không xây lại từ đầu.",
         "step1Label": "01",
         "step1Title": "Lõi chuẩn",
@@ -44,8 +44,8 @@
       },
       "cta": {
         "eyebrow": "Xem trong thực tế",
-        "heading1": "Chạy demo.",
-        "heading2": "Rồi quyết định.",
+        "heading1": "Chạy demo",
+        "heading2": "Rồi quyết định",
         "description": "Đặt một buổi trình bày tập trung với chuyên gia sản phẩm cấp cao của MeU. Bạn sẽ thấy nền tảng áp dụng vào use case của bạn, không phải một bài thuyết trình chung chung.",
         "primaryButton": "Yêu cầu demo",
         "secondaryButton": "Xem tất cả giải pháp"
@@ -54,14 +54,14 @@
         "hero": {
           "eyebrow": "Sản phẩm · Doanh nghiệp",
           "heading1": "Vận hành doanh nghiệp",
-          "heading2": "trên một nền tảng.",
+          "heading2": "trên một nền tảng",
           "summary": "Phần mềm doanh nghiệp module hóa được điều chỉnh theo từng mô hình vận hành — từ workflow và CRM đến phân tích và thành viên — trên một lớp dữ liệu chung.",
           "primaryButton": "Yêu cầu demo",
           "secondaryButton": "Liên hệ ngay với MeU"
         },
         "modules": {
           "eyebrow": "Module",
-          "heading": "Bốn module. Một nguồn dữ liệu duy nhất.",
+          "heading": "Bốn module. Một nguồn dữ liệu duy nhất",
           "summary": "Bắt đầu với module giải quyết khoảng trống cấp bách nhất. Thêm phần còn lại khi sẵn sàng — chúng chia sẻ cùng dữ liệu và cùng quy tắc.",
           "exploreLabel": "Khám phá module"
         },
@@ -99,7 +99,7 @@
         },
         "architecture": {
           "eyebrow": "Kiến trúc",
-          "heading": "Dữ liệu chung. Bàn giảng theo module.",
+          "heading": "Dữ liệu chung. Bàn giảng theo module",
           "summary": "Mỗi module đọc và ghi vào một lớp dữ liệu được quản trị, nên báo cáo đối chiếu và workflow nhất quán trên toàn vận hành.",
           "layer1Title": "Module",
           "layer1Desc": "Workflow · CRM · Phân tích · Thành viên",
@@ -112,8 +112,8 @@
         },
         "cta": {
           "eyebrow": "Xem nền tảng",
-          "heading1": "Bắt đầu với một module.",
-          "heading2": "Mở rộng khi sẵn sàng.",
+          "heading1": "Bắt đầu với một module",
+          "heading2": "Mở rộng khi sẵn sàng",
           "description": "Đặt demo tập trung vào module quan trọng nhất với vận hành của bạn ngay lúc này.",
           "primaryButton": "Yêu cầu demo",
           "secondaryButton": "Xem tất cả sản phẩm"
@@ -123,14 +123,14 @@
         "hero": {
           "eyebrow": "Sản phẩm · AI",
           "heading1": "Nền tảng AI với",
-          "heading2": "kiểm soát của người được tích hợp sẵn.",
+          "heading2": "kiểm soát của người được tích hợp sẵn",
           "summary": "Tài liệu thông minh, copilot vận hành và tự động hóa quyết định — mỗi nền tảng đều có ngữ cảnh, kiểm soát và phán đoán của người được thiết kế vào hệ thống.",
           "primaryButton": "Yêu cầu demo",
           "secondaryButton": "Liên hệ ngay với MeU"
         },
         "platforms": {
           "eyebrow": "Nền tảng",
-          "heading": "Ba nền tảng AI. Một mô hình governance.",
+          "heading": "Ba nền tảng AI. Một mô hình governance",
           "summary": "Mỗi nền tảng nhắm đến một quyết định kinh doanh xác định. Mọi output có thể truy vết, xem xét và kết nối với hệ thống của bạn.",
           "exploreLabel": "Khám phá nền tảng"
         },
@@ -160,7 +160,7 @@
         },
         "governance": {
           "eyebrow": "Quản trị",
-          "heading": "Mọi output đều có thể truy vết.",
+          "heading": "Mọi output đều có thể truy vết",
           "summary": "Chúng tôi thiết kế hệ thống AI sao cho con người giữ quyền kiểm soát các quyết định quan trọng, và mọi hành động tự động đều có một chuỗi rõ ràng, có thể xem xét.",
           "principle1Title": "Con người trong vòng lặp",
           "principle1Desc": "Quyết định quan trọng cần phê duyệt của người trước khi có hiệu lực.",
@@ -174,7 +174,7 @@
         "cta": {
           "eyebrow": "Xem hoạt động",
           "heading1": "AI phù hợp",
-          "heading2": "workflow của bạn.",
+          "heading2": "workflow của bạn",
           "description": "Đặt demo tập trung vào một use case AI xác định trong vận hành của bạn. Bạn sẽ thấy nền tảng áp dụng vào tài liệu và quyết định của bạn.",
           "primaryButton": "Yêu cầu demo",
           "secondaryButton": "Xem tất cả sản phẩm"
@@ -184,14 +184,14 @@
         "hero": {
           "eyebrow": "Sản phẩm · Thương mại",
           "heading1": "Nền tảng thương mại",
-          "heading2": "mở rộng cùng bạn.",
+          "heading2": "mở rộng cùng bạn",
           "summary": "Bán hàng đa kênh, POS, tồn kho và hoàn tất đơn hàng kết nối đầu cuối — nên mọi kênh thấy cùng tồn kho, giá và đơn hàng.",
           "primaryButton": "Yêu cầu demo",
           "secondaryButton": "Liên hệ ngay với MeU"
         },
         "platforms": {
           "eyebrow": "Nền tảng",
-          "heading": "Bốn module thương mại. Một tồn kho duy nhất.",
+          "heading": "Bốn module thương mại. Một tồn kho duy nhất",
           "summary": "Bắt đầu với kênh hoặc vận hành cần cải thiện nhất. Phần còn lại kết nối với cùng dữ liệu tồn kho và đơn hàng.",
           "exploreLabel": "Khám phá module"
         },
@@ -229,7 +229,7 @@
         },
         "integration": {
           "eyebrow": "Tích hợp",
-          "heading": "Một tồn kho. Mọi kênh.",
+          "heading": "Một tồn kho. Mọi kênh",
           "summary": "Mỗi module đọc và ghi vào một lớp tồn kho và đơn hàng, nên tồn kho, giá và trạng thái đơn hàng nhất quán trên web, cửa hàng và sàn thương mại.",
           "layer1Title": "Kênh",
           "layer1Desc": "Web · POS · sàn thương mại · B2B",
@@ -242,8 +242,8 @@
         },
         "cta": {
           "eyebrow": "Xem nền tảng",
-          "heading1": "Kết nối mọi kênh.",
-          "heading2": "Bắt đầu với một kênh.",
+          "heading1": "Kết nối mọi kênh",
+          "heading2": "Bắt đầu với một kênh",
           "description": "Đặt demo tập trung vào module thương mại quan trọng nhất với vận hành của bạn ngay lúc này.",
           "primaryButton": "Yêu cầu demo",
           "secondaryButton": "Xem tất cả sản phẩm"
@@ -253,14 +253,14 @@
         "hero": {
           "eyebrow": "Sản phẩm · Ngành",
           "heading1": "Nền tảng theo ngành",
-          "heading2": "với chiều sâu chuyên môn thực sự.",
+          "heading2": "với chiều sâu chuyên môn thực sự",
           "summary": "Module chuyên ngành dựng sẵn cho y tế, logistics và giáo dục — được định hình bởi kinh nghiệm bàn giao, không phải template chung chung.",
           "primaryButton": "Yêu cầu demo",
           "secondaryButton": "Liên hệ ngay với MeU"
         },
         "platforms": {
           "eyebrow": "Nền tảng",
-          "heading": "Ba nền tảng ngành. Xây từ bàn giao thực tế.",
+          "heading": "Ba nền tảng ngành. Xây từ bàn giao thực tế",
           "summary": "Mỗi nền tảng đóng gói workflow, mô hình dữ liệu và tích hợp mà chúng tôi đã xây và kiểm chứng trong thực tế.",
           "exploreLabel": "Khám phá nền tảng"
         },
@@ -290,7 +290,7 @@
         },
         "delivery": {
           "eyebrow": "Mô hình bàn giao",
-          "heading": "Dựng sẵn, rồi cấu hình.",
+          "heading": "Dựng sẵn, rồi cấu hình",
           "summary": "Mỗi nền tảng ngành được bàn giao với workflow và mô hình dữ liệu chuyên ngành đã xây sẵn. Chúng tôi cấu hình theo vận hành của bạn, rồi tích hợp và triển khai.",
           "step1Label": "01",
           "step1Title": "Lõi chuyên ngành",
@@ -307,8 +307,8 @@
         },
         "cta": {
           "eyebrow": "Xem ngành của bạn",
-          "heading1": "Xây cho thế giới của bạn.",
-          "heading2": "Sẵn sàng cấu hình.",
+          "heading1": "Xây cho thế giới của bạn",
+          "heading2": "Sẵn sàng cấu hình",
           "description": "Đặt demo tập trung vào ngành của bạn. Bạn sẽ thấy workflow chuyên ngành áp dụng vào thực tế vận hành của bạn.",
           "primaryButton": "Yêu cầu demo",
           "secondaryButton": "Xem tất cả sản phẩm"
@@ -316,8 +316,8 @@
       },
       "meos": {
         "hero": {
-          "eyebrow": "MeOS — One Ecosystem. Infinite Possibilities.",
-          "heading": "Một hệ sinh thái. Không giới hạn khả năng.",
+          "eyebrow": "MeOS — One Ecosystem. Infinite Possibilities",
+          "heading": "Một hệ sinh thái. Không giới hạn khả năng",
           "summary": "Hệ sinh thái giải pháp công nghệ do MeU Solutions phát triển, hướng đến việc hỗ trợ doanh nghiệp quản lý, vận hành và mở rộng hoạt động kinh doanh trong kỷ nguyên số.",
           "primaryButton": "Khám phá hệ sinh thái",
           "secondaryButton": "Liên hệ tư vấn"
@@ -331,7 +331,7 @@
         },
         "values": {
           "eyebrow": "Giá trị cốt lõi",
-          "heading": "Công nghệ phù hợp cho từng nhu cầu. Một định hướng phát triển thống nhất.",
+          "heading": "Công nghệ phù hợp cho từng nhu cầu. Một định hướng phát triển thống nhất",
           "summary": "Mỗi doanh nghiệp có những nhu cầu và thách thức riêng. MeOS hướng đến danh mục giải pháp đa dạng để doanh nghiệp tiếp cận công nghệ theo bài toán thực tế và theo từng giai đoạn phát triển.",
           "item1Title": "Giải pháp phù hợp",
           "item1Desc": "Lựa chọn sản phẩm theo nhu cầu và mô hình kinh doanh.",
@@ -361,7 +361,7 @@
         },
         "architecture": {
           "eyebrow": "Kiến trúc hệ sinh thái",
-          "heading": "Nhiều giải pháp. Một hệ sinh thái công nghệ.",
+          "heading": "Nhiều giải pháp. Một hệ sinh thái công nghệ",
           "summary": "Các giải pháp trong hệ sinh thái MeOS được xây dựng để phục vụ những bài toán chuyên biệt, đồng thời hướng đến một định hướng phát triển chung về công nghệ và khả năng kết nối.",
           "summary2": "Doanh nghiệp có thể bắt đầu từ giải pháp phù hợp với nhu cầu hiện tại và tìm hiểu thêm những sản phẩm khác khi hoạt động kinh doanh, vận hành hoặc cung cấp dịch vụ cần mở rộng.",
           "cta": "Tìm hiểu nền tảng MeOS"
@@ -399,7 +399,7 @@
         },
         "cta": {
           "heading1": "Bắt đầu hành trình chuyển đổi số",
-          "heading2": "cùng MeOS.",
+          "heading2": "cùng MeOS",
           "description": "Chia sẻ nhu cầu của doanh nghiệp bạn. MeOS sẽ cùng bạn tìm hiểu giải pháp công nghệ phù hợp.",
           "primaryButton": "Nhận tư vấn giải pháp",
           "secondaryButton": "Khám phá sản phẩm MeOS",
@@ -409,14 +409,14 @@
       "meosEcommerce": {
         "hero": {
           "label": "MeOS Ecommerce | Giải pháp thương mại điện tử",
-          "heading": "Đơn giản vận hành. Bứt phá doanh thu.",
+          "heading": "Đơn giản vận hành. Bứt phá doanh thu",
           "summary": "MeOS Ecommerce là giải pháp thương mại điện tử giúp doanh nghiệp xây dựng kênh bán hàng trực tuyến, tổ chức hoạt động kinh doanh và phát triển trải nghiệm mua sắm thuận tiện cho khách hàng.",
           "primaryButton": "Đăng ký Demo",
           "secondaryButton": "Khám phá tính năng"
         },
         "value": {
           "eyebrow": "Giá trị giải pháp",
-          "heading": "Kinh doanh trực tuyến đơn giản hơn cùng MeOS Ecommerce.",
+          "heading": "Kinh doanh trực tuyến đơn giản hơn cùng MeOS Ecommerce",
           "summary": "Ba bài toán phổ biến của bán hàng trực tuyến và cách MeOS Ecommerce tiếp cận từng bài toán.",
           "item1Problem": "Chưa có kênh bán hàng riêng",
           "item1Value": "Xây dựng website thương mại điện tử đồng bộ với thương hiệu.",
@@ -427,7 +427,7 @@
         },
         "features": {
           "eyebrow": "Tính năng nổi bật",
-          "heading": "Các công cụ cần thiết để vận hành thương mại điện tử.",
+          "heading": "Các công cụ cần thiết để vận hành thương mại điện tử",
           "summary": "Khám phá các nhóm chức năng chính hỗ trợ doanh nghiệp xây dựng trải nghiệm mua sắm và tổ chức hoạt động bán hàng trực tuyến.",
           "tab1Title": "Website bán hàng",
           "tab1Desc": "Xây dựng không gian mua sắm trực tuyến với giao diện phù hợp máy tính và di động.",
@@ -452,7 +452,7 @@
         },
         "experience": {
           "eyebrow": "Trải nghiệm sản phẩm",
-          "heading": "Khám phá MeOS Ecommerce qua trải nghiệm thực tế.",
+          "heading": "Khám phá MeOS Ecommerce qua trải nghiệm thực tế",
           "summary": "Xem cách khách hàng khám phá sản phẩm, thực hiện đặt hàng và cách doanh nghiệp tiếp nhận, xử lý đơn hàng thông qua giao diện minh họa hoặc demo thực tế.",
           "step1Title": "Khám phá sản phẩm",
           "step1Desc": "Khách hàng xem danh mục, tìm kiếm và chọn sản phẩm trên website bán hàng.",
@@ -463,7 +463,7 @@
           "primaryButton": "Đặt lịch Demo"
         },
         "ecosystem": {
-          "heading": "Một giải pháp trong hệ sinh thái MeOS.",
+          "heading": "Một giải pháp trong hệ sinh thái MeOS",
           "summary": "MeOS Ecommerce là một phần của hệ sinh thái giải pháp công nghệ MeOS. Khám phá thêm những sản phẩm phục vụ các nhu cầu quản lý bán hàng đa kênh và phát triển trải nghiệm trên di động.",
           "link1Title": "MeOS Omni",
           "link1Desc": "Quản lý bán hàng đa kênh",
@@ -491,14 +491,14 @@
       "meosMiniapp": {
         "hero": {
           "label": "MeOS Mini App | Trải nghiệm dịch vụ trên Mini App",
-          "heading": "Kết nối khách hàng. Tăng trưởng tiện lợi.",
+          "heading": "Kết nối khách hàng. Tăng trưởng tiện lợi",
           "summary": "MeOS Mini App là giải pháp phát triển trải nghiệm dịch vụ và kết nối khách hàng trên nền tảng Mini App — bán hàng, loyalty, voucher và affiliate trong một điểm chạm trực tiếp.",
           "primaryButton": "Đăng ký Demo",
           "secondaryButton": "Khám phá tính năng"
         },
         "value": {
           "eyebrow": "Giá trị giải pháp",
-          "heading": "Gặp khách hàng ngay trên nền tảng họ dùng hằng ngày.",
+          "heading": "Gặp khách hàng ngay trên nền tảng họ dùng hằng ngày",
           "summary": "Ba bài toán tiếp cận khách hàng phổ biến và cách MeOS Mini App tiếp cận từng bài toán.",
           "item1Problem": "Khách hàng khó tiếp cận dịch vụ",
           "item1Value": "Mini App loại bỏ rào cản cài đặt — khách hàng sử dụng ngay trên nền tảng quen thuộc.",
@@ -509,7 +509,7 @@
         },
         "features": {
           "eyebrow": "Tính năng nổi bật",
-          "heading": "Các công cụ cần thiết để phát triển kênh Mini App.",
+          "heading": "Các công cụ cần thiết để phát triển kênh Mini App",
           "summary": "Khám phá các nhóm chức năng chính hỗ trợ doanh nghiệp xây dựng trải nghiệm dịch vụ trên Mini App.",
           "tab1Title": "Shopping trên Mini App",
           "tab1Desc": "Danh mục sản phẩm, đặt hàng và thanh toán ngay trong Mini App mà không cần cài ứng dụng.",
@@ -534,7 +534,7 @@
         },
         "experience": {
           "eyebrow": "Trải nghiệm sản phẩm",
-          "heading": "Khám phá MeOS Mini App qua trải nghiệm thực tế.",
+          "heading": "Khám phá MeOS Mini App qua trải nghiệm thực tế",
           "summary": "Xem cách khách hàng tiếp cận dịch vụ và cách doanh nghiệp vận hành kênh Mini App thông qua giao diện minh họa hoặc demo thực tế.",
           "step1Title": "Mở điểm chạm",
           "step1Desc": "Đưa sản phẩm và dịch vụ lên Mini App để khách hàng tiếp cận nhanh nhất có thể.",
@@ -545,7 +545,7 @@
           "primaryButton": "Đặt lịch Demo"
         },
         "ecosystem": {
-          "heading": "Một giải pháp trong hệ sinh thái MeOS.",
+          "heading": "Một giải pháp trong hệ sinh thái MeOS",
           "summary": "MeOS Mini App là một phần của hệ sinh thái giải pháp công nghệ MeOS. Khám phá thêm những sản phẩm phục vụ nhu cầu bán hàng trực tuyến và bán hàng đa kênh.",
           "link1Title": "MeOS Ecommerce",
           "link1Desc": "Kênh bán hàng trực tuyến cho doanh nghiệp",
@@ -573,14 +573,14 @@
       "meosOmni": {
         "hero": {
           "label": "MeOS Omni | Quản lý bán hàng đa kênh",
-          "heading": "Một nơi quản lý. Mọi kênh bán hàng.",
+          "heading": "Một nơi quản lý. Mọi kênh bán hàng",
           "summary": "MeOS Omni hướng đến quản lý tập trung các hoạt động bán hàng trên nhiều kênh kinh doanh: cửa hàng, website, sàn thương mại điện tử và các kênh xã hội.",
           "primaryButton": "Đăng ký Demo",
           "secondaryButton": "Khám phá tính năng"
         },
         "value": {
           "eyebrow": "Giá trị giải pháp",
-          "heading": "Bán hàng đa kênh không còn là gánh nặng vận hành.",
+          "heading": "Bán hàng đa kênh không còn là gánh nặng vận hành",
           "summary": "Ba bài toán vận hành đa kênh phổ biến và cách MeOS Omni tiếp cận từng bài toán.",
           "item1Problem": "Mỗi kênh một hệ thống",
           "item1Value": "Quản lý tập trung hoạt động bán hàng trên nhiều kênh từ một nơi.",
@@ -591,7 +591,7 @@
         },
         "features": {
           "eyebrow": "Tính năng nổi bật",
-          "heading": "Các công cụ cần thiết để quản lý bán hàng đa kênh.",
+          "heading": "Các công cụ cần thiết để quản lý bán hàng đa kênh",
           "summary": "Khám phá các nhóm chức năng chính hỗ trợ doanh nghiệp tổ chức hoạt động bán hàng trên nhiều kênh.",
           "tab1Title": "Quản lý kênh bán hàng",
           "tab1Desc": "Tổ chức và theo dõi các kênh kinh doanh: cửa hàng, website, sàn thương mại điện tử và kênh xã hội.",
@@ -616,7 +616,7 @@
         },
         "experience": {
           "eyebrow": "Trải nghiệm sản phẩm",
-          "heading": "Khám phá MeOS Omni qua trải nghiệm thực tế.",
+          "heading": "Khám phá MeOS Omni qua trải nghiệm thực tế",
           "summary": "Xem cách doanh nghiệp tổ chức bán hàng trên nhiều kênh thông qua giao diện minh họa hoặc demo thực tế.",
           "step1Title": "Kết nối kênh",
           "step1Desc": "Thiết lập các kênh kinh doanh hiện có của doanh nghiệp trên hệ thống.",
@@ -627,7 +627,7 @@
           "primaryButton": "Đặt lịch Demo"
         },
         "ecosystem": {
-          "heading": "Một giải pháp trong hệ sinh thái MeOS.",
+          "heading": "Một giải pháp trong hệ sinh thái MeOS",
           "summary": "MeOS Omni là một phần của hệ sinh thái giải pháp công nghệ MeOS. Khám phá thêm những sản phẩm phục vụ nhu cầu bán hàng trực tuyến và trải nghiệm trên di động.",
           "link1Title": "MeOS Ecommerce",
           "link1Desc": "Kênh bán hàng trực tuyến cho doanh nghiệp",
@@ -655,14 +655,14 @@
       "meosHicare": {
         "hero": {
           "label": "MeOS HiCare | Giải pháp quản lý y tế thông minh",
-          "heading": "Công nghệ đồng hành vì sức khỏe mọi người.",
+          "heading": "Công nghệ đồng hành vì sức khỏe mọi người",
           "summary": "MeOS HiCare là giải pháp công nghệ hướng đến số hóa quy trình và trải nghiệm dịch vụ y tế, hỗ trợ cơ sở y tế tổ chức hoạt động và chăm sóc người bệnh hiệu quả hơn.",
           "primaryButton": "Đăng ký Demo",
           "secondaryButton": "Khám phá tính năng"
         },
         "value": {
           "eyebrow": "Giá trị giải pháp",
-          "heading": "Số hóa dịch vụ y tế, chăm sóc người bệnh chu đáo hơn.",
+          "heading": "Số hóa dịch vụ y tế, chăm sóc người bệnh chu đáo hơn",
           "summary": "Ba bài toán vận hành y tế phổ biến và cách MeOS HiCare tiếp cận từng bài toán.",
           "item1Problem": "Đặt khám và tiếp nhận thủ công",
           "item1Value": "Đặt lịch khám và tiếp nhận được số hóa, giảm chờ đợi cho người bệnh.",
@@ -673,7 +673,7 @@
         },
         "features": {
           "eyebrow": "Tính năng nổi bật",
-          "heading": "Các công cụ cần thiết cho cơ sở y tế.",
+          "heading": "Các công cụ cần thiết cho cơ sở y tế",
           "summary": "Khám phá các nhóm chức năng chính hỗ trợ cơ sở y tế tổ chức hoạt động và chăm sóc người bệnh.",
           "tab1Title": "Đặt lịch khám",
           "tab1Desc": "Người bệnh đặt lịch khám trực tuyến, cơ sở y tế quản lý lịch làm việc và lượt khám.",
@@ -698,7 +698,7 @@
         },
         "experience": {
           "eyebrow": "Trải nghiệm sản phẩm",
-          "heading": "Khám phá MeOS HiCare qua trải nghiệm thực tế.",
+          "heading": "Khám phá MeOS HiCare qua trải nghiệm thực tế",
           "summary": "Xem cách người bệnh đặt lịch, theo dõi hồ sơ sức khỏe và cách cơ sở y tế vận hành dịch vụ thông qua giao diện minh họa hoặc demo thực tế.",
           "step1Title": "Đặt lịch khám",
           "step1Desc": "Người bệnh chọn chuyên khoa, bác sĩ và khung giờ phù hợp.",
@@ -709,7 +709,7 @@
           "primaryButton": "Đặt lịch Demo"
         },
         "ecosystem": {
-          "heading": "Một giải pháp trong hệ sinh thái MeOS.",
+          "heading": "Một giải pháp trong hệ sinh thái MeOS",
           "summary": "MeOS HiCare là một phần của hệ sinh thái giải pháp công nghệ MeOS. Khám phá thêm những sản phẩm phục vụ nhu cầu trải nghiệm di động và bán hàng đa kênh.",
           "link1Title": "MeOS Mini App",
           "link1Desc": "Trải nghiệm kinh doanh trên Mini App",
