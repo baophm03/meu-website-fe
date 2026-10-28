@@ -1,9 +1,9 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { A11y, Keyboard } from "swiper/modules";
+import { A11y, Keyboard, Autoplay } from "swiper/modules";
 import type { Swiper as SwiperInstance } from "swiper";
 import { ArrowLeft, ArrowRight, Quote, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -45,9 +45,27 @@ function FeedbackAvatar({ index, name }: { index: number; name: string }) {
 export function Feedback() {
   const t = useTranslations("home.feedback");
   const swiperRef = useRef<SwiperInstance | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleSlideChange = (swiper: SwiperInstance) => {
+    setActiveIndex(swiper.realIndex);
+  };
 
   return (
     <section aria-labelledby="home-feedback-title" className="scroll-mt-20 w-full max-w-full overflow-hidden py-16 text-white sm:py-24 lg:py-[128px]">
+      <style>{`
+        .feedback-swiper .swiper-slide {
+          transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        }
+        .feedback-swiper .swiper-slide:not(.swiper-slide-active) {
+          transform: scale(0.85);
+          opacity: 0.6;
+        }
+        .feedback-swiper .swiper-slide-active {
+          transform: scale(1);
+          opacity: 1;
+        }
+      `}</style>
       <Reveal className={cn(shell, "min-w-0 overflow-hidden")}>
         <div className="mb-12 flex flex-col gap-8 sm:mb-16 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
           <div>
@@ -81,29 +99,33 @@ export function Feedback() {
       </Reveal>
 
       <Reveal className="w-full">
-
         <Swiper
-          modules={[A11y, Keyboard]}
+          modules={[A11y, Keyboard, Autoplay]}
           onSwiper={(swiper) => { swiperRef.current = swiper; }}
+          onSlideChange={handleSlideChange}
           loop
           centeredSlides
           slidesPerView={1.15}
-          spaceBetween={14}
+          spaceBetween={10}
           keyboard={{ enabled: true, onlyInViewport: true }}
           a11y={{ enabled: true }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           breakpoints={{
-            640: { slidesPerView: 2.4, spaceBetween: 18 },
-            1024: { slidesPerView: 3, spaceBetween: 20 },
+            640: { slidesPerView: 2.4, spaceBetween: 14 },
+            1024: { slidesPerView: 3, spaceBetween: 12 },
           }}
           className="feedback-swiper w-full max-w-full !overflow-hidden"
         >
           {[...FEEDBACK_ITEMS, ...FEEDBACK_ITEMS].map((item, index) => (
             <SwiperSlide
               key={`${item}-${index}`}
-              className="!h-auto min-w-0"
+              className="!h-auto min-w-0 transition-transform duration-500 ease-out py-4"
               onClick={() => { swiperRef.current?.slideToLoop(index % FEEDBACK_ITEMS.length); }}
             >
-              <article className="group relative flex h-full min-h-[340px] min-w-0 flex-col rounded-2xl border border-white/10 bg-white/[0.035] p-6 backdrop-blur-sm transition duration-300 hover:border-primary-light/35 hover:bg-white/[0.055] sm:min-h-[370px] sm:p-8">
+              <article className="swiper-slide-card group relative flex h-full min-h-[340px] min-w-0 flex-col rounded-2xl border border-white/10 bg-white/[0.035] p-6 backdrop-blur-sm transition duration-300 hover:border-primary-light/35 hover:bg-white/[0.055] sm:min-h-[370px] sm:p-8 shadow-[0_20px_60px_rgba(0,0,0,0.3)]" style={{ boxShadow: (index % FEEDBACK_ITEMS.length) === activeIndex ? '0 0 40px rgba(0,0,0,0.5), 0 0 20px rgba(0,0,0,0.4)' : '0 20px 60px rgba(0,0,0,0.3)' }}>
                 <div className="flex items-center justify-between">
                   <Quote aria-hidden="true" className="h-6 w-6 text-primary-light/80" />
                   <div className="flex gap-1 text-primary-light" aria-label={t("ratingLabel")}>
