@@ -5,12 +5,14 @@
 # -----------------------------------
 # Created:        2026-11-16
 # LastEditTime:   2026-11-16
-# Version:        1.0
+# Version:        1.1
 # Status:         Updated
 # ==========================================
 #
-# CI/CD for meu-website frontend
-# Pattern adapted from Week_11/accountant-frontend
+# CI/CD for meu-website frontend.
+# Compatible with the older GitLab CI on gitlab.meu-solutions.com:
+# - no cache:key.files
+# - no workflow/default/needs/dotenv reports
 #
 # Required GitLab CI/CD variables:
 #   REGISTRY_USER
@@ -18,8 +20,6 @@
 #
 # Deploy branch: release/product
 # Commit message must start with: [tag]0.1-prod
-# Image tag: 0.1-prod
-# Container prefix: production
 # ==========================================
 
 stages:
@@ -28,69 +28,60 @@ stages:
   - deploy
 
 variables:
-  RELEASE_BRANCH: "release/product"
-  RELEASE_MARKER_REGEX: '/^\[tag\]0\.1-prod(\s|$)/'
-
   DOCKER_BUILDKIT: "1"
   COMPOSE_DOCKER_CLI_BUILD: "1"
 
-default:
-  interruptible: true
+.job_base: &job_base
   retry:
     max: 1
     when:
       - runner_system_failure
       - stuck_or_timeout_failure
-  before_script:
-    - echo "source=$CI_PIPELINE_SOURCE ref=$CI_COMMIT_REF_NAME sha=$CI_COMMIT_SHORT_SHA"
-
-workflow:
-  rules:
-    - if: '$CI_COMMIT_REF_NAME == $RELEASE_BRANCH && $CI_COMMIT_MESSAGE =~ $RELEASE_MARKER_REGEX'
-    - when: never
-
-cache:
-  key:
-    files:
-      - pnpm-lock.yaml
-  paths:
-    - .pnpm-store/
-  policy: pull-push
+  only:
+    refs:
+      - release/product
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /^\[tag\]0\.1-prod(\s|$)/
 
 source:
   stage: source
+  <<: *job_base
   tags:
     - runner-builder
+  before_script:
+    - echo "source=$CI_PIPELINE_SOURCE ref=$CI_COMMIT_REF_NAME sha=$CI_COMMIT_SHORT_SHA"
   script:
     - bash cicd/source.sh
   artifacts:
-    reports:
-      dotenv: cicd-release.env
     paths:
       - cicd-release.env
     expire_in: 1 day
 
 build:image:
   stage: build
+  <<: *job_base
   tags:
     - runner-builder
-  needs:
-    - job: source
-      artifacts: true
+  dependencies:
+    - source
+  before_script:
+    - echo "source=$CI_PIPELINE_SOURCE ref=$CI_COMMIT_REF_NAME sha=$CI_COMMIT_SHORT_SHA"
+    - . ./cicd-release.env
+    - . ./cicd/env-param.sh
   script:
     - bash cicd/build.sh
 
 deploy:production:
   stage: deploy
+  <<: *job_base
   tags:
     - runner-inet-149
-  interruptible: false
-  needs:
-    - job: source
-      artifacts: true
-    - job: build:image
-      artifacts: false
-  resource_group: production
+  dependencies:
+    - source
+  before_script:
+    - echo "source=$CI_PIPELINE_SOURCE ref=$CI_COMMIT_REF_NAME sha=$CI_COMMIT_SHORT_SHA"
+    - . ./cicd-release.env
+    - . ./cicd/env-param.sh
   script:
     - bash cicd/deploy.sh
   after_script:
