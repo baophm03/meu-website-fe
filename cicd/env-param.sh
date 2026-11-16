@@ -17,7 +17,7 @@
 export PROJECT_NAME="${PROJECT_NAME:-meu-website-fe}"
 export ENVIRONMENT_NAME="${ENVIRONMENT_NAME:-production}"
 
-export IMAGE_NAME="${IMAGE_NAME:-registry.gitlab.com/meu-solutions/meu-website-fe}"
+export IMAGE_NAME="${IMAGE_NAME:-registry.gitlab.com/meu-solutions/meu-website/fe}"
 export IMAGE_TAG="${IMAGE_TAG:-0.1-prod}"
 export APP_IMAGE="${APP_IMAGE:-${IMAGE_NAME}:${IMAGE_TAG}}"
 
