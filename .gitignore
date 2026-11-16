@@ -1,3 +1,14 @@
+# ==========================================
+# Author:         Quach Dac Duc Manh
+# Email:          quachdacducmanhk16@siu.edu.vn
+# Phone:          +84 396 677 325
+# -----------------------------------
+# Created:        2026-11-16
+# LastEditTime:   2026-11-16
+# Version:        1.0
+# Status:         Updated
+# ==========================================
+
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -45,3 +56,6 @@ next-env.d.ts
 
 # Windows reserved device name files (cannot be deleted normally)
 nul
+
+# CI artifact
+cicd-release.env

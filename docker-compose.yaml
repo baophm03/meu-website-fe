@@ -1,13 +1,32 @@
+# ==========================================
+# Author:         Quach Dac Duc Manh
+# Email:          quachdacducmanhk16@siu.edu.vn
+# Phone:          +84 396 677 325
+# -----------------------------------
+# Created:        2026-11-16
+# LastEditTime:   2026-11-16
+# Version:        1.0
+# Status:         Updated
+# ==========================================
+
 services:
   app:
-    container_name: ENVIRONMENT-NAME-PROJECT-NAME
-    image: IMAGE-NAME:IMAGE-TAG
+    container_name: ${CONTAINER_NAME:-production-meu-website-fe}
+    image: ${APP_IMAGE:-meu-website-fe:0.1-prod}
     ports:
-      - "P-MAPPING:3000"
-    restart: unless-stopped
-    pull_policy: always
+      - "${PORT_APP:-8136}:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
     networks:
-      meu-solutions-product-alpha-net:
+      - meu-solutions-product-alpha-net
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
 
 networks:
   meu-solutions-product-alpha-net:

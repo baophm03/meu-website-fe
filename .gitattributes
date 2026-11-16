@@ -1,0 +1,20 @@
+# ==========================================
+# Author:         Quach Dac Duc Manh
+# Email:          quachdacducmanhk16@siu.edu.vn
+# Phone:          +84 396 677 325
+# -----------------------------------
+# Created:        2026-11-16
+# LastEditTime:   2026-11-16
+# Version:        1.0
+# Status:         Updated
+# ==========================================
+
+* text=auto
+
+*.sh text eol=lf
+Dockerfile text eol=lf
+docker-compose*.yml text eol=lf
+docker-compose*.yaml text eol=lf
+.gitlab-ci.yml text eol=lf
+cicd/*.sh text eol=lf
+cicd/*.conf text eol=lf

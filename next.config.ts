@@ -1,3 +1,14 @@
+// ==========================================
+// Author:         Quach Dac Duc Manh
+// Email:          quachdacducmanhk16@siu.edu.vn
+// Phone:          +84 396 677 325
+// -----------------------------------
+// Created:        2026-11-16
+// LastEditTime:   2026-11-16
+// Version:        1.0
+// Status:         Updated
+// ==========================================
+
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
@@ -39,6 +50,18 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "news.vccihcm.vn",
+        port: "",
+        pathname: "/uploads/**",
+      },
+      {
+        protocol: "https",
+        hostname: "meu-solutions.com",
+        port: "",
+        pathname: "/uploads/**",
+      },
+      {
+        protocol: "https",
+        hostname: "www.meu-solutions.com",
         port: "",
         pathname: "/uploads/**",
       },

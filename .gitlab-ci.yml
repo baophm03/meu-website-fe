@@ -1,72 +1,100 @@
+# ==========================================
+# Author:         Quach Dac Duc Manh
+# Email:          quachdacducmanhk16@siu.edu.vn
+# Phone:          +84 396 677 325
+# -----------------------------------
+# Created:        2026-11-16
+# LastEditTime:   2026-11-16
+# Version:        1.0
+# Status:         Updated
+# ==========================================
+#
+# CI/CD for meu-website frontend
+# Pattern adapted from Week_11/accountant-frontend
+#
+# Required GitLab CI/CD variables:
+#   REGISTRY_USER
+#   CI_PERMISSION
+#
+# Deploy branch: release/product
+# Commit message must start with: [tag]0.1-prod
+# Image tag: 0.1-prod
+# Container prefix: production
+# ==========================================
+
 stages:
-  - build-base
+  - source
   - build
   - deploy
 
-build-base:
-  stage: build-base
+variables:
+  RELEASE_BRANCH: "release/product"
+  RELEASE_MARKER_REGEX: '/^\[tag\]0\.1-prod(\s|$)/'
+
+  DOCKER_BUILDKIT: "1"
+  COMPOSE_DOCKER_CLI_BUILD: "1"
+
+default:
+  interruptible: true
+  retry:
+    max: 1
+    when:
+      - runner_system_failure
+      - stuck_or_timeout_failure
   before_script:
-    - tag=$(echo $CI_COMMIT_MESSAGE | sed -r 's/.*(\[tag\])//')
-    - check=$(echo $CI_COMMIT_MESSAGE | sed -r 's/^.*(\[tag\]).*/\1/')
-    - echo "To release new docker image, tagname should be 'staging', your tag is:$tag"
-    - export tag=$tag
-    - export root=$(pwd)
-    - export docker_path=$root/.docker
-    - export cicd_path=$root/.ci
-    - source $cicd_path/env-param.sh
-  script:
-    - |
-      if [ "$check" == "[tag]" ]; then
-          bash $cicd_path/build/base.sh
-      fi
-  only:
-    refs:
-      - release
-    changes:
-      - "package*"
+    - echo "source=$CI_PIPELINE_SOURCE ref=$CI_COMMIT_REF_NAME sha=$CI_COMMIT_SHORT_SHA"
+
+workflow:
+  rules:
+    - if: '$CI_COMMIT_REF_NAME == $RELEASE_BRANCH && $CI_COMMIT_MESSAGE =~ $RELEASE_MARKER_REGEX'
+    - when: never
+
+cache:
+  key:
+    files:
+      - pnpm-lock.yaml
+  paths:
+    - .pnpm-store/
+  policy: pull-push
+
+source:
+  stage: source
   tags:
     - runner-builder
+  script:
+    - bash cicd/source.sh
+  artifacts:
+    reports:
+      dotenv: cicd-release.env
+    paths:
+      - cicd-release.env
+    expire_in: 1 day
 
-build:
+build:image:
   stage: build
-  before_script:
-    - tag=$(echo $CI_COMMIT_MESSAGE | sed -r 's/.*(\[tag\])//')
-    - check=$(echo $CI_COMMIT_MESSAGE | sed -r 's/^.*(\[tag\]).*/\1/')
-    - echo "To release new docker image, tagname should be 'staging', your tag is:$tag"
-    - export tag=$tag
-    - export root=$(pwd)
-    - export docker_path=$root/.docker
-    - export cicd_path=$root/.ci
-    - source $cicd_path/env-param.sh
-  script:
-    - |
-      if [ "$check" == "[tag]" ]; then
-          bash $cicd_path/build/build.sh
-      fi
-  only:
-    refs:
-      - release
   tags:
     - runner-builder
-
-
-
-deploy:
-  stage: deploy
-  before_script:
-    - check=$(echo $CI_COMMIT_MESSAGE | sed -r 's/^.*(\[tag\]).*/\1/')
-    - tag=$(echo $CI_COMMIT_MESSAGE | sed -r 's/.*(\[tag\])//')
-    - export tag=$tag
-    - export root=$(pwd)
-    - export cicd_path=$root/.ci
-    - source $cicd_path/env-param.sh
+  needs:
+    - job: source
+      artifacts: true
   script:
-    - |
-      if [ "$check" == "[tag]" ]; then
-          bash $cicd_path/deploy/deploy.sh
-      fi
-  only:
-    refs:
-      - release
+    - bash cicd/build.sh
+
+deploy:production:
+  stage: deploy
   tags:
     - runner-inet-149
+  interruptible: false
+  needs:
+    - job: source
+      artifacts: true
+    - job: build:image
+      artifacts: false
+  resource_group: production
+  script:
+    - bash cicd/deploy.sh
+  after_script:
+    - echo "deploy:production finished - status=$CI_JOB_STATUS image=$IMAGE_REF"
+  environment:
+    name: production
+    url: https://meu-solutions.com
