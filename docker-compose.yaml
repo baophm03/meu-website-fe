@@ -14,7 +14,7 @@ services:
     container_name: ${CONTAINER_NAME:-production-meu-website-fe}
     image: ${APP_IMAGE:-registry.gitlab.com/meu-solutions/meu-website/fe:0.1-prod}
     ports:
-      - "${PORT_APP:-8136}:3000"
+      - "127.0.0.1:${PORT_APP:-8136}:3000"
     environment:
       - NODE_ENV=production
       - PORT=3000
